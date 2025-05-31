@@ -1,0 +1,154 @@
+﻿@{
+    ViewData["Title"] = "Salary Policy Settings";
+}
+@section Styles {
+    <link rel="stylesheet" href="~/css/salarysettings/salarypolicysettings.css" />
+}
+
+<div class="row">
+    <div class="col-12">
+        <div class="card">
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-6">
+                        <div class="officer_inputs">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h5 class="card-title">Officer</h5>
+                                    <div class="form-row">
+                                        <div class="form-group col-6">
+                                            <label for="off_fuel_allow">Fuel Allow</label>
+                                            <input type="number" class="form-control off_input" id="off_fuel_allow" placeholder="Enter Fuel Allow" readonly>
+                                        </div>
+                                        <div class="form-group col-6">
+                                            <label for="off_special_benefit">Special Benefit (%)</label>
+                                            <input type="number" class="form-control off_input" id="off_special_benefit" placeholder="Enter Special Benefit" readonly>
+                                        </div>
+                                        <div class="form-group col-6">
+                                            <label for="off_lunch_rate">Lunch Rate</label>
+                                            <input type="number" class="form-control off_input" id="off_lunch_rate" placeholder="Enter lunch Rate" readonly>
+                                        </div>
+                                        <div class="form-group col-6">
+                                            <label for="off_tiffin_rate">Tiffin Rate</label>
+                                            <input type="number" class="form-control off_input" id="off_tiffin_rate" placeholder="Enter Tiffin Rate" readonly>
+                                        </div>
+                                        <div class="form-group col-6">
+                                            <label for="off_officer_club">Officer Club</label>
+                                            <input type="number" class="form-control off_input" id="off_officer_club" placeholder="Enter Officer Club" readonly>
+                                        </div>
+                                        <div class="form-group col-6">
+                                            <label for="off_association">Officer Association</label>
+                                            <input type="number" class="form-control off_input" id="off_association" placeholder="Enter Officer Association" readonly>
+                                        </div>
+                                        <div class="form-group col-6">
+                                            <label for="off_welfare_fund">Welfare Fund</label>
+                                            <input type="number" class="form-control off_input" id="off_welfare_fund" placeholder="Enter Welfare Fund" readonly>
+                                        </div>
+                                        <div class="form-group col-6">
+                                            <label for="off_provident_fund">Provident Fund Rate (%)</label>
+                                            <input type="number" class="form-control off_input" id="off_provident_fund" placeholder="Enter Provident Fund Rate" readonly>
+                                        </div>
+                                        <div class="form-group col-6">
+                                            <label for="off_medical">Medical</label>
+                                            <input type="number" class="form-control off_input" id="off_medical" placeholder="Enter Medical" readonly>
+                                        </div>
+                                        <div class="form-group col-6">
+                                            <label for="off_revenue_stamp">Revenue Stamp</label>
+                                            <input type="number" class="form-control off_input" id="off_revenue_stamp" placeholder="Enter Revenue Stamp" readonly>
+                                        </div>
+                                        <div class="form-group col-6">
+                                            <label for="off_pension_rate">Pension Rate (%)</label>
+                                            <input type="number" class="form-control off_input" id="off_pension_rate" placeholder="Enter Pension Rate" readonly>
+                                            <input type="hidden" id="off_id" />
+                                            <input type="hidden" id="off_operation_type" value="" />
+                                        </div>
+                                        <div class="col-12 d-flex justify-content-end">
+                                            <button type="button" class="btn btn-success" id="off_submit_button" onclick="onOffEditClick('off')">Edit</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="junior_staff_inputs">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h5 class="card-title">Junior Staff</h5>
+                                    <div class="form-row">
+                                        <div class="form-group col-6">
+                                            <label for="js_fuel_allow">Fuel Allow</label>
+                                            <input type="number" class="form-control js_input" id="js_fuel_allow" placeholder="Enter Fuel Allow" readonly>
+                                        </div>
+                                        <div class="form-group col-6">
+                                            <label for="js_utility_allow">Utility Allow</label>
+                                            <input type="number" class="form-control js_input" id="js_utility_allow" placeholder="Enter Utility Allow" readonly>
+                                        </div>
+                                        <div class="form-group col-6">
+                                            <label for="js_special_benefit">Special Benefit (%)</label>
+                                            <input type="number" class="form-control js_input" id="js_special_benefit" placeholder="Enter Special Benefit" readonly>
+                                        </div>
+                                        <div class="form-group col-6">
+                                            <label for="js_lunch_rate">Lunch Rate</label>
+                                            <input type="number" class="form-control js_input" id="js_lunch_rate" placeholder="Enter lunch Rate" readonly>
+                                        </div>
+                                        <div class="form-group col-6">
+                                            <label for="js_tiffin_rate">Tiffin Rate</label>
+                                            <input type="number" class="form-control js_input" id="js_tiffin_rate" placeholder="Enter Tiffin Rate" readonly>
+                                        </div>
+                                        <div class="form-group col-6">
+                                            <label for="js_shift_allow_rate">Shift Allow Rate</label>
+                                            <input type="number" class="form-control js_input" id="js_shift_allow_rate" placeholder="Enter Shift Allow Rate" readonly>
+                                        </div>
+                                        <div class="form-group col-6">
+                                            <label for="js_ot_single">OT Single Fraction</label>
+                                            <input type="number" class="form-control js_input" id="js_ot_single" placeholder="Enter OT Single Fraction" readonly>
+                                        </div>
+                                        <div class="form-group col-6">
+                                            <label for="js_ot_double">OT Double Fraction</label>
+                                            <input type="number" class="form-control js_input" id="js_ot_double" placeholder="Enter OT Double Fraction" readonly>
+                                        </div>
+                                        <div class="form-group col-6">
+                                            <label for="js_employee_club">Employee Club</label>
+                                            <input type="number" class="form-control js_input" id="js_employee_club" placeholder="Enter Employee Club" readonly>
+                                        </div>
+                                        <div class="form-group col-6">
+                                            <label for="js_employee_union">Employee Union</label>
+                                            <input type="number" class="form-control js_input" id="js_employee_union" placeholder="Enter Employee Union" readonly>
+                                        </div>
+                                        <div class="form-group col-6">
+                                            <label for="js_welfare_fund">Welfare Fund</label>
+                                            <input type="number" class="form-control js_input" id="js_welfare_fund" placeholder="Enter Welfare Fund" readonly>
+                                        </div>
+                                        <div class="form-group col-6">
+                                            <label for="js_provident_fund">Provident Fund Rate (%)</label>
+                                            <input type="number" class="form-control js_input" id="js_provident_fund" placeholder="Enter Provident Fund Rate" readonly>
+                                        </div>
+                                        <div class="form-group col-6">
+                                            <label for="js_revenue_stamp">Revenue Stamp</label>
+                                            <input type="number" class="form-control js_input" id="js_revenue_stamp" placeholder="Enter Revenue Stamp" readonly>
+                                        </div>
+                                        <div class="form-group col-6">
+                                            <label for="js_pension_rate">Pension Rate (%)</label>
+                                            <input type="number" class="form-control js_input" id="js_pension_rate" placeholder="Enter Pension Rate" readonly>
+                                            <input type="hidden" id="js_id" />
+                                            <input type="hidden" id="js_operation_type" value="" />
+                                        </div>
+                                        <div class="col-12 d-flex justify-content-end">
+                                            <button type="button" class="btn btn-success" id="js_submit_button" onClick="onJsEditClick('js')">Edit</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+@section Scripts {
+    <script type="text/javascript" src="~/js/salarysettings/salarypolicysettings.js"></script>
+}

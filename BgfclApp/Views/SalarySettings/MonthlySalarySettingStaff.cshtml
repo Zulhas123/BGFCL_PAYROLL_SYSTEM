@@ -1,0 +1,87 @@
+﻿@model List<BgfclApp.ViewModels.ExelUploadMonthlySalarySettingStaffViewModel>
+@{
+    ViewData["Title"] = "Monthly Salary Setting Staff";
+}
+
+<div class="row">
+    <div class="col-4">
+        <div class="card">
+            <div class="card-body">
+                <form asp-controller="SalarySettings" asp-action="MonthlySalarySettingStaff" method="post" enctype="multipart/form-data">
+                    <div class="form-group">
+                        <label for="postedFile">Choose File</label>
+                        <input type="file" name="postedFile" id="postedFile" />
+                        @* <p id="BankTagIdError" class="text-danger error-item"></p> *@
+                    </div>
+                    <button type="submit" class="btn btn-primary" id="submit_button">upload</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-8">
+        <div class="card">
+            <div class="card-body">
+                @if(Model.Count > 0){
+                    <div class="col-4">
+                        <div class="form-group">
+                            <label for="month">Month</label>
+                            <select class="form-control" id="months"></select>
+                        </div>
+                        <div class="form-group">
+                            <label for="year">Year</label>
+                            <select class="form-control" id="years"></select>
+                        </div>
+                        <button type="button" class="btn btn-primary mb-2" id="save_button">save</button>
+                    </div>
+                }
+                <table class="table table-hover col-12 table-bordered" id="msss_list">
+                    <thead>
+                        <tr>
+                            <th>Sl.</th>
+                            <th>Job Code</th>
+                            <th>Empoyee Name</th>
+                            <th>Work Days</th>
+                            <th>Ot Single</th>
+                            <th>Ot Double</th>
+                            <th>Number of Shift</th>
+                            <th>Other Allow</th>
+                            <th>Arrear Salary</th>
+                            <th>Advance Deduction</th>
+                            <th>Other Deduction</th>
+                            <th>Special Deduction</th>
+                            <th>Hospital Deduction</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                       @if(Model.Count > 0){
+                            foreach (var item in Model)
+                            {
+                                <tr>
+                                    <td>@item.Sl</td>
+                                    <td>@item.JobCode</td>
+                                    <td>@item.EmployeeName</td>
+                                    <td>@item.WorkDays</td>
+                                    <td>@item.OtSingle</td>
+                                    <td>@item.OtDouble</td>
+                                    <td>@item.NumberOfShift</td>
+                                    <td>@item.OtherAllow</td>
+                                    <td>@item.ArrearSalary</td>
+                                    <td>@item.AdvanceDeduction</td>
+                                    <td>@item.OtherDeduction</td>
+                                    <td>@item.SpecialDeduction</td>
+                                    <td>@item.HospitalDeduction</td>
+                                </tr>
+                            }
+                       }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script type="text/javascript" src="~/js/salarysettings/msss.js"></script>
+}

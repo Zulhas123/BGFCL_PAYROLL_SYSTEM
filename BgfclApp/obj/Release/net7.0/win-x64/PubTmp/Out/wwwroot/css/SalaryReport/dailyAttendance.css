@@ -1,0 +1,111 @@
+﻿/* ===== DataTable Layout and Controls ===== */
+
+/* Align buttons and search box */
+.dataTables_wrapper .dt-buttons {
+    margin-bottom: 0;
+}
+
+.dataTables_wrapper .dataTables_filter {
+    margin-bottom: 0;
+    text-align: right;
+}
+
+/* Compact DataTable UI */
+.dataTables_wrapper .dataTables_paginate .paginate_button,
+.dataTables_wrapper .dataTables_length,
+.dataTables_wrapper .dataTables_filter,
+.dataTables_wrapper .dataTables_info {
+    font-size: 12px;
+    padding: 2px 4px;
+}
+
+    .dataTables_wrapper .dataTables_length select,
+    .dataTables_wrapper .dataTables_filter input {
+        height: 24px;
+        font-size: 12px;
+        padding: 2px 4px;
+    }
+
+/* ===== Table Styling ===== */
+
+/* Compact row and cell sizes */
+#dailyAttendencelist tbody tr {
+    height: auto; /* Let content define height */
+}
+
+#dailyAttendencelist tbody td {
+    padding: 3px 6px;
+    font-size: 12px;
+}
+
+#dailyAttendencelist thead th {
+    padding: 4px 6px;
+    font-size: 14px;
+    white-space: nowrap;
+    vertical-align: middle;
+}
+
+    /* Column filter input (if used in header) */
+    #dailyAttendencelist thead th input.column-filter {
+        width: 90%;
+        height: 24px;
+        font-size: 12px;
+        padding: 2px 4px;
+        margin-top: 4px;
+        box-sizing: border-box;
+    }
+
+/* Fix table layout */
+#dailyAttendencelist_wrapper {
+    overflow-x: auto;
+}
+
+/* ===== Modal Styling ===== */
+
+.modal-dialog {
+    max-width: 350px;
+}
+
+.modal-content {
+    padding: 10px;
+}
+
+.modal-header {
+    background-color: silver;
+    color: white;
+    border-bottom: none;
+}
+
+    .modal-header .btn-close {
+        filter: invert(1);
+    }
+
+/* ===== Form Controls ===== */
+
+.form-select,
+#months,
+#years {
+    height: 25px;
+    font-size: 12px;
+    padding: 5px 10px;
+}
+
+textarea.form-control {
+    height: 50px;
+    font-size: 12px;
+}
+
+.form-check-input {
+    transform: scale(0.8);
+    margin-right: 5px;
+}
+
+.btn {
+    font-size: 14px;
+    padding: 5px 10px;
+}
+
+.form-control-sm.form-control {
+    height: 30px;
+    border-radius: 6px;
+}

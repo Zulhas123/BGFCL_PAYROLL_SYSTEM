@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="dsIncomeTaxMonthly" targetNamespace="http://tempuri.org/dsIncomeTaxMonthly.xsd" xmlns:mstns="http://tempuri.org/dsIncomeTaxMonthly.xsd" xmlns="http://tempuri.org/dsIncomeTaxMonthly.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="dsIncomeTaxMonthly" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="dsIncomeTaxMonthly" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="dsIncomeTaxMonthly">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="dsIncomeTaxMonthly" msprop:Generator_RowClassName="dsIncomeTaxMonthlyRow" msprop:Generator_RowEvHandlerName="dsIncomeTaxMonthlyRowChangeEventHandler" msprop:Generator_RowDeletedName="dsIncomeTaxMonthlyRowDeleted" msprop:Generator_RowDeletingName="dsIncomeTaxMonthlyRowDeleting" msprop:Generator_RowEvArgName="dsIncomeTaxMonthlyRowChangeEvent" msprop:Generator_TablePropName="_dsIncomeTaxMonthly" msprop:Generator_RowChangedName="dsIncomeTaxMonthlyRowChanged" msprop:Generator_UserTableName="dsIncomeTaxMonthly" msprop:Generator_RowChangingName="dsIncomeTaxMonthlyRowChanging" msprop:Generator_TableClassName="dsIncomeTaxMonthlyDataTable" msprop:Generator_TableVarName="tabledsIncomeTaxMonthly">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="JobCode" msprop:Generator_UserColumnName="JobCode" msprop:Generator_ColumnPropNameInTable="JobCodeColumn" msprop:Generator_ColumnPropNameInRow="JobCode" msprop:Generator_ColumnVarNameInTable="columnJobCode" type="xs:string" minOccurs="0" />
+              <xs:element name="EmployeeName" msprop:Generator_UserColumnName="EmployeeName" msprop:Generator_ColumnPropNameInTable="EmployeeNameColumn" msprop:Generator_ColumnPropNameInRow="EmployeeName" msprop:Generator_ColumnVarNameInTable="columnEmployeeName" type="xs:string" minOccurs="0" />
+              <xs:element name="DesignationName" msprop:Generator_UserColumnName="DesignationName" msprop:Generator_ColumnPropNameInTable="DesignationNameColumn" msprop:Generator_ColumnPropNameInRow="DesignationName" msprop:Generator_ColumnVarNameInTable="columnDesignationName" type="xs:string" minOccurs="0" />
+              <xs:element name="TinNo" msprop:Generator_UserColumnName="TinNo" msprop:Generator_ColumnPropNameInTable="TinNoColumn" msprop:Generator_ColumnPropNameInRow="TinNo" msprop:Generator_ColumnVarNameInTable="columnTinNo" type="xs:string" minOccurs="0" />
+              <xs:element name="TotalAmount" msprop:Generator_UserColumnName="TotalAmount" msprop:Generator_ColumnPropNameInTable="TotalAmountColumn" msprop:Generator_ColumnPropNameInRow="TotalAmount" msprop:Generator_ColumnVarNameInTable="columnTotalAmount" type="xs:string" minOccurs="0" />
+              <xs:element name="TIN" msprop:Generator_ColumnPropNameInRow="TIN" msprop:Generator_ColumnPropNameInTable="TINColumn" msprop:Generator_ColumnVarNameInTable="columnTIN" msprop:Generator_UserColumnName="TIN" type="xs:string" minOccurs="0" />
+              <xs:element name="IncomeTax" msprop:Generator_ColumnPropNameInRow="IncomeTax" msprop:Generator_ColumnPropNameInTable="IncomeTaxColumn" msprop:Generator_ColumnVarNameInTable="columnIncomeTax" msprop:Generator_UserColumnName="IncomeTax" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

@@ -1,0 +1,59 @@
+﻿@model List<BgfclApp.ViewModels.ExcelUploadTaxViewModel>
+@{
+    ViewData["Title"] = "Update TAX";
+}
+
+<div class="row">
+    <div class="col-4">
+        <div class="card">
+            <div class="card-body">
+                <form asp-controller="SalarySettings" asp-action="UpdateTax" method="post" enctype="multipart/form-data">
+                    <div class="form-group">
+                        <label for="postedFile">Choose File</label>
+                        <input type="file" name="postedFile" id="postedFile" />
+                        @* <p id="BankTagIdError" class="text-danger error-item"></p> *@
+                    </div>
+                    <button type="submit" class="btn btn-primary" id="submit_button">upload</button>
+                    
+                </form>
+            </div>
+        </div>
+    </div>
+    @if (Model.Count > 0)
+    {
+        <div class="col-8">
+            <div class="card">
+                <div class="card-body">
+                    @if (ViewBag.TaxUpdateResult!=null)
+                    {
+                        <p>@ViewBag.TaxUpdateResult</p>
+                    }
+                    <table class="table table-hover col-12 table-bordered">
+                        <thead>
+                            <tr>
+                                <th>Sl.</th>
+                                <th>Job Code</th>
+                                <th>Empoyee Name</th>
+                                <th>TIN</th>
+                                <th>TAX</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var item in Model)
+                            {
+                                <tr>
+                                    <td>@item.Sl</td>
+                                    <td>@item.JobCode</td>
+                                    <td>@item.EmployeeName</td>
+                                    <td>@item.TIN</td>
+                                    <td>@item.TAX.ToString("N2")</td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    }
+
+</div>

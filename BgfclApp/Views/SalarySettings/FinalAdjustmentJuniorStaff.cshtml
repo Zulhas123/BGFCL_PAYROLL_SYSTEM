@@ -1,0 +1,60 @@
+﻿@{
+    ViewData["Title"] = "Final Adjustment (Junior Staff)";
+}
+@section Styles {
+    <link rel="stylesheet" href="~/css/salarysettings/jspreadsheet.css" />
+    <style>
+        .jexcel_content {
+            max-height: 1000px !important;
+        }
+    </style>
+}
+
+<div class="row">
+    <div class="col-4">
+        <div class="card">
+            <div class="card-body">
+                <form>
+                    <div class="form-group">
+                        <label for="month">Month</label>
+                        <select class="form-control" id="months"></select>
+                    </div>
+                    <div class="form-group">
+                        <label for="year">Year</label>
+                        <select class="form-control" id="years"></select>
+                    </div>
+                    <button type="button" class="btn btn-primary mb-2" id="submit_button">show</button>
+                    <button type="button" class="btn btn-info mb-2" id="update_button" style="display:none;">update</button>
+                    <a href="" id="excel_export" style="display:none;">export as excel</a>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="col-8">
+        <div class="card">
+            <div class="card-body">
+                <table class="table table-bordered" id="table" style="display:none;">
+                    <thead>
+                        <tr>
+                            <th>Job Code</th>
+                            <th>Employee Name</th>
+                            <th>Net Pay</th>
+                        </tr>
+                    </thead>
+                    <tbody id="data-table-body">
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-12">
+        <div id="spreadsheet"></div>
+    </div>
+</div>
+
+
+@section Scripts {
+    <script type="text/javascript" src="~/js/salarysettings/final_adjustment_junior_staff.js"></script>
+}

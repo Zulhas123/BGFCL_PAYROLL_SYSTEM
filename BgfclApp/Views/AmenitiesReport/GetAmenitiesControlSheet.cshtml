@@ -1,0 +1,155 @@
+﻿@{
+    ViewData["Title"] = "Amenities Control Sheet Report";
+    var departments = ViewBag.Departments as List<SelectListItem>;
+    var codes = ViewBag.EmployeeCode as List<SelectListItem>;
+}
+
+
+<!-- Page Header -->
+<div class="page-header">
+    <div class="row align-items-center">
+        <div class="col">
+            <h3 class="page-title">Amenities Control Sheet Report</h3>
+            <ul class="breadcrumb">
+                <li class="breadcrumb-item">Amenities</li>
+                <li class="breadcrumb-item active">Amenities Control Sheet Report</li>
+            </ul>
+        </div>
+    </div>
+</div>
+<!-- /Page Header -->
+<div class="row">
+    <div class="col-4">
+        <div class="card">
+            <div class="card-body">
+                <form asp-action="GetAmenitiesControlSheet" asp-controller="AmenitiesReport">
+                    <div class="form-group">
+                        <label for="jobCode">Job Codes</label>
+                        <select class="form-control" id="jobCode" name="jobCodes" multiple="multiple">
+                            <!-- Populate with job codes -->
+                            @foreach (var jobCode in ViewBag.EmployeeCode)
+                            {
+                                <option value="@jobCode.Text">@jobCode.Text</option>
+                            }
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="month">Month</label>
+                        <select class="form-control" id="months" name="month"></select>
+                        <p id="MonthsError" class="text-danger error-item">@ViewBag.monthsError</p>
+                    </div>
+                    <div class="form-group">
+                        <label for="year">Year</label>
+                        <select class="form-control" id="years" name="year"></select>
+                        <p id="YearsError" class="text-danger error-item">@ViewBag.yearsError</p>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label">Department</label>
+                        <select name="department" class="form-control" id="department">
+                            <option value="">Select</option>
+                            @foreach (var department in departments)
+                            {
+                                <option value="@department.Value">@department.Text</option>
+                            }
+                        </select>
+                    </div>
+                    <div class="row">
+                        <div class="offset-8 col-3">
+                            <button type="submit" formtarget="_blank" class="btn btn-primary btn-sm mb-2">generate</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+@section Scripts {
+    <script type="text/javascript">
+        $(document).ready(function () {
+            loadInitialData();
+
+            $('#jobCode').select2({
+                placeholder: "All job codes",
+                allowClear: true
+            });
+
+        });
+        function getMonthId() {
+            let month = $('#months').val();
+            let year = $('#years').val();
+
+            return (parseInt(year) * 100) + parseInt(month);
+        }
+
+        function loadInitialData() {
+            $.ajax({
+                url: '/api/Employees/GetEmployeeTypes',
+                type: 'Get',
+                async: false,
+                dataType: 'json',
+                success: function (responseObject) {
+                    employeeTypes = responseObject.data;
+                    $('#EmployeeTypeId').empty();
+                    $('#EmployeeTypeId').append('<option value="0">select one</option>');
+                    $.each(employeeTypes, function (key, item) {
+                        if (item.id != 3 && item.id != 4) {
+                            $('#EmployeeTypeId').append(`<option value=${item.id}>${item.employeeTypeName}</option>`);
+                        }
+
+                    });
+                },
+                error: function (responseObject) {
+                }
+            });
+
+            $.ajax({
+                url: '/api/Others/GetMonths',
+                type: 'Get',
+                async: false,
+                dataType: 'json',
+                success: function (responseObject) {
+                    let months = responseObject.data;
+                    let currentMonth = new Date().getMonth() + 1;
+                    $('#months').empty();
+                    $.each(months, function (key, item) {
+                        if (currentMonth == parseInt(item.monthId)) {
+                            $('#months').append(`<option value=${item.monthId} selected>${item.monthName}</option>`);
+                        }
+                        else {
+                            $('#months').append(`<option value=${item.monthId}>${item.monthName}</option>`);
+                        }
+
+                    });
+                },
+                error: function (responseObject) {
+                }
+            });
+
+            $.ajax({
+                url: '/api/Others/GetYears',
+                type: 'Get',
+                async: false,
+                dataType: 'json',
+                success: function (responseObject) {
+                    let years = responseObject.data;
+                    let currentYear = new Date().getFullYear();
+                    $('#years').empty();
+                    $.each(years, function (key, item) {
+                        if (item == currentYear) {
+                            $('#years').append(`<option value=${item} selected>${item}</option>`);
+                        }
+                        else {
+                            $('#years').append(`<option value=${item}>${item}</option>`);
+                        }
+                    });
+                },
+                error: function (responseObject) {
+                }
+            });
+
+        }
+    </script>
+}

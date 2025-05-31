@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="dsSalaryReportPermanent" targetNamespace="http://tempuri.org/dsSalaryReportPermanent.xsd" xmlns:mstns="http://tempuri.org/dsSalaryReportPermanent.xsd" xmlns="http://tempuri.org/dsSalaryReportPermanent.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="dsSalaryReportPermanent" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_UserDSName="dsSalaryReportPermanent" msprop:Generator_DataSetName="dsSalaryReportPermanent">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="dsSalaryReportPermanent" msprop:Generator_RowEvHandlerName="dsSalaryReportPermanentRowChangeEventHandler" msprop:Generator_RowDeletedName="dsSalaryReportPermanentRowDeleted" msprop:Generator_RowDeletingName="dsSalaryReportPermanentRowDeleting" msprop:Generator_RowEvArgName="dsSalaryReportPermanentRowChangeEvent" msprop:Generator_TablePropName="_dsSalaryReportPermanent" msprop:Generator_RowChangedName="dsSalaryReportPermanentRowChanged" msprop:Generator_RowChangingName="dsSalaryReportPermanentRowChanging" msprop:Generator_TableClassName="dsSalaryReportPermanentDataTable" msprop:Generator_RowClassName="dsSalaryReportPermanentRow" msprop:Generator_TableVarName="tabledsSalaryReportPermanent" msprop:Generator_UserTableName="dsSalaryReportPermanent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="JobCode" msprop:Generator_ColumnPropNameInRow="JobCode" msprop:Generator_ColumnPropNameInTable="JobCodeColumn" msprop:Generator_ColumnVarNameInTable="columnJobCode" msprop:Generator_UserColumnName="JobCode" type="xs:string" minOccurs="0" />
+              <xs:element name="EmployeeName" msprop:Generator_ColumnPropNameInRow="EmployeeName" msprop:Generator_ColumnPropNameInTable="EmployeeNameColumn" msprop:Generator_ColumnVarNameInTable="columnEmployeeName" msprop:Generator_UserColumnName="EmployeeName" type="xs:string" minOccurs="0" />
+              <xs:element name="DepartmentName" msprop:Generator_ColumnPropNameInRow="DepartmentName" msprop:Generator_ColumnPropNameInTable="DepartmentNameColumn" msprop:Generator_ColumnVarNameInTable="columnDepartmentName" msprop:Generator_UserColumnName="DepartmentName" type="xs:string" minOccurs="0" />
+              <xs:element name="BankName" msprop:Generator_ColumnPropNameInRow="BankName" msprop:Generator_ColumnPropNameInTable="BankNameColumn" msprop:Generator_ColumnVarNameInTable="columnBankName" msprop:Generator_UserColumnName="BankName" type="xs:string" minOccurs="0" />
+              <xs:element name="AccountNumber" msprop:Generator_ColumnPropNameInRow="AccountNumber" msprop:Generator_ColumnPropNameInTable="AccountNumberColumn" msprop:Generator_ColumnVarNameInTable="columnAccountNumber" msprop:Generator_UserColumnName="AccountNumber" type="xs:string" minOccurs="0" />
+              <xs:element name="JoiningDate" msprop:Generator_ColumnPropNameInRow="JoiningDate" msprop:Generator_ColumnPropNameInTable="JoiningDateColumn" msprop:Generator_ColumnVarNameInTable="columnJoiningDate" msprop:Generator_UserColumnName="JoiningDate" type="xs:string" minOccurs="0" />
+              <xs:element name="PayScale" msprop:Generator_ColumnPropNameInRow="PayScale" msprop:Generator_ColumnPropNameInTable="PayScaleColumn" msprop:Generator_ColumnVarNameInTable="columnPayScale" msprop:Generator_UserColumnName="PayScale" type="xs:string" minOccurs="0" />
+              <xs:element name="BasicSalary" msprop:Generator_ColumnPropNameInRow="BasicSalary" msprop:Generator_ColumnPropNameInTable="BasicSalaryColumn" msprop:Generator_ColumnVarNameInTable="columnBasicSalary" msprop:Generator_UserColumnName="BasicSalary" type="xs:string" minOccurs="0" />
+              <xs:element name="HouseRentAllow" msprop:Generator_ColumnPropNameInRow="HouseRentAllow" msprop:Generator_ColumnPropNameInTable="HouseRentAllowColumn" msprop:Generator_ColumnVarNameInTable="columnHouseRentAllow" msprop:Generator_UserColumnName="HouseRentAllow" type="xs:string" minOccurs="0" />
+              <xs:element name="MedicalFund" msprop:Generator_ColumnPropNameInRow="MedicalFund" msprop:Generator_ColumnPropNameInTable="MedicalFundColumn" msprop:Generator_ColumnVarNameInTable="columnMedicalFund" msprop:Generator_UserColumnName="MedicalFund" type="xs:string" minOccurs="0" />
+              <xs:element name="Conveyance" msprop:Generator_ColumnPropNameInRow="Conveyance" msprop:Generator_ColumnPropNameInTable="ConveyanceColumn" msprop:Generator_ColumnVarNameInTable="columnConveyance" msprop:Generator_UserColumnName="Conveyance" type="xs:string" minOccurs="0" />
+              <xs:element name="ElectricityAllow" msprop:Generator_ColumnPropNameInRow="ElectricityAllow" msprop:Generator_ColumnPropNameInTable="ElectricityAllowColumn" msprop:Generator_ColumnVarNameInTable="columnElectricityAllow" msprop:Generator_UserColumnName="ElectricityAllow" type="xs:string" minOccurs="0" />
+              <xs:element name="GasAllow" msprop:Generator_ColumnPropNameInRow="GasAllow" msprop:Generator_ColumnPropNameInTable="GasAllowColumn" msprop:Generator_ColumnVarNameInTable="columnGasAllow" msprop:Generator_UserColumnName="GasAllow" type="xs:string" minOccurs="0" />
+              <xs:element name="CtAllow" msprop:Generator_ColumnPropNameInRow="CtAllow" msprop:Generator_ColumnPropNameInTable="CtAllowColumn" msprop:Generator_ColumnVarNameInTable="columnCtAllow" msprop:Generator_UserColumnName="CtAllow" type="xs:string" minOccurs="0" />
+              <xs:element name="AcAllow" msprop:Generator_ColumnPropNameInRow="AcAllow" msprop:Generator_ColumnPropNameInTable="AcAllowColumn" msprop:Generator_ColumnVarNameInTable="columnAcAllow" msprop:Generator_UserColumnName="AcAllow" type="xs:string" minOccurs="0" />
+              <xs:element name="ArrearAllow" msprop:Generator_ColumnPropNameInRow="ArrearAllow" msprop:Generator_ColumnPropNameInTable="ArrearAllowColumn" msprop:Generator_ColumnVarNameInTable="columnArrearAllow" msprop:Generator_UserColumnName="ArrearAllow" type="xs:string" minOccurs="0" />
+              <xs:element name="PF" msprop:Generator_ColumnPropNameInRow="PF" msprop:Generator_ColumnPropNameInTable="PFColumn" msprop:Generator_ColumnVarNameInTable="columnPF" msprop:Generator_UserColumnName="PF" type="xs:string" minOccurs="0" />
+              <xs:element name="RevenueStamp" msprop:Generator_ColumnPropNameInRow="RevenueStamp" msprop:Generator_ColumnPropNameInTable="RevenueStampColumn" msprop:Generator_ColumnVarNameInTable="columnRevenueStamp" msprop:Generator_UserColumnName="RevenueStamp" type="xs:string" minOccurs="0" />
+              <xs:element name="OtherDeduction" msprop:Generator_ColumnPropNameInRow="OtherDeduction" msprop:Generator_ColumnPropNameInTable="OtherDeductionColumn" msprop:Generator_ColumnVarNameInTable="columnOtherDeduction" msprop:Generator_UserColumnName="OtherDeduction" type="xs:string" minOccurs="0" />
+              <xs:element name="SpecialBenefit" msprop:Generator_ColumnPropNameInRow="SpecialBenefit" msprop:Generator_ColumnPropNameInTable="SpecialBenefitColumn" msprop:Generator_ColumnVarNameInTable="columnSpecialBenefit" msprop:Generator_UserColumnName="SpecialBenefit" type="xs:string" minOccurs="0" />
+              <xs:element name="InstituteLib" msprop:Generator_ColumnPropNameInRow="InstituteLib" msprop:Generator_ColumnPropNameInTable="InstituteLibColumn" msprop:Generator_ColumnVarNameInTable="columnInstituteLib" msprop:Generator_UserColumnName="InstituteLib" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

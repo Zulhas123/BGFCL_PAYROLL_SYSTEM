@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="dsAmortizationInterest" targetNamespace="http://tempuri.org/dsAmortizationInterest.xsd" xmlns:mstns="http://tempuri.org/dsAmortizationInterest.xsd" xmlns="http://tempuri.org/dsAmortizationInterest.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="dsAmortizationInterest" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_UserDSName="dsAmortizationInterest" msprop:Generator_DataSetName="dsAmortizationInterest">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="dsAmortizationInterest" msprop:Generator_RowEvHandlerName="dsAmortizationInterestRowChangeEventHandler" msprop:Generator_RowDeletedName="dsAmortizationInterestRowDeleted" msprop:Generator_RowDeletingName="dsAmortizationInterestRowDeleting" msprop:Generator_RowEvArgName="dsAmortizationInterestRowChangeEvent" msprop:Generator_TablePropName="_dsAmortizationInterest" msprop:Generator_RowChangedName="dsAmortizationInterestRowChanged" msprop:Generator_RowChangingName="dsAmortizationInterestRowChanging" msprop:Generator_TableClassName="dsAmortizationInterestDataTable" msprop:Generator_RowClassName="dsAmortizationInterestRow" msprop:Generator_TableVarName="tabledsAmortizationInterest" msprop:Generator_UserTableName="dsAmortizationInterest">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="NoOfInstallment" msprop:Generator_ColumnPropNameInRow="NoOfInstallment" msprop:Generator_ColumnPropNameInTable="NoOfInstallmentColumn" msprop:Generator_ColumnVarNameInTable="columnNoOfInstallment" msprop:Generator_UserColumnName="NoOfInstallment" type="xs:string" minOccurs="0" />
+              <xs:element name="MonthYear" msprop:Generator_ColumnPropNameInRow="MonthYear" msprop:Generator_ColumnPropNameInTable="MonthYearColumn" msprop:Generator_ColumnVarNameInTable="columnMonthYear" msprop:Generator_UserColumnName="MonthYear" type="xs:string" minOccurs="0" />
+              <xs:element name="InterestInstallment" msprop:Generator_ColumnPropNameInRow="InterestInstallment" msprop:Generator_ColumnPropNameInTable="InterestInstallmentColumn" msprop:Generator_ColumnVarNameInTable="columnInterestInstallment" msprop:Generator_UserColumnName="InterestInstallment" type="xs:string" minOccurs="0" />
+              <xs:element name="NoOfInterest" msprop:Generator_ColumnPropNameInRow="NoOfInterest" msprop:Generator_ColumnPropNameInTable="NoOfInterestColumn" msprop:Generator_ColumnVarNameInTable="columnNoOfInterest" msprop:Generator_UserColumnName="NoOfInterest" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

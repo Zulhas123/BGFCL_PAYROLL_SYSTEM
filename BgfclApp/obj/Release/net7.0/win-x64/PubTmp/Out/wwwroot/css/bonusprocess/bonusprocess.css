@@ -1,0 +1,121 @@
+﻿/* Align DataTable controls */
+.dataTables_wrapper .dt-buttons {
+    float: left;
+    margin-bottom: 0;
+}
+
+/* Move "Show X entries" dropdown before the search box */
+.dataTables_wrapper .dataTables_length {
+    display: flex;
+    align-items: center;
+    gap: 8px; /* Adjust space between text and dropdown */
+}
+
+    .dataTables_wrapper .dataTables_length label {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px; /* Space between text and dropdown */
+    }
+
+    /* Increase dropdown size */
+    .dataTables_wrapper .dataTables_length select {
+        height: 30px; /* Increase height */
+        font-size: 14px; /* Increase font size */
+        padding: 4px 8px;
+        min-width: 80px; /* Adjust width */
+    }
+
+/* Wrapper alignment */
+.dataTables_wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.dataTables_length {
+    margin-right: 30px; /* Space between labels */
+}
+
+/* Search box on the right */
+.dataTables_wrapper .dataTables_filter {
+    float: right;
+    margin-bottom: 0;
+}
+
+/* Reduce row height and cell padding */
+#process_bonus_list_table tbody tr {
+    height: 10px;
+}
+
+#process_bonus_list_table tbody td {
+    padding: 3px 6px;
+    font-size: 12px;
+}
+
+/* Reduce header height */
+#process_bonus_list_table thead th {
+    padding: 4px 6px;
+    font-size: 14px;
+}
+
+/* Ensure table header remains fixed */
+#process_bonus_list_table thead {
+    height: 65px !important;
+    overflow: hidden;
+}
+
+    #process_bonus_list_table thead th {
+        white-space: nowrap;
+        vertical-align: middle;
+        padding: 8px;
+    }
+
+/* Button styling */
+.btn {
+    font-size: 14px;
+    padding: 5px 10px;
+}
+
+/* Modal CSS */
+.modal-dialog {
+    max-width: 350px;
+}
+
+.modal-content {
+    padding: 10px;
+}
+
+.modal-header {
+    background-color: silver;
+    color: white;
+    border-bottom: none;
+}
+
+/* Input field styles */
+.form-control, .form-select {
+    height: 25px;
+    font-size: 12px;
+    padding: 5px 10px;
+}
+
+textarea.form-control {
+    height: 50px;
+    font-size: 12px;
+}
+
+/* Checkbox and button adjustments */
+.form-check-input {
+    transform: scale(0.8);
+    margin-right: 5px;
+}
+
+.btn {
+    font-size: 14px;
+    padding: 5px 10px;
+}
+
+.modal-header .btn-close {
+    filter: invert(1);
+}
+
+

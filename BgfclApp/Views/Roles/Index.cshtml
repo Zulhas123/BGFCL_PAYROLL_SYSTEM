@@ -1,0 +1,128 @@
+﻿@{
+    ViewData["Title"] = "Roles";
+}
+@section Styles {
+    <link rel="stylesheet" href="~/css/roles/index.css" />
+}
+
+<div class="row">
+    <div class="col-12">
+        <div class="card shadow-sm">
+            <div class="card-body">
+                <!-- Top right aligned controls -->
+                <div class="card border shadow-sm p-1">
+                    <div class="d-flex justify-content-between align-items-center gap-2">
+                        <h4 class="mb-0 mr-1">Role Management</h4>
+                        <div class="d-flex">
+                            @* <select id="page_length_select" class="form-control w-auto me-3 mr-1">
+                                <option value="10">10 rows</option>
+                                <option value="20">20 rows</option>
+                                <option value="30">30 rows</option>
+                                <option value="40">40 rows</option>
+                                <option value="50">50 rows</option>
+                            </select> *@
+                            <button type="button" class="btn btn-info" id="add_button"><i class="fas fa-plus me-1"></i> Add Role</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- DataTable -->
+                <div class="table-responsive">
+                    <table class="table table-hover table-bordered align-middle" id="roles_list_table">
+                        <thead>
+                            <tr>
+                                <th>Sl.</th>
+                                <th>Title</th>
+                                <th>Slug</th>
+                                <th>Role Status</th>
+                                <th>Active Status</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody></tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Role Form Modal -->
+<div class="modal fade" id="role_modal" tabindex="-1" aria-labelledby="roleModalLabel" aria-hidden="true">
+    <div class="modal-dialog custom-small-modal">
+        <!-- Increased modal size -->
+        <div class="modal-content shadow-md rounded-3">
+            <!-- Modal Header -->
+            <div class="modal-header border border-info">
+                <h5 class="modal-title" id="roleModalLabel">Add Role</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <!-- Modal Body -->
+            <div class="modal-body">
+                <form id="roleformId">
+                    <input type="hidden" id="RoleId">
+                    <input type="hidden" id="operation_type" value="create">
+
+                    <div class="row g-3">
+                        <!-- Title -->
+                        <div class="col-md-6">
+                            <label for="Title" class="form-label">Title <span class="text-danger">*</span></label>
+                            <input type="text" class="form-control" id="Title" placeholder="Enter Title">
+                            <p id="TitleError" class="text-danger small"></p>
+                        </div>
+
+                        <!-- Slug -->
+                        <div class="col-md-6">
+                            <label for="Slug" class="form-label">Slug <span class="text-danger">*</span></label>
+                            <input type="text" class="form-control" id="Slug" placeholder="Enter Slug">
+                            <p id="SlugError" class="text-danger small"></p>
+                        </div>
+
+                        <!-- Description -->
+                        <div class="col-md-6">
+                            <label for="Notes" class="form-label">Description</label>
+                            <input type="text" class="form-control" id="Notes" placeholder="Enter Notes">
+                            <p id="NotesError" class="text-danger small"></p>
+                        </div>
+
+                        <!-- Role Status Checkboxes -->
+                        <div class="col-md-6">
+                            <label class="form-label fw-bold">Role Status</label>
+                            <div class="form-check">
+                                <input type="checkbox" class="form-check-input" id="is_employee" name="IsEmployee">
+                                <label class="form-check-label" for="is_employee">Is Employee</label>
+                            </div>
+                            <div class="form-check">
+                                <input type="checkbox" class="form-check-input" id="is_authority" name="IsAuthority">
+                                <label class="form-check-label" for="is_authority">Is Authority</label>
+                            </div>
+                            <div class="form-check">
+                                <input type="checkbox" class="form-check-input" id="is_staff" name="IsStaff">
+                                <label class="form-check-label" for="is_staff">Is Staff</label>
+                            </div>
+                        </div>
+
+                        <!-- Active Status -->
+                        <div class="col-12">
+                            <div class="form-check">
+                                <input type="checkbox" class="form-check-input" id="Is_Active" name="isActive">
+                                <label class="form-check-label fw-bold" for="Is_Active">Is Active</label>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Buttons -->
+                    <div class="d-flex justify-content-between">
+                        <button type="button" class="btn btn-outline-danger px-3" id="cancel_button">Cancel</button>
+                        <button type="button" class="btn btn-success px-3 fw-bold" id="submit_button">Create</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+@section Scripts {
+    <script type="text/javascript" src="~/js/roles/index.js"></script>
+}

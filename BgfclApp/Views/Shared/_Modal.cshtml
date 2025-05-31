@@ -1,0 +1,39 @@
+﻿<div class="modal" tabindex="-1" id="edit_modal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Edit Info!</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <p>Do you want to edit?</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary btn-sm" data-dismiss="modal">close</button>
+                <button type="button" class="btn btn-primary btn-sm" onclick="onEditConfirmed()">confirm</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal" tabindex="-1" id="remove_modal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Remove Info!</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <p>Do you want to remove?</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary btn-sm" data-dismiss="modal">close</button>
+                <button type="button" class="btn btn-danger btn-sm" onclick="onRemoveConfirmed()"><span id="remove_spin" class="spinner-border spinner-border-sm d-none" role="status" aria-hidden="true"></span> confirm</button>
+            </div>
+        </div>
+    </div>
+</div>

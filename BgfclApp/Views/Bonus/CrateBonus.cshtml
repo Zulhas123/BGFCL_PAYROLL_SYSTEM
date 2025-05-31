@@ -1,0 +1,166 @@
+﻿@{
+    ViewData["Title"] = "Create Bonus";
+}
+@section Styles {
+    <link rel="stylesheet" href="~/css/bonus/bonus.css" />
+}
+
+
+
+<div class="row">
+    <div class="col-12">
+        <div class="card border">
+            <div class="card-body">
+                <!-- Top right aligned controls -->
+                <div class="card border">
+                    <div class="d-flex justify-content-between align-items-center m-2">
+                        <h4 class="fw-bold">Bonus Management</h4>
+                        <div class="d-flex align-items-center">
+                            <select id="page_length_select" class="form-control w-auto me-3 mr-1">
+                                <option value="10">10 rows</option>
+                                <option value="20">20 rows</option>
+                                <option value="30">30 rows</option>
+                                <option value="50">50 rows</option>
+                                <option value="100">100 rows</option>
+                            </select>
+                            <button type="button" class="btn btn-info h-100 d-flex align-items-center" id="add_button">
+                                <i class="fas fa-plus"></i> Add Bonus
+                            </button>
+                        </div>
+                    </div>
+                </div>
+               
+
+                <!-- DataTable -->
+                <table class="table table-hover col-12 table-bordered" id="bonus_list_table">
+                    <thead>
+                        <tr>
+                            <th>Sl.</th>
+                            <th>Bonus Title</th>
+                            <th>Payable Month</th>
+                            <th>Status</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Bonus Form Modal -->
+<div class="modal fade" id="bonus_modal_create" tabindex="-1" aria-labelledby="bonusModalLabel" aria-hidden="true">
+    <div class="modal-dialog" style=" max-width: 450px;">
+        <div class="modal-content">
+            <div class="modal-header border border-info">
+                <h5 class="modal-title" id="bonusModalLabel">Add Bonus</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+
+            <div class="modal-body">
+                <form id="bonusformId">
+                    <input type="hidden" value="" id="BonusId" />
+                    <input type="hidden" value="create" id="operation_type" />
+
+                    <div class="form-group">
+                        <label for="BonusTitle">Bonus Title <span class="text-danger" title="required">*</span></label>
+                        <input type="text" class="form-control" id="BonusTitle">
+                        <p id="BonusTitleError" class="text-danger error-item d-none"></p>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="months">Month</label>
+                        <select class="form-control" id="months"></select>
+                        <p id="MonthError" class="text-danger error-item d-none"></p>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="years">Year</label>
+                        <select class="form-control" id="years"></select>
+                    </div>
+                    <!-- Buttons -->
+                    <div class="d-flex justify-content-between">
+                        <button type="button" class="btn btn-outline-danger px-3" id="cancel_button" data-bs-dismiss="modal">Cancel</button>
+                        <button type="button" class="btn btn-success px-3 fw-bold" id="submit_button">Create</button>
+                    </div>
+                </form>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+<!-- Modal -->
+
+<div class="modal fade" id="bonusModal" tabindex="-1" aria-labelledby="bonusModalLabel" aria-hidden="true">
+    <div class="modal-dialog" style=" max-width: 380px;">
+        <!-- use modal-lg to get a wider form -->
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="bonusModalLabel">Bonus Process</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form id="bonusForm">
+                    <input type="hidden" id="schoolId" value="" />
+                    <input type="hidden" id="guestPkId" value="" />
+                    <input type="hidden" id="roleId" value="" />
+                    <input type="hidden" id="userId" value="" />
+                    <input type="hidden" value="create" id="operation_type" />
+                    <div class="row">
+                        <div class="col-md-6">
+                            <label for="Months">Month</label>
+                            <select class="form-control" id="Months"></select>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="Years">Year</label>
+                            <select class="form-control" id="Years"></select>
+                        </div>
+                    </div>
+
+                    <div class="row mt-3">
+                        <div class="col-md-6">
+                            <label for="BonusID" class="form-label">Bonus <span class="text-danger">*</span></label>
+                            <select class="form-control" id="BonusID"></select>
+                            <p id="BonusIDError" class="text-danger error-item"></p>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="EmployeeTypeId" class="form-label">Emp. Type <span class="text-danger">*</span></label>
+                            <select class="form-control" id="EmployeeTypeId"></select>
+                            <p id="EmployeeTypeIdError" class="text-danger error-item"></p>
+                        </div>
+                    </div>
+
+                    <div class="row mt-3" id="bonusValueGroup" style="display:none;">
+                        <div class="col-md-6">
+                            <label id="bonusValueLabel" for="FestivalBonus" class="form-label"></label>
+                            <input type="number" class="form-control" id="FestivalBonus" />
+                            <p id="bonusValueError" class="text-danger error-item"></p>
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+            <!-- Buttons -->
+            <div class="d-flex justify-content-between">
+                <button type="button" class="btn btn-outline-danger px-3" id="process_cancel_button">Cancel</button>
+                <button type="button" class="btn btn-success px-3 fw-bold" id="process_btn">Process</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script type="text/javascript" src="~/js/bonus/create_bonus.js"></script>
+   
+}

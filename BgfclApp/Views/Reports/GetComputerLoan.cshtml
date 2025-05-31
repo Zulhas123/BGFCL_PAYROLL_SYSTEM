@@ -1,0 +1,241 @@
+﻿@{
+    ViewData["Title"] = " Computer Loan Report";
+    var employeeType = ViewBag.employeeType as List<SelectListItem>;
+    var Codes = ViewBag.EmployeeCode as List<SelectListItem>;
+}
+
+<!-- Page Header -->
+<div class="page-header">
+    <div class="row align-items-center">
+        <div class="col">
+            <h3 class="page-title">Computer Loan Report</h3>
+            <ul class="breadcrumb">
+                <li class="breadcrumb-item">Reports</li>
+                <li class="breadcrumb-item active">Computer Loan </li>
+            </ul>
+        </div>
+    </div>
+</div>
+<!-- /Page Header -->
+<div class="row">
+    <div class="col-8 offset-2">
+        <div class="card border">
+            <div class="card-body">
+                @if (ViewBag.Message != null)
+                {
+                    <div class="alert alert-warning">
+                        @ViewBag.Message
+                    </div>
+                }
+                <form asp-action="GetComputerLoan" asp-controller="Reports">
+                    <div class="row">
+                        <div class="col-6">
+                            <div class="form-group">
+                                <label class="control-label">Employee Code</label>
+                                <select name="jobCode" class="form-control" id="jobCode">
+                                    <option value="">-- Select Employee Code --</option> 
+                                    @foreach (var Code in Codes)
+                                    {
+                                        <option value="@Code.Value">@Code.Text</option>
+                                    }
+                                </select>
+                                <p id="jobCodeError" class="text-danger error-item">@ViewBag.jobCodeError</p>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="fmonth">From Month</label>
+                                <select class="form-control" id="fmonths" name="fmonth"></select>
+                                <p id="fMonthsError" class="text-danger error-item">@ViewBag.fmonthsError</p>
+                            </div>
+                            <div class="form-group">
+                                <label for="fyear">From Year</label>
+                                <select class="form-control" id="fyears" name="fyear"></select>
+                                <p id="fYearsError" class="text-danger error-item">@ViewBag.fyearsError</p>
+                            </div>
+                            <div class="form-group">
+                                <label for="yearclosingmonth">Closing Month</label>
+                                <select class="form-control" id="yearclosingmonth" name="yearclosingmonth" required></select>
+                                <small class="text-danger" id="yearError" style="display: none;">Closing Month is required.</small>
+                            </div>
+                            <div class="form-group">
+                                <label for="reportType">Report Type</label>
+                                <select class="form-control" id="reportType" name="reportType">
+                                    <option value="1">Individual</option>
+                                    <option value="2">Summary</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="form-group">
+                                <label for="EmployeeTypeId">Employee Type <span class="text-danger" title="required">*</span></label>
+                                <select class="form-control" id="EmployeeTypeId" name="employeeTypeId"></select>
+                                <p id="EmployeeTypeIdError" class="text-danger error-item">@ViewBag.employeeTypeIdError</p>
+                            </div>
+                            <div class="form-group">
+                                <label for="tmonth">To Month</label>
+                                <select class="form-control" id="tmonths" name="tmonth"></select>
+                                <p id="tMonthsError" class="text-danger error-item">@ViewBag.tmonthsError</p>
+                            </div>
+                            <div class="form-group">
+                                <label for="tyear">To Year</label>
+                                <select class="form-control" id="tyears" name="tyear"></select>
+                                <p id="tYearsError" class="text-danger error-item">@ViewBag.tyearsError</p>
+                            </div>
+                            <div class="form-group">
+                                <label for="tyear">Closing Year</label>
+                                <select class="form-control" id="yearclosingyear" name="yearclosingyear" required></select>
+                                <small class="text-danger" id="yearError" style="display: none;">Closing Year is required.</small>
+                            </div>
+                            <div class="row">
+                                <div class="col-12 text-right">
+                                    <button type="submit" formtarget="_blank" class="btn btn-primary btn-sm mb-2">Generate</button>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                   @*  <div class="row">
+                        <div class="offset-10 col-3">
+                            <button type="submit" formtarget="_blank" class="btn btn-primary btn-sm mb-2">Generate</button>
+                        </div>
+                    </div> *@
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script type="text/javascript">
+        $(document).ready(function () {
+            loadInitialData();
+            $('#jobCode').select2({
+                placeholder: 'Select an employee code',
+                allowClear: true
+            });
+        });
+
+        function getMonthId() {
+            let month = $('#months').val();
+            let year = $('#years').val();
+            return (parseInt(year) * 100) + parseInt(month);
+        }
+
+        function loadInitialData() {
+            $.ajax({
+                url: '/api/Employees/GetEmployeeTypes',
+                type: 'Get',
+                async: false,
+                dataType: 'json',
+                success: function (responseObject) {
+                    employeeTypes = responseObject.data;
+                    $('#EmployeeTypeId').empty();
+                    $('#EmployeeTypeId').append('<option value="0">Select One</option>');
+                    $.each(employeeTypes, function (key, item) {
+                        if (item.id != 3 && item.id != 4) {
+                            $('#EmployeeTypeId').append(`<option value=${item.id}>${item.employeeTypeName}</option>`);
+                        }
+                    });
+                },
+                error: function (responseObject) {
+                }
+            });
+
+            $.ajax({
+                url: '/api/Others/GetMonths',
+                type: 'GET',
+                async: false,
+                dataType: 'json',
+                success: function (responseObject) {
+                    let months = responseObject.data;
+                    const currentMonth = new Date().getMonth() + 1; 
+                    $('#fmonths, #tmonths').empty();
+
+                    $.each(months, function (key, item) {
+                        if (item.monthId === currentMonth) {
+                            $('#fmonths, #tmonths').append(`<option value=${item.monthId} selected>${item.monthName}</option>`);
+                        } else {
+                            $('#fmonths, #tmonths').append(`<option value=${item.monthId}>${item.monthName}</option>`);
+                        }
+                    });
+                },
+                error: function (responseObject) {
+                    console.error('Error fetching months:', responseObject);
+                }
+            });
+
+
+            $.ajax({
+                url: '/api/Others/GetYears',
+                type: 'GET',
+                async: false,
+                dataType: 'json',
+                success: function (responseObject) {
+                    let years = responseObject.data;
+                    const currentYear = new Date().getFullYear(); // Get the current year
+                    $('#fyears, #tyears').empty();
+
+                    $.each(years, function (key, item) {
+                        if (item === currentYear) {
+                            $('#fyears, #tyears').append(`<option value=${item} selected>${item}</option>`);
+                        } else {
+                            $('#fyears, #tyears').append(`<option value=${item}>${item}</option>`);
+                        }
+                    });
+                },
+                error: function (responseObject) {
+                    console.error('Error fetching years:', responseObject);
+                }
+            });
+
+
+            $.ajax({
+                url: '/api/Others/GetMonths',
+                type: 'GET',
+                async: false,
+                dataType: 'json',
+                success: function (responseObject) {
+                    let months = responseObject.data;
+                    $('#yearclosingmonth').empty();
+                    $.each(months, function (key, item) {
+                        $('#yearclosingmonth').append(`<option value=${item.monthId}>${item.monthName}</option>`);
+                    });
+
+                    // Set default value to June
+                    $('#yearclosingmonth').val(months.find(month => month.monthName === 'June').monthId);
+                },
+                error: function (responseObject) {
+                }
+            });
+
+            $.ajax({
+                url: '/api/Others/GetYears',
+                type: 'Get',
+                async: false,
+                dataType: 'json',
+                success: function (responseObject) {
+                    let years = responseObject.data;
+                    $('#yearclosingyear').empty();
+                    $.each(years, function (key, item) {
+                        $('#yearclosingyear').append(`<option value=${item}>${item}</option>`);
+                    });
+                },
+                error: function (responseObject) {
+                }
+            });
+        }
+
+        document.getElementById('generateBtn').addEventListener('click', function (event) {
+            var yearField = document.getElementById('yearclosingyear');
+            var yearError = document.getElementById('yearError');
+
+            if (yearField.value === "") {
+                event.preventDefault();  
+                yearError.style.display = 'block';  
+            } else {
+                yearError.style.display = 'none';  
+            }
+        });
+
+    </script>
+}

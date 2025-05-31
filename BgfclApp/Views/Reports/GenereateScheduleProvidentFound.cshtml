@@ -1,0 +1,56 @@
+﻿@{
+    ViewData["Title"] = "Schedule Provident Fund";
+}
+@section Styles {
+    <link rel="stylesheet" href="~/css/Reports/schedule_pf.css" />
+}
+
+<div class="row justify-content-center">
+    <div class="col-md-5">
+        @if (!string.IsNullOrEmpty(ViewBag.ProcessMessage as string))
+        {
+            <div id="processAlert" class="alert alert-warning alert-dismissible fade show" role="alert">
+                @ViewBag.ProcessMessage
+                <button type="button" class="btn-close float-end" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+        }
+
+        <div class="card border">
+            <div class="card-header bg-light">
+                <h6 class="page-title mb-0">Schedule Provident Fund Report</h6>
+            </div>
+            <div class="card-body">
+                <form id="providentFoundForm" asp-action="GenereateScheduleProvidentFound" asp-controller="Reports">
+                    <div class="mb-3">
+                        <label for="years" class="form-label">Select Schedule Year</label>
+                        <select class="form-control form-control-sm" id="years" name="year"></select>
+                        <p id="YearsError" class="text-danger error-item">@ViewBag.yearsError</p>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="months" class="form-label">Selected Month</label>
+                        <select class="form-control form-control-sm" id="months" name="month" disabled></select>
+                        <p id="MonthError" class="text-danger error-item">@ViewBag.MonthError</p>
+                    </div>
+
+                    <div class="d-flex justify-content-between align-items-center">
+                        <div class="form-check">
+                            <input type="checkbox" class="form-check-input" id="isExcel" name="isExcel">
+                            <label class="form-check-label" for="isExcel">Export as Excel?</label>
+                        </div>
+
+                        <button type="submit" id="generateButton" formtarget="_blank" class="btn btn-success btn-sm">
+                            Generate Report
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+@section Scripts {
+    <script type="text/javascript" src="~/js/Reports/schedule_pf.js"></script>
+}

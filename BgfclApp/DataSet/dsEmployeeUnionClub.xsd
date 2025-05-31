@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="dsEmployeeUnionClub" targetNamespace="http://tempuri.org/dsEmployeeUnionClub.xsd" xmlns:mstns="http://tempuri.org/dsEmployeeUnionClub.xsd" xmlns="http://tempuri.org/dsEmployeeUnionClub.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="dsEmployeeUnionClub" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_UserDSName="dsEmployeeUnionClub" msprop:Generator_DataSetName="dsEmployeeUnionClub">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="dsEmployeeUnionClub" msprop:Generator_RowEvHandlerName="dsEmployeeUnionClubRowChangeEventHandler" msprop:Generator_RowDeletedName="dsEmployeeUnionClubRowDeleted" msprop:Generator_RowDeletingName="dsEmployeeUnionClubRowDeleting" msprop:Generator_RowEvArgName="dsEmployeeUnionClubRowChangeEvent" msprop:Generator_TablePropName="_dsEmployeeUnionClub" msprop:Generator_RowChangedName="dsEmployeeUnionClubRowChanged" msprop:Generator_RowChangingName="dsEmployeeUnionClubRowChanging" msprop:Generator_TableClassName="dsEmployeeUnionClubDataTable" msprop:Generator_RowClassName="dsEmployeeUnionClubRow" msprop:Generator_TableVarName="tabledsEmployeeUnionClub" msprop:Generator_UserTableName="dsEmployeeUnionClub">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="JobCode" msprop:Generator_ColumnPropNameInRow="JobCode" msprop:Generator_ColumnPropNameInTable="JobCodeColumn" msprop:Generator_ColumnVarNameInTable="columnJobCode" msprop:Generator_UserColumnName="JobCode" type="xs:string" minOccurs="0" />
+              <xs:element name="MonthID" msprop:Generator_ColumnPropNameInRow="MonthID" msprop:Generator_ColumnPropNameInTable="MonthIDColumn" msprop:Generator_ColumnVarNameInTable="columnMonthID" msprop:Generator_UserColumnName="MonthID" type="xs:string" minOccurs="0" />
+              <xs:element name="EmployeeName" msprop:Generator_ColumnPropNameInRow="EmployeeName" msprop:Generator_ColumnPropNameInTable="EmployeeNameColumn" msprop:Generator_ColumnVarNameInTable="columnEmployeeName" msprop:Generator_UserColumnName="EmployeeName" type="xs:string" minOccurs="0" />
+              <xs:element name="DesignationName" msprop:Generator_ColumnPropNameInRow="DesignationName" msprop:Generator_ColumnPropNameInTable="DesignationNameColumn" msprop:Generator_ColumnVarNameInTable="columnDesignationName" msprop:Generator_UserColumnName="DesignationName" type="xs:string" minOccurs="0" />
+              <xs:element name="DepartmentName" msprop:Generator_ColumnPropNameInRow="DepartmentName" msprop:Generator_ColumnPropNameInTable="DepartmentNameColumn" msprop:Generator_ColumnVarNameInTable="columnDepartmentName" msprop:Generator_UserColumnName="DepartmentName" type="xs:string" minOccurs="0" />
+              <xs:element name="EmployeeUnion" msprop:Generator_ColumnPropNameInRow="EmployeeUnion" msprop:Generator_ColumnPropNameInTable="EmployeeUnionColumn" msprop:Generator_ColumnVarNameInTable="columnEmployeeUnion" msprop:Generator_UserColumnName="EmployeeUnion" type="xs:string" minOccurs="0" />
+              <xs:element name="EmployeeClub" msprop:Generator_ColumnPropNameInRow="EmployeeClub" msprop:Generator_ColumnPropNameInTable="EmployeeClubColumn" msprop:Generator_ColumnVarNameInTable="columnEmployeeClub" msprop:Generator_UserColumnName="EmployeeClub" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

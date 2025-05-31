@@ -1,0 +1,134 @@
+﻿@{
+    ViewData["Title"] = "Create Advance Tax";
+}
+@model Entities.AdvanceTax
+
+@* @section Style {
+    <link rel="stylesheet" href="~/css/categories/create_category.css" />
+} *@
+<div class="row">
+    <div class="col-4">
+        <div class="card">
+            <div class="card-body border-light">
+                <h3 class="card">Advance Tax </h3>
+                <form>
+                    <div class="form-group">
+                        <input type="hidden" value="" id="TaxId" />
+                        <input type="hidden" value="create" id="operation_type" />
+                        <label for="LetterNo">Letter No. <span class="text-danger" title="required">*</span></label>
+                        <input type="text" class="form-control" id="LetterNo">
+                        <p id="LetterNoError" class="text-danger error-item"></p>
+                    </div>
+                    <div class="form-group">
+                        <label for="Amount">Amount</label>
+                        <input type="text" class="form-control" id="Amount">
+                        <p id="AmountError" class="text-danger error-item"></p>
+                    </div>
+                    <div class="form-group">
+                        <label for="Date">Date</label>
+                        <input type="text" class="form-control datetimepicker" id="Date">
+                        <p id="DateError" class="text-danger error-item"></p>
+                    </div>
+                    <div class="form-group">
+                        <label for="month">Month</label>
+                        <select class="form-control" id="months"></select>
+                    </div>
+                    <div class="form-group">
+                        <label for="year">Year</label>
+                        <select class="form-control" id="years"></select>
+                    </div>
+                    <button type="button" class="btn btn-danger" id="cancel_button">Cancel</button>
+                    <button type="button" class="btn btn-success text-dark pull-right" id="submit_button">Create</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="col-8">
+        <div class="card">
+            <div class="card-body">
+                <h3>Advance tax list</h3>
+                <table class="table table-hover table-bordered col-12" id="advance_tax_list_table">
+                    <thead>
+                        <tr>
+                            <th>Sl.</th>
+                            <th>Letter No.</th>
+                            <th>Amount</th>
+                            <th>Date</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script type="text/javascript" src="~/js/salarysettings/advance_tax.js"></script>
+    <style>
+        /* Ensure the table takes full width */
+        #advance_tax_list_table {
+            width: 100%; /* Set table width to 100% of the container */
+            table-layout: fixed; /* Set a fixed layout to ensure columns fit */
+        }
+
+            #advance_tax_list_table tbody tr {
+                height: 20px; /* Adjust row height */
+                line-height: 20px; /* Match line height to row height */
+            }
+
+            #advance_tax_list_table tbody td {
+                padding: 2px 4px; /* Reduce padding */
+                overflow: hidden; /* Hide overflow content */
+                white-space: nowrap; /* Prevent text wrapping */
+                text-overflow: ellipsis; /* Add ellipsis for overflowing text */
+                font-size: 15px;
+            }
+
+            #advance_tax_list_table thead th {
+                background-color: lightgrey;
+                color: darkolivegreen; /* Header text color */
+                padding: 8px 4px; /* Adjust header padding */
+                font-weight: bold; /* Make header text bold */
+                font-size: 15px; /* Smaller font size */
+            }
+
+                /* Set specific column widths using percentages */
+                #advance_tax_list_table thead th:nth-child(1),
+                #advance_tax_list_table tbody td:nth-child(1) {
+                    width: 5%;
+                }
+                /* Serial Number */
+
+                #advance_tax_list_table thead th:nth-child(2),
+                #advance_tax_list_table tbody td:nth-child(2) {
+                    width: 10%;
+                }
+                /* Job Code */
+
+                #advance_tax_list_table thead th:nth-child(3),
+                #advance_tax_list_table tbody td:nth-child(3) {
+                    width: 24%;
+                }
+                /* Employee Name */
+
+                #advance_tax_list_table thead th:nth-child(4),
+                #advance_tax_list_table tbody td:nth-child(4) {
+                    width: 24%;
+                }
+                /* Designation */
+
+                #advance_tax_list_table thead th:nth-child(5),
+                #advance_tax_list_table tbody td:nth-child(5) {
+                    width: 24%;
+                }
+                /* Department */
+
+                #advance_tax_list_table thead th:nth-child(6),
+                #advance_tax_list_table tbody td:nth-child(6) {
+                    width: 13%;
+                }
+        /* Actions */
+    </style>
+}

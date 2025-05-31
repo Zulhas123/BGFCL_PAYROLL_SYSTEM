@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="dsTaxCertificate" targetNamespace="http://tempuri.org/dsTaxCertificate.xsd" xmlns:mstns="http://tempuri.org/dsTaxCertificate.xsd" xmlns="http://tempuri.org/dsTaxCertificate.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="dsTaxCertificate" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="dsTaxCertificate" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="dsTaxCertificate">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="TaxCertificate" msprop:Generator_RowClassName="TaxCertificateRow" msprop:Generator_RowEvHandlerName="TaxCertificateRowChangeEventHandler" msprop:Generator_RowDeletedName="TaxCertificateRowDeleted" msprop:Generator_RowDeletingName="TaxCertificateRowDeleting" msprop:Generator_RowEvArgName="TaxCertificateRowChangeEvent" msprop:Generator_TablePropName="TaxCertificate" msprop:Generator_RowChangedName="TaxCertificateRowChanged" msprop:Generator_UserTableName="TaxCertificate" msprop:Generator_RowChangingName="TaxCertificateRowChanging" msprop:Generator_TableClassName="TaxCertificateDataTable" msprop:Generator_TableVarName="tableTaxCertificate">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Month" msprop:Generator_UserColumnName="Month" msprop:Generator_ColumnPropNameInTable="MonthColumn" msprop:Generator_ColumnPropNameInRow="Month" msprop:Generator_ColumnVarNameInTable="columnMonth" type="xs:string" minOccurs="0" />
+              <xs:element name="IncomeTax" msprop:Generator_UserColumnName="IncomeTax" msprop:Generator_ColumnPropNameInTable="IncomeTaxColumn" msprop:Generator_ColumnPropNameInRow="IncomeTax" msprop:Generator_ColumnVarNameInTable="columnIncomeTax" type="xs:decimal" minOccurs="0" />
+              <xs:element name="ChalanNo" msprop:Generator_UserColumnName="ChalanNo" msprop:Generator_ColumnPropNameInTable="ChalanNoColumn" msprop:Generator_ColumnPropNameInRow="ChalanNo" msprop:Generator_ColumnVarNameInTable="columnChalanNo" type="xs:string" minOccurs="0" />
+              <xs:element name="Date" msprop:Generator_UserColumnName="Date" msprop:Generator_ColumnPropNameInTable="DateColumn" msprop:Generator_ColumnPropNameInRow="Date" msprop:Generator_ColumnVarNameInTable="columnDate" type="xs:dateTime" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

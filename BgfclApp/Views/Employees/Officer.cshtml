@@ -1,0 +1,362 @@
+﻿@{
+    ViewData["Title"] = "Employee";
+}
+@section Styles {
+    <link rel="stylesheet" href="~/css/employees/index.css" />
+}
+<div class="row">
+    <div class="col-12">
+        <div class="card border shadow-sm p-0">
+            <div class="card-body">
+                <div class="d-flex justify-content-between align-items-center flex-wrap gap-2">
+                    <!-- Left Side Content -->
+                    <div class="d-flex align-items-center flex-wrap gap-2">
+                        <h4 class="mb-0 mr-1">Permanent Employee</h4>
+                        <h4 class="mb-0 mr-1">Filter By :</h4>
+
+                        <select id="school_filter" class="form-control w-auto mr-1">
+                            <option value="">All Schools</option>
+                        </select>
+
+                        <select id="role_filter" class="form-control w-auto mr-1">
+                            <option value="">All Roles</option>
+                        </select>
+
+                        <select id="department_filter" class="form-control w-auto mr-1">
+                            <option value="">All Departments</option>
+                        </select>
+
+                        <select id="designation_filter" class="form-control w-auto mr-4">
+                            <option value="">All Designations</option>
+                        </select>
+                    </div>
+
+                    <!-- Right Side Content -->
+                    <div>
+                        <button type="button" class="btn btn-info" id="add_button">Add Employee</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="col-12">
+            <div class="card">
+                <div class="card-body table-responsive">
+                    <table class="table table-hover col-12" id="employee_list_table">
+                        <thead>
+                            <tr>
+                                <th>Sl.</th>
+                                <th>Emp Code</th>
+                                <th>Employee Name</th>
+                                <th>Designation</th>
+                                <th>Department</th>
+                                <th>Status</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody></tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Modal for Adding Employee -->
+<div class="modal fade" id="addEmployeeModal" tabindex="-1" role="dialog" aria-labelledby="addEmployeeModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header border border-info">
+                <h5 class="modal-title" id="addEmployeeModalLabel">Add New Employee</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+
+            <div class="modal-body">
+                <form id="employeeform">
+                    <div class="stepwizard">
+                        <div class="stepwizard-row setup-panel">
+                            <div class="stepwizard-step col-xs-3">
+                                <a href="#step-1" type="button" class="btn btn-success btn-circle">1</a>
+                                <p><small>Personal Information</small></p>
+                            </div>
+                            <div class="stepwizard-step col-xs-3">
+                                <a href="#step-2" type="button" class="btn btn-default btn-circle" disabled="disabled">2</a>
+                                <p><small>Official Information</small></p>
+                            </div>
+                            <div class="stepwizard-step col-xs-3">
+                                <a href="#step-3" type="button" class="btn btn-default btn-circle" disabled="disabled">3</a>
+                                <p><small>Address & Qualification</small></p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Step 1: Personal Information -->
+                    <div class="panel panel-primary setup-content" id="step-1">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">Personal Information</h4>
+                        </div>
+                        <div class="panel-body">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="EmployeeName">Employee Name <span class="text-danger">*</span></label>
+                                        <input type="text" class="form-control" id="EmployeeName" placeholder="Enter Employee Name" maxlength="100" />
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="FatherName">Father's Name</label>
+                                        <input type="text" class="form-control" id="FatherName" placeholder="Enter Father Name" maxlength="100" />
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="MotherName">Mother's Name</label>
+                                        <input type="text" class="form-control" id="MotherName" placeholder="Enter Mother Name" maxlength="100" />
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="DateOfBirth">Date of Birth <span class="text-danger">*</span></label>
+                                        <input type="text" class="form-control datetimepicker" id="DateOfBirth" />
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="GenderId">Gender <span class="text-danger">*</span></label>
+                                        <select class="form-control" id="GenderId"></select>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="MaritalId">Marital Status</label>
+                                        <select class="form-control" id="MaritalId"></select>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="ReligionId">Religion <span class="text-danger">*</span></label>
+                                        <select class="form-control" id="ReligionId"></select>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form-group d-flex justify-content-between mt-3">
+                                <button type="button" class="btn btn-danger" id="cancel_button">Cancel</button>
+                                <button type="button" class="btn btn-success nextBtn">Next</button>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <!-- Step 2: Official Information -->
+                    <div class="panel panel-primary setup-content" id="step-2">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">Official Information</h4>
+                        </div>
+                        <div class="panel-body">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="JobCode">Emp Code <span class="text-danger">*</span></label>
+                                        <input type="text" class="form-control" id="JobCode" placeholder="Enter Emp Code" maxlength="100" />
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="EmployeeTypeId">Employee Type <span class="text-danger">*</span></label>
+                                        <select class="form-control" id="EmployeeTypeId"></select>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="DepartmentId">Department <span class="text-danger">*</span></label>
+                                        <select class="form-control" id="DepartmentId" name="DepartmentId"></select>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="DesignationId">Designation <span class="text-danger">*</span></label>
+                                        <select class="form-control" id="DesignationId"></select>
+                                        <p id="DesignationIdError" class="text-danger error-item"></p>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="JoiningDate">Joining Date <span class="text-danger">*</span></label>
+                                        <input type="text" class="form-control datetimepicker" id="JoiningDate" />
+                                        <p id="JoiningDateError" class="text-danger error-item"></p>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="Nid">NID</label>
+                                        <input type="text" class="form-control" placeholder="Enter NID" id="Nid" maxlength="100" />
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="TinNo">Tin No.</label>
+                                        <input type="text" class="form-control" placeholder="Enter TIN No" id="TinNo" maxlength="100" />
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form-group d-flex justify-content-between mt-3">
+                                <button type="button" class="btn btn-danger" id="cancel_button1">Cancel</button>
+                                <button type="button" class="btn btn-success nextBtn">Next</button>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <!-- Step 3: Address & Qualification -->
+                    <div class="panel panel-primary setup-content" id="step-3">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">Address & Qualification</h4>
+                        </div>
+                        <div class="panel-body">
+                            <div class="row">
+                                <!-- Left Column -->
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="MobileNumber">Mobile Number</label>
+                                        <input type="text" class="form-control" placeholder="Enter Mobile Number" id="MobileNumber" maxlength="100" />
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="PresentAddress">Present Address</label>
+                                        <textarea class="form-control" id="PresentAddress"></textarea>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="PermanentAddress">Permanent Address</label>
+                                        <textarea class="form-control" id="PermanentAddress"></textarea>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="Qualifications">Qualifications</label>
+                                        <textarea class="form-control" id="Qualifications"></textarea>
+                                    </div>
+                                </div>
+
+                                <!-- Right Column -->
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="IdentityMarks">Identity Marks</label>
+                                        <textarea class="form-control" id="IdentityMarks"></textarea>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="Remarks">Remarks</label>
+                                        <textarea class="form-control" id="Remarks"></textarea>
+                                    </div>
+                                    <div class="form-group">
+                                        <input class="form-check-input me-2" type="checkbox" id="TaxStatus">
+                                        <label class="form-check-label me-4" for="TaxStatus">Tax</label>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="me-2" for="ActiveStatus">Status</label>
+                                        <select id="ActiveStatus" class="form-control" style="width: 120px;"></select>
+                                    </div>
+                                    <div class="form-group d-flex align-items-center">
+                                        <label class="ms-4 me-2" for="EmpSl">Sl No</label>
+                                        <input type="text" class="form-control" id="EmpSl" name="EmpSl" style="width: 80px;">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Hidden Fields -->
+                            <input type="hidden" value="" id="EmployeeId" />
+                            <input type="hidden" value="create" id="operation_type" />
+
+                            <!-- Buttons -->
+                            <div class="form-group d-flex justify-content-between mt-3">
+                                <button type="button" class="btn btn-danger" id="cancel_button2">Cancel</button>
+                                <button type="button" class="btn btn-success text-dark pull-right" id="submit_button">Finish</button>
+                            </div>
+                        </div>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal" tabindex="-1" id="view_modal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Employee Info!</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-6"><p>Employee Name: <span id="view_employee_name"></span></p></div>
+                    <div class="col-6"><p>Father Name: <span id="view_father_name"></span></p></div>
+                    <div class="col-6"><p>Mother Name: <span id="view_mother_name"></span></p></div>
+                    <div class="col-6"><p>Date of Birth: <span id="view_date_of_birth"></span></p></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script type="text/javascript" src="~/js/employees/officer.js"></script>
+    <style>
+        /* Ensure the table takes full width */
+        #employee_list_table {
+            width: 100%; /* Set table width to 100% of the container */
+            table-layout: fixed; /* Set a fixed layout to ensure columns fit */
+        }
+
+            #employee_list_table tbody tr {
+                height: 20px; /* Adjust row height */
+                line-height: 20px; /* Match line height to row height */
+            }
+
+            #employee_list_table tbody td {
+                padding: 2px 4px; /* Reduce padding */
+                overflow: hidden; /* Hide overflow content */
+                white-space: nowrap; /* Prevent text wrapping */
+                text-overflow: ellipsis; /* Add ellipsis for overflowing text */
+                font-size: 10px;
+            }
+
+            #employee_list_table thead th {
+                background-color: lightgrey;
+                color: darkolivegreen; /* Header text color */
+                padding: 8px 4px; /* Adjust header padding */
+                font-weight: bold; /* Make header text bold */
+                font-size: 15px; /* Smaller font size */
+            }
+
+                /* Set specific column widths using percentages */
+                #employee_list_table thead th:nth-child(1),
+                #employee_list_table tbody td:nth-child(1) {
+                    width: 10%;
+                }
+                /* Serial Number */
+
+                #employee_list_table thead th:nth-child(2),
+                #employee_list_table tbody td:nth-child(2) {
+                    width: 10%;
+                }
+                /* Job Code */
+
+                #employee_list_table thead th:nth-child(3),
+                #employee_list_table tbody td:nth-child(3) {
+                    width: 24%;
+                }
+                /* Employee Name */
+
+                #employee_list_table thead th:nth-child(4),
+                #employee_list_table tbody td:nth-child(4) {
+                    width: 24%;
+                }
+                /* Designation */
+
+                #employee_list_table thead th:nth-child(5),
+                #employee_list_table tbody td:nth-child(5) {
+                    width: 15%;
+                }
+                /* Department */
+
+                #employee_list_table thead th:nth-child(6),
+                #employee_list_table tbody td:nth-child(6) {
+                    width: 10%;
+                }
+                /* Active */
+
+                #employee_list_table thead th:nth-child(7),
+                #employee_list_table tbody td:nth-child(7) {
+                    width: 7%;
+                }
+        /* Actions */
+    </style>
+}
+
+

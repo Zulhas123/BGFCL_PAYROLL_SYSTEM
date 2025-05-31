@@ -1,0 +1,68 @@
+﻿@{
+    ViewBag.Title = "Salary Settings Config";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@section Styles {
+    <link rel="stylesheet" href="~/css/salarySettingsConfig/salarySettingsConfig.css" />
+}
+@{
+    ViewBag.Title = "Salary Settings Config";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    var fields = new List<string> {
+        "EmployeeTypeId", "EmployeeId", "BasicSalary", "PersonalPay", "ConvenienceAllow", "LikeBasic",
+        "OtherSalary", "HouseRentAllowRate", "HouseRentAllow", "FamilyMedicalAllow", "FuelReturn",
+        "EducationAllow", "FieldAllow", "DormitoryDeduction", "ProvidentFund", "OfficerPF",
+        "FieldRiskAllow", "WashAllow", "ConveyanceAllow", "ChargeAllow", "DAidAllow", "DeputationAllow",
+        "HouseRentReturn", "UtilityReturn", "ClassTeacherAllow", "ArrearAllow", "SpecialBenefits",
+        "RevenueStamp", "CME"
+    };
+}
+
+<div class="container mt-4">
+    <div class="row g-4">
+        <!-- LEFT COLUMN -->
+        <div class="col-md-6">
+            <div class="card shadow h-100 d-flex flex-column">
+                <div class="card-header bg-info text-white">
+                    <h5 class="mb-0">Select Fields</h5>
+                </div>
+                <div class="card-body overflow-auto">
+                    <form id="selectFieldsForm">
+                        <div class="row">
+                            @foreach (var field in fields)
+                            {
+                                <div class="col-6">
+                                    <div class="form-check mb-2">
+                                        <input class="form-check-input select-field-checkbox" type="checkbox" id="chk_@field" value="@field">
+                                        <label class="form-check-label" for="chk_@field">@field</label>
+                                    </div>
+                                </div>
+                            }
+                        </div>
+                        <button type="button" class="btn btn-primary mt-3" onclick="loadSelectedFields()">Next</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <!-- RIGHT COLUMN -->
+        <div class="col-md-6">
+            <div class="card shadow h-100 d-flex flex-column">
+                <div class="card-header bg-success text-white">
+                    <h5 class="mb-0">Configure Selected Fields</h5>
+                </div>
+                <div class="card-body overflow-auto" id="fieldConfigContainer">
+                    <form id="fieldConfigForm">
+                        <!-- Dynamic content will be appended here -->
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script src="~/js/salarySettingsConfig/salarySettingsConfig.js"></script>
+}
+
+

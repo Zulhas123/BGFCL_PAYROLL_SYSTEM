@@ -1,0 +1,173 @@
+﻿/* ================= General Table Styling ================= */
+#basic_salary_setting_off_list_table {
+    font-size: 0.7rem;
+    width: 100%;
+    table-layout: fixed;
+    border-spacing: 0;
+}
+#basic_salary_setting_off_list_table,
+#basic_salary_setting_off_list_table th,
+#basic_salary_setting_off_list_table td {
+    border-width: 1px;
+    border-style: solid;
+}
+#basic_salary_setting_off_list_table th {
+    font-size: 0.75rem;
+    padding: 2px 5px;
+    text-align: center;
+    white-space: nowrap;
+}
+#basic_salary_setting_off_list_table td {
+    font-size: 0.7rem;
+    padding: 1px 3px;
+}
+#basic_salary_setting_off_list_table tr {
+    height: 18px;
+}
+#basic_salary_setting_off_list_table .btn {
+    font-size: 0.65rem;
+    padding: 2px 5px;
+    margin: 0 1px;
+}
+
+/* ================= DataTables Dropdown Styling ================= */
+div.dataTables_wrapper div.dataTables_length select {
+    width: 180px !important;
+    height: 30px !important;
+    font-size: 13px !important;
+    font-weight: 500 !important;
+    padding: 4px 10px !important;
+    border-radius: 4px !important;
+    border: 1px solid #aaa !important;
+    background-color: #fff !important;
+    appearance: none !important;
+    -webkit-appearance: none !important;
+    -moz-appearance: none !important;
+    background-image: none !important;
+    
+}
+div.dataTables_length label {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin: 2px !important;
+}
+div.dt-container div.dt-length select {
+    margin: 2px !important;
+}
+div.dataTables_wrapper div.dataTables_length select::-ms-expand {
+    display: none;
+}
+/* ============ Form Controls ============ */
+.form-control,
+.form-group input,
+.form-group select {
+    height: 28px !important;
+    font-size: 12px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+}
+/* ============ Select2 Styling ============ */
+/* Container of the select2 input */
+.select2-container .select2-selection--single {
+    height: 28px !important;
+    font-size: 12px !important;
+    padding: 2px 6px !important;
+    line-height: 1.6 !important;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    display: flex;
+    align-items: center;
+}
+
+/* Text inside Select2 input */
+.select2-container--default .select2-selection--single .select2-selection__rendered {
+    line-height: 24px !important;
+    font-size: 12px !important;
+    padding-left: 6px !important;
+}
+
+/* Dropdown arrow icon */
+.select2-container--default .select2-selection--single .select2-selection__arrow {
+    height: 28px !important;
+    top: 0 !important;
+    right: 6px;
+    width: 28px;
+}
+/* Select2 width control */
+.select2-container {
+    width: 100% !important;
+}
+
+buttons: [ {
+    extend: 'copy', className: 'btn btn-outline-secondary btn-sm me-1'
+}
+]
+/* ================= Form Controls ================= */
+.form-control,
+.form-group input,
+.form-group select {
+    height: 28px;
+    font-size: 12px;
+    padding: 1px 2px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+}
+
+    .form-control.select,
+    .select {
+        font-size: 12px !important;
+        height: 28px !important;
+        padding: 2px 5px !important;
+        line-height: normal;
+    }
+
+.form-text {
+    font-size: 10px;
+}
+/* Select Dropdown */
+.form-select {
+    height: 10px;
+    font-size: 10px;
+}
+#pay_mode {
+    font-size: 0.5rem;
+    padding: 1px 1px;
+    height: 10px;
+}
+/* ================= Buttons ================= */
+.btn {
+    font-size: 0.75rem;
+    padding: 5px 10px;
+    height: 32px;
+}
+
+/* ================= Labels and Form Layout ================= */
+.form-group label {
+    font-size: 0.75rem;
+    margin-bottom: 5px;
+}
+
+/* ================= Card Body Padding ================= */
+.card-body {
+    padding: 15px;
+}
+
+/* ================= Responsive Adjustments ================= */
+@media (max-width: 768px) {
+    #basic_salary_setting_off_list_table {
+        font-size: 0.65rem;
+    }
+
+        #basic_salary_setting_off_list_table th,
+        #basic_salary_setting_off_list_table td {
+            padding: 2px 4px;
+        }
+
+        #basic_salary_setting_off_list_table .btn {
+            font-size: 0.6rem;
+        }
+}
+.form-control-sm.form-control {
+    border-radius: 6px;
+}

@@ -1,0 +1,137 @@
+﻿@{
+    ViewData["Title"] = "Journal Posting";
+}
+
+<div class="row">
+    <div class="col-4">
+        <div class="card">
+            <div class="card-body">
+                <form>
+                    <div class="form-group">
+                        <label class="control-label" for="EmployeeTypeId">Employee Type <span class="text-danger" title="required">*</span></label>
+                        <select class="form-control" id="EmployeeTypeId"></select>
+                        @* <p id="EmployeeTypeIdError" class="text-danger error-item"></p> *@
+                    </div>
+                    <div class="form-group">
+                        <label for="month">Month</label>
+                        <select class="form-control" id="months"></select>
+                    </div>
+                    <div class="form-group">
+                        <label for="year">Year</label>
+                        <select class="form-control" id="years"></select>
+                    </div>
+                    <button type="button" class="btn btn-primary mb-2" id="process_button">process</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+@section Scripts {
+    <script type="text/javascript">
+
+        $(document).ready(function () {
+
+            loadInitialData();
+            $('#process_button').on('click', function () {
+                let _monthId = getMonthId();
+                let _employeeTypeId = $('#EmployeeTypeId').val();
+
+                $.ajax({
+                    url: `/api/SalarySettings/JournalPosting?monthId=${_monthId}&employeeTypeId=${_employeeTypeId}`,
+                    type: 'POST',
+                    async: false,
+                    dataType: 'json',
+                    success: function (responseObject) {
+                        if (responseObject.statusCode == 201) {
+                            showToast(title = 'Success', message = responseObject.responseMessage, toastrType = 'success');
+                        }
+                        if (responseObject.statusCode == 500) {
+                            showToast(title = 'Error', message = responseObject.responseMessage, toastrType = 'error');
+                        }
+                    },
+                    error: function (responseObject) {
+                    }
+                });
+            });
+
+        });
+
+        function getMonthId() {
+            let month = $('#months').val();
+            let year = $('#years').val();
+
+            return (parseInt(year) * 100) + parseInt(month);
+        }
+
+        function loadInitialData() {
+
+            $.ajax({
+                url: '/api/Others/GetMonths',
+                type: 'Get',
+                async: false,
+                dataType: 'json',
+                success: function (responseObject) {
+                    let months = responseObject.data;
+                    let currentMonth = new Date().getMonth() + 1;
+                    $('#months').empty();
+                    $.each(months, function (key, item) {
+                        if (currentMonth == parseInt(item.monthId)) {
+                            $('#months').append(`<option value=${item.monthId} selected>${item.monthName}</option>`);
+                        }
+                        else {
+                            $('#months').append(`<option value=${item.monthId}>${item.monthName}</option>`);
+                        }
+
+                    });
+                },
+                error: function (responseObject) {
+                }
+            });
+
+            $.ajax({
+                url: '/api/Others/GetYears',
+                type: 'Get',
+                async: false,
+                dataType: 'json',
+                success: function (responseObject) {
+                    let years = responseObject.data;
+                    let currentYear = new Date().getFullYear();
+                    $('#years').empty();
+                    $.each(years, function (key, item) {
+                        if (item == currentYear) {
+                            $('#years').append(`<option value=${item} selected>${item}</option>`);
+                        }
+                        else {
+                            $('#years').append(`<option value=${item}>${item}</option>`);
+                        }
+                    });
+                },
+                error: function (responseObject) {
+                }
+            });
+
+            $.ajax({
+                url: '/api/Employees/GetEmployeeTypes',
+                type: 'Get',
+                async: false,
+                dataType: 'json',
+                success: function (responseObject) {
+                    employeeTypes = responseObject.data;
+                    $('#EmployeeTypeId').empty();
+                    $.each(employeeTypes, function (key, item) {
+                        if(item.id==1 || item.id==2){
+                            $('#EmployeeTypeId').append(`<option value=${item.id}>${item.employeeTypeName}</option>`);
+                        }
+                       
+                    });
+                },
+                error: function (responseObject) {
+                }
+            });
+
+        }
+
+    </script>
+}

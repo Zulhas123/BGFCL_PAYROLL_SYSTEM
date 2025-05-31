@@ -1,0 +1,9 @@
+E:\JabaIt\Payroll_System\ReportDesigner\bin\Debug\ReportDesigner.exe.config
+E:\JabaIt\Payroll_System\ReportDesigner\bin\Debug\ReportDesigner.exe
+E:\JabaIt\Payroll_System\ReportDesigner\bin\Debug\ReportDesigner.pdb
+E:\JabaIt\Payroll_System\ReportDesigner\obj\Debug\ReportDesigner.csproj.AssemblyReference.cache
+E:\JabaIt\Payroll_System\ReportDesigner\obj\Debug\ReportDesigner.Properties.Resources.resources
+E:\JabaIt\Payroll_System\ReportDesigner\obj\Debug\ReportDesigner.csproj.GenerateResource.cache
+E:\JabaIt\Payroll_System\ReportDesigner\obj\Debug\ReportDesigner.csproj.CoreCompileInputs.cache
+E:\JabaIt\Payroll_System\ReportDesigner\obj\Debug\ReportDesigner.exe
+E:\JabaIt\Payroll_System\ReportDesigner\obj\Debug\ReportDesigner.pdb

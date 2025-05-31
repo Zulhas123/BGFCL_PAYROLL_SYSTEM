@@ -1,0 +1,146 @@
+﻿@* @{
+    ViewData["Title"] = "Location";
+}
+@section Styles {
+    <link rel="stylesheet" href="~/css/location/index.css" />
+}
+
+<div class="row">
+    <div class="col-4">
+        <div class="card">
+            <div class="card-body">
+                <form id="locationForm"> 
+                    <div class="form-group">
+                        <input type="hidden" value="" id="LocationId" />
+                        <input type="hidden" value="create" id="operation_type" />
+                        <label for="LocationName">Location Name <span class="text-danger" title="required">*</span></label>
+                        <input type="text" class="form-control" id="LocationName">
+                        <p id="LocationNameError" class="text-danger error-item"></p>
+                    </div>
+                    <div class="form-group">
+                        <input type="checkbox" class="form-check-input" id="IsActive" name="IsActive">
+                        <label for="IsActive">Is Active</label>
+                    </div>
+                    <!-- Form Group for Buttons -->
+                    <div class="form-group d-flex justify-content-between">
+                        <button type="button" class="btn btn-success text-dark" id="submit_button">Create</button>
+                        <button type="button" class="btn btn-danger" id="cancel_button">Cancel</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="col-8">
+        <div class="card">
+            <div class="card-body">
+                <table class="table table-hover col-12 table-bordered" id="location_list_table">
+                    <thead>
+                        <tr>
+                            <th>Sl.</th>
+                            <th>Location Name</th>
+                            <th>Status</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+@section Scripts {
+    <script type="text/javascript" src="~/js/location/index.js"></script>
+} *@
+
+@{
+    ViewData["Title"] = "Location";
+}
+@section Styles {
+    <link rel="stylesheet" href="~/css/location/index.css" />
+}
+
+<div class="row">
+    <div class="col-12">
+        <div class="row mb-3">
+            <div class="col-12">
+                <div class="d-flex justify-content-between align-items-center">
+                    @* <div class="d-flex align-items-center flex-grow-1">
+                        <select id="filter_select" class="form-control w-50">
+                            <option value="">Filter by Location</option>
+                        </select>
+                    </div> *@
+
+                    <div class="d-flex flex-grow-1 justify-content-center">
+                        @*  <h4 class="mb-0">List of Locations</h4> *@
+                    </div>
+                    <div class="d-flex">
+                        <select id="page_length_select" class="form-control w-auto me-2">
+                            <option value="100">100 rows</option>
+                            <option value="120">120 rows</option>
+                            <option value="130">130 rows</option>
+                            <option value="150">150 rows</option>
+                            <option value="200">200 rows</option>
+                        </select>
+                        <button type="button" class="btn btn-info" id="add_button">Add Location</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-body">
+                <table class="table table-hover table-bordered col-12" id="location_list_table">
+                    <thead>
+                        <tr>
+                            <th>Sl.</th>
+                            <th>Location Name</th>
+                            <th>Status</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Location Form Modal -->
+<div class="modal fade" id="location_modal" tabindex="-1" aria-labelledby="locationModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="locationModalLabel">Add Location</h5>
+                <button type="button" class="btn-close ms-auto larger-close-button" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form id="locationForm">
+                    <input type="hidden" value="" id="LocationId" />
+                    <input type="hidden" value="create" id="operation_type" />
+                    <div class="form-group">
+                        <label for="LocationName">Location Name <span class="text-danger" title="required">*</span></label>
+                        <input type="text" class="form-control" id="LocationName">
+                        <p id="LocationNameError" class="text-danger error-item"></p>
+                    </div>
+                    <div class="form-group">
+                        <div class="d-flex align-items-center">
+                            <input type="checkbox" class="form-check-input" id="IsActive" name="IsActive" style="margin-left: .5rem; margin-right: .5rem;">
+                            <label for="IsActive" class="mb-0" style="margin-left: 2rem;">Is Active</label>
+                        </div>
+                    </div>
+
+                    <div class="form-group d-flex justify-content-between">
+                        <button type="button" class="btn btn-danger" id="cancel_button">Cancel</button>
+                        <button type="button" class="btn btn-success text-dark" id="submit_button">Create</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script type="text/javascript" src="~/js/location/index.js"></script>
+}

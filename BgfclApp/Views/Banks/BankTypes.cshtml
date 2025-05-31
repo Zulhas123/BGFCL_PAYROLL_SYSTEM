@@ -1,0 +1,88 @@
+﻿@{
+    ViewData["Title"] = "Banks";
+}
+@section Styles {
+    <link rel="stylesheet" href="~/css/banks/banktype.css" />
+}
+<div class="row">
+    <div class="col-12">
+        <div class="card">
+            <div class="card-body">
+                <!-- Top right aligned controls -->
+                <div class="card border shadow-sm p-1">
+                    <div class="d-flex justify-content-between align-items-center gap-2">
+                        <h4 class="mb-0 mr-1">Bank Type Management</h4>
+                        <div class="d-flex">
+                            @* <select id="page_length_select" class="form-control w-auto me-3 mr-1">
+                                <option value="10">10 rows</option>
+                                <option value="20">20 rows</option>
+                                <option value="30">30 rows</option>
+                                <option value="40">40 rows</option>
+                                <option value="50">50 rows</option>
+                            </select> *@
+                            <button type="button" class="btn btn-info" id="add_button"><i class="fas fa-plus me-1"></i> Add Bank Type</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- DataTable -->
+                <table class="table table-hover table-bordered" id="bank_type_list_table">
+                    <thead>
+                        <tr>
+                            <th>Sl.</th>
+                            <th>Bank Type</th>
+                            <th>Status</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Bank Form Modal -->
+
+<div class="modal fade" id="bank_type_modal" tabindex="-1" aria-labelledby="banktypeModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header border border-info">
+                <h5 class="modal-title" id="banktypeModalLabel">Add Bank Types</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form id="banktypeForm">
+                    <input type="hidden" value="" id="BankTypeId" />
+                    <input type="hidden" value="create" id="operation_type" />
+                    <div class="form-group">
+                        <label for="BankTypeName">Bank Type <span class="text-danger" title="required">*</span></label>
+                        <input type="text" class="form-control" id="BankTypeName">
+                        <p id="BankTypeError" class="text-danger error-item"></p>
+                    </div>
+                    <div class="form-group">
+                        <label for="Description">Description</label>
+                        <textarea class="form-control" id="Description" rows="3"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <div class="d-flex align-items-center">
+                            <input type="checkbox" class="form-check-input" id="IsActive" name="IsActive" style="margin-left: .5rem; margin-right: .5rem;">
+                            <label for="IsActive" class="mb-0" style="margin-left: 2rem;">Is Active</label>
+                        </div>
+                    </div>
+                    <!-- Buttons -->
+                    <div class="d-flex justify-content-between">
+                        <button type="button" class="btn btn-outline-danger px-3" id="cancel_button">Cancel</button>
+                        <button type="button" class="btn btn-success px-3 fw-bold" id="submit_button">Create</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script type="text/javascript" src="~/js/banks/banktype.js"></script>
+}
+
+

@@ -1,0 +1,55 @@
+﻿@{
+    ViewData["Title"] = "Salary Report";
+}
+
+<div class="container">
+    <h2 class="text-center">Salary Report</h2>
+
+    <form asp-action="SalaryReport" method="post" class="form-inline justify-content-center">
+        <div class="form-group mx-2">
+            <label for="Month" class="mr-2">Month</label>
+            <select id="Month" name="month" class="form-control" required>
+                <option value="">Select Month</option>
+                @foreach (var item in ViewBag.Months as List<SelectListItem>)
+                {
+                    <option value="@item.Value">@item.Text</option>
+                }
+            </select>
+        </div>
+
+        <div class="form-group mx-2">
+            <label for="Year" class="mr-2">Year</label>
+            <select id="Year" name="year" class="form-control" required>
+                <option value="">Select Year</option>
+                @foreach (var item in ViewBag.Years as List<SelectListItem>)
+                {
+                    <option value="@item.Value">@item.Text</option>
+                }
+            </select>
+        </div>
+
+        <div class="form-group mx-2">
+            <label for="EmpType" class="mr-2">Employee Type</label>
+            <select id="EmpType" name="empType" class="form-control" required>
+                <option value="">Select Employee Type</option>
+                @foreach (var item in ViewBag.EmployeeTypes as List<SelectListItem>)
+                {
+                    <option value="@item.Value">@item.Text</option>
+                }
+            </select>
+        </div>
+
+        <div class="form-group mx-2">
+            <label for="Department" class="mr-2">Department</label>
+            <select id="Department" name="department" class="form-control" required>
+                <option value="">Select Department</option>
+                @foreach (var item in ViewBag.Departments as List<SelectListItem>)
+                {
+                    <option value="@item.Value">@item.Text</option>
+                }
+            </select>
+        </div>
+
+        <button type="submit" class="btn btn-primary mx-2">Filter</button>
+    </form>
+</div>

@@ -1,0 +1,196 @@
+﻿@{
+    ViewData["Title"] = "Basic Salary Settings Officer";
+}
+@section Styles {
+    <link rel="stylesheet" href="~/css/salarysettings/basicsalarysettingsofficer.css" />
+}
+
+
+
+
+<div class="row">
+    <!-- Left Column -->
+    <div class="col-4">
+        <div class="card border">
+            <div class="card-body">
+                <!-- Employee Information Card -->
+                <div class="card border">
+                    <div class="card-body">
+                        <h5 class="card-title border-bottom">Employee Information</h5>
+                        <div class="form-row">
+                            <div class="form-group col-6">
+                                <input type="hidden" value="" id="job_code_hidden" />
+                                <input type="hidden" value="create" id="operation_type" />
+                                <label for="job_code">Job Code</label>
+                                <div class="job_code_flag">
+                                    <select class="form-control select job_code_flag" id="job_code"></select>
+                                    <small id="job_code_error" class="form-text text-danger job_code_flag"></small>
+                                </div>
+                                <div class="job_code_show_flag" style="display:none">
+                                    <input type="text" class="form-control job_code_show_flag" id="job_code_show" readonly>
+                                </div>
+                            </div>
+                            <div class="form-group col-6">
+                                <label for="empoyee_name">Employee Name</label>
+                                <input type="text" class="form-control" id="empoyee_name" readonly>
+                            </div>
+                            <div class="form-group col-6">
+                                <label for="designation">Designation</label>
+                                <input type="text" class="form-control" id="designation" readonly>
+                            </div>
+                            <div class="form-group col-6">
+                                <label for="department">Department</label>
+                                <input type="text" class="form-control" id="department" readonly>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Payment Information Card -->
+                <div class="card border">
+                    <div class="card-body">
+                        <h5 class="card-title border-bottom">Payment Information</h5>
+                        <div class="form-row">
+                            <div class="form-group col-6">
+                                <label for="pay_mode">Pay Mode</label>
+                                <select class="form-control select" id="pay_mode"></select>
+                                <small id="pay_mode_error" class="form-text text-danger"></small>
+                            </div>
+                            <div class="form-group col-6">
+                                <label for="bank">Bank</label>
+                                <select class="form-control select" id="bank"></select>
+                                <small id="bank_error" class="form-text text-danger"></small>
+                            </div>
+                            <div class="form-group col-6">
+                                <label for="branch">Branch</label>
+                                <select class="form-control select" id="branch"></select>
+                                <small id="branch_error" class="form-text text-danger"></small>
+                            </div>
+                            <div class="form-group col-6">
+                                <label for="account_number">Account Number</label>
+                                <input type="text" class="form-control" id="account_number">
+                                <small id="account_number_error" class="form-text text-danger"></small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Salary Information Card -->
+                <div class="card border">
+                    <div class="card-body">
+                        <h5 class="card-title border-bottom">Salary Information</h5>
+                        <div class="form-row">
+                            <div class="form-group col-6">
+                                <label for="pay_scale">Pay Scale</label>
+                                <select class="form-control select job_code_flag" id="pay_scale"></select>
+                                <small id="pay_scale_error" class="form-text text-danger job_code_flag"></small>
+                            </div>
+                            <div class="form-group col-6">
+                                <label for="basic_salary">Basic Salary</label>
+                                <select class="form-control select job_code_flag" id="basic_salary"></select>
+                            </div>
+                            <div class="form-group col-6">
+                                <label for="h_allow">H. Rent Allow</label>
+                                <input type="number" class="form-control" id="h_allow">
+                            </div>
+                            <div class="form-group col-6">
+                                <label for="medical_allow">Medical Allow</label>
+                                <input type="number" class="form-control" id="medical_allow">
+                            </div>
+                            <div class="form-group col-6">
+                                <label for="electricity_allow">Electricity Allow</label>
+                                <input type="number" class="form-control" id="electricity_allow">
+                            </div>
+                            <div class="form-group col-6">
+                                <label for="gas_allow">Gas Allow</label>
+                                <input type="number" class="form-control" id="gas_allow">
+                            </div>
+                            <div class="form-group col-6">
+                                <label for="conveyance_allow">Conveyance Allow</label>
+                                <input type="number" class="form-control" id="conveyance_allow">
+                            </div>
+                            <div class="form-group col-6">
+                                <label for="education_allow">Education Allow</label>
+                                <input type="number" class="form-control" id="education_allow">
+                            </div>
+                            <div class="form-group col-6">
+                                <label for="shifting_allow">Shifting Allow</label>
+                                <input type="number" class="form-control" id="shifting_allow">
+                            </div>
+                            <div class="form-group col-6">
+                                <label for="mobile_allow">Mobile Bill</label>
+                                <input type="number" class="form-control" id="mobile_allow">
+                            </div>
+                            <div class="form-group col-6">
+                                <label for="class_teacher_allow">Class Teacher Allow</label>
+                                <input type="number" class="form-control" id="class_teacher_allow">
+                            </div>
+                            <div class="form-group col-6">
+                                <label for="arrear_allow">Arrear</label>
+                                <input type="number" class="form-control" id="arrear_allow">
+                            </div>
+                            <div class="form-group col-6">
+                                <label for="special_benefits">S.Benefits (5% of Basic)</label>
+                                <input type="number" class="form-control" id="special_benefits">
+                            </div>
+                            <div class="form-group col-6">
+                                <label for="other_pay">Other Pay</label>
+                                <input type="number" class="form-control" id="other_pay">
+                            </div>
+                            <div class="form-group col-6">
+                                <label for="provident_fund">P.Fund (10% of Basic)</label>
+                                <input type="number" class="form-control" id="provident_fund">
+                            </div>
+                            <div class="form-group col-6">
+                                <label for="revenue_stamp">Revenue Stamp (10/-)</label>
+                                <input type="number" class="form-control" id="revenue_stamp">
+                            </div>
+                            <div class="form-group col-6">
+                                <label for="other_deduction">Other Deduction</label>
+                                <input type="number" class="form-control" id="other_deduction">
+                            </div>
+                        </div>
+                        <div class="form-group d-flex justify-content-between">
+                            <button type="button" class="btn btn-danger btn-sm cancel_button_show ml-2" id="cancel_button" style="display:none">Cancel</button>
+                            <button type="button" class="btn btn-success btn-sm text-dark ml-auto" id="submit_button">Submit</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Right Column -->
+    <div class="col-8">
+       @*  <div class="d-flex justify-content-end align-items-center mb-2">
+            <label class="me-">Show: </label> <!-- Increase margin-end -->
+            <select id="page_length_select" class="form-control form-control-sm w-auto">
+                <option value="10">10 rows</option>
+                <option value="20">20 rows</option>
+                <option value="30">30 rows</option>
+                <option value="50">50 rows</option>
+                <option value="100">100 rows</option>
+            </select>
+        </div> *@
+
+
+        <div class="card">
+            <div class="card-body table-responsive">
+                <table class="table table-hover table-bordered col-12" id="basic_salary_setting_off_list_table">
+                    <thead>
+                        <tr>
+                            <th>Action</th>
+                            <th>JobCode</th>
+                            <th>Name</th>
+                            <th>Designation</th>
+                            <th>Department</th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script type="text/javascript" src="~/js/salarysettings/basicsalarysettingsofficer.js"></script>
+}

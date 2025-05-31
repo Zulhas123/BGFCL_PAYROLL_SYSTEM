@@ -1,0 +1,132 @@
+﻿@{
+    ViewData["Title"] = "Basic Salary Settings Daily Worker";
+}
+@section Styles {
+    <link rel="stylesheet" href="~/css/salarysettings/basicsalarysettingsworker.css" />
+}
+
+
+<div class="row">
+    <!-- Left Column -->
+    <div class="col-4">
+        <div class="card border">
+            <div class="card-body">
+                <!-- Employee Information Card -->
+                <div class="card border">
+                    <div class="card-body">
+                        <h5 class="card-title border-bottom">Employee Information</h5>
+                        <div class="form-row">
+                            <div class="form-group col-6">
+                                <input type="hidden" value="" id="job_code_hidden" />
+                                <input type="hidden" value="create" id="operation_type" />
+                                <label for="job_code">Job Code</label>
+                                <div class="job_code_flag">
+                                    <select class="form-control select job_code_flag" id="job_code"></select>
+                                    <small id="job_code_error" class="form-text text-danger job_code_flag"></small>
+                                </div>
+                                <div class="job_code_show_flag" style="display:none">
+                                    <input type="text" class="form-control job_code_show_flag" id="job_code_show" readonly>
+                                </div>
+                            </div>
+                            <div class="form-group col-6">
+                                <label for="empoyee_name">Employee Name</label>
+                                <input type="text" class="form-control" id="empoyee_name" readonly>
+                            </div>
+                            <div class="form-group col-6">
+                                <label for="designation">Designation</label>
+                                <input type="text" class="form-control" id="designation" readonly>
+                            </div>
+                            <div class="form-group col-6">
+                                <label for="department">Department</label>
+                                <input type="text" class="form-control" id="department" readonly>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Payment Information Card -->
+                <div class="card border">
+                    <div class="card-body">
+                        <h5 class="card-title border-bottom">Payment Information</h5>
+                        <div class="form-row">
+                            <div class="form-group col-6">
+                                <label for="pay_mode">Pay Mode</label>
+                                <select class="form-control select" id="pay_mode"></select>
+                                <small id="pay_mode_error" class="form-text text-danger"></small>
+                            </div>
+                            <div class="form-group col-6">
+                                <label for="bank">Bank</label>
+                                <select class="form-control select" id="bank"></select>
+                                <small id="bank_error" class="form-text text-danger"></small>
+                            </div>
+                            <div class="form-group col-6">
+                                <label for="branch">Branch</label>
+                                <select class="form-control select" id="branch"></select>
+                                <small id="branch_error" class="form-text text-danger"></small>
+                            </div>
+                            <div class="form-group col-6">
+                                <label for="account_number">Account Number</label>
+                                <input type="text" class="form-control" id="account_number">
+                                <small id="account_number_error" class="form-text text-danger"></small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Salary Information Card -->
+                <div class="card border">
+                    <div class="card-body">
+                        <h5 class="card-title border-bottom">Salary Information</h5>
+                        <div class="form-row">
+                            <div class="form-group col-6">
+                                <label for="per_attendence">Per Attendence</label>
+                                <input type="number" class="form-control" id="per_attendence">
+                            </div>
+                            <div class="form-group col-6">
+                                <label for="festival_bonus">Festival Bonus</label>
+                                <input type="number" class="form-control" id="festival_bonus">
+                            </div>
+                            <div class="form-group col-6 d-flex align-items-center">
+                                <input type="checkbox" class="form-check-input me-2" id="is_daily_worker" name="is_daily_worker" checked>
+                                <label for="is_daily_worker" class="form-check-label mb-0">Is Daily Worker</label>
+                            </div>
+                            <div class="form-group col-6">
+                                <label for="revenue_stamp">Revenue Stamp</label>
+                                <input type="number" class="form-control" id="revenue_stamp">
+                            </div>
+                        </div>
+                        <div class="form-group d-flex justify-content-between">
+                            <button type="button" class="btn btn-danger btn-sm cancel_button_show ml-2" id="cancel_button" style="display:none">Cancel</button>
+                            <button type="button" class="btn btn-success btn-sm text-dark ml-auto" id="submit_button">Submit</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div class="col-8">
+        <div class="card">
+            <div class="card-body table-responsive">
+                <table class="table table-hover table-bordered col-12" id="basic_salary_setting_worker_list_table">
+                    <thead>
+                        <tr>
+                            <th>Action</th>
+                            <th>JobCode</th>
+                            <th>Name</th>
+                            <th>Designation</th>
+                            <th>Department</th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+
+
+
+@section Scripts {
+    <script type="text/javascript" src="~/js/salarysettings/basicsalarysettingdailyworker.js"></script>
+}

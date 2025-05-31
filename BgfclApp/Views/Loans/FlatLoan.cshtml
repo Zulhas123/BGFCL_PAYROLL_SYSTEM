@@ -1,0 +1,197 @@
+﻿@{
+    ViewData["Title"] = "Flat Loan";
+}
+@* @section Styles {
+    <link rel="stylesheet" href="~/css/salarysettings/basicsalarysettingsofficer.css" />
+} *@
+<!-- Page Header -->
+<div class="page-header">
+    <div class="row align-items-center">
+        <div class="col">
+            <h3 class="page-title">Flat Loan</h3>
+            <ul class="breadcrumb">
+                <li class="breadcrumb-item">Loans</li>
+                <li class="breadcrumb-item active">Flat Loan</li>
+            </ul>
+        </div>
+    </div>
+</div>
+<!-- /Page Header -->
+<div class="row">
+    <div class="col-6">
+        <div class="card">
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-12">
+                        <h5 class="card-title">Loan Information</h5>
+                        <div class="form-row">
+                            <div class="form-group col-6">
+                                <label for="EmployeeTypeId">Employee Type</label>
+                                <select class="form-control select" id="EmployeeTypeId"></select>
+                                <p id="EmployeeTypeIdError" class="text-danger error-item"></p>
+                            </div>
+                            <div class="form-group col-6">
+                                <label for="JobCode">Job Code</label>
+                                <select class="form-control select" id="JobCode"></select>
+                                <p id="JobCodeError" class="text-danger error-item"></p>
+                            </div>
+                            <div class="form-group col-6">
+                                <label for="TotalLoanAmount">Total Loan Amount</label>
+                                <input type="number" class="form-control" id="TotalLoanAmount">
+                                <p id="TotalLoanAmountError" class="text-danger error-item"></p>
+                            </div>
+                            <div class="form-group col-6">
+                                <label for="LoanTakenDateString">Loan Taken Date</label>
+                                <input type="text" class="form-control datetimepicker" id="LoanTakenDateString">
+                                <p id="LoanTakenDateStringError" class="text-danger error-item"></p>
+                            </div>
+                            <div class="form-group col-6">
+                                <label for="InterestRate">Interest Rate (%)</label>
+                                <input type="number" class="form-control" id="InterestRate">
+                                <p id="InterestRateError" class="text-danger error-item"></p>
+                            </div>
+                            <div class="form-group col-6">
+                                <label for="InstallmentNo">Installment No</label>
+                                <input type="number" class="form-control" id="InstallmentNo">
+                                <p id="InstallmentNoError" class="text-danger error-item"></p>
+                            </div>
+                            <div class="form-group col-6">
+                                <label for="PrincipalInstallmentAmount">Principal Installment Amount</label>
+                                <input type="number" class="form-control" id="PrincipalInstallmentAmount">
+                                <p id="PrincipalInstallmentAmountError" class="text-danger error-item"></p>
+                            </div>
+                            <div class="form-group col-6">
+                                <label for="InterestInstallmentNo">Interest Installment No</label>
+                                <input type="number" class="form-control" id="InterestInstallmentNo">
+                            </div>
+                            <div class="form-group col-6">
+                                <label for="InterestInstallmentAmount">Interest Installment Amount</label>
+                                <input type="number" class="form-control" id="InterestInstallmentAmount">
+                            </div>
+
+                        </div>
+                        <div class="row">
+                            <div class="col-4">
+                                <button type="button" class="btn btn-primary btn-sm" id="submit_button">submit</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-12">
+        <div class="card">
+            <div class="card-body table-responsive">
+                <table class="table table-hover table-bordered col-12" id="flat_list_table">
+                    <thead>
+                        <tr>
+                            <th>Sl.</th>
+                            <th>Action</th>
+                            <th>JobCode</th>
+                            <th>Name</th>
+                            <th>Loan Taken Date</th>
+                            <th>Interest Rate (%)</th>
+                            <th>Total Loan Amount</th>
+                            <th>Remaining Amount</th>
+                            <th>Installment No.</th>
+                            <th>Remaining Installment No.</th>
+                            <th>Principal Installment Amount</th>
+                            <th>Total Interest</th>
+                            <th>Remaining Interest</th>
+                            <th>Interest Installment No.</th>
+                            <th>Remaining Interest Installment No.</th>
+                            <th>Interest Installment Amount</th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal" tabindex="-1" id="edit_cl_modal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Edit Loan</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-12">
+                        <h5 class="card-title">Edit Computer Loan</h5>
+                        <div class="form-row">
+                            <div class="form-group col-6">
+                                <label for="JobCode">Job Code</label>
+                                <input type="hidden" class="form-control" id="Id_M">
+                                <input type="text" class="form-control" id="JobCode_M" readonly>
+                            </div>
+                            <div class="form-group col-6">
+                                <label for="TotalLoanAmount_M">Total Loan Amount</label>
+                                <input type="number" class="form-control" id="TotalLoanAmount_M" readonly>
+                                <p id="TotalLoanAmountError_M" class="text-danger error-item"></p>
+                            </div>
+                            <div class="form-group col-6">
+                                <label for="TotalLoanAmount_M">Total Loan Amount</label>
+                                <input type="number" class="form-control" id="RemainingLoanAmount_M" readonly>
+                                <p id="RemainingLoanAmountError_M" class="text-danger error-item"></p>
+                            </div>
+                            <div class="form-group col-6">
+                                <label for="LoanTakenDateString_M">Loan Taken Date</label>
+                                <input type="text" class="form-control datetimepicker" id="LoanTakenDateString_M" readonly>
+                                <p id="LoanTakenDateStringError_M" class="text-danger error-item"></p>
+                            </div>
+                            <div class="form-group col-6">
+                                <label for="InterestRate_M">Interest Rate</label>
+                                <input type="number" class="form-control" id="InterestRate_M" readonly>
+                                <p id="InterestRate_M" class="text-danger error-item"></p>
+                            </div>
+                            <div class="form-group col-6">
+                                <label for="InstallmentNo_M">Installment No</label>
+                                <input type="number" class="form-control" id="InstallmentNo_M" readonly>
+                                <p id="InstallmentNoError_M" class="text-danger error-item"></p>
+                            </div>
+                            <div class="form-group col-6">
+                                <label for="RemainingInstallmentNo_M">Remaining Installment No</label>
+                                <input type="number" class="form-control" id="RemainingInstallmentNo_M" readonly>
+                                <p id="RemainingInstallmentNoError_M" class="text-danger error-item"></p>
+                            </div>
+                            <div class="form-group col-6">
+                                <label for="InstallmentAmount_M">Installment Amount</label>
+                                <input type="number" class="form-control" id="InstallmentAmount_M">
+                                <p id="InstallmentAmountError_M" class="text-danger error-item"></p>
+                            </div>
+
+                            <div class="col-6">
+                                <div class="row">
+                                    <div class="form-check offset-1 col-11">
+                                        <input class="form-check-input" type="checkbox" value="" id="isactive_checkbox">
+                                        <label class="form-check-label" for="isactive_checkbox"> IsActive? </label>
+                                    </div>
+                                    <div class="form-check offset-1 col-11">
+                                        <input class="form-check-input" type="checkbox" value="" id="pause_checkbox">
+                                        <label class="form-check-label" for="pause_checkbox"> Pause? </label>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary btn-sm" data-dismiss="modal">close</button>
+                <button type="button" class="btn btn-primary btn-sm" onclick="onEditConfirmed()">confirm</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+@section Scripts {
+    <script type="text/javascript" src="~/js/loans/flat_loan.js"></script>
+}

@@ -1,0 +1,43 @@
+﻿@{
+    ViewData["Title"] = "Amenities Process";
+}
+@* @section Styles {
+    <link rel="stylesheet" href="~/css/banks/banks.css" />
+} *@
+<!-- Page Header -->
+<div class="page-header">
+    <div class="row align-items-center">
+        <div class="col">
+            <h3 class="page-title">Process Amenities</h3>
+            <ul class="breadcrumb">
+                <li class="breadcrumb-item">Amenities</li>
+                <li class="breadcrumb-item active">Process Amenities</li>
+            </ul>
+        </div>
+    </div>
+</div>
+<!-- /Page Header -->
+<div class="row">
+    <div class="col-4">
+        <div class="card">
+            <div class="card-body">
+                <form>
+                    <div class="form-group">
+                        <label for="months">Month</label>
+                        <select class="form-control" id="months"></select>
+                    </div>
+                    <div class="form-group">
+                        <label for="years">Year</label>
+                        <select class="form-control" id="years"></select>
+                    </div>
+                    <button type="button" class="btn btn-primary mb-2 btn-sm" id="process_button">process</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+@section Scripts {
+    <script type="text/javascript" src="~/js/amenities/amenities_process.js"></script>
+}

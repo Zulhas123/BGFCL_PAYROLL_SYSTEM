@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="dsLoanSheet" targetNamespace="http://tempuri.org/dsLoanSheet.xsd" xmlns:mstns="http://tempuri.org/dsLoanSheet.xsd" xmlns="http://tempuri.org/dsLoanSheet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="dsLoanSheet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="dsLoanSheet" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="dsLoanSheet">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="dsLoanSheet" msprop:Generator_RowEvHandlerName="dsLoanSheetRowChangeEventHandler" msprop:Generator_RowDeletedName="dsLoanSheetRowDeleted" msprop:Generator_RowDeletingName="dsLoanSheetRowDeleting" msprop:Generator_RowEvArgName="dsLoanSheetRowChangeEvent" msprop:Generator_TablePropName="_dsLoanSheet" msprop:Generator_RowChangedName="dsLoanSheetRowChanged" msprop:Generator_UserTableName="dsLoanSheet" msprop:Generator_RowChangingName="dsLoanSheetRowChanging" msprop:Generator_RowClassName="dsLoanSheetRow" msprop:Generator_TableClassName="dsLoanSheetDataTable" msprop:Generator_TableVarName="tabledsLoanSheet">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="JobCode" msprop:Generator_ColumnPropNameInTable="JobCodeColumn" msprop:Generator_ColumnPropNameInRow="JobCode" msprop:Generator_UserColumnName="JobCode" msprop:Generator_ColumnVarNameInTable="columnJobCode" type="xs:string" minOccurs="0" />
+              <xs:element name="EmployeeName" msprop:Generator_ColumnPropNameInTable="EmployeeNameColumn" msprop:Generator_ColumnPropNameInRow="EmployeeName" msprop:Generator_UserColumnName="EmployeeName" msprop:Generator_ColumnVarNameInTable="columnEmployeeName" type="xs:string" minOccurs="0" />
+              <xs:element name="DesignationName" msprop:Generator_ColumnPropNameInTable="DesignationNameColumn" msprop:Generator_ColumnPropNameInRow="DesignationName" msprop:Generator_UserColumnName="DesignationName" msprop:Generator_ColumnVarNameInTable="columnDesignationName" type="xs:string" minOccurs="0" />
+              <xs:element name="DepartmentName" msprop:Generator_ColumnPropNameInTable="DepartmentNameColumn" msprop:Generator_ColumnPropNameInRow="DepartmentName" msprop:Generator_UserColumnName="DepartmentName" msprop:Generator_ColumnVarNameInTable="columnDepartmentName" type="xs:string" minOccurs="0" />
+              <xs:element name="HBLoan" msprop:Generator_ColumnPropNameInTable="HBLoanColumn" msprop:Generator_ColumnPropNameInRow="HBLoan" msprop:Generator_UserColumnName="HBLoan" msprop:Generator_ColumnVarNameInTable="columnHBLoan" type="xs:double" minOccurs="0" />
+              <xs:element name="MCycleLoan" msprop:Generator_ColumnPropNameInTable="MCycleLoanColumn" msprop:Generator_ColumnPropNameInRow="MCycleLoan" msprop:Generator_UserColumnName="MCycleLoan" msprop:Generator_ColumnVarNameInTable="columnMCycleLoan" type="xs:double" minOccurs="0" />
+              <xs:element name="BCycleLoan" msprop:Generator_ColumnPropNameInTable="BCycleLoanColumn" msprop:Generator_ColumnPropNameInRow="BCycleLoan" msprop:Generator_UserColumnName="BCycleLoan" msprop:Generator_ColumnVarNameInTable="columnBCycleLoan" type="xs:double" minOccurs="0" />
+              <xs:element name="ComLoan" msprop:Generator_ColumnPropNameInTable="ComLoanColumn" msprop:Generator_ColumnPropNameInRow="ComLoan" msprop:Generator_UserColumnName="ComLoan" msprop:Generator_ColumnVarNameInTable="columnComLoan" type="xs:double" minOccurs="0" />
+              <xs:element name="PFLoan" msprop:Generator_ColumnPropNameInTable="PFLoanColumn" msprop:Generator_ColumnPropNameInRow="PFLoan" msprop:Generator_UserColumnName="PFLoan" msprop:Generator_ColumnVarNameInTable="columnPFLoan" type="xs:double" minOccurs="0" />
+              <xs:element name="WPFLoan" msprop:Generator_ColumnPropNameInTable="WPFLoanColumn" msprop:Generator_ColumnPropNameInRow="WPFLoan" msprop:Generator_UserColumnName="WPFLoan" msprop:Generator_ColumnVarNameInTable="columnWPFLoan" type="xs:double" minOccurs="0" />
+              <xs:element name="COSLoan" msprop:Generator_ColumnPropNameInTable="COSLoanColumn" msprop:Generator_ColumnPropNameInRow="COSLoan" msprop:Generator_UserColumnName="COSLoan" msprop:Generator_ColumnVarNameInTable="columnCOSLoan" type="xs:double" minOccurs="0" />
+              <xs:element name="OtherLoan" msprop:Generator_ColumnPropNameInTable="OtherLoanColumn" msprop:Generator_ColumnPropNameInRow="OtherLoan" msprop:Generator_UserColumnName="OtherLoan" msprop:Generator_ColumnVarNameInTable="columnOtherLoan" type="xs:double" minOccurs="0" />
+              <xs:element name="CarLoan" msprop:Generator_ColumnPropNameInRow="CarLoan" msprop:Generator_ColumnPropNameInTable="CarLoanColumn" msprop:Generator_ColumnVarNameInTable="columnCarLoan" msprop:Generator_UserColumnName="CarLoan" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

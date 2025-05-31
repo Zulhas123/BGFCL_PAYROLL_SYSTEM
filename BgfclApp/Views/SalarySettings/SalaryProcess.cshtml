@@ -1,0 +1,94 @@
+﻿@{
+    ViewData["Title"] = "Salary Process";
+}
+@section Styles {
+    <link rel="stylesheet" href="~/css/salarysettings/salaryprocess.css" />
+}
+
+
+<div class="row">
+    <div class="col-12">
+        <div class="card border">
+            <div class="card-body">
+                <div class="card border">
+                    <div class="d-flex justify-content-between align-items-center m-2">
+                        <h4 class="mb-0 mr-1">Salary Process Management</h4>
+                        <div class="d-flex">
+                           @*  <select id="page_length_select" class="form-control w-auto me-3 mr-1">
+                                <option value="10">10 rows</option>
+                                <option value="20">20 rows</option>
+                                <option value="30">30 rows</option>
+                                <option value="40">40 rows</option>
+                                <option value="50">50 rows</option>
+                            </select> *@
+                            <button type="button" class="btn btn-info" id="Salary_process_button">
+                                <i class="fas fa-plus me-4"></i>Salary Process
+                            </button>
+
+                        </div>
+                    </div>
+                </div>
+                <!-- Data Table -->
+                <table class="table table-hover table-bordered col-12" id="salary_process_list_table">
+                    <thead>
+                        <tr>
+                            <th>Sl.</th>
+                            <th>Month</th>
+                            <th>Year</th>
+                            <th>Employee Type</th>
+                            <th>Status</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- Basic Form Modal -->
+<div class="modal fade" id="process_modal" tabindex="-1" aria-labelledby="processModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header border border-info">
+                <h5 class="modal-title" id="processModalLabel">Salary Process</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+
+
+            <div class="modal-body">
+                <form id="formId">
+                    <input type="hidden" value="" id="ProcessId" />
+                    <input type="hidden" value="create" id="operation_type" />
+                    <div class="form-group">
+                        <label class="control-label" for="EmployeeTypeId">Employee Type <span class="text-danger" title="required">*</span></label>
+                        <select class="form-control" id="EmployeeTypeId"></select>
+                    </div>
+                    <div class="form-group">
+                        <label for="month">Month</label>
+                        <select class="form-control" id="months"></select>
+                    </div>
+                    <div class="form-group">
+                        <label for="year">Year</label>
+                        <select class="form-control" id="years"></select>
+                    </div>
+                    <div class="form-group d-flex justify-content-between">
+                        <button type="button" class="btn btn-danger" id="cancel_button">Cancel</button>
+                        <button type="button" class="btn btn-success text-dark" id="process_button">Process</button>
+
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+@section Scripts {
+    <script type="text/javascript" src="~/js/salarysettings/salary_process.js"></script>
+}

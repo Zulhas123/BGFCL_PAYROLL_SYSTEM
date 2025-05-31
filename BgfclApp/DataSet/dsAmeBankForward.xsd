@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="dsAmeBankForward" targetNamespace="http://tempuri.org/dsAmeBankForward.xsd" xmlns:mstns="http://tempuri.org/dsAmeBankForward.xsd" xmlns="http://tempuri.org/dsAmeBankForward.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="dsAmeBankForward" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="dsAmeBankForward" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="dsAmeBankForward">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="dsAmeBankForward" msprop:Generator_RowEvHandlerName="dsAmeBankForwardRowChangeEventHandler" msprop:Generator_RowDeletedName="dsAmeBankForwardRowDeleted" msprop:Generator_RowDeletingName="dsAmeBankForwardRowDeleting" msprop:Generator_RowEvArgName="dsAmeBankForwardRowChangeEvent" msprop:Generator_TablePropName="_dsAmeBankForward" msprop:Generator_RowChangedName="dsAmeBankForwardRowChanged" msprop:Generator_UserTableName="dsAmeBankForward" msprop:Generator_RowChangingName="dsAmeBankForwardRowChanging" msprop:Generator_RowClassName="dsAmeBankForwardRow" msprop:Generator_TableClassName="dsAmeBankForwardDataTable" msprop:Generator_TableVarName="tabledsAmeBankForward">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="JobCode" msprop:Generator_ColumnPropNameInTable="JobCodeColumn" msprop:Generator_ColumnPropNameInRow="JobCode" msprop:Generator_UserColumnName="JobCode" msprop:Generator_ColumnVarNameInTable="columnJobCode" type="xs:string" minOccurs="0" />
+              <xs:element name="EmployeeName" msprop:Generator_ColumnPropNameInTable="EmployeeNameColumn" msprop:Generator_ColumnPropNameInRow="EmployeeName" msprop:Generator_UserColumnName="EmployeeName" msprop:Generator_ColumnVarNameInTable="columnEmployeeName" type="xs:string" minOccurs="0" />
+              <xs:element name="AccountNumber" msprop:Generator_ColumnPropNameInTable="AccountNumberColumn" msprop:Generator_ColumnPropNameInRow="AccountNumber" msprop:Generator_UserColumnName="AccountNumber" msprop:Generator_ColumnVarNameInTable="columnAccountNumber" type="xs:string" minOccurs="0" />
+              <xs:element name="NetPay" msprop:Generator_ColumnPropNameInTable="NetPayColumn" msprop:Generator_ColumnPropNameInRow="NetPay" msprop:Generator_UserColumnName="NetPay" msprop:Generator_ColumnVarNameInTable="columnNetPay" type="xs:string" minOccurs="0" />
+              <xs:element name="WageGMSCB" msprop:Generator_ColumnPropNameInTable="WageGMSCBColumn" msprop:Generator_ColumnPropNameInRow="WageGMSCB" msprop:Generator_UserColumnName="WageGMSCB" msprop:Generator_ColumnVarNameInTable="columnWageGMSCB" type="xs:double" minOccurs="0" />
+              <xs:element name="HouseKeepUp" msprop:Generator_ColumnPropNameInTable="HouseKeepUpColumn" msprop:Generator_ColumnPropNameInRow="HouseKeepUp" msprop:Generator_UserColumnName="HouseKeepUp" msprop:Generator_ColumnVarNameInTable="columnHouseKeepUp" type="xs:double" minOccurs="0" />
+              <xs:element name="FuelSubsidy" msprop:Generator_ColumnPropNameInTable="FuelSubsidyColumn" msprop:Generator_ColumnPropNameInRow="FuelSubsidy" msprop:Generator_UserColumnName="FuelSubsidy" msprop:Generator_ColumnVarNameInTable="columnFuelSubsidy" type="xs:double" minOccurs="0" />
+              <xs:element name="WESubsidy" msprop:Generator_ColumnPropNameInTable="WESubsidyColumn" msprop:Generator_ColumnPropNameInRow="WESubsidy" msprop:Generator_UserColumnName="WESubsidy" msprop:Generator_ColumnVarNameInTable="columnWESubsidy" type="xs:double" minOccurs="0" />
+              <xs:element name="OtherDeduction" msprop:Generator_ColumnPropNameInTable="OtherDeductionColumn" msprop:Generator_ColumnPropNameInRow="OtherDeduction" msprop:Generator_UserColumnName="OtherDeduction" msprop:Generator_ColumnVarNameInTable="columnOtherDeduction" type="xs:double" minOccurs="0" />
+              <xs:element name="OtherPay" msprop:Generator_ColumnPropNameInTable="OtherPayColumn" msprop:Generator_ColumnPropNameInRow="OtherPay" msprop:Generator_UserColumnName="OtherPay" msprop:Generator_ColumnVarNameInTable="columnOtherPay" type="xs:double" minOccurs="0" />
+              <xs:element name="RevenueStamp" msprop:Generator_ColumnPropNameInTable="RevenueStampColumn" msprop:Generator_ColumnPropNameInRow="RevenueStamp" msprop:Generator_UserColumnName="RevenueStamp" msprop:Generator_ColumnVarNameInTable="columnRevenueStamp" type="xs:double" minOccurs="0" />
+              <xs:element name="BankName" msprop:Generator_UserColumnName="BankName" msprop:Generator_ColumnPropNameInTable="BankNameColumn" msprop:Generator_ColumnPropNameInRow="BankName" msprop:Generator_ColumnVarNameInTable="columnBankName" type="xs:string" minOccurs="0" />
+              <xs:element name="RoutingNumber" msprop:Generator_ColumnPropNameInRow="RoutingNumber" msprop:Generator_ColumnPropNameInTable="RoutingNumberColumn" msprop:Generator_ColumnVarNameInTable="columnRoutingNumber" msprop:Generator_UserColumnName="RoutingNumber" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

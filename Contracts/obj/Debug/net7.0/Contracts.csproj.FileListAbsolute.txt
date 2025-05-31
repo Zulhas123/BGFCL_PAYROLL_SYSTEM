@@ -1,0 +1,16 @@
+E:\JabaIt\Payroll_System\Contracts\bin\Debug\net7.0\Contracts.deps.json
+E:\JabaIt\Payroll_System\Contracts\bin\Debug\net7.0\Contracts.dll
+E:\JabaIt\Payroll_System\Contracts\bin\Debug\net7.0\Contracts.pdb
+E:\JabaIt\Payroll_System\Contracts\bin\Debug\net7.0\Entities.dll
+E:\JabaIt\Payroll_System\Contracts\bin\Debug\net7.0\Entities.pdb
+E:\JabaIt\Payroll_System\Contracts\obj\Debug\net7.0\Contracts.csproj.AssemblyReference.cache
+E:\JabaIt\Payroll_System\Contracts\obj\Debug\net7.0\Contracts.GeneratedMSBuildEditorConfig.editorconfig
+E:\JabaIt\Payroll_System\Contracts\obj\Debug\net7.0\Contracts.AssemblyInfoInputs.cache
+E:\JabaIt\Payroll_System\Contracts\obj\Debug\net7.0\Contracts.AssemblyInfo.cs
+E:\JabaIt\Payroll_System\Contracts\obj\Debug\net7.0\Contracts.csproj.CoreCompileInputs.cache
+E:\JabaIt\Payroll_System\Contracts\obj\Debug\net7.0\Contracts.sourcelink.json
+E:\JabaIt\Payroll_System\Contracts\obj\Debug\net7.0\Contracts.csproj.Up2Date
+E:\JabaIt\Payroll_System\Contracts\obj\Debug\net7.0\Contracts.dll
+E:\JabaIt\Payroll_System\Contracts\obj\Debug\net7.0\refint\Contracts.dll
+E:\JabaIt\Payroll_System\Contracts\obj\Debug\net7.0\Contracts.pdb
+E:\JabaIt\Payroll_System\Contracts\obj\Debug\net7.0\ref\Contracts.dll

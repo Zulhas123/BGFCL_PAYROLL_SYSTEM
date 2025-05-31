@@ -1,0 +1,28 @@
+﻿
+.form-control {
+    height: 32px;  Decrease input field height 
+    font-size: 12px;  Adjust font size 
+    padding: 5px 10px;
+}
+
+
+
+/* Adjust checkbox alignment */
+.form-check-input {
+    transform: scale(0.8); /* Make checkbox smaller */
+    margin-right: 5px;
+}
+
+/* Adjust button size */
+.btn {
+    font-size: 14px;
+    padding: 5px 10px;
+}
+
+/* Customize close button */
+.modal-header .btn-close {
+    filter: invert(1); /* Make close button white */
+}
+.form-control-sm.form-control {
+    border-radius: 6px;
+}

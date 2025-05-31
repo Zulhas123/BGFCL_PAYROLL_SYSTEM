@@ -1,0 +1,96 @@
+﻿/* Align DataTable buttons and search box */
+.dataTables_wrapper .dt-buttons {
+    margin-bottom: 0;
+}
+
+.dataTables_wrapper .dataTables_filter {
+    margin-bottom: 0;
+    text-align: right;
+}
+
+/* Reduce row height in the DataTable */
+.dataTables_wrapper .dataTables_paginate .paginate_button,
+.dataTables_wrapper .dataTables_length,
+.dataTables_wrapper .dataTables_filter,
+.dataTables_wrapper .dataTables_info {
+    padding-top: 0;
+    padding-bottom: 0;
+    font-size: 12px; /* Reduce font size for better compactness */
+}
+
+    /* Adjust select dropdown and search input */
+    .dataTables_wrapper .dataTables_length select,
+    .dataTables_wrapper .dataTables_filter input {
+        height: 24px; /* Reduce height of dropdown and input */
+        font-size: 12px; /* Reduce font size */
+        padding: 2px 4px;
+    }
+
+/* Reduce tbody row height */
+#Attendance_Master_list_table tbody tr {
+    height: 6px; /* Reduce row height */
+}
+
+/* Reduce cell padding and adjust line height */
+#Attendance_Master_list_table tbody td {
+    padding: 2px 6px; /* Reduce padding */
+    font-size: 12px; /* Reduce font size */
+    line-height: 1;
+}
+
+/* Reduce the height of table headers */
+#Attendance_Master_list_table thead th {
+    padding: 2px 4px;
+    font-size: 14px;
+    line-height: 1;
+    height: 20px; /* Reduce header row height */
+}
+
+/* Reduce button sizes inside DataTable */
+#Attendance_Master_list_table .btn {
+    padding: 2px 6px;
+    font-size: 10px; /* Smaller button text */
+}
+
+    /* Reduce icon sizes in action buttons */
+    #Attendance_Master_list_table .btn i {
+        font-size: 10px; /* Reduce icon size */
+    }
+
+/* Reduce padding and border-radius in bordered div */
+.bordered-div {
+    border: 1px solid #ccc;
+    padding: 10px; /* Reduce padding */
+    border-radius: 3px; /* Slightly reduce border radius */
+}
+.form-control{
+    height:38px;
+    font-size:12px;
+    padding:5px,10px;
+}
+.form-control-sm.form-control {
+    border-radius: 6px;
+}
+/* Xml desing */
+.xml-scroll-wrapper {
+    max-width: 100%;
+    overflow-x: auto;
+    margin-top: 15px;
+}
+
+.xml-table {
+    width: max-content;
+    min-width: 100%;
+    font-size: 12px;
+    white-space: nowrap;
+}
+
+    .xml-table th.date-col {
+        width: 80px;
+        text-align: center;
+    }
+
+    .xml-table th.total-col {
+        width: 100px;
+        text-align: center;
+    }

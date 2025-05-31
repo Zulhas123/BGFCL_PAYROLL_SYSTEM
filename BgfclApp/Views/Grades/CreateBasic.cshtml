@@ -1,0 +1,81 @@
+﻿@{
+    ViewData["Title"] = "Basic";
+}
+@section Styles {
+    <link rel="stylesheet" href="~/css/grades/basic.css" />
+}
+<div class="row">
+    <div class="col-12">
+        <div class="card">
+            <div class="card-body">
+                <!-- Top right aligned controls -->
+                <div class="card border shadow-sm p-1">
+                    <div class="d-flex justify-content-between align-items-center gap-2">
+                        <h4 class="mb-0 mr-1">Basic Management</h4>
+                        <div class="d-flex">
+                           @*  <select id="page_length_select" class="form-control w-auto me-3 mr-1">
+                                <option value="10">10 rows</option>
+                                <option value="20">20 rows</option>
+                                <option value="30">30 rows</option>
+                                <option value="40">40 rows</option>
+                                <option value="50">50 rows</option>
+                            </select> *@
+                            <button type="button" class="btn btn-info" id="add_button"><i class="fas fa-plus me-1"></i> Add Basic</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- DataTable -->
+                <table class="table table-hover table-bordered" id="basic_list_table">
+                    <thead>
+                        <tr>
+                            <th>Sl.</th>
+                            <th>Pay Scale</th>
+                            <th>Basic Amount</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Basic Form Modal -->
+<div class="modal fade" id="basic_modal" tabindex="-1" aria-labelledby="basicModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header border border-info">
+                <h5 class="modal-title" id="basicModalLabel">Add Basic</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form id="basicForm">
+                    <input type="hidden" value="" id="BasicId" />
+                    <input type="hidden" value="create" id="operation_type" />
+                    <div class="form-group">
+                        <label for="BasicAmount">Basic Amount <span class="text-danger" title="required">*</span></label>
+                        <input type="number" class="form-control" id="BasicAmount">
+                        <p id="BasicAmountError" class="text-danger error-item"></p>
+                    </div>
+                    <div class="form-group">
+                        <label for="GradeId">Pay Scale <span class="text-danger" title="required">*</span></label>
+                        <select class="form-control" id="GradeId"></select>
+                        <p id="GradeIdError" class="text-danger error-item"></p>
+                    </div>
+                    <!-- Buttons -->
+                    <div class="d-flex justify-content-between">
+                        <button type="button" class="btn btn-outline-danger px-3" id="cancel_button">Cancel</button>
+                        <button type="button" class="btn btn-success px-3 fw-bold" id="submit_button">Create</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script type="text/javascript" src="~/js/grades/basic.js"></script>
+}

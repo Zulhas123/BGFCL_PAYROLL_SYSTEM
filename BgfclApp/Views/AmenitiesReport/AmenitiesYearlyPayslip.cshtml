@@ -1,0 +1,175 @@
+﻿@{
+    ViewData["Title"] = "Amenities Yearly PaySlip Report";
+    var Codes = ViewBag.EmployeeCode as List<SelectListItem>;
+    var departments = ViewBag.Departments as List<SelectListItem>;
+}
+
+
+
+<div class="page-header">
+    <div class="row align-items-center">
+        <div class="col">
+            <h3 class="page-title">Amenities Yearly PaySlip Report</h3>
+            <ul class="breadcrumb">
+                <li class="breadcrumb-item">Reports</li>
+                <li class="breadcrumb-item">Salary</li>
+                <li class="breadcrumb-item active"> Amenities Yearly PaySlip</li>
+            </ul>
+        </div>
+    </div>
+</div>
+<!-- /Page Header -->
+<div class="row">
+    <div class="col-10">
+        <div class="card">
+            <div class="card-body">
+                <form asp-action="AmenitiesYearlyPayslip" asp-controller="AmenitiesReport">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label class="control-label">Employee Code</label>
+                                <select name="jobCode" class="form-control" id="jobCode">
+                                    @foreach (var Code in Codes)
+                                    {
+                                        <option value="@Code.Text">@Code.Text</option>
+                                    }
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="month">From Month</label>
+                                <select class="form-control" id="fmonths" name="fmonth"></select>
+                            </div>
+                            <div class="form-group">
+                                <label for="year">From Year</label>
+                                <select class="form-control" id="fyears" name="fyear"></select>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label class="control-label">Department</label>
+                                <select name="department" class="form-control" id="department">
+                                    <option value="">Select</option>
+                                    @foreach (var department in departments)
+                                    {
+                                        <option value="@department.Text">@department.Text</option>
+                                    }
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="month">To Month</label>
+                                <select class="form-control" id="tmonths" name="tmonth"></select>
+                            </div>
+                            <div class="form-group">
+                                <label for="year">To Year</label>
+                                <select class="form-control" id="tyears" name="tyear"></select>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12 text-right">
+                            <button type="submit" formtarget="_blank" class="btn btn-primary btn-sm mb-2">Generate</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+@section Scripts {
+    <script type="text/javascript">
+
+        $('#jobCode').select2();
+
+        // Display selected job codes
+        $('#jobCode').on('change', function () {
+            var selectedJobCodes = $(this).val();
+            var displayArea = $('#selectedJobCodes');
+            displayArea.empty();
+            if (selectedJobCodes) {
+                selectedJobCodes.forEach(function (code) {
+                    displayArea.append('<div>' + code + '</div>');
+                });
+            }
+        });
+
+
+        function getMonthId() {
+            let fmonth = $('#fmonths').val();
+            let fyear = $('#fyears').val();
+
+            let tmonth = $('#tmonths').val();
+            let tyear = $('#tyears').val();
+
+            return (parseInt(year) * 100) + parseInt(month);
+        }
+
+        $.ajax({
+            url: '/api/Others/GetMonths',
+            type: 'Get',
+            async: false,
+            dataType: 'json',
+            success: function (responseObject) {
+                let months = responseObject.data;
+                let currentMonth = new Date().getMonth() + 1;
+                $('#months').empty();
+                $.each(months, function (key, item) {
+                    if (currentMonth == parseInt(item.monthId)) {
+                        $('#fmonths, #tmonths').append(`<option value=${item.monthId} selected>${item.monthName}</option>`);
+                    }
+                    else {
+                        $('#fmonths, #tmonths').append(`<option value=${item.monthId}>${item.monthName}</option>`);
+                    }
+
+                });
+            },
+            error: function (responseObject) {
+            }
+        });
+
+        $.ajax({
+            url: '/api/Others/GetYears',
+            type: 'Get',
+            async: false,
+            dataType: 'json',
+            success: function (responseObject) {
+                let years = responseObject.data;
+                let currentYear = new Date().getFullYear();
+                $('#years').empty();
+                $.each(years, function (key, item) {
+                    if (item == currentYear) {
+                        $('#fyears, #tyears').append(`<option value=${item} selected>${item}</option>`);
+                    }
+                    else {
+                        $('#fyears, #tyears').append(`<option value=${item}>${item}</option>`);
+                    }
+                });
+            },
+            error: function (responseObject) {
+            }
+        });
+       
+        $.ajax({
+            url: '/api/Employees/GetEmployeeTypes',
+            type: 'Get',
+            async: false,
+            dataType: 'json',
+            success: function (responseObject) {
+                employeeTypes = responseObject.data;
+                $('#EmployeeTypeId').empty();
+                $('#EmployeeTypeId').append('<option value="0">select one</option>');
+                $.each(employeeTypes, function (key, item) {
+                    if (item.id != 3 && item.id != 4) {
+                        $('#EmployeeTypeId').append(`<option value=${item.id}>${item.employeeTypeName}</option>`);
+                    }
+
+                });
+            },
+            error: function (responseObject) {
+            }
+        });
+    </script>
+}

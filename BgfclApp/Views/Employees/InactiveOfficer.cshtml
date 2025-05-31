@@ -1,0 +1,143 @@
+﻿<div class="col-12">
+    <div class="card">
+        <div class="d-flex justify-content-between align-items-center mb-3">
+            <h4 class="mb-0 p-2">Inactive Officer List</h4>
+            <div class="d-flex">
+                <select id="filter_select" class="form-control me-2">
+                    <option value="">Filter by Officer</option>
+                </select>
+                <select id="page_length_select" class="form-control w-auto p-2 ml-3">
+                    <option value="100">100 rows</option>
+                    <option value="120">120 rows</option>
+                    <option value="130">130 rows</option>
+                    <option value="150">150 rows</option>
+                    <option value="200">200 rows</option>
+                </select>
+            </div>
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="card-body table-responsive">
+            <table class="table table-hover col-12" id="employee_list_table">
+                <thead>
+                    <tr>
+                        <th>Sl.</th>
+                        <th>Job Code</th>
+                        <th>Employee Name</th>
+                        <th>Designation</th>
+                        <th>Department</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+
+<!-- Modal for Edit -->
+<div class="modal fade" id="edit_modal" tabindex="-1" role="dialog" aria-labelledby="editModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="editModalLabel">Edit Employee</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form id="edit_form">
+                    <input type="hidden" id="EmployeeId" />
+                    <div class="form-group">
+                        <label for="JobCode">Job Code</label>
+                        <input type="text" class="form-control" name="JobCode" id="JobCode" readonly />
+                    </div>
+                    <div class="form-group">
+                        <label for="EmployeeName">Employee Name</label>
+                        <input type="text" class="form-control" name="EmployeeName" id="EmployeeName" readonly />
+                    </div>
+                    <div class="form-group">
+                        <label for="ActiveStatus">Active Status</label>
+                        <select class="form-control" name="ActiveStatus" id="ActiveStatus"></select>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary" id="saveChangesButton" onclick="onEditConfirmed()">Save</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script type="text/javascript" src="~/js/employees/inactiveofficer.js"></script>
+    <style>
+        /* Ensure the table takes full width */
+        #employee_list_table {
+              width: 100%; /* Set table width to 100% of the container */
+              table-layout: fixed; /* Set a fixed layout to ensure columns fit */
+              overflow-x: auto;
+        }
+
+            #employee_list_table tbody tr {
+                height: 20px; /* Adjust row height */
+                line-height: 20px; /* Match line height to row height */
+            }
+
+            #employee_list_table tbody td {
+                padding: 2px 4px; /* Reduce padding */
+                overflow: hidden; /* Hide overflow content */
+                white-space: nowrap; /* Prevent text wrapping */
+                text-overflow: ellipsis; /* Add ellipsis for overflowing text */
+                font-size: 10px;
+            }
+
+            #employee_list_table thead th {
+                background-color: lightgrey;
+                color: darkolivegreen; /* Header text color */
+                padding: 8px 4px; /* Adjust header padding */
+                font-weight: bold; /* Make header text bold */
+                font-size: 15px; /* Smaller font size */
+            }
+
+                /* Set specific column widths using percentages */
+                #employee_list_table thead th:nth-child(1),
+                #employee_list_table tbody td:nth-child(1) {
+                    width: 5%;
+                }
+                /* Serial Number */
+
+                #employee_list_table thead th:nth-child(2),
+                #employee_list_table tbody td:nth-child(2) {
+                    width: 10%;
+                }
+                /* Job Code */
+
+                #employee_list_table thead th:nth-child(3),
+                #employee_list_table tbody td:nth-child(3) {
+                    width: 24%;
+                }
+                /* Employee Name */
+
+                #employee_list_table thead th:nth-child(4),
+                #employee_list_table tbody td:nth-child(4) {
+                    width: 30%;
+                }
+                /* Designation */
+
+                #employee_list_table thead th:nth-child(5),
+                #employee_list_table tbody td:nth-child(5) {
+                    width: 30%;
+                }
+                /* Department */
+
+                #employee_list_table thead th:nth-child(6),
+                #employee_list_table tbody td:nth-child(6) {
+                    width: 13%;
+                }
+        /* Actions */
+    </style>
+}

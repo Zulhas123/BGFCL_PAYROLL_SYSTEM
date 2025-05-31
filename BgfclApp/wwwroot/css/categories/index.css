@@ -1,0 +1,10 @@
+﻿#page_header {
+    font-family: 'Lato', sans-serif;
+    text-decoration: underline;
+}
+
+.category_list {
+    margin-left: 50px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}

@@ -1,0 +1,91 @@
+﻿@{
+    ViewData["Title"] = "Salary PF Deduction Report";
+    var departments = ViewBag.Departments as List<SelectListItem>;
+    var employeeType = ViewBag.employeeType as List<SelectListItem>;
+}
+
+<div class="row justify-content-center mt-4 mb-2">
+    <div class="col-md-8">
+        <form method="post" asp-action="GetPFDeductionOF" class="form-signin create-form bg-white rounded border shadow-sm p-4">
+            <div class="text-center mb-4">
+                <h1 class="h5 mb-3 font-weight-bold card-header border">Salary PF Deduction Report</h1>
+            </div>
+            <div class="row">
+                <div class="col-md-6 border">
+                    <div class="form-group">
+                        <label class="control-label">Month</label>
+                        <select name="month" class="form-control" required="required" id="Month">
+                            <option value="1">January</option>
+                            <option value="2">February</option>
+                            <option value="3">March</option>
+                            <option value="4">April</option>
+                            <option value="5">May</option>
+                            <option value="6">June</option>
+                            <option value="7">July</option>
+                            <option value="8">August</option>
+                            <option value="9">September</option>
+                            <option value="10">October</option>
+                            <option value="11">November</option>
+                            <option value="12">December</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label">Year</label>
+                        <select name="year" class="form-control" required="required" id="ddlYears">
+                        </select>
+                    </div>
+                </div>
+                <div class="col-md-6 border">
+                    <div class="form-group">
+                        <label class="control-label">Employee Type</label>
+                        <select name="employeeType" class="form-control" id="employeeType">
+                            <option value="">Select</option>
+                            @foreach (var type in employeeType)
+                            {
+                                <option value="@type.Value">@type.Text</option>
+                            }
+                        </select>
+                    </div>
+                    <div class="form-group">
+                    <label class="control-label">Department</label>
+                    <select name="department" class="form-control" id="department">
+                        <option value="">Select</option>
+                        @foreach (var department in departments)
+                        {
+                            <option value="@department.Value">@department.Text</option>
+                        }
+                    </select>
+                </div>
+            </div>
+            </div>
+            <div class="form-group mt-4 text-center">
+                <input type="submit" name="btnValue" id="submitBtn" formtarget="_blank" value="Print" class="btn btn-primary form-control" />
+            </div>
+        </form>
+    </div>
+</div>
+
+@section scripts
+{
+    <script>
+        $(document).ready(function () {
+            $("#Report").css("display", "block");
+            var date = new Date();
+            var year = date.getFullYear();
+            var month = date.getMonth() + 1;
+            $("#Month").val(month);
+            var currentYear = date.getFullYear() + 10;
+            var ddlYears = document.getElementById("ddlYears");
+
+            for (var i = 2022; i <= currentYear; i++) {
+                var option = document.createElement("OPTION");
+                option.innerHTML = i;
+                option.value = i;
+                if (i == year) {
+                    option.setAttribute("selected", year);
+                }
+                ddlYears.appendChild(option);
+            }
+        });
+    </script>
+}

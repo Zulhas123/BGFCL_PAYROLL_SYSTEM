@@ -1,0 +1,60 @@
+﻿/* For all screen sizes */
+.dash-widget-info h5 {
+    margin-bottom: 10px;
+    color: gray;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap; /* Allow wrapping when needed */
+    word-wrap: break-word; /* Prevent long words from breaking the layout */
+}
+
+    .dash-widget-info h5 span:first-child {
+        font-weight: bold;
+        margin-right: 10px;
+        max-width: 150px; /* Flexible label width */
+        text-align: right;
+        white-space: nowrap; /* Prevent label from breaking into multiple lines */
+    }
+
+.dash-widget-info span:last-child {
+    flex: 1;
+    padding-left: 10px;
+    text-align: right;
+    white-space: nowrap; /* Prevent value from wrapping */
+    overflow: hidden;
+    text-overflow: ellipsis; /* Add ellipsis if the text is too long */
+}
+
+/* Tweak for large screens */
+@media (min-width: 1200px) {
+    .dash-widget-info h5 {
+        flex-wrap: wrap; /* Allow wrapping even on larger screens */
+    }
+
+    .dash-widget-info span:first-child {
+        max-width: 200px; /* Adjustable label width for large screens */
+    }
+}
+
+/* Responsive tweaks for smaller screens */
+@media (max-width: 768px) {
+    .dash-widget-info h5 {
+        flex-direction: column; /* Stack label and value on smaller screens */
+        align-items: flex-start;
+        word-wrap: break-word;
+    }
+
+    .dash-widget-info span:first-child {
+        text-align: left;
+        max-width: 100%; /* Make label full-width on small screens */
+        white-space: normal; /* Allow text to wrap */
+    }
+
+    .dash-widget-info span:last-child {
+        padding-left: 0;
+        text-align: left;
+        white-space: normal; /* Allow text to wrap */
+    }
+}
+

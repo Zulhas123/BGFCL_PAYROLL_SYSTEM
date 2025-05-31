@@ -1,0 +1,25 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Entities.ViewModels
+{
+    public class McLoanViewModel
+    {
+        public int Sl { get; set; }
+        public int Id { get; set; }
+        public string JobCode { get; set; }
+        public string EmployeeName { get; set; }
+        public double TotalLoanAmount { get; set; }
+        public double RemainingLoanAmount { get; set; }
+        public string LoanTakenDate { get; set; }
+        public double InstallmentAmount { get; set; }
+        public double InstallmentNo { get; set; }
+        public double RemainingInstallmentNo { get; set; }
+
+
+
+    }
+}

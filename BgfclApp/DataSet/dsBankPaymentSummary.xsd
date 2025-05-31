@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="dsBankPaymentSummary" targetNamespace="http://tempuri.org/dsBankPaymentSummary.xsd" xmlns:mstns="http://tempuri.org/dsBankPaymentSummary.xsd" xmlns="http://tempuri.org/dsBankPaymentSummary.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="dsBankPaymentSummary" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="dsBankPaymentSummary" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="dsBankPaymentSummary">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="dsBankPaymentSummary" msprop:Generator_RowClassName="dsBankPaymentSummaryRow" msprop:Generator_RowEvHandlerName="dsBankPaymentSummaryRowChangeEventHandler" msprop:Generator_RowDeletedName="dsBankPaymentSummaryRowDeleted" msprop:Generator_RowDeletingName="dsBankPaymentSummaryRowDeleting" msprop:Generator_RowEvArgName="dsBankPaymentSummaryRowChangeEvent" msprop:Generator_TablePropName="_dsBankPaymentSummary" msprop:Generator_RowChangedName="dsBankPaymentSummaryRowChanged" msprop:Generator_UserTableName="dsBankPaymentSummary" msprop:Generator_RowChangingName="dsBankPaymentSummaryRowChanging" msprop:Generator_TableClassName="dsBankPaymentSummaryDataTable" msprop:Generator_TableVarName="tabledsBankPaymentSummary">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="BankName" msprop:Generator_UserColumnName="BankName" msprop:Generator_ColumnPropNameInTable="BankNameColumn" msprop:Generator_ColumnPropNameInRow="BankName" msprop:Generator_ColumnVarNameInTable="columnBankName" type="xs:string" minOccurs="0" />
+              <xs:element name="BranchName" msprop:Generator_UserColumnName="BranchName" msprop:Generator_ColumnPropNameInTable="BranchNameColumn" msprop:Generator_ColumnPropNameInRow="BranchName" msprop:Generator_ColumnVarNameInTable="columnBranchName" type="xs:string" minOccurs="0" />
+              <xs:element name="NetPay" msprop:Generator_UserColumnName="NetPay" msprop:Generator_ColumnPropNameInTable="NetPayColumn" msprop:Generator_ColumnPropNameInRow="NetPay" msprop:Generator_ColumnVarNameInTable="columnNetPay" type="xs:double" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

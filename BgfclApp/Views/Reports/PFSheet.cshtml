@@ -1,0 +1,190 @@
+﻿@{
+    ViewData["Title"] = "PF Sheet Report";
+    var Codes = ViewBag.EmployeeCode as List<SelectListItem>;
+}
+@section Styles {
+    <link rel="stylesheet" href="~/css/Reports/reports.css" />
+}
+
+
+<div class="row">
+    <div class="col-md-5 offset-md-2">
+        @if (!string.IsNullOrEmpty(ViewBag.ProcessMessage as string))
+        {
+            <div id="processAlert" class="alert alert-warning alert-dismissible fade show" role="alert">
+                @ViewBag.ProcessMessage
+                <button type="button" class="btn-close float-end" data-bs-dismiss="alert" aria-label="Close">X</button>
+            </div>
+        }
+        <div class="card border">
+            <div class="card-header bg-light">
+                <h4 class="page-title">PF Sheet Report</h4>
+            </div>
+            <div class="card-body">
+                <form id="PfSheetId" asp-action="PFSheet" asp-controller="Reports">
+                    <div class="form-group">
+                        <label for="months">Month</label>
+                        <select class="form-control" id="months" name="month"></select>
+                        <p id="MonthsError" class="text-danger error-item">@ViewBag.monthsError</p>
+                    </div>
+                    <div class="form-group">
+                        <label for="years">Year</label>
+                        <select class="form-control" id="years" name="year"></select>
+                        <p id="YearsError" class="text-danger error-item">@ViewBag.yearsError</p>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="EmployeeTypeId">Employee Type</label>
+                        <select class="form-control" id="EmployeeTypeId" name="employeeTypeId"></select>
+                        <p id="EmployeeTypeIdError" class="text-danger error-item">@ViewBag.employeeTypeIdError</p>
+                    </div>
+                    <div class="d-flex justify-content-between align-items-center mt-3">
+                        <div class="form-check">
+                            <input type="checkbox" class="form-check-input" id="isExcel" name="isExcel">
+                            <label class="form-check-label" for="isExcel">Export as Excel?</label>
+                        </div>
+                        <button type="submit" id="generateButton" formtarget="_blank" class="btn btn-success btn-sm">
+                            Report To PDF
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+@section Scripts {
+    <script type="text/javascript">
+        $(document).ready(function () {
+            loadInitialData();
+            $('#jobCode').select2({
+                placeholder: 'Select an employee code',
+                allowClear: true
+            });
+            $('#isExcel').on('change', function () {
+                if ($(this).is(':checked')) {
+                    $('#generateButton')
+                        .text('Export To Excel')                     // Change text
+                        .css('background-color', 'yellow') // Set background color to yellow
+                        .css('color', 'black');            // Optional: change text color for better contrast
+                } else {
+                    $('#generateButton')
+                        .text('Report To PDF')                    // Change text back
+                        .css('background-color', '')       // Reset background color to default
+                        .css('color', '');                 // Reset text color
+                }
+            });
+            setTimeout(function () {
+                var alertBox = document.getElementById("processAlert");
+                if (alertBox) {
+                    alertBox.classList.remove("show");
+                    alertBox.classList.add("fade");
+                    setTimeout(() => {
+                        alertBox.style.display = 'none';
+                    }, 500); // Allow Bootstrap's fade animation
+                }
+            }, 5000);
+        });
+        function getMonthId() {
+            let month = $('#months').val();
+            let year = $('#years').val();
+
+            return (parseInt(year) * 100) + parseInt(month);
+        }
+
+        function loadInitialData() {
+            $.ajax({
+                url: '/api/Employees/GetEmployeeTypes',
+                type: 'GET',
+                async: false,
+                dataType: 'json',
+                success: function (responseObject) {
+                    let employeeTypes = responseObject.data;
+                    const $employeeType = $('#EmployeeTypeId');
+                    const $errorField = $('#EmployeeTypeIdError');
+
+                    $employeeType.empty();
+                    $employeeType.append('<option value="">Select One</option>');
+
+                    $.each(employeeTypes, function (key, item) {
+                        // Append only item with id 1 or 2
+                        if (item.id == 1 || item.id == 2) {
+                            $employeeType.append(`<option value="${item.id}">${item.employeeTypeName}</option>`);
+                        }
+                    });
+
+                    // Reset error field
+                    $errorField.text('');
+                },
+                error: function (xhr, status, error) {
+                    console.error("Error fetching employee types:", error);
+                }
+            });
+
+            $.ajax({
+                url: '/api/Others/GetMonths',
+                type: 'Get',
+                async: false,
+                dataType: 'json',
+                success: function (responseObject) {
+                    let months = responseObject.data;
+                    let currentMonth = new Date().getMonth() + 1;
+                    $('#months').empty();
+                    $.each(months, function (key, item) {
+                        if (currentMonth == parseInt(item.monthId)) {
+                            $('#months').append(`<option value=${item.monthId} selected>${item.monthName}</option>`);
+                        }
+                        else {
+                            $('#months').append(`<option value=${item.monthId}>${item.monthName}</option>`);
+                        }
+
+                    });
+                },
+                error: function (responseObject) {
+                }
+            });
+            $.ajax({
+                url: '/api/Others/GetYears',
+                type: 'Get',
+                async: false,
+                dataType: 'json',
+                success: function (responseObject) {
+                    let years = responseObject.data;
+                    let currentYear = new Date().getFullYear();
+                    $('#years').empty();
+                    $.each(years, function (key, item) {
+                        if (item == currentYear) {
+                            $('#years').append(`<option value=${item} selected>${item}</option>`);
+                        }
+                        else {
+                            $('#years').append(`<option value=${item}>${item}</option>`);
+                        }
+                    });
+                },
+                error: function (responseObject) {
+                }
+            });
+            $('#PfSheetId').on('submit', function (e) {
+                const employeeTypeValue = $('#EmployeeTypeId').val();
+                const $errorField = $('#EmployeeTypeIdError');
+
+                $errorField.text('');
+
+                if (!employeeTypeValue) {
+                    e.preventDefault();
+                    $errorField.text('Please select an employee type.');
+                }
+            });
+            $('#EmployeeTypeId').on('change', function () {
+                const employeeTypeValue = $(this).val();
+                const $errorField = $('#EmployeeTypeIdError');
+
+                if (employeeTypeValue) {
+                    $errorField.text('');
+                }
+            });
+        }
+    </script>
+}

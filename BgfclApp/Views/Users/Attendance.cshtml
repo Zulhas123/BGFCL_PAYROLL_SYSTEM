@@ -1,0 +1,152 @@
+﻿@{
+    ViewData["Title"] = "Attendance Sheet";
+}
+<title>Attendance Sheet</title>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<div class="container">
+    <h2 class="mb-3">Attendance Sheet</h2>
+
+    <div class="form-row mb-3">
+        <div class="col">
+            <label>Start Date</label>
+            <input type="date" id="startDate" class="form-control form-control-sm" />
+        </div>
+        <div class="col">
+            <label>End Date</label>
+            <input type="date" id="endDate" class="form-control form-control-sm" />
+        </div>
+        <div class="col d-flex align-items-end">
+            <button id="generateBtn" class="btn btn-primary btn-sm">Generate Sheet</button>
+            <button id="Submit_btn" type="button" class="btn btn-info btn-sm ml-1">Save</button>
+        </div>
+    </div>
+
+    <div id="attendanceGrid" class="table-responsive"></div>
+</div>
+
+<script>
+    let employees = [];
+
+    // Load employee data
+    $.ajax({
+        url: '/api/Employees/GetEmployees?employeeTypeId=3',
+        type: 'GET',
+        async: false,
+        dataType: 'json',
+        success: function (responseObject) {
+            employees = responseObject.data || [];
+        },
+        error: function (responseObject) {
+            console.error("Error fetching employee data:", responseObject);
+        }
+    });
+
+    function getDatesBetween(start, end) {
+        const dates = [];
+        const currentDate = new Date(start);
+        while (currentDate <= end) {
+            dates.push(new Date(currentDate));
+            currentDate.setDate(currentDate.getDate() + 1);
+        }
+        return dates;
+    }
+
+    function formatDateHeader(date) {
+        const day = date.getDate();
+        const monthShort = date.toLocaleString('default', { month: 'short' });
+        const year = date.getFullYear();
+        return `${day}-${monthShort}-${year}`;
+    }
+
+    $('#generateBtn').click(function () {
+        const startDate = new Date($('#startDate').val());
+        const endDate = new Date($('#endDate').val());
+
+        if (isNaN(startDate) || isNaN(endDate)) {
+            alert("Please select valid start and end dates.");
+            return;
+        }
+
+        const dateRange = getDatesBetween(startDate, endDate);
+
+        let html = '<table class="table table-bordered table-sm"><thead><tr>';
+        html += '<th><input type="checkbox" id="selectAll" /></th>';
+        html += '<th>Employee Name</th><th>Job Code</th>';
+        dateRange.forEach(d => {
+            html += `<th>${formatDateHeader(d)}</th>`;
+        });
+        html += '</tr></thead><tbody>';
+
+        employees.forEach(emp => {
+            html += `<tr>`;
+            html += `<td><input type="checkbox" class="emp-check" /></td>`;
+            html += `<td class="emp-name">${emp.employeeName}</td><td class="job-code">${emp.jobCode}</td>`;
+            dateRange.forEach(d => {
+                const dateStr = d.toISOString().split('T')[0];
+                html += `<td><input type="number" min="0" class="form-control form-control-sm" data-emp="${emp.id}" data-date="${dateStr}" /></td>`;
+            });
+            html += `</tr>`;
+        });
+
+        html += '</tbody></table>';
+        $('#attendanceGrid').html(html);
+
+        // Select all checkbox logic
+        $('#selectAll').change(function () {
+            $('.emp-check').prop('checked', $(this).is(':checked'));
+        });
+    });
+
+    $('#Submit_btn').click(function () {
+        let attendanceData = [];
+
+        $('#attendanceGrid tbody tr').each(function () {
+            const isChecked = $(this).find('.emp-check').is(':checked');
+            if (!isChecked) return; // Skip if employee not selected
+
+            const employeeName = $(this).find('.emp-name').text();
+            const jobCode = $(this).find('.job-code').text();
+
+            $(this).find('input[type="number"]').each(function () {
+                const value = $(this).val();
+                if (value && parseInt(value) > 0) {
+                    const employeeId = $(this).data('emp');
+                    const attendanceDate = $(this).data('date');
+
+                    const dateObj = new Date(attendanceDate);
+                    const monthId = dateObj.getFullYear().toString() + ('0' + (dateObj.getMonth() + 1)).slice(-2);
+
+                    attendanceData.push({
+                        EmployeeId: employeeId,
+                        JobCode: jobCode,
+                        EmployeeName: employeeName,
+                        AttendanceDate: attendanceDate,
+                        DayCount: parseInt(value),
+                        MonthId: parseInt(monthId)
+                    });
+                }
+            });
+        });
+
+        if (attendanceData.length === 0) {
+            alert("No data to save.");
+            return;
+        }
+
+        $.ajax({
+            url: '/api/Users/SaveAttendance',
+            type: 'POST',
+            contentType: 'application/json',
+            data: JSON.stringify(attendanceData),
+            success: function () {
+                alert('Attendance saved successfully.');
+            },
+            error: function () {
+                alert('Failed to save attendance.');
+            }
+        });
+    });
+</script>
+

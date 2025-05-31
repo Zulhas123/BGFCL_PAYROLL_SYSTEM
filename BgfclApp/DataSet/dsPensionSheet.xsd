@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="dsPensionSheet" targetNamespace="http://tempuri.org/dsPensionSheet.xsd" xmlns:mstns="http://tempuri.org/dsPensionSheet.xsd" xmlns="http://tempuri.org/dsPensionSheet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="dsPensionSheet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="dsPensionSheet" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="dsPensionSheet">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="dsPensionSheet" msprop:Generator_RowEvHandlerName="dsPensionSheetRowChangeEventHandler" msprop:Generator_RowDeletedName="dsPensionSheetRowDeleted" msprop:Generator_RowDeletingName="dsPensionSheetRowDeleting" msprop:Generator_RowEvArgName="dsPensionSheetRowChangeEvent" msprop:Generator_TablePropName="_dsPensionSheet" msprop:Generator_RowChangedName="dsPensionSheetRowChanged" msprop:Generator_UserTableName="dsPensionSheet" msprop:Generator_RowChangingName="dsPensionSheetRowChanging" msprop:Generator_RowClassName="dsPensionSheetRow" msprop:Generator_TableClassName="dsPensionSheetDataTable" msprop:Generator_TableVarName="tabledsPensionSheet">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="JobCode" msprop:Generator_ColumnPropNameInTable="JobCodeColumn" msprop:Generator_ColumnPropNameInRow="JobCode" msprop:Generator_UserColumnName="JobCode" msprop:Generator_ColumnVarNameInTable="columnJobCode" type="xs:string" minOccurs="0" />
+              <xs:element name="EmployeeName" msprop:Generator_ColumnPropNameInTable="EmployeeNameColumn" msprop:Generator_ColumnPropNameInRow="EmployeeName" msprop:Generator_UserColumnName="EmployeeName" msprop:Generator_ColumnVarNameInTable="columnEmployeeName" type="xs:string" minOccurs="0" />
+              <xs:element name="DesignationName" msprop:Generator_ColumnPropNameInTable="DesignationNameColumn" msprop:Generator_ColumnPropNameInRow="DesignationName" msprop:Generator_UserColumnName="DesignationName" msprop:Generator_ColumnVarNameInTable="columnDesignationName" type="xs:string" minOccurs="0" />
+              <xs:element name="CompanyContribution" msprop:Generator_ColumnPropNameInTable="CompanyContributionColumn" msprop:Generator_ColumnPropNameInRow="CompanyContribution" msprop:Generator_UserColumnName="CompanyContribution" msprop:Generator_ColumnVarNameInTable="columnCompanyContribution" type="xs:double" minOccurs="0" />
+              <xs:element name="MonthYear" msprop:Generator_UserColumnName="MonthYear" msprop:Generator_ColumnPropNameInTable="MonthYearColumn" msprop:Generator_ColumnPropNameInRow="MonthYear" msprop:Generator_ColumnVarNameInTable="columnMonthYear" type="xs:string" minOccurs="0" />
+              <xs:element name="PensionRate" msprop:Generator_ColumnPropNameInRow="PensionRate" msprop:Generator_ColumnPropNameInTable="PensionRateColumn" msprop:Generator_ColumnVarNameInTable="columnPensionRate" msprop:Generator_UserColumnName="PensionRate" type="xs:string" minOccurs="0" />
+              <xs:element name="BasicSalary" msprop:Generator_ColumnPropNameInRow="BasicSalary" msprop:Generator_ColumnPropNameInTable="BasicSalaryColumn" msprop:Generator_ColumnVarNameInTable="columnBasicSalary" msprop:Generator_UserColumnName="BasicSalary" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

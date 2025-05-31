@@ -1,0 +1,204 @@
+﻿@{
+    ViewData["Title"] = "Bonus Bank Forwarding";
+    var bankList = ViewBag.banks as List<SelectListItem>;
+}
+@* @section Styles {
+    <link rel="stylesheet" href="~/css/banks/banks.css" />
+} *@
+
+<!-- Page Header -->
+<div class="page-header">
+    <div class="row align-items-center">
+        <div class="col">
+            <h3 class="page-title">Bonus Bank Forwarding</h3>
+            <ul class="breadcrumb">
+                <li class="breadcrumb-item">Reports</li>
+                <li class="breadcrumb-item">Bonus</li>
+                <li class="breadcrumb-item active">Bonus Bank Forwarding</li>
+            </ul>
+        </div>
+    </div>
+</div>
+<!-- /Page Header -->
+<div class="row">
+    <div class="col-8">
+        <div class="card">
+            <div class="card-body">
+                <form asp-action="BonusBankForward" asp-controller="BonusReport">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="month">Month</label>
+                                <select class="form-control" id="months" name="month"></select>
+                                <p id="MonthsError" class="text-danger error-item">@ViewBag.monthsError</p>
+                            </div>
+                            <div class="form-group">
+                                <label for="year">Year</label>
+                                <select class="form-control" id="years" name="year"></select>
+                                <p id="YearsError" class="text-danger error-item">@ViewBag.yearsError</p>
+                            </div>
+                            <div class="form-group">
+                                <label for="BonusId">Bonus <span class="text-danger" title="required">*</span></label>
+                                <select class="form-control" id="BonusId" name="bonusId"></select>
+                                <p id="BonusIdError" class="text-danger error-item">@ViewBag.bonusError</p>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="EmployeeTypeId">Employee Type <span class="text-danger" title="required">*</span></label>
+                                <select class="form-control" id="EmployeeTypeId" name="employeeTypeId"></select>
+                                <p id="EmployeeTypeIdError" class="text-danger error-item">@ViewBag.employeeTypeIdError</p>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label">Bank Name</label>
+                                <select name="bank" class="form-control" id="BankId" name="bank">
+                                    <option value="">Select</option>
+                                    @foreach (var bank in bankList)
+                                    {
+                                        <option value="@bank.Value">@bank.Text</option> <!-- Use Text for filtering by name -->
+                                    }
+                                </select>
+                                <p id="bankError" class="text-danger error-item">@ViewBag.bankError</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="offset-9 col-3">
+                            <button type="submit" formtarget="_blank" class="btn btn-primary btn-sm mb-2">Generate</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+@section Scripts {
+    <script type="text/javascript">
+        $(document).ready(function () {
+            loadInitialData();
+
+            $('#months').on('change', function () {
+                let monthId = getMonthId();
+                $('#bonus_form').css('display', 'none');
+                $.ajax({
+                    url: '/api/Bonus/GetBonusByMonthId?monthId=' + monthId,
+                    type: 'Get',
+                    async: false,
+                    dataType: 'json',
+                    success: function (responseObject) {
+                        let bonus = responseObject.data;
+                        console.log("Data",bonus);
+                        $('#BonusId').empty();
+                        $('#BonusId').append(`<option value='0'>Select Bonus</option>`);
+                        $.each(bonus, function (key, item) {
+                            $('#BonusId').append(`<option value=${item.id}>${item.bonusTitle}</option>`);
+
+                        });
+                    },
+                    error: function (responseObject) {
+                    }
+                });
+
+            });
+
+            $('#years').on('change', function () {
+                let monthId = getMonthId();
+                $('#bonus_form').css('display', 'none');
+                $.ajax({
+                    url: '/api/Bonus/GetBonusByMonthId?monthId=' + monthId,
+                    type: 'Get',
+                    async: false,
+                    dataType: 'json',
+                    success: function (responseObject) {
+                        let bonus = responseObject.data;
+                        $('#BonusId').empty();
+                        $('#BonusId').append(`<option value='0'>Select Bonus</option>`);
+                        $.each(bonus, function (key, item) {
+                            $('#BonusId').append(`<option value=${item.id}>${item.bonusTitle}</option>`);
+
+                        });
+                    },
+                    error: function (responseObject) {
+                    }
+                });
+            });
+
+        });
+        function getMonthId() {
+            let month = $('#months').val();
+            let year = $('#years').val();
+
+            return (parseInt(year) * 100) + parseInt(month);
+        }
+        function loadInitialData() {
+            $.ajax({
+                url: '/api/Employees/GetEmployeeTypes',
+                type: 'Get',
+                async: false,
+                dataType: 'json',
+                success: function (responseObject) {
+                    employeeTypes = responseObject.data;
+                    $('#EmployeeTypeId').empty();
+                    $('#EmployeeTypeId').append('<option value="0">select one</option>');
+                    $.each(employeeTypes, function (key, item) {
+                        if (item.id != 3 && item.id != 4) {
+                            $('#EmployeeTypeId').append(`<option value=${item.id}>${item.employeeTypeName}</option>`);
+                        }
+
+                    });
+                },
+                error: function (responseObject) {
+                }
+            });
+
+            $.ajax({
+                url: '/api/Others/GetMonths',
+                type: 'Get',
+                async: false,
+                dataType: 'json',
+                success: function (responseObject) {
+                    let months = responseObject.data;
+                    let currentMonth = new Date().getMonth() + 1;
+                    $('#months').empty();
+                    $.each(months, function (key, item) {
+                        if (currentMonth == parseInt(item.monthId)) {
+                            $('#months').append(`<option value=${item.monthId} selected>${item.monthName}</option>`);
+                        }
+                        else {
+                            $('#months').append(`<option value=${item.monthId}>${item.monthName}</option>`);
+                        }
+
+                    });
+                },
+                error: function (responseObject) {
+                }
+            });
+
+            $.ajax({
+                url: '/api/Others/GetYears',
+                type: 'Get',
+                async: false,
+                dataType: 'json',
+                success: function (responseObject) {
+                    let years = responseObject.data;
+                    let currentYear = new Date().getFullYear();
+                    $('#years').empty();
+                    $.each(years, function (key, item) {
+                        if (item == currentYear) {
+                            $('#years').append(`<option value=${item} selected>${item}</option>`);
+                        }
+                        else {
+                            $('#years').append(`<option value=${item}>${item}</option>`);
+                        }
+                    });
+                },
+                error: function (responseObject) {
+                }
+            });
+
+        }
+    </script>
+}

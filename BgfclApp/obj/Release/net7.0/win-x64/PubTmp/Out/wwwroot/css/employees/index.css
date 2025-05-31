@@ -1,0 +1,265 @@
+﻿/* Step Wizard Styling */
+.stepwizard {
+    display: table;
+    width: 100%;
+    position: relative;
+}
+
+.stepwizard-row {
+    display: table-row;
+    position: relative;
+}
+
+.stepwizard-step {
+    display: table-cell;
+    text-align: center;
+    position: relative;
+}
+
+    .stepwizard-step p {
+        margin-top: 0;
+        color: #555;
+        font-size: 14px;
+        font-weight: 500;
+    }
+
+.stepwizard-row::before {
+    top: 14px;
+    bottom: 0;
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 2px;
+    background-color: #ddd;
+    z-index: 0;
+}
+
+.stepwizard .btn.disabled,
+.stepwizard .btn[disabled],
+.stepwizard fieldset[disabled] .btn {
+    opacity: 1 !important;
+    color: #aaa;
+    background-color: #f1f1f1;
+    border-color: #ddd;
+}
+
+.btn-circle {
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    padding: 6px 0;
+    font-size: 12px;
+    line-height: 1.4;
+    border-radius: 50%;
+    background-color: #007bff;
+    color: white;
+    font-weight: bold;
+    border: 2px solid #007bff;
+}
+
+    .btn-circle:hover {
+        background-color: #0056b3;
+    }
+
+/* DataTable Custom Styling */
+.dataTables_wrapper .dt-buttons {
+    margin-bottom: 0;
+}
+
+.dataTables_wrapper .dataTables_filter {
+    margin-bottom: 0;
+    text-align: right;
+}
+
+/* Compact DataTable Row Styling */
+.dataTables_wrapper .dataTables_paginate .paginate_button,
+.dataTables_wrapper .dataTables_length,
+.dataTables_wrapper .dataTables_filter,
+.dataTables_wrapper .dataTables_info {
+    padding-top: 0;
+    padding-bottom: 0;
+    font-size: 13px;
+}
+
+    /* Adjust select dropdown and search input */
+    .dataTables_wrapper .dataTables_length select,
+    .dataTables_wrapper .dataTables_filter input {
+        height: 28px;
+        font-size: 13px;
+        padding: 4px 8px;
+    }
+
+/* Reduce tbody row height */
+#employee_list_table tbody tr {
+    height: 6px;
+}
+
+/* Reduce cell padding and adjust line height */
+#employee_list_table tbody td {
+    padding: 3px 8px;
+    font-size: 13px;
+    line-height: 1.2;
+}
+
+/* Header Styling (No Background) */
+#employee_list_table thead th {
+    padding: 4px 6px;
+    font-size: 14px;
+    font-weight: 600;
+    border-bottom: 2px solid #ddd;
+    height: 20px;
+    background: none !important;
+    color: inherit !important;
+}
+
+/* Small Action Buttons */
+#employee_list_table .btn {
+    padding: 2px 5px;
+    font-size: 11px;
+    border-radius: 4px;
+}
+
+    /* Reduce icon sizes in action buttons */
+    #employee_list_table .btn i {
+        font-size: 11px;
+    }
+
+    /* Add hover effect for action buttons */
+    #employee_list_table .btn:hover {
+        opacity: 0.8;
+        transform: scale(1.05);
+        transition: all 0.2s ease-in-out;
+    }
+
+/* Improve bordered div */
+.bordered-div {
+    border: 1px solid #ccc;
+    padding: 12px;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+/* Modal Styling */
+.modal-dialog {
+    max-width: 400px;
+}
+
+.modal-content {
+    padding: 12px;
+    border-radius: 6px;
+}
+
+/* Modal header */
+.modal-header {
+    border-bottom: none;
+}
+
+    .modal-header .btn-close {
+        filter: invert(1);
+    }
+
+/* Form Controls */
+/*.form-control {
+    height: 30px;
+    font-size: 13px;
+    padding: 6px 10px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+}*/
+#EmployeeName, #FatherName, #MotherName, #DateOfBirth, #GenderId, #MaritalId, #ReligionId, #JobCode,
+#EmployeeTypeId, #DepartmentId, #DesignationId, #JoiningDate, #Nid, #TinNo, #MobileNumber, #PresentAddress,
+#PermanentAddress, #Qualifications, #IdentityMarks, #Remarks, #TaxStatus, #ActiveStatus, #EmpSl, #school_filter,
+#role_filter, #department_filter, #designation_filter {
+    height: 30px;
+    font-size: 13px;
+    padding: 6px 10px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+}
+textarea.form-control {
+    height: 40px;
+    font-size: 13px;
+    padding: 6px 10px;
+}
+
+/* Select Dropdown */
+.form-select {
+    height: 30px;
+    font-size: 13px;
+}
+
+/* Checkbox Styling */
+.form-check-input {
+    transform: scale(0.9);
+    margin-right: 6px;
+}
+
+/* Button Styling */
+.btn {
+    font-size: 13px;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: 0.3s ease-in-out;
+}
+
+    .btn:hover {
+        opacity: 0.85;
+        transform: scale(1.03);
+    }
+
+
+/******************/
+/* Reduce the height of the buttons area */
+.dataTables_wrapper .dt-buttons {
+    padding: 0 !important;
+    margin: 0 !important;
+    height: 20px !important; /* Decrease height */
+}
+
+    /* Make buttons smaller */
+    .dataTables_wrapper .dt-buttons button {
+        font-size: 10px !important;
+        padding: 1px 4px !important;
+        height: 18px !important; /* Adjust height */
+        line-height: 1 !important;
+        border-radius: 3px !important;
+    }
+
+/* Reduce search box height */
+.dataTables_wrapper .dataTables_filter input {
+    height: 22px !important;
+    font-size: 12px !important;
+    padding: 2px 6px !important;
+}
+
+/* Adjust the entire top section (buttons + filter) */
+.d-flex.justify-content-between.align-items-center {
+    height: 20px !important; /* Reduce height */
+    align-items: center !important;
+    margin-bottom: 3px !important;
+}
+
+/* Reduce padding inside the DataTable wrapper */
+.dataTables_wrapper {
+    padding: 5px !important;
+}
+
+    /* Reduce pagination and info section */
+    .dataTables_wrapper .dataTables_info,
+    .dataTables_wrapper .dataTables_paginate {
+        font-size: 10px !important;
+        padding: 0 !important;
+        margin: 0 !important;
+    }
+select {
+    height: 38px; /* Set the height to match */
+    width: 100%; /* Ensure full width */
+    padding: 6px 12px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+.form-control-sm.form-control {
+    height: 30px;
+    border-radius: 6px;
+}

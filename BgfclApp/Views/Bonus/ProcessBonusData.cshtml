@@ -1,0 +1,135 @@
+﻿@{
+    ViewData["Title"] = "Process Bonus";
+}
+@section Styles {
+    <link rel="stylesheet" href="~/css/bonusprocess/bonusprocess.css" />
+}
+
+
+<!-- Modal -->
+<div class="modal fade" id="bonusModal" tabindex="-1" aria-labelledby="bonusModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <!-- use modal-lg to get a wider form -->
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="bonusModalLabel">Bonus Process</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form id="bonusForm">
+                    <input type="hidden" id="schoolId" value="" />
+                    <input type="hidden" id="guestPkId" value="" />
+                    <input type="hidden" id="roleId" value="" />
+                    <input type="hidden" id="userId" value="" />
+                    <input type="hidden" value="create" id="operation_type" />
+                    <div class="row">
+                        <div class="col-md-6">
+                            <label for="months">Month</label>
+                            <select class="form-control" id="months"></select>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="years">Year</label>
+                            <select class="form-control" id="years"></select>
+                        </div>
+                    </div>
+
+                    <div class="row mt-3">
+                        <div class="col-md-6">
+                            <label for="BonusId" class="form-label">Bonus <span class="text-danger">*</span></label>
+                            <select class="form-control" id="BonusId"></select>
+                            <p id="BonusIdError" class="text-danger error-item"></p>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="EmployeeTypeId" class="form-label">Employee Type <span class="text-danger">*</span></label>
+                            <select class="form-control" id="EmployeeTypeId"></select>
+                            <p id="EmployeeTypeIdError" class="text-danger error-item"></p>
+                        </div>
+                    </div>
+
+                    <div class="row mt-3" id="bonusValueGroup" style="display:none;">
+                        <div class="col-md-6">
+                            <label id="bonusValueLabel" for="FestivalBonus" class="form-label"></label>
+                            <input type="number" class="form-control" id="FestivalBonus" />
+                            <p id="bonusValueError" class="text-danger error-item"></p>
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+            <!-- Buttons -->
+            <div class="d-flex justify-content-between">
+                <button type="button" class="btn btn-outline-danger px-3" id="cancel_button">Cancel</button>
+                <button type="button" class="btn btn-success px-3 fw-bold" id="process_btn">Process</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-12">
+        <div class="card border shadow-sm p-0">
+            <div class="card-body">
+                <div class="d-flex justify-content-between align-items-center flex-wrap gap-2">
+                    <!-- Left Side Content -->
+                    <div class="d-flex align-items-center flex-wrap gap-2">
+                        <h4 class="mb-0 mr-3">Bonus Process</h4>
+                        <h4 class="mb-0 mr-1">Filter By :</h4>
+
+                        <select id="school_filter" class="form-control w-auto mr-1">
+                            <option value="">All Schools</option>
+                        </select>
+
+                        <select id="role_filter" class="form-control w-auto mr-1">
+                            <option value="">All Roles</option>
+                        </select>
+
+                        <select id="department_filter" class="form-control w-auto mr-1">
+                            <option value="">All Departments</option>
+                        </select>
+
+                        <select id="designation_filter" class="form-control w-auto mr-4">
+                            <option value="">All Designations</option>
+                        </select>
+                    </div>
+
+                    <!-- Right Side Content -->
+                    <div>
+                        <button type="button" class="btn btn-info" id="add_button"><i class="fas fa-plus me-1"></i>Process Bonus</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+        <div class="col-12">
+            <div class="card">
+                <div class="card-body table-responsive">
+                    <table class="table table-hover table-bordered" id="process_bonus_list_table">
+                        <thead>
+                            <tr>
+                                <th>Sl.</th>
+                                <th>Code</th>
+                                <th>Employee</th>
+                                <th>Designation</th>
+                                <th>Department</th>
+                                <th>Festival</th>
+                                <th>RevStamp</th>
+                                <th>Deduction</th>
+                            </tr>
+                        </thead>
+                        <tbody></tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+@section Scripts {
+    <script type="text/javascript" src="~/js/bonus/process_bonus_data.js"></script>
+
+}

@@ -1,0 +1,170 @@
+﻿/* Align DataTable buttons and search box */
+.dataTables_wrapper .dt-buttons {
+    margin-bottom: 0;
+}
+
+.dataTables_wrapper .dataTables_filter {
+    margin-bottom: 0;
+    text-align: right;
+}
+
+/* Reduce row height in the DataTable */
+.dataTables_wrapper .dataTables_paginate .paginate_button,
+.dataTables_wrapper .dataTables_length,
+.dataTables_wrapper .dataTables_filter,
+.dataTables_wrapper .dataTables_info {
+    padding: 2px 4px;
+    font-size: 12px;
+}
+
+    /* Adjust dropdown and search input */
+    .dataTables_wrapper .dataTables_length select,
+    .dataTables_wrapper .dataTables_filter input {
+        height: 24px;
+        font-size: 12px;
+        padding: 2px 4px;
+    }
+
+/* Reduce row height */
+#bonus_process_list_table tbody tr {
+    height: 10px;
+}
+
+/* Reduce cell padding */
+#bonus_process_list_table tbody td {
+    padding: 3px 6px;
+    font-size: 12px;
+}
+
+/* Reduce header height */
+#bonus_process_list_table thead th {
+    padding: 4px 6px;
+    font-size: 14px;
+}
+
+/* Reduce button sizes */
+#bonus_process_list_table .btn {
+    padding: 3px 6px;
+    font-size: 10px;
+}
+
+/* Reduce row height and cell padding */
+#process_bonus_list_table tbody tr {
+    height: 10px;
+}
+
+#process_bonus_list_table tbody td {
+    padding: 3px 6px;
+    font-size: 12px;
+}
+
+/* Reduce header height */
+#process_bonus_list_table thead th {
+    padding: 4px 6px;
+    font-size: 14px;
+}
+
+/* Ensure table header remains fixed */
+#process_bonus_list_table thead {
+    height: 65px !important;
+    overflow: hidden;
+}
+
+    #process_bonus_list_table thead th {
+        white-space: nowrap;
+        vertical-align: middle;
+        padding: 8px;
+    }
+
+/* Modal CSS */
+.modal-dialog {
+    max-width: 350px;
+}
+
+.modal-content {
+    padding: 10px;
+}
+
+.modal-header {
+    background-color: silver;
+    color: white;
+    border-bottom: none;
+}
+
+/* Input field styles */
+/*.form-select {
+    height: 25px;
+    font-size: 12px;
+    padding: 5px 10px;
+}*/
+#months, #years, #BonusId, #EmployeeTypeId, #employee_type_filter, #school_filter, #role_filter, #department_filter, #designation_filter {
+    height: 25px;
+    font-size: 12px;
+    padding: 5px 10px;
+}
+textarea.form-control {
+    height: 50px;
+    font-size: 12px;
+}
+
+/* Checkbox and button adjustments */
+.form-check-input {
+    transform: scale(0.8);
+    margin-right: 5px;
+}
+
+.btn {
+    font-size: 14px;
+    padding: 5px 10px;
+}
+
+.modal-header .btn-close {
+    filter: invert(1);
+}
+
+/***************/
+/* Reduce row height */
+#bonus_process_list_table tbody tr {
+    height: 10px;
+}
+
+/* Reduce cell padding */
+#bonus_process_list_table tbody td {
+    padding: 3px 6px;
+    font-size: 12px;
+}
+
+/* Reduce header height */
+#bonus_process_list_table thead th {
+    padding: 4px 6px;
+    font-size: 14px;
+}
+
+/* Keep the table header fixed */
+#bonus_process_list_table thead {
+    height: 65px !important; /* Set a fixed height */
+    overflow: hidden; /* Prevent extra height */
+}
+
+    /* Ensure input boxes do not push the header down */
+    #bonus_process_list_table thead th {
+        white-space: nowrap;
+        vertical-align: middle;
+        padding: 8px;
+        position: relative;
+    }
+
+        /* Keep filter inputs compact */
+        #bonus_process_list_table thead th input.column-filter {
+            width: 90%; /* Keep input within column */
+            height: 24px; /* Fixed height */
+            font-size: 12px;
+            padding: 2px 4px;
+            margin: 0;
+            position: absolute;
+            bottom: 2px; /* Ensures it stays inside header */
+        }
+.form-control-sm.form-control {
+    height: 30px;
+    border-radius: 6px;
+}

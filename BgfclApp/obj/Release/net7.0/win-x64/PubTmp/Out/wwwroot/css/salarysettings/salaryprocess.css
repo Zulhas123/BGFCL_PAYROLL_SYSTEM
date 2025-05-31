@@ -1,0 +1,176 @@
+﻿/* ========== DataTable Layout ========== */
+
+/* Align DataTable buttons and search box */
+.dataTables_wrapper .dt-buttons {
+    margin-bottom: 0;
+}
+
+.dataTables_wrapper .dataTables_filter {
+    margin-bottom: 0;
+    text-align: right;
+}
+
+/* Compact DataTable sections */
+.dataTables_wrapper .dataTables_paginate .paginate_button,
+.dataTables_wrapper .dataTables_length,
+.dataTables_wrapper .dataTables_filter,
+.dataTables_wrapper .dataTables_info {
+    padding-top: 0;
+    padding-bottom: 0;
+    font-size: 12px;
+}
+
+    /* Dropdown and search input size */
+    .dataTables_wrapper .dataTables_length select,
+    .dataTables_wrapper .dataTables_filter input {
+        height: 24px;
+        font-size: 12px;
+        padding: 2px 4px;
+    }
+.dataTables_wrapper .dataTables_length {
+    display: flex;
+    align-items: center;
+    gap: 8px; /* space between dropdown and label */
+}
+
+    .dataTables_wrapper .dataTables_length select {
+        width: auto; /* or keep your custom width */
+    }
+
+    .dataTables_wrapper .dataTables_length span {
+        font-size: 13px;
+    }
+
+    /* Dropdown enhancements */
+    .dataTables_wrapper .dataTables_length select {
+        width: 180px;
+        font-size: 13px;
+        font-weight: 500;
+        padding: 4px 10px;
+        border-radius: 4px;
+        border: 1px solid #aaa;
+        background-color: #fff;
+        appearance: none;
+        background-image: none;
+    }
+
+.dataTables_wrapper .dataTables_length {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+.dataTables_length label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+.dataTables_length select {
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 5px 10px;
+    font-size: 14px;
+    background-color: #fff;
+}
+
+/* DataTable buttons */
+.dt-buttons .btn {
+    padding: 6px 12px;
+    font-size: 0.875rem;
+    border-radius: 0.25rem;
+    margin-left: 0.25rem;
+}
+
+/* ========== DataTable Table Styling ========== */
+
+#salary_process_list_table tbody tr {
+    height: 8px;
+}
+
+#salary_process_list_table tbody td {
+    padding: 2px 6px;
+    font-size: 12px;
+    line-height: 1;
+}
+
+#salary_process_list_table thead th {
+    padding: 2px 4px;
+    font-size: 14px;
+    line-height: 1;
+    height: 18px;
+}
+.dataTables_length span {
+    margin-left: 8px;
+    font-size: 13px;
+}
+
+/* Action buttons inside table */
+#salary_process_list_table .btn {
+    padding: 2px 6px;
+    font-size: 10px;
+}
+
+    #salary_process_list_table .btn i {
+        font-size: 10px;
+    }
+
+/* Bordered content box */
+.bordered-div {
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 3px;
+}
+
+/* ========== Modal Styling ========== */
+
+.modal-dialog {
+    max-width: 300px;
+}
+
+.modal-content {
+    padding: 10px;
+}
+
+.modal-header {
+    background-color: silver;
+    color: white;
+    border-bottom: none;
+}
+
+    .modal-header .btn-close {
+        filter: invert(1);
+    }
+
+/* Form controls in modal */
+
+
+textarea.form-control {
+    height: 50px;
+}
+
+.form-select {
+    height: 25px;
+    font-size: 14px;
+}
+
+.form-check-input {
+    transform: scale(0.8);
+    margin-right: 5px;
+}
+
+.btn {
+    font-size: 14px;
+    padding: 6px 15px;
+}
+
+/* Smaller input override */
+.form-control-sm.form-control {
+    height: 30px;
+    border-radius: 6px;
+}
+
+/* Custom DataTable length dropdown ID (if used) */
+#page_length_select {
+    height: 38px;
+    font-size: 0.9rem;
+    padding: 6px 12px;
+}

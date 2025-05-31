@@ -1,0 +1,61 @@
+﻿@{
+    ViewData["Title"] = "Bonus Final Adjustment";
+}
+@section Styles {
+    <link rel="stylesheet" href="~/css/salarysettings//jspreadsheet.css" />
+}
+<!-- Page Header -->
+<div class="page-header">
+    <div class="row align-items-center">
+        <div class="col">
+            <h3 class="page-title">Final Adjustment</h3>
+            <ul class="breadcrumb">
+                <li class="breadcrumb-item">Bonus</li>
+                <li class="breadcrumb-item active">Final Adjustment</li>
+            </ul>
+        </div>
+    </div>
+</div>
+<!-- /Page Header -->
+<div class="row">
+    <div class="col-4">
+        <div class="card">
+            <div class="card-body">
+                <form>
+                    <div class="form-group">
+                        <label for="months">Month</label>
+                        <select class="form-control" id="months"></select>
+                    </div>
+                    <div class="form-group">
+                        <label for="years">Year</label>
+                        <select class="form-control" id="years"></select>
+                    </div>
+                    <div class="form-group">
+                        <label for="BonusId">Bonus <span class="text-danger" title="required">*</span></label>
+                        <select class="form-control" id="BonusId"></select>
+                        <p id="BonusIdError" class="text-danger error-item"></p>
+                    </div>
+                    <div class="form-group">
+                        <label for="EmployeeTypeId">Employee Type <span class="text-danger" title="required">*</span></label>
+                        <select class="form-control" id="EmployeeTypeId"></select>
+                        <p id="EmployeeTypeIdError" class="text-danger error-item"></p>
+                    </div>
+                </form>
+                <div class="row">
+                    <div class="col-6">
+                        <button type="button" class="btn btn-primary btn-sm mb-2" id="submit_button">show</button>
+                        <button type="button" class="btn btn-info btn-sm mb-2" id="update_button" style="display:none;">update</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="col-12">
+    <div id="spreadsheet"></div>
+</div>
+
+
+@section Scripts {
+    <script type="text/javascript" src="~/js/bonus/final_adjustment.js"></script>
+}

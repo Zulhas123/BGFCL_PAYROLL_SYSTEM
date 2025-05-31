@@ -1,0 +1,129 @@
+﻿@{
+    ViewData["Title"] = "Over Time Report";
+    var departments = ViewBag.Departments as List<SelectListItem>;
+    var employeeType = ViewBag.employeeType as List<SelectListItem>;
+    var codes = ViewBag.EmployeeCode as List<SelectListItem>;
+}
+
+<!-- Page Header -->
+<div class="page-header">
+    <div class="row align-items-center">
+        <div class="col">
+            <h3 class="page-title">Over Time</h3>
+            <ul class="breadcrumb">
+                <li class="breadcrumb-item">Reports</li>
+                <li class="breadcrumb-item">Reports</li>
+                <li class="breadcrumb-item active">Over Time Report</li>
+            </ul>
+        </div>
+    </div>
+</div>
+<!-- /Page Header -->
+<div class="row justify-content-center mt-4 mb-2">
+    <div class="col-md-6">
+        <form method="post" asp-action="OverTime" class="form-signin create-form bg-white rounded border shadow-sm p-4">
+            <div class="text-center mb-4">
+                <h1 class="h3 mb-3 font-weight-bold card-header border">Over Time Report</h1>
+            </div>
+            <div class="form-group">
+                <label for="month">Month</label>
+                <select class="form-control" id="months" name="month"></select>
+                <p id="MonthsError" class="text-danger error-item">@ViewBag.monthsError</p>
+            </div>
+            <div class="form-group">
+                <label for="year">Year</label>
+                <select class="form-control" id="years" name="year"></select>
+                <p id="YearsError" class="text-danger error-item">@ViewBag.yearsError</p>
+            </div>
+            <div class="form-group">
+                <label for="jobCode">Job Codes</label>
+                <select class="form-control" id="jobCode" name="jobCodes" multiple="multiple">
+                    <!-- Populate with job codes -->
+                    @foreach (var jobCode in ViewBag.EmployeeCode)
+                    {
+                        <option value="@jobCode.Text">@jobCode.Text</option>
+                    }
+                </select>
+            </div>
+            <div class="form-group">
+                <input type="checkbox" class="form-check-input" id="isExcel" name="isExcel">
+                <label for="isExcel">Export as Excel?</label>
+            </div>
+            <div class="text-right">
+                <button type="submit" formtarget="_blank" class="btn btn-primary btn-sm mb-2 mt-2">Generate</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+
+@section Scripts {
+    <script type="text/javascript">
+        $(document).ready(function () {
+            loadInitialData();
+
+        });
+
+        $(document).ready(function () {
+            $('#jobCode').select2({
+                placeholder: "Select job codes",
+                allowClear: true
+            });
+        });
+        // function getMonthId() {
+        //     let month = $('#months').val();
+        //     let year = $('#years').val();
+
+        //     return (parseInt(year) * 100) + parseInt(month);
+        // }
+
+        function loadInitialData() {
+
+            $.ajax({
+                url: '/api/Others/GetMonths',
+                type: 'Get',
+                async: false,
+                dataType: 'json',
+                success: function (responseObject) {
+                    let months = responseObject.data;
+                    let currentMonth = new Date().getMonth() + 1;
+                    $('#months').empty();
+                    $.each(months, function (key, item) {
+                        if (currentMonth == parseInt(item.monthId)) {
+                            $('#months').append(`<option value=${item.monthId} selected>${item.monthName}</option>`);
+                        }
+                        else {
+                            $('#months').append(`<option value=${item.monthId}>${item.monthName}</option>`);
+                        }
+
+                    });
+                },
+                error: function (responseObject) {
+                }
+            });
+
+            $.ajax({
+                url: '/api/Others/GetYears',
+                type: 'Get',
+                async: false,
+                dataType: 'json',
+                success: function (responseObject) {
+                    let years = responseObject.data;
+                    let currentYear = new Date().getFullYear();
+                    $('#years').empty();
+                    $.each(years, function (key, item) {
+                        if (item == currentYear) {
+                            $('#years').append(`<option value=${item} selected>${item}</option>`);
+                        }
+                        else {
+                            $('#years').append(`<option value=${item}>${item}</option>`);
+                        }
+                    });
+                },
+                error: function (responseObject) {
+                }
+            });
+        }
+
+    </script>
+}

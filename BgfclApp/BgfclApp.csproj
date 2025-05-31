@@ -1,0 +1,712 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Content Remove="wwwroot\js\bonus\bonusSheet.js" />
+    <Content Remove="wwwroot\js\SalaryReport\dailyAttendance.js" />
+    <Content Remove="wwwroot\js\SalaryReport\Salary_Forwarding_Report.js" />
+    <Content Remove="wwwroot\js\SalaryReport\Salary_Report.js" />
+    <Content Remove="wwwroot\Reports\RptAmeBankForward.rdlc" />
+    <Content Remove="wwwroot\Reports\RptAmeJournal.rdlc" />
+    <Content Remove="wwwroot\Reports\RptAmenitiesControlSheet.rdlc" />
+    <Content Remove="wwwroot\Reports\RptAmenitiesControlSheetYearly.rdlc" />
+    <Content Remove="wwwroot\Reports\RptAmenitiesPaySlip.rdlc" />
+    <Content Remove="wwwroot\Reports\RptAmenitiesPaySlipYearly.rdlc" />
+    <Content Remove="wwwroot\Reports\RptCarDepriciate.rdlc" />
+    <Content Remove="wwwroot\Reports\RptCarInstallment.rdlc" />
+    <Content Remove="wwwroot\Reports\RptEmployeeClub.rdlc" />
+    <Content Remove="wwwroot\Reports\RptEmployeeUnion.rdlc" />
+    <Content Remove="wwwroot\Reports\RptMonthlyAttendance.rdlc" />
+    <Content Remove="wwwroot\Reports\RptOverTime.rdlc" />
+    <Content Remove="wwwroot\Reports\RptWageSheet.rdlc" />
+    <Content Remove="wwwroot\Reports\Rpt_Bonus_Forwarding.rdlc" />
+    <Content Remove="wwwroot\Reports\Rpt_Bonus_Sheet_Office _Contract.rdlc" />
+    <Content Remove="wwwroot\Reports\Rpt_Bonus_Sheet_Office.rdlc" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="wwwroot\Reports\RptAmeBankForward.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="wwwroot\Reports\RptAmeJournal.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="wwwroot\Reports\RptAmenitiesPaySlipYearly.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="wwwroot\Reports\RptAmenitiesPaySlip.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="wwwroot\Reports\RptAmenitiesControlSheetYearly.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="wwwroot\Reports\RptAmenitiesControlSheet.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="wwwroot\Reports\RptCarDepriciate.rdlc" />
+    <EmbeddedResource Include="wwwroot\Reports\RptCarInstallment.rdlc" />
+    <EmbeddedResource Include="wwwroot\Reports\RptEmployeeClub.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="wwwroot\Reports\RptEmployeeUnion.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="wwwroot\Reports\RptMonthlyAttendance.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="wwwroot\Reports\RptOverTime.rdlc" />
+    <EmbeddedResource Include="wwwroot\Reports\RptWageSheet.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="wwwroot\Reports\Rpt_Bonus_Forwarding.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="wwwroot\Reports\Rpt_Bonus_Sheet_Office _Contract.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="wwwroot\Reports\Rpt_Bonus_Sheet_Office.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+  </ItemGroup>
+
+
+  <ItemGroup>
+    <PackageReference Include="AspNetCore.Reporting" Version="2.1.0" />
+    <PackageReference Include="ClosedXML" Version="0.102.3" />
+    <PackageReference Include="DocumentFormat.OpenXml" Version="2.16.0" />
+    <PackageReference Include="EPPlus" Version="7.5.1" />
+    <PackageReference Include="ExcelDataReader" Version="3.7.0" />
+    <PackageReference Include="ExcelDataReader.DataSet" Version="3.7.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="7.0.20" />
+    <PackageReference Include="Microsoft.Data.SqlClient" Version="5.2.1" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="7.0.0" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="7.0.12" />
+    <PackageReference Include="ReportViewerCore.NETCore" Version="15.1.20" />
+    <PackageReference Include="Swashbuckle.AspNetCore.Swagger" Version="6.5.0" />
+    <PackageReference Include="Swashbuckle.AspNetCore.SwaggerGen" Version="6.5.0" />
+    <PackageReference Include="Swashbuckle.AspNetCore.SwaggerUI" Version="6.5.0" />
+    <PackageReference Include="System.CodeDom" Version="8.0.0" />
+    <PackageReference Include="System.Data.OleDb" Version="8.0.0" />
+    <PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="8.8.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Contracts\Contracts.csproj" />
+    <ProjectReference Include="..\Entities\Entities.csproj" />
+    <ProjectReference Include="..\Repository\Repositories.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="wwwroot\lib\bootstrap\dist\css\" />
+    <Folder Include="wwwroot\lib\bootstrap\dist\js\" />
+    <Folder Include="wwwroot\Uploads\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="wwwroot\js\bonus\bonusSheet.js">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="wwwroot\js\SalaryReport\Salary_Forwarding_Report.js">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="wwwroot\js\SalaryReport\dailyAttendance.js">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="wwwroot\js\SalaryReport\Salary_Report.js">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="wwwroot\js\salarysettings\salary_process.js" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Controllers\Api\ConfigController .cs">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Update="DataSet\dsAmeBankForward.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>dsAmeBankForward.xsd</DependentUpon>
+    </Compile>
+    <Compile Update="DataSet\dsAmeJournal.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>dsAmeJournal.xsd</DependentUpon>
+    </Compile>
+    <Compile Update="DataSet\dsAmenitiesControlSheet.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>dsAmenitiesControlSheet.xsd</DependentUpon>
+    </Compile>
+    <Compile Update="DataSet\dsAmortizationInterest.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>dsAmortizationInterest.xsd</DependentUpon>
+    </Compile>
+    <Compile Update="DataSet\dsAmortizationSchedule.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>dsAmortizationSchedule.xsd</DependentUpon>
+    </Compile>
+    <Compile Update="DataSet\dsBankForward.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>dsBankForward.xsd</DependentUpon>
+    </Compile>
+    <Compile Update="DataSet\dsBankPaymentSummary.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>dsBankPaymentSummary.xsd</DependentUpon>
+    </Compile>
+    <Compile Update="DataSet\dsBonusControlSheet.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>dsBonusControlSheet.xsd</DependentUpon>
+    </Compile>
+    <Compile Update="DataSet\dsBonusJournal.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>dsBonusJournal.xsd</DependentUpon>
+    </Compile>
+    <Compile Update="DataSet\dsBonusPaySlip.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>dsBonusPaySlip.xsd</DependentUpon>
+    </Compile>
+    <Compile Update="DataSet\dsCarDepriciate.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>dsCarDepriciate.xsd</DependentUpon>
+    </Compile>
+    <Compile Update="DataSet\dsCarInstallment.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>dsCarInstallment.xsd</DependentUpon>
+    </Compile>
+    <Compile Update="DataSet\dsComLoan.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>dsComLoan.xsd</DependentUpon>
+    </Compile>
+    <Compile Update="DataSet\dsEmployeeUnionClub.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>dsEmployeeUnionClub.xsd</DependentUpon>
+    </Compile>
+    <Compile Update="DataSet\dsHBILoan.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>dsHBILoan.xsd</DependentUpon>
+    </Compile>
+    <Compile Update="DataSet\dsHblIndividualLoan.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>dsHblIndividualLoan.xsd</DependentUpon>
+    </Compile>
+    <Compile Update="DataSet\dsHBLoanSchedule.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>dsHBLoanSchedule.xsd</DependentUpon>
+    </Compile>
+    <Compile Update="DataSet\dsIncomeTaxMonthly.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>dsIncomeTaxMonthly.xsd</DependentUpon>
+    </Compile>
+    <Compile Update="DataSet\dsIndividualComLoan.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>dsIndividualComLoan.xsd</DependentUpon>
+    </Compile>
+    <Compile Update="DataSet\dsIndividualMotorLoan.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>dsIndividualMotorLoan.xsd</DependentUpon>
+    </Compile>
+    <Compile Update="DataSet\dsLoanSheet.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>dsLoanSheet.xsd</DependentUpon>
+    </Compile>
+    <Compile Update="DataSet\dsMCL.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>dsMCL.xsd</DependentUpon>
+    </Compile>
+    <Compile Update="DataSet\dsMedicalFund.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>dsMedicalFund.xsd</DependentUpon>
+    </Compile>
+    <Compile Update="DataSet\dsMonthlyAttendance.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>dsMonthlyAttendance.xsd</DependentUpon>
+    </Compile>
+    <Compile Update="DataSet\dsOfficerAssoClub.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>dsOfficerAssoClub.xsd</DependentUpon>
+    </Compile>
+    <Compile Update="DataSet\dsOverTime.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>dsOverTime.xsd</DependentUpon>
+    </Compile>
+    <Compile Update="DataSet\dsPensionSheet.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>dsPensionSheet.xsd</DependentUpon>
+    </Compile>
+    <Compile Update="DataSet\dsPFDeductionOF.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>dsPFDeductionOF.xsd</DependentUpon>
+    </Compile>
+    <Compile Update="DataSet\dsPFSheet.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>dsPFSheet.xsd</DependentUpon>
+    </Compile>
+    <Compile Update="DataSet\dsProvidentFund.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>dsProvidentFund.xsd</DependentUpon>
+    </Compile>
+    <Compile Update="DataSet\dsSalaryControlSheetJS.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>dsSalaryControlSheetJS.xsd</DependentUpon>
+    </Compile>
+    <Compile Update="DataSet\dsSalaryJournal.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>dsSalaryJournal.xsd</DependentUpon>
+    </Compile>
+    <Compile Update="DataSet\dsSalaryPaySlip.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>dsSalaryPaySlip.xsd</DependentUpon>
+    </Compile>
+    <Compile Update="DataSet\dsSalaryReportOF.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>dsSalaryReportOF.xsd</DependentUpon>
+    </Compile>
+    <Compile Update="DataSet\dsSalaryReportPermanent.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>dsSalaryReportPermanent.xsd</DependentUpon>
+    </Compile>
+    <Compile Update="DataSet\dsSummaryComLoan.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>dsSummaryComLoan.xsd</DependentUpon>
+    </Compile>
+    <Compile Update="DataSet\dsSummaryMotorLoan.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>dsSummaryMotorLoan.xsd</DependentUpon>
+    </Compile>
+    <Compile Update="DataSet\dsTaxCertificate.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>dsTaxCertificate.xsd</DependentUpon>
+    </Compile>
+    <Compile Update="DataSet\dsWageSheet.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>dsWageSheet.xsd</DependentUpon>
+    </Compile>
+    <Compile Update="DataSet\dsWelfareFund.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>dsWelfareFund.xsd</DependentUpon>
+    </Compile>
+    <Compile Update="DataSet\dsYearlyIncomeTax.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>dsYearlyIncomeTax.xsd</DependentUpon>
+    </Compile>
+    <Compile Update="DataSet\dsYearlyPaySlip.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>dsYearlyPaySlip.xsd</DependentUpon>
+    </Compile>
+    <Compile Update="DataSet\dsYearlyPaySlipJS.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>dsYearlyPaySlipJS.xsd</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Update="Views\Bonus\CrateBonus.cshtml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Update="wwwroot\css\bonus\bonus.css">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Update="wwwroot\js\bonus\create_bonus.js">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Update="wwwroot\js\salarysettings\advance_tax.js">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Update="wwwroot\js\salarysettings\basicsalarysettingdailyworker.js">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Update="wwwroot\js\salarysettings\basicsalarysettingsjuniorstaff.js">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Update="wwwroot\js\schools\index.js">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Update="wwwroot\Reports\RptAmortizationInterest.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Update="wwwroot\Reports\RptAmortizationSchedule.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Update="wwwroot\Reports\RptBankPaymentSummary.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Update="wwwroot\Reports\RptBonusBankForward.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Update="wwwroot\Reports\RptBonusControlSheet.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Update="wwwroot\Reports\RptBonusJournal.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Update="wwwroot\Reports\RptBonusPaySlip.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Update="wwwroot\Reports\RptComLoan.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Update="wwwroot\Reports\RptHBILoan.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Update="wwwroot\Reports\RptHBLoanSchedule.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Update="wwwroot\Reports\RptIncomeTaxMonthly.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Update="wwwroot\Reports\RptIndividualHblLoan.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Update="wwwroot\Reports\RptIndividualComLoan.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Update="wwwroot\Reports\RptIndividualMotorLoan.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Update="wwwroot\Reports\RptLoanSheet.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Update="wwwroot\Reports\RptMCl.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Update="wwwroot\Reports\RptMedicalFund.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Update="wwwroot\Reports\RptOfficerAssociation.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Update="wwwroot\Reports\RptOfficerClub.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Update="wwwroot\Reports\RptPensionSheetYearly.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Update="wwwroot\Reports\RptPensionSheet.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Update="wwwroot\Reports\RptGPFDeductionYearly.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Update="wwwroot\Reports\RptPFDeductionOF.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Update="wwwroot\Reports\RptPFSheetYearly.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Update="wwwroot\Reports\RptPFSheet.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Update="wwwroot\Reports\RptSchedulePF.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Update="wwwroot\Reports\RptSalaryBankForwarding.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Update="wwwroot\Reports\RptSalaryControlSheetJSYearly.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Update="wwwroot\Reports\RptSalaryControlSheetJS.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Update="wwwroot\Reports\RptSalaryControlSheetOFYearly.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Update="wwwroot\Reports\RptSalaryControlSheetOF.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Update="wwwroot\Reports\RptSalaryJournal.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Update="wwwroot\Reports\RptSalaryPaySlip.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Update="wwwroot\Reports\RptSalaryPaySlipJS.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Update="wwwroot\Reports\RptSummaryComLoan.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Update="wwwroot\Reports\RptSummaryMotorLoan.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Update="wwwroot\Reports\RptTaxCertificate.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Update="wwwroot\Reports\RptWelfareFund.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Update="wwwroot\Reports\RptYearlyPaySlip.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Update="wwwroot\Reports\RptYearlyPaySlipJS.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Update="wwwroot\Reports\Rpt_Bonus_Sheet_Bank_Copy.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="DataSet\dsAmeBankForward.xsd">
+      <SubType>Designer</SubType>
+      <LastGenOutput>dsAmeBankForward.Designer.cs</LastGenOutput>
+      <Generator>MSDataSetGenerator</Generator>
+    </None>
+    <None Update="DataSet\dsAmeJournal.xsd">
+      <SubType>Designer</SubType>
+      <LastGenOutput>dsAmeJournal.Designer.cs</LastGenOutput>
+      <Generator>MSDataSetGenerator</Generator>
+    </None>
+    <None Update="DataSet\dsAmenitiesControlSheet.xsd">
+      <SubType>Designer</SubType>
+      <LastGenOutput>dsAmenitiesControlSheet.Designer.cs</LastGenOutput>
+      <Generator>MSDataSetGenerator</Generator>
+    </None>
+    <None Update="DataSet\dsAmortizationInterest.xsd">
+      <SubType>Designer</SubType>
+      <LastGenOutput>dsAmortizationInterest.Designer.cs</LastGenOutput>
+      <Generator>MSDataSetGenerator</Generator>
+    </None>
+    <None Update="DataSet\dsAmortizationSchedule.xsd">
+      <SubType>Designer</SubType>
+      <LastGenOutput>dsAmortizationSchedule.Designer.cs</LastGenOutput>
+      <Generator>MSDataSetGenerator</Generator>
+    </None>
+    <None Update="DataSet\dsBankForward.xsd">
+      <SubType>Designer</SubType>
+      <LastGenOutput>dsBankForward.Designer.cs</LastGenOutput>
+      <Generator>MSDataSetGenerator</Generator>
+    </None>
+    <None Update="DataSet\dsBankPaymentSummary.xsd">
+      <SubType>Designer</SubType>
+      <LastGenOutput>dsBankPaymentSummary.Designer.cs</LastGenOutput>
+      <Generator>MSDataSetGenerator</Generator>
+    </None>
+    <None Update="DataSet\dsBonusControlSheet.xsd">
+      <SubType>Designer</SubType>
+      <LastGenOutput>dsBonusControlSheet.Designer.cs</LastGenOutput>
+      <Generator>MSDataSetGenerator</Generator>
+    </None>
+    <None Update="DataSet\dsBonusJournal.xsd">
+      <SubType>Designer</SubType>
+      <LastGenOutput>dsBonusJournal.Designer.cs</LastGenOutput>
+      <Generator>MSDataSetGenerator</Generator>
+    </None>
+    <None Update="DataSet\dsBonusPaySlip.xsd">
+      <SubType>Designer</SubType>
+      <LastGenOutput>dsBonusPaySlip.Designer.cs</LastGenOutput>
+      <Generator>MSDataSetGenerator</Generator>
+    </None>
+    <None Update="DataSet\dsCarDepriciate.xsd">
+      <SubType>Designer</SubType>
+      <LastGenOutput>dsCarDepriciate.Designer.cs</LastGenOutput>
+      <Generator>MSDataSetGenerator</Generator>
+    </None>
+    <None Update="DataSet\dsCarInstallment.xsd">
+      <SubType>Designer</SubType>
+      <LastGenOutput>dsCarInstallment.Designer.cs</LastGenOutput>
+      <Generator>MSDataSetGenerator</Generator>
+    </None>
+    <None Update="DataSet\dsComLoan.xsd">
+      <SubType>Designer</SubType>
+      <LastGenOutput>dsComLoan.Designer.cs</LastGenOutput>
+      <Generator>MSDataSetGenerator</Generator>
+    </None>
+    <None Update="DataSet\dsEmployeeUnionClub.xsd">
+      <SubType>Designer</SubType>
+      <LastGenOutput>dsEmployeeUnionClub.Designer.cs</LastGenOutput>
+      <Generator>MSDataSetGenerator</Generator>
+    </None>
+    <None Update="DataSet\dsHBILoan.xsd">
+      <SubType>Designer</SubType>
+      <LastGenOutput>dsHBILoan.Designer.cs</LastGenOutput>
+      <Generator>MSDataSetGenerator</Generator>
+    </None>
+    <None Update="DataSet\dsHblIndividualLoan.xsd">
+      <SubType>Designer</SubType>
+      <LastGenOutput>dsHblIndividualLoan.Designer.cs</LastGenOutput>
+      <Generator>MSDataSetGenerator</Generator>
+    </None>
+    <None Update="DataSet\dsHBLoanSchedule.xsd">
+      <SubType>Designer</SubType>
+      <LastGenOutput>dsHBLoanSchedule.Designer.cs</LastGenOutput>
+      <Generator>MSDataSetGenerator</Generator>
+    </None>
+    <None Update="DataSet\dsIncomeTaxMonthly.xsd">
+      <SubType>Designer</SubType>
+      <LastGenOutput>dsIncomeTaxMonthly.Designer.cs</LastGenOutput>
+      <Generator>MSDataSetGenerator</Generator>
+    </None>
+    <None Update="DataSet\dsIndividualComLoan.xsd">
+      <SubType>Designer</SubType>
+      <LastGenOutput>dsIndividualComLoan.Designer.cs</LastGenOutput>
+      <Generator>MSDataSetGenerator</Generator>
+    </None>
+    <None Update="DataSet\dsIndividualMotorLoan.xsd">
+      <SubType>Designer</SubType>
+      <LastGenOutput>dsIndividualMotorLoan.Designer.cs</LastGenOutput>
+      <Generator>MSDataSetGenerator</Generator>
+    </None>
+    <None Update="DataSet\dsLoanSheet.xsd">
+      <SubType>Designer</SubType>
+      <LastGenOutput>dsLoanSheet.Designer.cs</LastGenOutput>
+      <Generator>MSDataSetGenerator</Generator>
+    </None>
+    <None Update="DataSet\dsMCL.xsd">
+      <SubType>Designer</SubType>
+      <LastGenOutput>dsMCL.Designer.cs</LastGenOutput>
+      <Generator>MSDataSetGenerator</Generator>
+    </None>
+    <None Update="DataSet\dsMedicalFund.xsd">
+      <SubType>Designer</SubType>
+      <LastGenOutput>dsMedicalFund.Designer.cs</LastGenOutput>
+      <Generator>MSDataSetGenerator</Generator>
+    </None>
+    <None Update="DataSet\dsMonthlyAttendance.xsd">
+      <SubType>Designer</SubType>
+      <LastGenOutput>dsMonthlyAttendance.Designer.cs</LastGenOutput>
+      <Generator>MSDataSetGenerator</Generator>
+    </None>
+    <None Update="DataSet\dsOfficerAssoClub.xsd">
+      <SubType>Designer</SubType>
+      <LastGenOutput>dsOfficerAssoClub.Designer.cs</LastGenOutput>
+      <Generator>MSDataSetGenerator</Generator>
+    </None>
+    <None Update="DataSet\dsOverTime.xsd">
+      <SubType>Designer</SubType>
+      <LastGenOutput>dsOverTime.Designer.cs</LastGenOutput>
+      <Generator>MSDataSetGenerator</Generator>
+    </None>
+    <None Update="DataSet\dsPensionSheet.xsd">
+      <SubType>Designer</SubType>
+      <LastGenOutput>dsPensionSheet.Designer.cs</LastGenOutput>
+      <Generator>MSDataSetGenerator</Generator>
+    </None>
+    <None Update="DataSet\dsPFDeductionOF.xsd">
+      <SubType>Designer</SubType>
+      <LastGenOutput>dsPFDeductionOF.Designer.cs</LastGenOutput>
+      <Generator>MSDataSetGenerator</Generator>
+    </None>
+    <None Update="DataSet\dsPFSheet.xsd">
+      <SubType>Designer</SubType>
+      <LastGenOutput>dsPFSheet.Designer.cs</LastGenOutput>
+      <Generator>MSDataSetGenerator</Generator>
+    </None>
+    <None Update="DataSet\dsProvidentFund.xsd">
+      <SubType>Designer</SubType>
+      <LastGenOutput>dsProvidentFund.Designer.cs</LastGenOutput>
+      <Generator>MSDataSetGenerator</Generator>
+    </None>
+    <None Update="DataSet\dsSalaryControlSheetJS.xsd">
+      <SubType>Designer</SubType>
+      <LastGenOutput>dsSalaryControlSheetJS.Designer.cs</LastGenOutput>
+      <Generator>MSDataSetGenerator</Generator>
+    </None>
+    <None Update="DataSet\dsSalaryJournal.xsd">
+      <SubType>Designer</SubType>
+      <LastGenOutput>dsSalaryJournal.Designer.cs</LastGenOutput>
+      <Generator>MSDataSetGenerator</Generator>
+    </None>
+    <None Update="DataSet\dsSalaryPaySlip.xsd">
+      <SubType>Designer</SubType>
+      <LastGenOutput>dsSalaryPaySlip.Designer.cs</LastGenOutput>
+      <Generator>MSDataSetGenerator</Generator>
+    </None>
+    <None Update="DataSet\dsSalaryReportOF.xsd">
+      <SubType>Designer</SubType>
+      <LastGenOutput>dsSalaryReportOF.Designer.cs</LastGenOutput>
+      <Generator>MSDataSetGenerator</Generator>
+    </None>
+    <None Update="DataSet\dsSalaryReportPermanent.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsSalaryReportPermanent.Designer.cs</LastGenOutput>
+    </None>
+    <None Update="DataSet\dsSummaryComLoan.xsd">
+      <SubType>Designer</SubType>
+      <LastGenOutput>dsSummaryComLoan.Designer.cs</LastGenOutput>
+      <Generator>MSDataSetGenerator</Generator>
+    </None>
+    <None Update="DataSet\dsSummaryMotorLoan.xsd">
+      <SubType>Designer</SubType>
+      <LastGenOutput>dsSummaryMotorLoan.Designer.cs</LastGenOutput>
+      <Generator>MSDataSetGenerator</Generator>
+    </None>
+    <None Update="DataSet\dsTaxCertificate.xsd">
+      <SubType>Designer</SubType>
+      <LastGenOutput>dsTaxCertificate.Designer.cs</LastGenOutput>
+      <Generator>MSDataSetGenerator</Generator>
+    </None>
+    <None Update="DataSet\dsWageSheet.xsd">
+      <SubType>Designer</SubType>
+      <LastGenOutput>dsWageSheet.Designer.cs</LastGenOutput>
+      <Generator>MSDataSetGenerator</Generator>
+    </None>
+    <None Update="DataSet\dsWelfareFund.xsd">
+      <SubType>Designer</SubType>
+      <LastGenOutput>dsWelfareFund.Designer.cs</LastGenOutput>
+      <Generator>MSDataSetGenerator</Generator>
+    </None>
+    <None Update="DataSet\dsYearlyIncomeTax.xsd">
+      <SubType>Designer</SubType>
+      <LastGenOutput>dsYearlyIncomeTax.Designer.cs</LastGenOutput>
+      <Generator>MSDataSetGenerator</Generator>
+    </None>
+    <None Update="DataSet\dsYearlyPaySlip.xsd">
+      <SubType>Designer</SubType>
+      <LastGenOutput>dsYearlyPaySlip.Designer.cs</LastGenOutput>
+      <Generator>MSDataSetGenerator</Generator>
+    </None>
+    <None Update="DataSet\dsYearlyPaySlipJS.xsd">
+      <SubType>Designer</SubType>
+      <LastGenOutput>dsYearlyPaySlipJS.Designer.cs</LastGenOutput>
+      <Generator>MSDataSetGenerator</Generator>
+    </None>
+  </ItemGroup>
+
+
+</Project>

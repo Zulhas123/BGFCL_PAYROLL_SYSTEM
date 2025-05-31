@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="dsWelfareFund" targetNamespace="http://tempuri.org/dsWelfareFund.xsd" xmlns:mstns="http://tempuri.org/dsWelfareFund.xsd" xmlns="http://tempuri.org/dsWelfareFund.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="dsWelfareFund" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_UserDSName="dsWelfareFund" msprop:Generator_DataSetName="dsWelfareFund">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="dsWelfareFund" msprop:Generator_RowEvHandlerName="dsWelfareFundRowChangeEventHandler" msprop:Generator_RowDeletedName="dsWelfareFundRowDeleted" msprop:Generator_RowDeletingName="dsWelfareFundRowDeleting" msprop:Generator_RowEvArgName="dsWelfareFundRowChangeEvent" msprop:Generator_TablePropName="_dsWelfareFund" msprop:Generator_RowChangedName="dsWelfareFundRowChanged" msprop:Generator_RowChangingName="dsWelfareFundRowChanging" msprop:Generator_TableClassName="dsWelfareFundDataTable" msprop:Generator_RowClassName="dsWelfareFundRow" msprop:Generator_TableVarName="tabledsWelfareFund" msprop:Generator_UserTableName="dsWelfareFund">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="JobCode" msprop:Generator_ColumnPropNameInRow="JobCode" msprop:Generator_ColumnPropNameInTable="JobCodeColumn" msprop:Generator_ColumnVarNameInTable="columnJobCode" msprop:Generator_UserColumnName="JobCode" type="xs:string" minOccurs="0" />
+              <xs:element name="EmployeeName" msprop:Generator_ColumnPropNameInRow="EmployeeName" msprop:Generator_ColumnPropNameInTable="EmployeeNameColumn" msprop:Generator_ColumnVarNameInTable="columnEmployeeName" msprop:Generator_UserColumnName="EmployeeName" type="xs:string" minOccurs="0" />
+              <xs:element name="DesignationName" msprop:Generator_ColumnPropNameInRow="DesignationName" msprop:Generator_ColumnPropNameInTable="DesignationNameColumn" msprop:Generator_ColumnVarNameInTable="columnDesignationName" msprop:Generator_UserColumnName="DesignationName" type="xs:string" minOccurs="0" />
+              <xs:element name="DepartmentName" msprop:Generator_ColumnPropNameInRow="DepartmentName" msprop:Generator_ColumnPropNameInTable="DepartmentNameColumn" msprop:Generator_ColumnVarNameInTable="columnDepartmentName" msprop:Generator_UserColumnName="DepartmentName" type="xs:string" minOccurs="0" />
+              <xs:element name="WelfareFund" msprop:Generator_ColumnPropNameInRow="WelfareFund" msprop:Generator_ColumnPropNameInTable="WelfareFundColumn" msprop:Generator_ColumnVarNameInTable="columnWelfareFund" msprop:Generator_UserColumnName="WelfareFund" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

@@ -1,0 +1,1437 @@
+{
+  "Files": [
+    {
+      "Id": "E:\\JabaIt\\Payroll_System\\BgfclApp\\wwwroot\\Image\\Bgfcl.jpg.jpg",
+      "PackagePath": "staticwebassets\\Image\\Bgfcl.jpg.jpg"
+    },
+    {
+      "Id": "E:\\JabaIt\\Payroll_System\\BgfclApp\\wwwroot\\Image\\bg.jpg",
+      "PackagePath": "staticwebassets\\Image\\bg.jpg"
+    },
+    {
+      "Id": "E:\\JabaIt\\Payroll_System\\BgfclApp\\wwwroot\\Image\\bgfsclogo.jpeg",
+      "PackagePath": "staticwebassets\\Image\\bgfsclogo.jpeg"
+    },
+    {
+      "Id": "E:\\JabaIt\\Payroll_System\\BgfclApp\\wwwroot\\Image\\loader.gif",
+      "PackagePath": "staticwebassets\\Image\\loader.gif"
+    },
+    {
+      "Id": "E:\\JabaIt\\Payroll_System\\BgfclApp\\wwwroot\\Reports\\RptAmortizationInterest.rdlc",
+      "PackagePath": "staticwebassets\\Reports\\RptAmortizationInterest.rdlc"
+    },
+    {
+      "Id": "E:\\JabaIt\\Payroll_System\\BgfclApp\\wwwroot\\Reports\\RptAmortizationSchedule.rdlc",
+      "PackagePath": "staticwebassets\\Reports\\RptAmortizationSchedule.rdlc"
+    },
+    {
+      "Id": "E:\\JabaIt\\Payroll_System\\BgfclApp\\wwwroot\\Reports\\RptBankPaymentSummary.rdlc",
+      "PackagePath": "staticwebassets\\Reports\\RptBankPaymentSummary.rdlc"
+    },
+    {
+      "Id": "E:\\JabaIt\\Payroll_System\\BgfclApp\\wwwroot\\Reports\\RptBonusBankForward.rdlc",
+      "PackagePath": "staticwebassets\\Reports\\RptBonusBankForward.rdlc"
+    },
+    {
+      "Id": "E:\\JabaIt\\Payroll_System\\BgfclApp\\wwwroot\\Reports\\RptBonusControlSheet.rdlc",
+      "PackagePath": "staticwebassets\\Reports\\RptBonusControlSheet.rdlc"
+    },
+    {
+      "Id": "E:\\JabaIt\\Payroll_System\\BgfclApp\\wwwroot\\Reports\\RptBonusJournal.rdlc",
+      "PackagePath": "staticwebassets\\Reports\\RptBonusJournal.rdlc"
+    },
+    {
+      "Id": "E:\\JabaIt\\Payroll_System\\BgfclApp\\wwwroot\\Reports\\RptBonusPaySlip.rdlc",
+      "PackagePath": "staticwebassets\\Reports\\RptBonusPaySlip.rdlc"
+    },
+    {
+      "Id": "E:\\JabaIt\\Payroll_System\\BgfclApp\\wwwroot\\Reports\\RptComLoan.rdlc",
+      "PackagePath": "staticwebassets\\Reports\\RptComLoan.rdlc"
+    },
+    {
+      "Id": "E:\\JabaIt\\Payroll_System\\BgfclApp\\wwwroot\\Reports\\RptGPFDeductionYearly.rdlc",
+      "PackagePath": "staticwebassets\\Reports\\RptGPFDeductionYearly.rdlc"
+    },
+    {
+      "Id": "E:\\JabaIt\\Payroll_System\\BgfclApp\\wwwroot\\Reports\\RptHBILoan.rdlc",
+      "PackagePath": "staticwebassets\\Reports\\RptHBILoan.rdlc"
+    },
+    {
+      "Id": "E:\\JabaIt\\Payroll_System\\BgfclApp\\wwwroot\\Reports\\RptHBLoanSchedule.rdlc",
+      "PackagePath": "staticwebassets\\Reports\\RptHBLoanSchedule.rdlc"
+    },
+    {
+      "Id": "E:\\JabaIt\\Payroll_System\\BgfclApp\\wwwroot\\Reports\\RptIncomeTaxMonthly.rdlc",
+      "PackagePath": "staticwebassets\\Reports\\RptIncomeTaxMonthly.rdlc"
+    },
+    {
+      "Id": "E:\\JabaIt\\Payroll_System\\BgfclApp\\wwwroot\\Reports\\RptIndividualComLoan.rdlc",
+      "PackagePath": "staticwebassets\\Reports\\RptIndividualComLoan.rdlc"
+    },
+    {
+      "Id": "E:\\JabaIt\\Payroll_System\\BgfclApp\\wwwroot\\Reports\\RptIndividualHblLoan.rdlc",
+      "PackagePath": "staticwebassets\\Reports\\RptIndividualHblLoan.rdlc"
+    },
+    {
+      "Id": "E:\\JabaIt\\Payroll_System\\BgfclApp\\wwwroot\\Reports\\RptIndividualMotorLoan.rdlc",
+      "PackagePath": "staticwebassets\\Reports\\RptIndividualMotorLoan.rdlc"
+    },
+    {
+      "Id": "E:\\JabaIt\\Payroll_System\\BgfclApp\\wwwroot\\Reports\\RptLoanSheet.rdlc",
+      "PackagePath": "staticwebassets\\Reports\\RptLoanSheet.rdlc"
+    },
+    {
+      "Id": "E:\\JabaIt\\Payroll_System\\BgfclApp\\wwwroot\\Reports\\RptMCl.rdlc",
+      "PackagePath": "staticwebassets\\Reports\\RptMCl.rdlc"
+    },
+    {
+      "Id": "E:\\JabaIt\\Payroll_System\\BgfclApp\\wwwroot\\Reports\\RptMedicalFund.rdlc",
+      "PackagePath": "staticwebassets\\Reports\\RptMedicalFund.rdlc"
+    },
+    {
+      "Id": "E:\\JabaIt\\Payroll_System\\BgfclApp\\wwwroot\\Reports\\RptOfficerAssociation.rdlc",
+      "PackagePath": "staticwebassets\\Reports\\RptOfficerAssociation.rdlc"
+    },
+    {
+      "Id": "E:\\JabaIt\\Payroll_System\\BgfclApp\\wwwroot\\Reports\\RptOfficerClub.rdlc",
+      "PackagePath": "staticwebassets\\Reports\\RptOfficerClub.rdlc"
+    },
+    {
+      "Id": "E:\\JabaIt\\Payroll_System\\BgfclApp\\wwwroot\\Reports\\RptPFDeductionOF.rdlc",
+      "PackagePath": "staticwebassets\\Reports\\RptPFDeductionOF.rdlc"
+    },
+    {
+      "Id": "E:\\JabaIt\\Payroll_System\\BgfclApp\\wwwroot\\Reports\\RptPFForwarding.rdlc",
+      "PackagePath": "staticwebassets\\Reports\\RptPFForwarding.rdlc"
+    },
+    {
+      "Id": "E:\\JabaIt\\Payroll_System\\BgfclApp\\wwwroot\\Reports\\RptPFSheet.rdlc",
+      "PackagePath": "staticwebassets\\Reports\\RptPFSheet.rdlc"
+    },
+    {
+      "Id": "E:\\JabaIt\\Payroll_System\\BgfclApp\\wwwroot\\Reports\\RptPFSheetYearly.rdlc",
+      "PackagePath": "staticwebassets\\Reports\\RptPFSheetYearly.rdlc"
+    },
+    {
+      "Id": "E:\\JabaIt\\Payroll_System\\BgfclApp\\wwwroot\\Reports\\RptPensionSheet.rdlc",
+      "PackagePath": "staticwebassets\\Reports\\RptPensionSheet.rdlc"
+    },
+    {
+      "Id": "E:\\JabaIt\\Payroll_System\\BgfclApp\\wwwroot\\Reports\\RptPensionSheetYearly.rdlc",
+      "PackagePath": "staticwebassets\\Reports\\RptPensionSheetYearly.rdlc"
+    },
+    {
+      "Id": "E:\\JabaIt\\Payroll_System\\BgfclApp\\wwwroot\\Reports\\RptSalaryBankForwarding.rdlc",
+      "PackagePath": "staticwebassets\\Reports\\RptSalaryBankForwarding.rdlc"
+    },
+    {
+      "Id": "E:\\JabaIt\\Payroll_System\\BgfclApp\\wwwroot\\Reports\\RptSalaryControlSheetJS.rdlc",
+      "PackagePath": "staticwebassets\\Reports\\RptSalaryControlSheetJS.rdlc"
+    },
+    {
+      "Id": "E:\\JabaIt\\Payroll_System\\BgfclApp\\wwwroot\\Reports\\RptSalaryControlSheetJS1.rdlc",
+      "PackagePath": "staticwebassets\\Reports\\RptSalaryControlSheetJS1.rdlc"
+    },
+    {
+      "Id": "E:\\JabaIt\\Payroll_System\\BgfclApp\\wwwroot\\Reports\\RptSalaryControlSheetJSYearly.rdlc",
+      "PackagePath": "staticwebassets\\Reports\\RptSalaryControlSheetJSYearly.rdlc"
+    },
+    {
+      "Id": "E:\\JabaIt\\Payroll_System\\BgfclApp\\wwwroot\\Reports\\RptSalaryControlSheetOF.rdlc",
+      "PackagePath": "staticwebassets\\Reports\\RptSalaryControlSheetOF.rdlc"
+    },
+    {
+      "Id": "E:\\JabaIt\\Payroll_System\\BgfclApp\\wwwroot\\Reports\\RptSalaryControlSheetOFYearly.rdlc",
+      "PackagePath": "staticwebassets\\Reports\\RptSalaryControlSheetOFYearly.rdlc"
+    },
+    {
+      "Id": "E:\\JabaIt\\Payroll_System\\BgfclApp\\wwwroot\\Reports\\RptSalaryForwarding.rdlc",
+      "PackagePath": "staticwebassets\\Reports\\RptSalaryForwarding.rdlc"
+    },
+    {
+      "Id": "E:\\JabaIt\\Payroll_System\\BgfclApp\\wwwroot\\Reports\\RptSalaryJournal.rdlc",
+      "PackagePath": "staticwebassets\\Reports\\RptSalaryJournal.rdlc"
+    },
+    {
+      "Id": "E:\\JabaIt\\Payroll_System\\BgfclApp\\wwwroot\\Reports\\RptSalaryPaySlip.rdlc",
+      "PackagePath": "staticwebassets\\Reports\\RptSalaryPaySlip.rdlc"
+    },
+    {
+      "Id": "E:\\JabaIt\\Payroll_System\\BgfclApp\\wwwroot\\Reports\\RptSalaryPaySlipJS.rdlc",
+      "PackagePath": "staticwebassets\\Reports\\RptSalaryPaySlipJS.rdlc"
+    },
+    {
+      "Id": "E:\\JabaIt\\Payroll_System\\BgfclApp\\wwwroot\\Reports\\RptSchedulePF.rdlc",
+      "PackagePath": "staticwebassets\\Reports\\RptSchedulePF.rdlc"
+    },
+    {
+      "Id": "E:\\JabaIt\\Payroll_System\\BgfclApp\\wwwroot\\Reports\\RptSummaryComLoan.rdlc",
+      "PackagePath": "staticwebassets\\Reports\\RptSummaryComLoan.rdlc"
+    },
+    {
+      "Id": "E:\\JabaIt\\Payroll_System\\BgfclApp\\wwwroot\\Reports\\RptSummaryMotorLoan.rdlc",
+      "PackagePath": "staticwebassets\\Reports\\RptSummaryMotorLoan.rdlc"
+    },
+    {
+      "Id": "E:\\JabaIt\\Payroll_System\\BgfclApp\\wwwroot\\Reports\\RptTaxCertificate.rdlc",
+      "PackagePath": "staticwebassets\\Reports\\RptTaxCertificate.rdlc"
+    },
+    {
+      "Id": "E:\\JabaIt\\Payroll_System\\BgfclApp\\wwwroot\\Reports\\RptWelfareFund.rdlc",
+      "PackagePath": "staticwebassets\\Reports\\RptWelfareFund.rdlc"
+    },
+    {
+      "Id": "E:\\JabaIt\\Payroll_System\\BgfclApp\\wwwroot\\Reports\\RptYearlyIncomeTax.rdlc",
+      "PackagePath": "staticwebassets\\Reports\\RptYearlyIncomeTax.rdlc"
+    },
+    {
+      "Id": "E:\\JabaIt\\Payroll_System\\BgfclApp\\wwwroot\\Reports\\RptYearlyPaySlip.rdlc",
+      "PackagePath": "staticwebassets\\Reports\\RptYearlyPaySlip.rdlc"
+    },
+    {
+      "Id": "E:\\JabaIt\\Payroll_System\\BgfclApp\\wwwroot\\Reports\\RptYearlyPaySlipJS.rdlc",
+      "PackagePath": "staticwebassets\\Reports\\RptYearlyPaySlipJS.rdlc"
+    },
+    {
+      "Id": "E:\\JabaIt\\Payroll_System\\BgfclApp\\wwwroot\\Reports\\Rpt_Bonus_Sheet_Bank_Copy.rdlc",
+      "PackagePath": "staticwebassets\\Reports\\Rpt_Bonus_Sheet_Bank_Copy.rdlc"
+    },
+    {
+      "Id": "E:\\JabaIt\\Payroll_System\\BgfclApp\\wwwroot\\Uploads\\Tax_August 2024.xls",
+      "PackagePath": "staticwebassets\\Uploads\\Tax_August 2024.xls"
+    },
+    {
+      "Id": "E:\\JabaIt\\Payroll_System\\BgfclApp\\wwwroot\\css\\Reports\\reports.css",
+      "PackagePath": "staticwebassets\\css\\Reports\\reports.css"
+    },
+    {
+      "Id": "E:\\JabaIt\\Payroll_System\\BgfclApp\\wwwroot\\css\\Reports\\schedule_pf.css",
+      "PackagePath": "staticwebassets\\css\\Reports\\schedule_pf.css"
+    },
+    {
+      "Id": "E:\\JabaIt\\Payroll_System\\BgfclApp\\wwwroot\\css\\SalaryReport\\dailyAttendance.css",
+      "PackagePath": "staticwebassets\\css\\SalaryReport\\dailyAttendance.css"
+    },
+    {
+      "Id": "E:\\JabaIt\\Payroll_System\\BgfclApp\\wwwroot\\css\\SalaryReport\\salaryReport.css",
+      "PackagePath": "staticwebassets\\css\\SalaryReport\\salaryReport.css"
+    },
+    {
+      "Id": "E:\\JabaIt\\Payroll_System\\BgfclApp\\wwwroot\\css\\banks\\account.css",
+      "PackagePath": "staticwebassets\\css\\banks\\account.css"
+    },
+    {
+      "Id": "E:\\JabaIt\\Payroll_System\\BgfclApp\\wwwroot\\css\\banks\\banks.css",
+      "PackagePath": "staticwebassets\\css\\banks\\banks.css"
+    },
+    {
+      "Id": "E:\\JabaIt\\Payroll_System\\BgfclApp\\wwwroot\\css\\banks\\banktype.css",
+      "PackagePath": "staticwebassets\\css\\banks\\banktype.css"
+    },
+    {
+      "Id": "E:\\JabaIt\\Payroll_System\\BgfclApp\\wwwroot\\css\\banks\\branches.css",
+      "PackagePath": "staticwebassets\\css\\banks\\branches.css"
+    },
+    {
+      "Id": "E:\\JabaIt\\Payroll_System\\BgfclApp\\wwwroot\\css\\banks\\tags.css",
+      "PackagePath": "staticwebassets\\css\\banks\\tags.css"
+    },
+    {
+      "Id": "E:\\JabaIt\\Payroll_System\\BgfclApp\\wwwroot\\css\\bonus\\bonus.css",
+      "PackagePath": "staticwebassets\\css\\bonus\\bonus.css"
+    },
+    {
+      "Id": "E:\\JabaIt\\Payroll_System\\BgfclApp\\wwwroot\\css\\bonus\\bonusSheet.css",
+      "PackagePath": "staticwebassets\\css\\bonus\\bonusSheet.css"
+    },
+    {
+      "Id": "E:\\JabaIt\\Payroll_System\\BgfclApp\\wwwroot\\css\\bonusprocess\\bonusprocess.css",
+      "PackagePath": "staticwebassets\\css\\bonusprocess\\bonusprocess.css"
+    },
+    {
+      "Id": "E:\\JabaIt\\Payroll_System\\BgfclApp\\wwwroot\\css\\bootstrap-datetimepicker.min.css",
+      "PackagePath": "staticwebassets\\css\\bootstrap-datetimepicker.min.css"
+    },
+    {
+      "Id": "E:\\JabaIt\\Payroll_System\\BgfclApp\\wwwroot\\css\\bootstrap.css",
+      "PackagePath": "staticwebassets\\css\\bootstrap.css"
+    },
+    {
+      "Id": "E:\\JabaIt\\Payroll_System\\BgfclApp\\wwwroot\\css\\bootstrap.css.map",
+      "PackagePath": "staticwebassets\\css\\bootstrap.css.map"
+    },
+    {
+      "Id": "E:\\JabaIt\\Payroll_System\\BgfclApp\\wwwroot\\css\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\css\\bootstrap.min.css"
+    },
+    {
+      "Id": "E:\\JabaIt\\Payroll_System\\BgfclApp\\wwwroot\\css\\bootstrap.min.css.map",
+      "PackagePath": "staticwebassets\\css\\bootstrap.min.css.map"
+    },
+    {
+      "Id": "E:\\JabaIt\\Payroll_System\\BgfclApp\\wwwroot\\css\\categories\\create_category.css",
+      "PackagePath": "staticwebassets\\css\\categories\\create_category.css"
+    },
+    {
+      "Id": "E:\\JabaIt\\Payroll_System\\BgfclApp\\wwwroot\\css\\categories\\edit_category.css",
+      "PackagePath": "staticwebassets\\css\\categories\\edit_category.css"
+    },
+    {
+      "Id": "E:\\JabaIt\\Payroll_System\\BgfclApp\\wwwroot\\css\\categories\\index.css",
+      "PackagePath": "staticwebassets\\css\\categories\\index.css"
+    },
+    {
+      "Id": "E:\\JabaIt\\Payroll_System\\BgfclApp\\wwwroot\\css\\dashboard\\index.css",
+      "PackagePath": "staticwebassets\\css\\dashboard\\index.css"
+    },
+    {
+      "Id": "E:\\JabaIt\\Payroll_System\\BgfclApp\\wwwroot\\css\\datatables.min.css",
+      "PackagePath": "staticwebassets\\css\\datatables.min.css"
+    },
+    {
+      "Id": "E:\\JabaIt\\Payroll_System\\BgfclApp\\wwwroot\\css\\departments\\index.css",
+      "PackagePath": "staticwebassets\\css\\departments\\index.css"
+    },
+    {
+      "Id": "E:\\JabaIt\\Payroll_System\\BgfclApp\\wwwroot\\css\\designations\\index.css",
+      "PackagePath": "staticwebassets\\css\\designations\\index.css"
+    },
+    {
+      "Id": "E:\\JabaIt\\Payroll_System\\BgfclApp\\wwwroot\\css\\employeeType\\index.css",
+      "PackagePath": "staticwebassets\\css\\employeeType\\index.css"
+    },
+    {
+      "Id": "E:\\JabaIt\\Payroll_System\\BgfclApp\\wwwroot\\css\\employees\\index.css",
+      "PackagePath": "staticwebassets\\css\\employees\\index.css"
+    },
+    {
+      "Id": "E:\\JabaIt\\Payroll_System\\BgfclApp\\wwwroot\\css\\font-awesome.min.css",
+      "PackagePath": "staticwebassets\\css\\font-awesome.min.css"
+    },
+    {
+      "Id": "E:\\JabaIt\\Payroll_System\\BgfclApp\\wwwroot\\css\\fullcalendar.min.css",
+      "PackagePath": "staticwebassets\\css\\fullcalendar.min.css"
+    },
+    {
+      "Id": "E:\\JabaIt\\Payroll_System\\BgfclApp\\wwwroot\\css\\grades\\basic.css",
+      "PackagePath": "staticwebassets\\css\\grades\\basic.css"
+    },
+    {
+      "Id": "E:\\JabaIt\\Payroll_System\\BgfclApp\\wwwroot\\css\\grades\\index.css",
+      "PackagePath": "staticwebassets\\css\\grades\\index.css"
+    },
+    {
+      "Id": "E:\\JabaIt\\Payroll_System\\BgfclApp\\wwwroot\\css\\line-awesome.min.css",
+      "PackagePath": "staticwebassets\\css\\line-awesome.min.css"
+    },
+    {
+      "Id": "E:\\JabaIt\\Payroll_System\\BgfclApp\\wwwroot\\css\\loader\\loader.css",
+      "PackagePath": "staticwebassets\\css\\loader\\loader.css"
+    },
+    {
+      "Id": "E:\\JabaIt\\Payroll_System\\BgfclApp\\wwwroot\\css\\location\\index.css",
+      "PackagePath": "staticwebassets\\css\\location\\index.css"
+    },
+    {
+      "Id": "E:\\JabaIt\\Payroll_System\\BgfclApp\\wwwroot\\css\\religions\\index.css",
+      "PackagePath": "staticwebassets\\css\\religions\\index.css"
+    },
+    {
+      "Id": "E:\\JabaIt\\Payroll_System\\BgfclApp\\wwwroot\\css\\roles\\index.css",
+      "PackagePath": "staticwebassets\\css\\roles\\index.css"
+    },
+    {
+      "Id": "E:\\JabaIt\\Payroll_System\\BgfclApp\\wwwroot\\css\\salarySettingsConfig\\salarySettingsConfig.css",
+      "PackagePath": "staticwebassets\\css\\salarySettingsConfig\\salarySettingsConfig.css"
+    },
+    {
+      "Id": "E:\\JabaIt\\Payroll_System\\BgfclApp\\wwwroot\\css\\salarysettings\\basicsalarysettingsjs.css",
+      "PackagePath": "staticwebassets\\css\\salarysettings\\basicsalarysettingsjs.css"
+    },
+    {
+      "Id": "E:\\JabaIt\\Payroll_System\\BgfclApp\\wwwroot\\css\\salarysettings\\basicsalarysettingsofficer.css",
+      "PackagePath": "staticwebassets\\css\\salarysettings\\basicsalarysettingsofficer.css"
+    },
+    {
+      "Id": "E:\\JabaIt\\Payroll_System\\BgfclApp\\wwwroot\\css\\salarysettings\\basicsalarysettingsworker.css",
+      "PackagePath": "staticwebassets\\css\\salarysettings\\basicsalarysettingsworker.css"
+    },
+    {
+      "Id": "E:\\JabaIt\\Payroll_System\\BgfclApp\\wwwroot\\css\\salarysettings\\jspreadsheet.css",
+      "PackagePath": "staticwebassets\\css\\salarysettings\\jspreadsheet.css"
+    },
+    {
+      "Id": "E:\\JabaIt\\Payroll_System\\BgfclApp\\wwwroot\\css\\salarysettings\\salarypolicysettings.css",
+      "PackagePath": "staticwebassets\\css\\salarysettings\\salarypolicysettings.css"
+    },
+    {
+      "Id": "E:\\JabaIt\\Payroll_System\\BgfclApp\\wwwroot\\css\\salarysettings\\salaryprocess.css",
+      "PackagePath": "staticwebassets\\css\\salarysettings\\salaryprocess.css"
+    },
+    {
+      "Id": "E:\\JabaIt\\Payroll_System\\BgfclApp\\wwwroot\\css\\schools\\index.css",
+      "PackagePath": "staticwebassets\\css\\schools\\index.css"
+    },
+    {
+      "Id": "E:\\JabaIt\\Payroll_System\\BgfclApp\\wwwroot\\css\\select2.min.css",
+      "PackagePath": "staticwebassets\\css\\select2.min.css"
+    },
+    {
+      "Id": "E:\\JabaIt\\Payroll_System\\BgfclApp\\wwwroot\\css\\style.css",
+      "PackagePath": "staticwebassets\\css\\style.css"
+    },
+    {
+      "Id": "E:\\JabaIt\\Payroll_System\\BgfclApp\\wwwroot\\css\\toastr.min.css",
+      "PackagePath": "staticwebassets\\css\\toastr.min.css"
+    },
+    {
+      "Id": "E:\\JabaIt\\Payroll_System\\BgfclApp\\wwwroot\\css\\users\\attendance.css",
+      "PackagePath": "staticwebassets\\css\\users\\attendance.css"
+    },
+    {
+      "Id": "E:\\JabaIt\\Payroll_System\\BgfclApp\\wwwroot\\css\\users\\index.css",
+      "PackagePath": "staticwebassets\\css\\users\\index.css"
+    },
+    {
+      "Id": "E:\\JabaIt\\Payroll_System\\BgfclApp\\wwwroot\\fonts\\CircularStd-Black.woff",
+      "PackagePath": "staticwebassets\\fonts\\CircularStd-Black.woff"
+    },
+    {
+      "Id": "E:\\JabaIt\\Payroll_System\\BgfclApp\\wwwroot\\fonts\\CircularStd-BlackItalic.woff",
+      "PackagePath": "staticwebassets\\fonts\\CircularStd-BlackItalic.woff"
+    },
+    {
+      "Id": "E:\\JabaIt\\Payroll_System\\BgfclApp\\wwwroot\\fonts\\CircularStd-Bold.woff",
+      "PackagePath": "staticwebassets\\fonts\\CircularStd-Bold.woff"
+    },
+    {
+      "Id": "E:\\JabaIt\\Payroll_System\\BgfclApp\\wwwroot\\fonts\\CircularStd-BoldItalic.woff",
+      "PackagePath": "staticwebassets\\fonts\\CircularStd-BoldItalic.woff"
+    },
+    {
+      "Id": "E:\\JabaIt\\Payroll_System\\BgfclApp\\wwwroot\\fonts\\CircularStd-Book.woff",
+      "PackagePath": "staticwebassets\\fonts\\CircularStd-Book.woff"
+    },
+    {
+      "Id": "E:\\JabaIt\\Payroll_System\\BgfclApp\\wwwroot\\fonts\\CircularStd-BookItalic.woff",
+      "PackagePath": "staticwebassets\\fonts\\CircularStd-BookItalic.woff"
+    },
+    {
+      "Id": "E:\\JabaIt\\Payroll_System\\BgfclApp\\wwwroot\\fonts\\CircularStd-Medium.woff",
+      "PackagePath": "staticwebassets\\fonts\\CircularStd-Medium.woff"
+    },
+    {
+      "Id": "E:\\JabaIt\\Payroll_System\\BgfclApp\\wwwroot\\fonts\\CircularStd-MediumItalic.woff",
+      "PackagePath": "staticwebassets\\fonts\\CircularStd-MediumItalic.woff"
+    },
+    {
+      "Id": "E:\\JabaIt\\Payroll_System\\BgfclApp\\wwwroot\\fonts\\FontAwesome.otf",
+      "PackagePath": "staticwebassets\\fonts\\FontAwesome.otf"
+    },
+    {
+      "Id": "E:\\JabaIt\\Payroll_System\\BgfclApp\\wwwroot\\fonts\\MaterialIcons-Regular.eot",
+      "PackagePath": "staticwebassets\\fonts\\MaterialIcons-Regular.eot"
+    },
+    {
+      "Id": "E:\\JabaIt\\Payroll_System\\BgfclApp\\wwwroot\\fonts\\MaterialIcons-Regular.svg",
+      "PackagePath": "staticwebassets\\fonts\\MaterialIcons-Regular.svg"
+    },
+    {
+      "Id": "E:\\JabaIt\\Payroll_System\\BgfclApp\\wwwroot\\fonts\\MaterialIcons-Regular.ttf",
+      "PackagePath": "staticwebassets\\fonts\\MaterialIcons-Regular.ttf"
+    },
+    {
+      "Id": "E:\\JabaIt\\Payroll_System\\BgfclApp\\wwwroot\\fonts\\MaterialIcons-Regular.woff",
+      "PackagePath": "staticwebassets\\fonts\\MaterialIcons-Regular.woff"
+    },
+    {
+      "Id": "E:\\JabaIt\\Payroll_System\\BgfclApp\\wwwroot\\fonts\\MaterialIcons-Regular.woff2",
+      "PackagePath": "staticwebassets\\fonts\\MaterialIcons-Regular.woff2"
+    },
+    {
+      "Id": "E:\\JabaIt\\Payroll_System\\BgfclApp\\wwwroot\\fonts\\fontawesome-webfont.eot",
+      "PackagePath": "staticwebassets\\fonts\\fontawesome-webfont.eot"
+    },
+    {
+      "Id": "E:\\JabaIt\\Payroll_System\\BgfclApp\\wwwroot\\fonts\\fontawesome-webfont.svg",
+      "PackagePath": "staticwebassets\\fonts\\fontawesome-webfont.svg"
+    },
+    {
+      "Id": "E:\\JabaIt\\Payroll_System\\BgfclApp\\wwwroot\\fonts\\fontawesome-webfont.ttf",
+      "PackagePath": "staticwebassets\\fonts\\fontawesome-webfont.ttf"
+    },
+    {
+      "Id": "E:\\JabaIt\\Payroll_System\\BgfclApp\\wwwroot\\fonts\\fontawesome-webfont.woff",
+      "PackagePath": "staticwebassets\\fonts\\fontawesome-webfont.woff"
+    },
+    {
+      "Id": "E:\\JabaIt\\Payroll_System\\BgfclApp\\wwwroot\\fonts\\fontawesome-webfont.woff2",
+      "PackagePath": "staticwebassets\\fonts\\fontawesome-webfont.woff2"
+    },
+    {
+      "Id": "E:\\JabaIt\\Payroll_System\\BgfclApp\\wwwroot\\fonts\\la-brands-400.eot",
+      "PackagePath": "staticwebassets\\fonts\\la-brands-400.eot"
+    },
+    {
+      "Id": "E:\\JabaIt\\Payroll_System\\BgfclApp\\wwwroot\\fonts\\la-brands-400.svg",
+      "PackagePath": "staticwebassets\\fonts\\la-brands-400.svg"
+    },
+    {
+      "Id": "E:\\JabaIt\\Payroll_System\\BgfclApp\\wwwroot\\fonts\\la-brands-400.ttf",
+      "PackagePath": "staticwebassets\\fonts\\la-brands-400.ttf"
+    },
+    {
+      "Id": "E:\\JabaIt\\Payroll_System\\BgfclApp\\wwwroot\\fonts\\la-brands-400.woff",
+      "PackagePath": "staticwebassets\\fonts\\la-brands-400.woff"
+    },
+    {
+      "Id": "E:\\JabaIt\\Payroll_System\\BgfclApp\\wwwroot\\fonts\\la-brands-400.woff2",
+      "PackagePath": "staticwebassets\\fonts\\la-brands-400.woff2"
+    },
+    {
+      "Id": "E:\\JabaIt\\Payroll_System\\BgfclApp\\wwwroot\\fonts\\la-regular-400.eot",
+      "PackagePath": "staticwebassets\\fonts\\la-regular-400.eot"
+    },
+    {
+      "Id": "E:\\JabaIt\\Payroll_System\\BgfclApp\\wwwroot\\fonts\\la-regular-400.svg",
+      "PackagePath": "staticwebassets\\fonts\\la-regular-400.svg"
+    },
+    {
+      "Id": "E:\\JabaIt\\Payroll_System\\BgfclApp\\wwwroot\\fonts\\la-regular-400.ttf",
+      "PackagePath": "staticwebassets\\fonts\\la-regular-400.ttf"
+    },
+    {
+      "Id": "E:\\JabaIt\\Payroll_System\\BgfclApp\\wwwroot\\fonts\\la-regular-400.woff",
+      "PackagePath": "staticwebassets\\fonts\\la-regular-400.woff"
+    },
+    {
+      "Id": "E:\\JabaIt\\Payroll_System\\BgfclApp\\wwwroot\\fonts\\la-regular-400.woff2",
+      "PackagePath": "staticwebassets\\fonts\\la-regular-400.woff2"
+    },
+    {
+      "Id": "E:\\JabaIt\\Payroll_System\\BgfclApp\\wwwroot\\fonts\\la-solid-900.eot",
+      "PackagePath": "staticwebassets\\fonts\\la-solid-900.eot"
+    },
+    {
+      "Id": "E:\\JabaIt\\Payroll_System\\BgfclApp\\wwwroot\\fonts\\la-solid-900.svg",
+      "PackagePath": "staticwebassets\\fonts\\la-solid-900.svg"
+    },
+    {
+      "Id": "E:\\JabaIt\\Payroll_System\\BgfclApp\\wwwroot\\fonts\\la-solid-900.ttf",
+      "PackagePath": "staticwebassets\\fonts\\la-solid-900.ttf"
+    },
+    {
+      "Id": "E:\\JabaIt\\Payroll_System\\BgfclApp\\wwwroot\\fonts\\la-solid-900.woff",
+      "PackagePath": "staticwebassets\\fonts\\la-solid-900.woff"
+    },
+    {
+      "Id": "E:\\JabaIt\\Payroll_System\\BgfclApp\\wwwroot\\fonts\\la-solid-900.woff2",
+      "PackagePath": "staticwebassets\\fonts\\la-solid-900.woff2"
+    },
+    {
+      "Id": "E:\\JabaIt\\Payroll_System\\BgfclApp\\wwwroot\\fonts\\line-awesome.eot",
+      "PackagePath": "staticwebassets\\fonts\\line-awesome.eot"
+    },
+    {
+      "Id": "E:\\JabaIt\\Payroll_System\\BgfclApp\\wwwroot\\fonts\\line-awesome.svg",
+      "PackagePath": "staticwebassets\\fonts\\line-awesome.svg"
+    },
+    {
+      "Id": "E:\\JabaIt\\Payroll_System\\BgfclApp\\wwwroot\\fonts\\line-awesome.ttf",
+      "PackagePath": "staticwebassets\\fonts\\line-awesome.ttf"
+    },
+    {
+      "Id": "E:\\JabaIt\\Payroll_System\\BgfclApp\\wwwroot\\fonts\\line-awesome.woff",
+      "PackagePath": "staticwebassets\\fonts\\line-awesome.woff"
+    },
+    {
+      "Id": "E:\\JabaIt\\Payroll_System\\BgfclApp\\wwwroot\\fonts\\line-awesome.woff2",
+      "PackagePath": "staticwebassets\\fonts\\line-awesome.woff2"
+    },
+    {
+      "Id": "E:\\JabaIt\\Payroll_System\\BgfclApp\\wwwroot\\js\\PayrollDashboard\\index.js",
+      "PackagePath": "staticwebassets\\js\\PayrollDashboard\\index.js"
+    },
+    {
+      "Id": "E:\\JabaIt\\Payroll_System\\BgfclApp\\wwwroot\\js\\Reports\\banksheet.js",
+      "PackagePath": "staticwebassets\\js\\Reports\\banksheet.js"
+    },
+    {
+      "Id": "E:\\JabaIt\\Payroll_System\\BgfclApp\\wwwroot\\js\\Reports\\schedule_pf.js",
+      "PackagePath": "staticwebassets\\js\\Reports\\schedule_pf.js"
+    },
+    {
+      "Id": "E:\\JabaIt\\Payroll_System\\BgfclApp\\wwwroot\\js\\amenities\\amenities_journal_adjustment.js",
+      "PackagePath": "staticwebassets\\js\\amenities\\amenities_journal_adjustment.js"
+    },
+    {
+      "Id": "E:\\JabaIt\\Payroll_System\\BgfclApp\\wwwroot\\js\\amenities\\amenities_process.js",
+      "PackagePath": "staticwebassets\\js\\amenities\\amenities_process.js"
+    },
+    {
+      "Id": "E:\\JabaIt\\Payroll_System\\BgfclApp\\wwwroot\\js\\amenities\\create_amenities.js",
+      "PackagePath": "staticwebassets\\js\\amenities\\create_amenities.js"
+    },
+    {
+      "Id": "E:\\JabaIt\\Payroll_System\\BgfclApp\\wwwroot\\js\\amenities\\final_adjustment.js",
+      "PackagePath": "staticwebassets\\js\\amenities\\final_adjustment.js"
+    },
+    {
+      "Id": "E:\\JabaIt\\Payroll_System\\BgfclApp\\wwwroot\\js\\app.js",
+      "PackagePath": "staticwebassets\\js\\app.js"
+    },
+    {
+      "Id": "E:\\JabaIt\\Payroll_System\\BgfclApp\\wwwroot\\js\\banks\\account.js",
+      "PackagePath": "staticwebassets\\js\\banks\\account.js"
+    },
+    {
+      "Id": "E:\\JabaIt\\Payroll_System\\BgfclApp\\wwwroot\\js\\banks\\banks.js",
+      "PackagePath": "staticwebassets\\js\\banks\\banks.js"
+    },
+    {
+      "Id": "E:\\JabaIt\\Payroll_System\\BgfclApp\\wwwroot\\js\\banks\\banktype.js",
+      "PackagePath": "staticwebassets\\js\\banks\\banktype.js"
+    },
+    {
+      "Id": "E:\\JabaIt\\Payroll_System\\BgfclApp\\wwwroot\\js\\banks\\branches.js",
+      "PackagePath": "staticwebassets\\js\\banks\\branches.js"
+    },
+    {
+      "Id": "E:\\JabaIt\\Payroll_System\\BgfclApp\\wwwroot\\js\\banks\\tags.js",
+      "PackagePath": "staticwebassets\\js\\banks\\tags.js"
+    },
+    {
+      "Id": "E:\\JabaIt\\Payroll_System\\BgfclApp\\wwwroot\\js\\bonus\\create_bonus.js",
+      "PackagePath": "staticwebassets\\js\\bonus\\create_bonus.js"
+    },
+    {
+      "Id": "E:\\JabaIt\\Payroll_System\\BgfclApp\\wwwroot\\js\\bonus\\final_adjustment.js",
+      "PackagePath": "staticwebassets\\js\\bonus\\final_adjustment.js"
+    },
+    {
+      "Id": "E:\\JabaIt\\Payroll_System\\BgfclApp\\wwwroot\\js\\bonus\\process_bonus.js",
+      "PackagePath": "staticwebassets\\js\\bonus\\process_bonus.js"
+    },
+    {
+      "Id": "E:\\JabaIt\\Payroll_System\\BgfclApp\\wwwroot\\js\\bonus\\process_bonus_data.js",
+      "PackagePath": "staticwebassets\\js\\bonus\\process_bonus_data.js"
+    },
+    {
+      "Id": "E:\\JabaIt\\Payroll_System\\BgfclApp\\wwwroot\\js\\bootstrap-datetimepicker.min.js",
+      "PackagePath": "staticwebassets\\js\\bootstrap-datetimepicker.min.js"
+    },
+    {
+      "Id": "E:\\JabaIt\\Payroll_System\\BgfclApp\\wwwroot\\js\\bootstrap.js",
+      "PackagePath": "staticwebassets\\js\\bootstrap.js"
+    },
+    {
+      "Id": "E:\\JabaIt\\Payroll_System\\BgfclApp\\wwwroot\\js\\bootstrap.js.map",
+      "PackagePath": "staticwebassets\\js\\bootstrap.js.map"
+    },
+    {
+      "Id": "E:\\JabaIt\\Payroll_System\\BgfclApp\\wwwroot\\js\\bootstrap.min.js",
+      "PackagePath": "staticwebassets\\js\\bootstrap.min.js"
+    },
+    {
+      "Id": "E:\\JabaIt\\Payroll_System\\BgfclApp\\wwwroot\\js\\bootstrap.min.js.map",
+      "PackagePath": "staticwebassets\\js\\bootstrap.min.js.map"
+    },
+    {
+      "Id": "E:\\JabaIt\\Payroll_System\\BgfclApp\\wwwroot\\js\\chart.js",
+      "PackagePath": "staticwebassets\\js\\chart.js"
+    },
+    {
+      "Id": "E:\\JabaIt\\Payroll_System\\BgfclApp\\wwwroot\\js\\common.js",
+      "PackagePath": "staticwebassets\\js\\common.js"
+    },
+    {
+      "Id": "E:\\JabaIt\\Payroll_System\\BgfclApp\\wwwroot\\js\\dashboard\\index.js",
+      "PackagePath": "staticwebassets\\js\\dashboard\\index.js"
+    },
+    {
+      "Id": "E:\\JabaIt\\Payroll_System\\BgfclApp\\wwwroot\\js\\dataImport\\DataImport.js",
+      "PackagePath": "staticwebassets\\js\\dataImport\\DataImport.js"
+    },
+    {
+      "Id": "E:\\JabaIt\\Payroll_System\\BgfclApp\\wwwroot\\js\\datatables.min.js",
+      "PackagePath": "staticwebassets\\js\\datatables.min.js"
+    },
+    {
+      "Id": "E:\\JabaIt\\Payroll_System\\BgfclApp\\wwwroot\\js\\departments\\index.js",
+      "PackagePath": "staticwebassets\\js\\departments\\index.js"
+    },
+    {
+      "Id": "E:\\JabaIt\\Payroll_System\\BgfclApp\\wwwroot\\js\\designations\\index.js",
+      "PackagePath": "staticwebassets\\js\\designations\\index.js"
+    },
+    {
+      "Id": "E:\\JabaIt\\Payroll_System\\BgfclApp\\wwwroot\\js\\dropfiles.js",
+      "PackagePath": "staticwebassets\\js\\dropfiles.js"
+    },
+    {
+      "Id": "E:\\JabaIt\\Payroll_System\\BgfclApp\\wwwroot\\js\\employeeType\\index.js",
+      "PackagePath": "staticwebassets\\js\\employeeType\\index.js"
+    },
+    {
+      "Id": "E:\\JabaIt\\Payroll_System\\BgfclApp\\wwwroot\\js\\employees\\dailyWorker.js",
+      "PackagePath": "staticwebassets\\js\\employees\\dailyWorker.js"
+    },
+    {
+      "Id": "E:\\JabaIt\\Payroll_System\\BgfclApp\\wwwroot\\js\\employees\\inactiveJuniorStaff.js",
+      "PackagePath": "staticwebassets\\js\\employees\\inactiveJuniorStaff.js"
+    },
+    {
+      "Id": "E:\\JabaIt\\Payroll_System\\BgfclApp\\wwwroot\\js\\employees\\inactiveofficer.js",
+      "PackagePath": "staticwebassets\\js\\employees\\inactiveofficer.js"
+    },
+    {
+      "Id": "E:\\JabaIt\\Payroll_System\\BgfclApp\\wwwroot\\js\\employees\\junior_staff.js",
+      "PackagePath": "staticwebassets\\js\\employees\\junior_staff.js"
+    },
+    {
+      "Id": "E:\\JabaIt\\Payroll_System\\BgfclApp\\wwwroot\\js\\employees\\officer.js",
+      "PackagePath": "staticwebassets\\js\\employees\\officer.js"
+    },
+    {
+      "Id": "E:\\JabaIt\\Payroll_System\\BgfclApp\\wwwroot\\js\\form-validation.js",
+      "PackagePath": "staticwebassets\\js\\form-validation.js"
+    },
+    {
+      "Id": "E:\\JabaIt\\Payroll_System\\BgfclApp\\wwwroot\\js\\fullcalendar.min.js",
+      "PackagePath": "staticwebassets\\js\\fullcalendar.min.js"
+    },
+    {
+      "Id": "E:\\JabaIt\\Payroll_System\\BgfclApp\\wwwroot\\js\\grades\\basic.js",
+      "PackagePath": "staticwebassets\\js\\grades\\basic.js"
+    },
+    {
+      "Id": "E:\\JabaIt\\Payroll_System\\BgfclApp\\wwwroot\\js\\grades\\departments\\index.js",
+      "PackagePath": "staticwebassets\\js\\grades\\departments\\index.js"
+    },
+    {
+      "Id": "E:\\JabaIt\\Payroll_System\\BgfclApp\\wwwroot\\js\\grades\\index.js",
+      "PackagePath": "staticwebassets\\js\\grades\\index.js"
+    },
+    {
+      "Id": "E:\\JabaIt\\Payroll_System\\BgfclApp\\wwwroot\\js\\html5shiv.min.js",
+      "PackagePath": "staticwebassets\\js\\html5shiv.min.js"
+    },
+    {
+      "Id": "E:\\JabaIt\\Payroll_System\\BgfclApp\\wwwroot\\js\\jquery-3.5.1.min.js",
+      "PackagePath": "staticwebassets\\js\\jquery-3.5.1.min.js"
+    },
+    {
+      "Id": "E:\\JabaIt\\Payroll_System\\BgfclApp\\wwwroot\\js\\jquery-ui.min.js",
+      "PackagePath": "staticwebassets\\js\\jquery-ui.min.js"
+    },
+    {
+      "Id": "E:\\JabaIt\\Payroll_System\\BgfclApp\\wwwroot\\js\\jquery.fullcalendar.js",
+      "PackagePath": "staticwebassets\\js\\jquery.fullcalendar.js"
+    },
+    {
+      "Id": "E:\\JabaIt\\Payroll_System\\BgfclApp\\wwwroot\\js\\jquery.maskedinput.min.js",
+      "PackagePath": "staticwebassets\\js\\jquery.maskedinput.min.js"
+    },
+    {
+      "Id": "E:\\JabaIt\\Payroll_System\\BgfclApp\\wwwroot\\js\\jquery.slimscroll.js",
+      "PackagePath": "staticwebassets\\js\\jquery.slimscroll.js"
+    },
+    {
+      "Id": "E:\\JabaIt\\Payroll_System\\BgfclApp\\wwwroot\\js\\jquery.slimscroll.min.js",
+      "PackagePath": "staticwebassets\\js\\jquery.slimscroll.min.js"
+    },
+    {
+      "Id": "E:\\JabaIt\\Payroll_System\\BgfclApp\\wwwroot\\js\\jquery.ui.touch-punch.min.js",
+      "PackagePath": "staticwebassets\\js\\jquery.ui.touch-punch.min.js"
+    },
+    {
+      "Id": "E:\\JabaIt\\Payroll_System\\BgfclApp\\wwwroot\\js\\loans\\Insert_Year_Ending_Loan.js",
+      "PackagePath": "staticwebassets\\js\\loans\\Insert_Year_Ending_Loan.js"
+    },
+    {
+      "Id": "E:\\JabaIt\\Payroll_System\\BgfclApp\\wwwroot\\js\\loans\\car_loan.js",
+      "PackagePath": "staticwebassets\\js\\loans\\car_loan.js"
+    },
+    {
+      "Id": "E:\\JabaIt\\Payroll_System\\BgfclApp\\wwwroot\\js\\loans\\com_loan.js",
+      "PackagePath": "staticwebassets\\js\\loans\\com_loan.js"
+    },
+    {
+      "Id": "E:\\JabaIt\\Payroll_System\\BgfclApp\\wwwroot\\js\\loans\\flat_loan.js",
+      "PackagePath": "staticwebassets\\js\\loans\\flat_loan.js"
+    },
+    {
+      "Id": "E:\\JabaIt\\Payroll_System\\BgfclApp\\wwwroot\\js\\loans\\hb_loan.js",
+      "PackagePath": "staticwebassets\\js\\loans\\hb_loan.js"
+    },
+    {
+      "Id": "E:\\JabaIt\\Payroll_System\\BgfclApp\\wwwroot\\js\\loans\\loan_process.js",
+      "PackagePath": "staticwebassets\\js\\loans\\loan_process.js"
+    },
+    {
+      "Id": "E:\\JabaIt\\Payroll_System\\BgfclApp\\wwwroot\\js\\loans\\mc_loan.js",
+      "PackagePath": "staticwebassets\\js\\loans\\mc_loan.js"
+    },
+    {
+      "Id": "E:\\JabaIt\\Payroll_System\\BgfclApp\\wwwroot\\js\\location\\index.js",
+      "PackagePath": "staticwebassets\\js\\location\\index.js"
+    },
+    {
+      "Id": "E:\\JabaIt\\Payroll_System\\BgfclApp\\wwwroot\\js\\mask.js",
+      "PackagePath": "staticwebassets\\js\\mask.js"
+    },
+    {
+      "Id": "E:\\JabaIt\\Payroll_System\\BgfclApp\\wwwroot\\js\\moment.min.js",
+      "PackagePath": "staticwebassets\\js\\moment.min.js"
+    },
+    {
+      "Id": "E:\\JabaIt\\Payroll_System\\BgfclApp\\wwwroot\\js\\multiselect.min.js",
+      "PackagePath": "staticwebassets\\js\\multiselect.min.js"
+    },
+    {
+      "Id": "E:\\JabaIt\\Payroll_System\\BgfclApp\\wwwroot\\js\\popper.min.js",
+      "PackagePath": "staticwebassets\\js\\popper.min.js"
+    },
+    {
+      "Id": "E:\\JabaIt\\Payroll_System\\BgfclApp\\wwwroot\\js\\religions\\index.js",
+      "PackagePath": "staticwebassets\\js\\religions\\index.js"
+    },
+    {
+      "Id": "E:\\JabaIt\\Payroll_System\\BgfclApp\\wwwroot\\js\\respond.min.js",
+      "PackagePath": "staticwebassets\\js\\respond.min.js"
+    },
+    {
+      "Id": "E:\\JabaIt\\Payroll_System\\BgfclApp\\wwwroot\\js\\roles\\index.js",
+      "PackagePath": "staticwebassets\\js\\roles\\index.js"
+    },
+    {
+      "Id": "E:\\JabaIt\\Payroll_System\\BgfclApp\\wwwroot\\js\\salarySettingsConfig\\salarySettingsConfig.js",
+      "PackagePath": "staticwebassets\\js\\salarySettingsConfig\\salarySettingsConfig.js"
+    },
+    {
+      "Id": "E:\\JabaIt\\Payroll_System\\BgfclApp\\wwwroot\\js\\salarysettings\\advance_tax.js",
+      "PackagePath": "staticwebassets\\js\\salarysettings\\advance_tax.js"
+    },
+    {
+      "Id": "E:\\JabaIt\\Payroll_System\\BgfclApp\\wwwroot\\js\\salarysettings\\basicsalarysettingdailyworker.js",
+      "PackagePath": "staticwebassets\\js\\salarysettings\\basicsalarysettingdailyworker.js"
+    },
+    {
+      "Id": "E:\\JabaIt\\Payroll_System\\BgfclApp\\wwwroot\\js\\salarysettings\\basicsalarysettingsjuniorstaff.js",
+      "PackagePath": "staticwebassets\\js\\salarysettings\\basicsalarysettingsjuniorstaff.js"
+    },
+    {
+      "Id": "E:\\JabaIt\\Payroll_System\\BgfclApp\\wwwroot\\js\\salarysettings\\basicsalarysettingsofficer.js",
+      "PackagePath": "staticwebassets\\js\\salarysettings\\basicsalarysettingsofficer.js"
+    },
+    {
+      "Id": "E:\\JabaIt\\Payroll_System\\BgfclApp\\wwwroot\\js\\salarysettings\\final_adjustment_junior_staff.js",
+      "PackagePath": "staticwebassets\\js\\salarysettings\\final_adjustment_junior_staff.js"
+    },
+    {
+      "Id": "E:\\JabaIt\\Payroll_System\\BgfclApp\\wwwroot\\js\\salarysettings\\final_adjustment_officer.js",
+      "PackagePath": "staticwebassets\\js\\salarysettings\\final_adjustment_officer.js"
+    },
+    {
+      "Id": "E:\\JabaIt\\Payroll_System\\BgfclApp\\wwwroot\\js\\salarysettings\\journal_adjustment_officer.js",
+      "PackagePath": "staticwebassets\\js\\salarysettings\\journal_adjustment_officer.js"
+    },
+    {
+      "Id": "E:\\JabaIt\\Payroll_System\\BgfclApp\\wwwroot\\js\\salarysettings\\ml.js",
+      "PackagePath": "staticwebassets\\js\\salarysettings\\ml.js"
+    },
+    {
+      "Id": "E:\\JabaIt\\Payroll_System\\BgfclApp\\wwwroot\\js\\salarysettings\\msso.js",
+      "PackagePath": "staticwebassets\\js\\salarysettings\\msso.js"
+    },
+    {
+      "Id": "E:\\JabaIt\\Payroll_System\\BgfclApp\\wwwroot\\js\\salarysettings\\msss.js",
+      "PackagePath": "staticwebassets\\js\\salarysettings\\msss.js"
+    },
+    {
+      "Id": "E:\\JabaIt\\Payroll_System\\BgfclApp\\wwwroot\\js\\salarysettings\\salary_process.js",
+      "PackagePath": "staticwebassets\\js\\salarysettings\\salary_process.js"
+    },
+    {
+      "Id": "E:\\JabaIt\\Payroll_System\\BgfclApp\\wwwroot\\js\\salarysettings\\salarypolicysettings.js",
+      "PackagePath": "staticwebassets\\js\\salarysettings\\salarypolicysettings.js"
+    },
+    {
+      "Id": "E:\\JabaIt\\Payroll_System\\BgfclApp\\wwwroot\\js\\salarysettings\\sms_services.js",
+      "PackagePath": "staticwebassets\\js\\salarysettings\\sms_services.js"
+    },
+    {
+      "Id": "E:\\JabaIt\\Payroll_System\\BgfclApp\\wwwroot\\js\\schools\\index.js",
+      "PackagePath": "staticwebassets\\js\\schools\\index.js"
+    },
+    {
+      "Id": "E:\\JabaIt\\Payroll_System\\BgfclApp\\wwwroot\\js\\select2.min.js",
+      "PackagePath": "staticwebassets\\js\\select2.min.js"
+    },
+    {
+      "Id": "E:\\JabaIt\\Payroll_System\\BgfclApp\\wwwroot\\js\\task.js",
+      "PackagePath": "staticwebassets\\js\\task.js"
+    },
+    {
+      "Id": "E:\\JabaIt\\Payroll_System\\BgfclApp\\wwwroot\\js\\toastr.min.js",
+      "PackagePath": "staticwebassets\\js\\toastr.min.js"
+    },
+    {
+      "Id": "E:\\JabaIt\\Payroll_System\\BgfclApp\\wwwroot\\js\\users\\attendence.js",
+      "PackagePath": "staticwebassets\\js\\users\\attendence.js"
+    },
+    {
+      "Id": "E:\\JabaIt\\Payroll_System\\BgfclApp\\wwwroot\\js\\users\\index.js",
+      "PackagePath": "staticwebassets\\js\\users\\index.js"
+    },
+    {
+      "Id": "E:\\JabaIt\\Payroll_System\\BgfclApp\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.js"
+    },
+    {
+      "Id": "E:\\JabaIt\\Payroll_System\\BgfclApp\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.min.js"
+    },
+    {
+      "Id": "E:\\JabaIt\\Payroll_System\\BgfclApp\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.js"
+    },
+    {
+      "Id": "E:\\JabaIt\\Payroll_System\\BgfclApp\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.min.js"
+    },
+    {
+      "Id": "E:\\JabaIt\\Payroll_System\\BgfclApp\\wwwroot\\lib\\jquery-validation\\dist\\localization\\messages_ar.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\localization\\messages_ar.js"
+    },
+    {
+      "Id": "E:\\JabaIt\\Payroll_System\\BgfclApp\\wwwroot\\lib\\jquery-validation\\dist\\localization\\messages_ar.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\localization\\messages_ar.min.js"
+    },
+    {
+      "Id": "E:\\JabaIt\\Payroll_System\\BgfclApp\\wwwroot\\lib\\jquery-validation\\dist\\localization\\messages_az.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\localization\\messages_az.js"
+    },
+    {
+      "Id": "E:\\JabaIt\\Payroll_System\\BgfclApp\\wwwroot\\lib\\jquery-validation\\dist\\localization\\messages_az.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\localization\\messages_az.min.js"
+    },
+    {
+      "Id": "E:\\JabaIt\\Payroll_System\\BgfclApp\\wwwroot\\lib\\jquery-validation\\dist\\localization\\messages_bg.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\localization\\messages_bg.js"
+    },
+    {
+      "Id": "E:\\JabaIt\\Payroll_System\\BgfclApp\\wwwroot\\lib\\jquery-validation\\dist\\localization\\messages_bg.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\localization\\messages_bg.min.js"
+    },
+    {
+      "Id": "E:\\JabaIt\\Payroll_System\\BgfclApp\\wwwroot\\lib\\jquery-validation\\dist\\localization\\messages_bn_BD.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\localization\\messages_bn_BD.js"
+    },
+    {
+      "Id": "E:\\JabaIt\\Payroll_System\\BgfclApp\\wwwroot\\lib\\jquery-validation\\dist\\localization\\messages_bn_BD.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\localization\\messages_bn_BD.min.js"
+    },
+    {
+      "Id": "E:\\JabaIt\\Payroll_System\\BgfclApp\\wwwroot\\lib\\jquery-validation\\dist\\localization\\messages_ca.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\localization\\messages_ca.js"
+    },
+    {
+      "Id": "E:\\JabaIt\\Payroll_System\\BgfclApp\\wwwroot\\lib\\jquery-validation\\dist\\localization\\messages_ca.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\localization\\messages_ca.min.js"
+    },
+    {
+      "Id": "E:\\JabaIt\\Payroll_System\\BgfclApp\\wwwroot\\lib\\jquery-validation\\dist\\localization\\messages_cs.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\localization\\messages_cs.js"
+    },
+    {
+      "Id": "E:\\JabaIt\\Payroll_System\\BgfclApp\\wwwroot\\lib\\jquery-validation\\dist\\localization\\messages_cs.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\localization\\messages_cs.min.js"
+    },
+    {
+      "Id": "E:\\JabaIt\\Payroll_System\\BgfclApp\\wwwroot\\lib\\jquery-validation\\dist\\localization\\messages_da.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\localization\\messages_da.js"
+    },
+    {
+      "Id": "E:\\JabaIt\\Payroll_System\\BgfclApp\\wwwroot\\lib\\jquery-validation\\dist\\localization\\messages_da.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\localization\\messages_da.min.js"
+    },
+    {
+      "Id": "E:\\JabaIt\\Payroll_System\\BgfclApp\\wwwroot\\lib\\jquery-validation\\dist\\localization\\messages_de.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\localization\\messages_de.js"
+    },
+    {
+      "Id": "E:\\JabaIt\\Payroll_System\\BgfclApp\\wwwroot\\lib\\jquery-validation\\dist\\localization\\messages_de.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\localization\\messages_de.min.js"
+    },
+    {
+      "Id": "E:\\JabaIt\\Payroll_System\\BgfclApp\\wwwroot\\lib\\jquery-validation\\dist\\localization\\messages_el.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\localization\\messages_el.js"
+    },
+    {
+      "Id": "E:\\JabaIt\\Payroll_System\\BgfclApp\\wwwroot\\lib\\jquery-validation\\dist\\localization\\messages_el.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\localization\\messages_el.min.js"
+    },
+    {
+      "Id": "E:\\JabaIt\\Payroll_System\\BgfclApp\\wwwroot\\lib\\jquery-validation\\dist\\localization\\messages_es.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\localization\\messages_es.js"
+    },
+    {
+      "Id": "E:\\JabaIt\\Payroll_System\\BgfclApp\\wwwroot\\lib\\jquery-validation\\dist\\localization\\messages_es.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\localization\\messages_es.min.js"
+    },
+    {
+      "Id": "E:\\JabaIt\\Payroll_System\\BgfclApp\\wwwroot\\lib\\jquery-validation\\dist\\localization\\messages_es_AR.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\localization\\messages_es_AR.js"
+    },
+    {
+      "Id": "E:\\JabaIt\\Payroll_System\\BgfclApp\\wwwroot\\lib\\jquery-validation\\dist\\localization\\messages_es_AR.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\localization\\messages_es_AR.min.js"
+    },
+    {
+      "Id": "E:\\JabaIt\\Payroll_System\\BgfclApp\\wwwroot\\lib\\jquery-validation\\dist\\localization\\messages_es_PE.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\localization\\messages_es_PE.js"
+    },
+    {
+      "Id": "E:\\JabaIt\\Payroll_System\\BgfclApp\\wwwroot\\lib\\jquery-validation\\dist\\localization\\messages_es_PE.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\localization\\messages_es_PE.min.js"
+    },
+    {
+      "Id": "E:\\JabaIt\\Payroll_System\\BgfclApp\\wwwroot\\lib\\jquery-validation\\dist\\localization\\messages_et.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\localization\\messages_et.js"
+    },
+    {
+      "Id": "E:\\JabaIt\\Payroll_System\\BgfclApp\\wwwroot\\lib\\jquery-validation\\dist\\localization\\messages_et.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\localization\\messages_et.min.js"
+    },
+    {
+      "Id": "E:\\JabaIt\\Payroll_System\\BgfclApp\\wwwroot\\lib\\jquery-validation\\dist\\localization\\messages_eu.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\localization\\messages_eu.js"
+    },
+    {
+      "Id": "E:\\JabaIt\\Payroll_System\\BgfclApp\\wwwroot\\lib\\jquery-validation\\dist\\localization\\messages_eu.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\localization\\messages_eu.min.js"
+    },
+    {
+      "Id": "E:\\JabaIt\\Payroll_System\\BgfclApp\\wwwroot\\lib\\jquery-validation\\dist\\localization\\messages_fa.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\localization\\messages_fa.js"
+    },
+    {
+      "Id": "E:\\JabaIt\\Payroll_System\\BgfclApp\\wwwroot\\lib\\jquery-validation\\dist\\localization\\messages_fa.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\localization\\messages_fa.min.js"
+    },
+    {
+      "Id": "E:\\JabaIt\\Payroll_System\\BgfclApp\\wwwroot\\lib\\jquery-validation\\dist\\localization\\messages_fi.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\localization\\messages_fi.js"
+    },
+    {
+      "Id": "E:\\JabaIt\\Payroll_System\\BgfclApp\\wwwroot\\lib\\jquery-validation\\dist\\localization\\messages_fi.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\localization\\messages_fi.min.js"
+    },
+    {
+      "Id": "E:\\JabaIt\\Payroll_System\\BgfclApp\\wwwroot\\lib\\jquery-validation\\dist\\localization\\messages_fr.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\localization\\messages_fr.js"
+    },
+    {
+      "Id": "E:\\JabaIt\\Payroll_System\\BgfclApp\\wwwroot\\lib\\jquery-validation\\dist\\localization\\messages_fr.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\localization\\messages_fr.min.js"
+    },
+    {
+      "Id": "E:\\JabaIt\\Payroll_System\\BgfclApp\\wwwroot\\lib\\jquery-validation\\dist\\localization\\messages_ge.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\localization\\messages_ge.js"
+    },
+    {
+      "Id": "E:\\JabaIt\\Payroll_System\\BgfclApp\\wwwroot\\lib\\jquery-validation\\dist\\localization\\messages_ge.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\localization\\messages_ge.min.js"
+    },
+    {
+      "Id": "E:\\JabaIt\\Payroll_System\\BgfclApp\\wwwroot\\lib\\jquery-validation\\dist\\localization\\messages_gl.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\localization\\messages_gl.js"
+    },
+    {
+      "Id": "E:\\JabaIt\\Payroll_System\\BgfclApp\\wwwroot\\lib\\jquery-validation\\dist\\localization\\messages_gl.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\localization\\messages_gl.min.js"
+    },
+    {
+      "Id": "E:\\JabaIt\\Payroll_System\\BgfclApp\\wwwroot\\lib\\jquery-validation\\dist\\localization\\messages_he.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\localization\\messages_he.js"
+    },
+    {
+      "Id": "E:\\JabaIt\\Payroll_System\\BgfclApp\\wwwroot\\lib\\jquery-validation\\dist\\localization\\messages_he.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\localization\\messages_he.min.js"
+    },
+    {
+      "Id": "E:\\JabaIt\\Payroll_System\\BgfclApp\\wwwroot\\lib\\jquery-validation\\dist\\localization\\messages_hr.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\localization\\messages_hr.js"
+    },
+    {
+      "Id": "E:\\JabaIt\\Payroll_System\\BgfclApp\\wwwroot\\lib\\jquery-validation\\dist\\localization\\messages_hr.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\localization\\messages_hr.min.js"
+    },
+    {
+      "Id": "E:\\JabaIt\\Payroll_System\\BgfclApp\\wwwroot\\lib\\jquery-validation\\dist\\localization\\messages_hu.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\localization\\messages_hu.js"
+    },
+    {
+      "Id": "E:\\JabaIt\\Payroll_System\\BgfclApp\\wwwroot\\lib\\jquery-validation\\dist\\localization\\messages_hu.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\localization\\messages_hu.min.js"
+    },
+    {
+      "Id": "E:\\JabaIt\\Payroll_System\\BgfclApp\\wwwroot\\lib\\jquery-validation\\dist\\localization\\messages_hy_AM.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\localization\\messages_hy_AM.js"
+    },
+    {
+      "Id": "E:\\JabaIt\\Payroll_System\\BgfclApp\\wwwroot\\lib\\jquery-validation\\dist\\localization\\messages_hy_AM.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\localization\\messages_hy_AM.min.js"
+    },
+    {
+      "Id": "E:\\JabaIt\\Payroll_System\\BgfclApp\\wwwroot\\lib\\jquery-validation\\dist\\localization\\messages_id.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\localization\\messages_id.js"
+    },
+    {
+      "Id": "E:\\JabaIt\\Payroll_System\\BgfclApp\\wwwroot\\lib\\jquery-validation\\dist\\localization\\messages_id.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\localization\\messages_id.min.js"
+    },
+    {
+      "Id": "E:\\JabaIt\\Payroll_System\\BgfclApp\\wwwroot\\lib\\jquery-validation\\dist\\localization\\messages_is.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\localization\\messages_is.js"
+    },
+    {
+      "Id": "E:\\JabaIt\\Payroll_System\\BgfclApp\\wwwroot\\lib\\jquery-validation\\dist\\localization\\messages_is.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\localization\\messages_is.min.js"
+    },
+    {
+      "Id": "E:\\JabaIt\\Payroll_System\\BgfclApp\\wwwroot\\lib\\jquery-validation\\dist\\localization\\messages_it.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\localization\\messages_it.js"
+    },
+    {
+      "Id": "E:\\JabaIt\\Payroll_System\\BgfclApp\\wwwroot\\lib\\jquery-validation\\dist\\localization\\messages_it.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\localization\\messages_it.min.js"
+    },
+    {
+      "Id": "E:\\JabaIt\\Payroll_System\\BgfclApp\\wwwroot\\lib\\jquery-validation\\dist\\localization\\messages_ja.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\localization\\messages_ja.js"
+    },
+    {
+      "Id": "E:\\JabaIt\\Payroll_System\\BgfclApp\\wwwroot\\lib\\jquery-validation\\dist\\localization\\messages_ja.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\localization\\messages_ja.min.js"
+    },
+    {
+      "Id": "E:\\JabaIt\\Payroll_System\\BgfclApp\\wwwroot\\lib\\jquery-validation\\dist\\localization\\messages_ka.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\localization\\messages_ka.js"
+    },
+    {
+      "Id": "E:\\JabaIt\\Payroll_System\\BgfclApp\\wwwroot\\lib\\jquery-validation\\dist\\localization\\messages_ka.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\localization\\messages_ka.min.js"
+    },
+    {
+      "Id": "E:\\JabaIt\\Payroll_System\\BgfclApp\\wwwroot\\lib\\jquery-validation\\dist\\localization\\messages_kk.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\localization\\messages_kk.js"
+    },
+    {
+      "Id": "E:\\JabaIt\\Payroll_System\\BgfclApp\\wwwroot\\lib\\jquery-validation\\dist\\localization\\messages_kk.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\localization\\messages_kk.min.js"
+    },
+    {
+      "Id": "E:\\JabaIt\\Payroll_System\\BgfclApp\\wwwroot\\lib\\jquery-validation\\dist\\localization\\messages_ko.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\localization\\messages_ko.js"
+    },
+    {
+      "Id": "E:\\JabaIt\\Payroll_System\\BgfclApp\\wwwroot\\lib\\jquery-validation\\dist\\localization\\messages_ko.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\localization\\messages_ko.min.js"
+    },
+    {
+      "Id": "E:\\JabaIt\\Payroll_System\\BgfclApp\\wwwroot\\lib\\jquery-validation\\dist\\localization\\messages_lt.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\localization\\messages_lt.js"
+    },
+    {
+      "Id": "E:\\JabaIt\\Payroll_System\\BgfclApp\\wwwroot\\lib\\jquery-validation\\dist\\localization\\messages_lt.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\localization\\messages_lt.min.js"
+    },
+    {
+      "Id": "E:\\JabaIt\\Payroll_System\\BgfclApp\\wwwroot\\lib\\jquery-validation\\dist\\localization\\messages_lv.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\localization\\messages_lv.js"
+    },
+    {
+      "Id": "E:\\JabaIt\\Payroll_System\\BgfclApp\\wwwroot\\lib\\jquery-validation\\dist\\localization\\messages_lv.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\localization\\messages_lv.min.js"
+    },
+    {
+      "Id": "E:\\JabaIt\\Payroll_System\\BgfclApp\\wwwroot\\lib\\jquery-validation\\dist\\localization\\messages_mk.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\localization\\messages_mk.js"
+    },
+    {
+      "Id": "E:\\JabaIt\\Payroll_System\\BgfclApp\\wwwroot\\lib\\jquery-validation\\dist\\localization\\messages_mk.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\localization\\messages_mk.min.js"
+    },
+    {
+      "Id": "E:\\JabaIt\\Payroll_System\\BgfclApp\\wwwroot\\lib\\jquery-validation\\dist\\localization\\messages_my.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\localization\\messages_my.js"
+    },
+    {
+      "Id": "E:\\JabaIt\\Payroll_System\\BgfclApp\\wwwroot\\lib\\jquery-validation\\dist\\localization\\messages_my.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\localization\\messages_my.min.js"
+    },
+    {
+      "Id": "E:\\JabaIt\\Payroll_System\\BgfclApp\\wwwroot\\lib\\jquery-validation\\dist\\localization\\messages_nl.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\localization\\messages_nl.js"
+    },
+    {
+      "Id": "E:\\JabaIt\\Payroll_System\\BgfclApp\\wwwroot\\lib\\jquery-validation\\dist\\localization\\messages_nl.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\localization\\messages_nl.min.js"
+    },
+    {
+      "Id": "E:\\JabaIt\\Payroll_System\\BgfclApp\\wwwroot\\lib\\jquery-validation\\dist\\localization\\messages_no.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\localization\\messages_no.js"
+    },
+    {
+      "Id": "E:\\JabaIt\\Payroll_System\\BgfclApp\\wwwroot\\lib\\jquery-validation\\dist\\localization\\messages_no.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\localization\\messages_no.min.js"
+    },
+    {
+      "Id": "E:\\JabaIt\\Payroll_System\\BgfclApp\\wwwroot\\lib\\jquery-validation\\dist\\localization\\messages_pl.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\localization\\messages_pl.js"
+    },
+    {
+      "Id": "E:\\JabaIt\\Payroll_System\\BgfclApp\\wwwroot\\lib\\jquery-validation\\dist\\localization\\messages_pl.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\localization\\messages_pl.min.js"
+    },
+    {
+      "Id": "E:\\JabaIt\\Payroll_System\\BgfclApp\\wwwroot\\lib\\jquery-validation\\dist\\localization\\messages_pt_BR.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\localization\\messages_pt_BR.js"
+    },
+    {
+      "Id": "E:\\JabaIt\\Payroll_System\\BgfclApp\\wwwroot\\lib\\jquery-validation\\dist\\localization\\messages_pt_BR.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\localization\\messages_pt_BR.min.js"
+    },
+    {
+      "Id": "E:\\JabaIt\\Payroll_System\\BgfclApp\\wwwroot\\lib\\jquery-validation\\dist\\localization\\messages_pt_PT.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\localization\\messages_pt_PT.js"
+    },
+    {
+      "Id": "E:\\JabaIt\\Payroll_System\\BgfclApp\\wwwroot\\lib\\jquery-validation\\dist\\localization\\messages_pt_PT.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\localization\\messages_pt_PT.min.js"
+    },
+    {
+      "Id": "E:\\JabaIt\\Payroll_System\\BgfclApp\\wwwroot\\lib\\jquery-validation\\dist\\localization\\messages_ro.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\localization\\messages_ro.js"
+    },
+    {
+      "Id": "E:\\JabaIt\\Payroll_System\\BgfclApp\\wwwroot\\lib\\jquery-validation\\dist\\localization\\messages_ro.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\localization\\messages_ro.min.js"
+    },
+    {
+      "Id": "E:\\JabaIt\\Payroll_System\\BgfclApp\\wwwroot\\lib\\jquery-validation\\dist\\localization\\messages_ru.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\localization\\messages_ru.js"
+    },
+    {
+      "Id": "E:\\JabaIt\\Payroll_System\\BgfclApp\\wwwroot\\lib\\jquery-validation\\dist\\localization\\messages_ru.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\localization\\messages_ru.min.js"
+    },
+    {
+      "Id": "E:\\JabaIt\\Payroll_System\\BgfclApp\\wwwroot\\lib\\jquery-validation\\dist\\localization\\messages_sd.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\localization\\messages_sd.js"
+    },
+    {
+      "Id": "E:\\JabaIt\\Payroll_System\\BgfclApp\\wwwroot\\lib\\jquery-validation\\dist\\localization\\messages_sd.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\localization\\messages_sd.min.js"
+    },
+    {
+      "Id": "E:\\JabaIt\\Payroll_System\\BgfclApp\\wwwroot\\lib\\jquery-validation\\dist\\localization\\messages_si.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\localization\\messages_si.js"
+    },
+    {
+      "Id": "E:\\JabaIt\\Payroll_System\\BgfclApp\\wwwroot\\lib\\jquery-validation\\dist\\localization\\messages_si.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\localization\\messages_si.min.js"
+    },
+    {
+      "Id": "E:\\JabaIt\\Payroll_System\\BgfclApp\\wwwroot\\lib\\jquery-validation\\dist\\localization\\messages_sk.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\localization\\messages_sk.js"
+    },
+    {
+      "Id": "E:\\JabaIt\\Payroll_System\\BgfclApp\\wwwroot\\lib\\jquery-validation\\dist\\localization\\messages_sk.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\localization\\messages_sk.min.js"
+    },
+    {
+      "Id": "E:\\JabaIt\\Payroll_System\\BgfclApp\\wwwroot\\lib\\jquery-validation\\dist\\localization\\messages_sl.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\localization\\messages_sl.js"
+    },
+    {
+      "Id": "E:\\JabaIt\\Payroll_System\\BgfclApp\\wwwroot\\lib\\jquery-validation\\dist\\localization\\messages_sl.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\localization\\messages_sl.min.js"
+    },
+    {
+      "Id": "E:\\JabaIt\\Payroll_System\\BgfclApp\\wwwroot\\lib\\jquery-validation\\dist\\localization\\messages_sr.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\localization\\messages_sr.js"
+    },
+    {
+      "Id": "E:\\JabaIt\\Payroll_System\\BgfclApp\\wwwroot\\lib\\jquery-validation\\dist\\localization\\messages_sr.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\localization\\messages_sr.min.js"
+    },
+    {
+      "Id": "E:\\JabaIt\\Payroll_System\\BgfclApp\\wwwroot\\lib\\jquery-validation\\dist\\localization\\messages_sr_lat.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\localization\\messages_sr_lat.js"
+    },
+    {
+      "Id": "E:\\JabaIt\\Payroll_System\\BgfclApp\\wwwroot\\lib\\jquery-validation\\dist\\localization\\messages_sr_lat.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\localization\\messages_sr_lat.min.js"
+    },
+    {
+      "Id": "E:\\JabaIt\\Payroll_System\\BgfclApp\\wwwroot\\lib\\jquery-validation\\dist\\localization\\messages_sv.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\localization\\messages_sv.js"
+    },
+    {
+      "Id": "E:\\JabaIt\\Payroll_System\\BgfclApp\\wwwroot\\lib\\jquery-validation\\dist\\localization\\messages_sv.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\localization\\messages_sv.min.js"
+    },
+    {
+      "Id": "E:\\JabaIt\\Payroll_System\\BgfclApp\\wwwroot\\lib\\jquery-validation\\dist\\localization\\messages_th.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\localization\\messages_th.js"
+    },
+    {
+      "Id": "E:\\JabaIt\\Payroll_System\\BgfclApp\\wwwroot\\lib\\jquery-validation\\dist\\localization\\messages_th.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\localization\\messages_th.min.js"
+    },
+    {
+      "Id": "E:\\JabaIt\\Payroll_System\\BgfclApp\\wwwroot\\lib\\jquery-validation\\dist\\localization\\messages_tj.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\localization\\messages_tj.js"
+    },
+    {
+      "Id": "E:\\JabaIt\\Payroll_System\\BgfclApp\\wwwroot\\lib\\jquery-validation\\dist\\localization\\messages_tj.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\localization\\messages_tj.min.js"
+    },
+    {
+      "Id": "E:\\JabaIt\\Payroll_System\\BgfclApp\\wwwroot\\lib\\jquery-validation\\dist\\localization\\messages_tr.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\localization\\messages_tr.js"
+    },
+    {
+      "Id": "E:\\JabaIt\\Payroll_System\\BgfclApp\\wwwroot\\lib\\jquery-validation\\dist\\localization\\messages_tr.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\localization\\messages_tr.min.js"
+    },
+    {
+      "Id": "E:\\JabaIt\\Payroll_System\\BgfclApp\\wwwroot\\lib\\jquery-validation\\dist\\localization\\messages_uk.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\localization\\messages_uk.js"
+    },
+    {
+      "Id": "E:\\JabaIt\\Payroll_System\\BgfclApp\\wwwroot\\lib\\jquery-validation\\dist\\localization\\messages_uk.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\localization\\messages_uk.min.js"
+    },
+    {
+      "Id": "E:\\JabaIt\\Payroll_System\\BgfclApp\\wwwroot\\lib\\jquery-validation\\dist\\localization\\messages_ur.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\localization\\messages_ur.js"
+    },
+    {
+      "Id": "E:\\JabaIt\\Payroll_System\\BgfclApp\\wwwroot\\lib\\jquery-validation\\dist\\localization\\messages_ur.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\localization\\messages_ur.min.js"
+    },
+    {
+      "Id": "E:\\JabaIt\\Payroll_System\\BgfclApp\\wwwroot\\lib\\jquery-validation\\dist\\localization\\messages_vi.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\localization\\messages_vi.js"
+    },
+    {
+      "Id": "E:\\JabaIt\\Payroll_System\\BgfclApp\\wwwroot\\lib\\jquery-validation\\dist\\localization\\messages_vi.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\localization\\messages_vi.min.js"
+    },
+    {
+      "Id": "E:\\JabaIt\\Payroll_System\\BgfclApp\\wwwroot\\lib\\jquery-validation\\dist\\localization\\messages_zh.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\localization\\messages_zh.js"
+    },
+    {
+      "Id": "E:\\JabaIt\\Payroll_System\\BgfclApp\\wwwroot\\lib\\jquery-validation\\dist\\localization\\messages_zh.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\localization\\messages_zh.min.js"
+    },
+    {
+      "Id": "E:\\JabaIt\\Payroll_System\\BgfclApp\\wwwroot\\lib\\jquery-validation\\dist\\localization\\messages_zh_TW.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\localization\\messages_zh_TW.js"
+    },
+    {
+      "Id": "E:\\JabaIt\\Payroll_System\\BgfclApp\\wwwroot\\lib\\jquery-validation\\dist\\localization\\messages_zh_TW.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\localization\\messages_zh_TW.min.js"
+    },
+    {
+      "Id": "E:\\JabaIt\\Payroll_System\\BgfclApp\\wwwroot\\lib\\jquery-validation\\dist\\localization\\methods_de.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\localization\\methods_de.js"
+    },
+    {
+      "Id": "E:\\JabaIt\\Payroll_System\\BgfclApp\\wwwroot\\lib\\jquery-validation\\dist\\localization\\methods_de.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\localization\\methods_de.min.js"
+    },
+    {
+      "Id": "E:\\JabaIt\\Payroll_System\\BgfclApp\\wwwroot\\lib\\jquery-validation\\dist\\localization\\methods_es_CL.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\localization\\methods_es_CL.js"
+    },
+    {
+      "Id": "E:\\JabaIt\\Payroll_System\\BgfclApp\\wwwroot\\lib\\jquery-validation\\dist\\localization\\methods_es_CL.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\localization\\methods_es_CL.min.js"
+    },
+    {
+      "Id": "E:\\JabaIt\\Payroll_System\\BgfclApp\\wwwroot\\lib\\jquery-validation\\dist\\localization\\methods_fi.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\localization\\methods_fi.js"
+    },
+    {
+      "Id": "E:\\JabaIt\\Payroll_System\\BgfclApp\\wwwroot\\lib\\jquery-validation\\dist\\localization\\methods_fi.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\localization\\methods_fi.min.js"
+    },
+    {
+      "Id": "E:\\JabaIt\\Payroll_System\\BgfclApp\\wwwroot\\lib\\jquery-validation\\dist\\localization\\methods_it.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\localization\\methods_it.js"
+    },
+    {
+      "Id": "E:\\JabaIt\\Payroll_System\\BgfclApp\\wwwroot\\lib\\jquery-validation\\dist\\localization\\methods_it.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\localization\\methods_it.min.js"
+    },
+    {
+      "Id": "E:\\JabaIt\\Payroll_System\\BgfclApp\\wwwroot\\lib\\jquery-validation\\dist\\localization\\methods_nl.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\localization\\methods_nl.js"
+    },
+    {
+      "Id": "E:\\JabaIt\\Payroll_System\\BgfclApp\\wwwroot\\lib\\jquery-validation\\dist\\localization\\methods_nl.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\localization\\methods_nl.min.js"
+    },
+    {
+      "Id": "E:\\JabaIt\\Payroll_System\\BgfclApp\\wwwroot\\lib\\jquery-validation\\dist\\localization\\methods_pt.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\localization\\methods_pt.js"
+    },
+    {
+      "Id": "E:\\JabaIt\\Payroll_System\\BgfclApp\\wwwroot\\lib\\jquery-validation\\dist\\localization\\methods_pt.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\localization\\methods_pt.min.js"
+    },
+    {
+      "Id": "E:\\JabaIt\\Payroll_System\\BgfclApp\\wwwroot\\lib\\jquery\\dist\\jquery-3.7.1.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery-3.7.1.min.js"
+    },
+    {
+      "Id": "E:\\JabaIt\\Payroll_System\\BgfclApp\\wwwroot\\sampleExcels\\Department_Import_Sample.xlsx",
+      "PackagePath": "staticwebassets\\sampleExcels\\Department_Import_Sample.xlsx"
+    },
+    {
+      "Id": "E:\\JabaIt\\Payroll_System\\BgfclApp\\wwwroot\\sampleExcels\\Designation_Import_Sample.xlsx",
+      "PackagePath": "staticwebassets\\sampleExcels\\Designation_Import_Sample.xlsx"
+    },
+    {
+      "Id": "E:\\JabaIt\\Payroll_System\\BgfclApp\\wwwroot\\sampleExcels\\Employee_Import_Sample.xlsx",
+      "PackagePath": "staticwebassets\\sampleExcels\\Employee_Import_Sample.xlsx"
+    },
+    {
+      "Id": "E:\\JabaIt\\Payroll_System\\BgfclApp\\wwwroot\\sampleExcels\\Role_Import_Sample.xlsx",
+      "PackagePath": "staticwebassets\\sampleExcels\\Role_Import_Sample.xlsx"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\win-x64\\staticwebassets\\msbuild.BgfclApp.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\win-x64\\staticwebassets\\msbuild.build.BgfclApp.props",
+      "PackagePath": "build\\BgfclApp.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\win-x64\\staticwebassets\\msbuild.buildMultiTargeting.BgfclApp.props",
+      "PackagePath": "buildMultiTargeting\\BgfclApp.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\win-x64\\staticwebassets\\msbuild.buildTransitive.BgfclApp.props",
+      "PackagePath": "buildTransitive\\BgfclApp.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

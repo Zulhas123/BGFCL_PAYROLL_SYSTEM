@@ -1,0 +1,110 @@
+﻿@{
+    ViewData["Title"] = "Users";
+}
+@section Styles {
+    <link rel="stylesheet" href="~/css/users/index.css" />
+}
+
+<div class="row">
+    <div class="col-12">
+        <div class="card">
+            <div class="card-body">
+                <!-- Top right aligned controls -->
+                <div class="card border shadow-sm p-1">
+                    <div class="d-flex justify-content-between align-items-center gap-2">
+                        <h4 class="mb-0 mr-1">User Management</h4>
+                        <div class="d-flex">
+                            @* <select id="page_length_select" class="form-control w-auto me-3 mr-1">
+                                <option value="10">10 rows</option>
+                                <option value="20">20 rows</option>
+                                <option value="30">30 rows</option>
+                                <option value="40">40 rows</option>
+                                <option value="50">50 rows</option>
+                            </select> *@
+                            <button type="button" class="btn btn-info" id="add_button"><i class="fas fa-plus me-1"></i> Add User</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- DataTable -->
+                <table class="table table-hover table-bordered" id="user_list_table">
+                    <thead>
+                        <tr>
+                            <th>Sl.</th>
+                            <th>User Name</th>
+                            <th>Password</th> 
+                            <th>Email</th>
+                            <th>Status</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- User Form Modal -->
+<div class="modal fade" id="user_modal" tabindex="-1" aria-labelledby="userModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-sm">
+        <!-- Small Modal -->
+        <div class="modal-content">
+            <!-- Modal Header -->
+            <div class="modal-header border border-info">
+                <h5 class="modal-title" id="userModalLabel">Add User</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+
+            <!-- Modal Body -->
+            <div class="modal-body">
+                <form id="userformId">
+                    <input type="hidden" value="" id="UserId">
+                    <input type="hidden" value="create" id="operation_type">
+
+                    <!-- User Name -->
+                    <div class="mb-2">
+                        <label for="Username" class="formPassword-label">User Name <span class="text-danger">*</span></label>
+                        <input type="text" class="form-control" id="Username" placeholder="Enter username">
+                        <p id="UserNameError" class="text-danger small"></p>
+                    </div>
+
+                    <!-- Password -->
+                    <div class="mb-2">
+                        <label for="Password" class="form-label">Password <span class="text-danger">*</span></label>
+                        <input type="password" class="form-control" id="Password" placeholder="Enter password">
+                        <p id="PasswordError" class="text-danger small"></p>
+                    </div>
+
+                    <!-- Email -->
+                    <div class="mb-2">
+                        <label for="Email" class="form-label">Email <span class="text-danger">*</span></label>
+                        <input type="email" class="form-control" id="Email" placeholder="Enter email">
+                    </div>
+
+                    <!-- Is Active Checkbox -->
+                    <div class="form-check mb-3">
+                        <input type="checkbox" class="form-check-input" id="IsActive">
+                        <label class="form-check-label" for="IsActive">Is Active</label>
+                    </div>
+
+                    <!-- Buttons -->
+                    <div class="d-flex justify-content-between">
+                        <button type="button" class="btn btn-outline-danger px-3" id="cancel_button">Cancel</button>
+                        <button type="button" class="btn btn-success px-3 fw-bold" id="submit_button">Create</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+@section Scripts {
+    <script type="text/javascript" src="~/js/users/index.js"></script>
+
+}

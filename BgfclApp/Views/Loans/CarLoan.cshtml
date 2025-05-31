@@ -1,0 +1,269 @@
+﻿@{
+    ViewData["Title"] = "Car Loan";
+}
+@section Styles {
+    <link rel="stylesheet" href="~/css/carloans/index.css" />
+}
+
+
+
+<!-- Car Loan Section -->
+<div class="row">
+    <div class="col-12">
+        <div class="row mb-3" style="border: 1px solid #ccc; padding: 15px; border-radius: 5px;">
+            <div class="col-12">
+                <div class="d-flex justify-content-between align-items-center">
+                    <h3 class="p-6" style="padding-right: 20px; margin-right: 20px;">Car Loan List</h3>
+                    <div class="d-flex align-items-center flex-grow-1">
+                       @*  <select id="filter_select" class="form-control w-50">
+                            <option value="">Filter by Job Code</option>
+                        </select> *@
+                    </div>
+                    <div class="d-flex flex-grow-1 justify-content-center"></div>
+                    <div class="d-flex">
+                        <select id="page_length_select" class="form-control w-auto me-3">
+                            <option value="100">100 rows</option>
+                            <option value="120">120 rows</option>
+                            <option value="130">130 rows</option>
+                            <option value="150">150 rows</option>
+                            <option value="200">200 rows</option>
+                        </select>
+                        <button type="button" class="btn btn-info" id="add_button">Add Car Loan</button>
+                        <button type="button" class="btn btn-warning" id="summary_button">Loan Summary</button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-body">
+                <table class="table table-hover table-bordered col-12" id="car_loan_list_table">
+                    <thead>
+                        <tr>
+                            <th>Sl.</th>
+                            <th>View</th>
+                            <th>View</th>
+                            <th>JobCode</th>
+                            <th>Name</th>
+                            <th>Loan Taken Date</th>
+                            <th>Interest Rate (%)</th>
+                            <th>Total Loan Amount</th>
+                            <th>Depreciation Amount</th>
+                            <th>Remaining</th>
+                            <th>Actual Amount</th>
+                            <th>Remaining </th>
+                            <th>Installment No.</th>
+                            <th>Remaining</th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Car Loan Form Modal -->
+<div class="modal fade" id="car_loan_modal" tabindex="-1" aria-labelledby="carLoanModalLabel">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="carLoanModalLabel">Add Car Loan</h5>
+                <button type="button" class="btn-close ms-auto larger-close-button" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form id="carLoanForm">
+                    <input type="hidden" value="" id="LoanId" />
+                  @*   <input type="hidden" value="create" id="operation_type" /> *@
+                    <div class="row g-3">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="JobCode">Job Code <span class="text-danger" title="required">*</span></label>
+                                <select class="form-control" id="JobCode"></select>
+                                <p id="JobCodeError" class="text-danger error-item"></p>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="TotalLoanAmount">Total Loan Amount <span class="text-danger">*</span></label>
+                                <input type="number" class="form-control" id="TotalLoanAmount">
+                                <p id="TotalLoanAmountError" class="text-danger error-item"></p>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="DepreciationAmount">Depreciation Amount <span class="text-danger">*</span></label>
+                                <input type="number" class="form-control" id="DepreciationAmount">
+                                <p id="DepreciationAmountError" class="text-danger error-item"></p>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="ActualAmount">Actual Amount <span class="text-danger">*</span></label>
+                                <input type="number" class="form-control" id="ActualAmount">
+                                <p id="ActualAmountError" class="text-danger error-item"></p>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="LoanTakenDateString">Loan Taken Date</label>
+                                <input type="text" class="form-control datetimepicker" id="LoanTakenDateString">
+                                <p id="LoanTakenDateStringError" class="text-danger error-item"></p>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="InterestRate">Interest Rate (%)</label>
+                                <input type="number" class="form-control" id="InterestRate">
+                                <p id="InterestRateError" class="text-danger error-item"></p>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="InstallmentNo">Installment No</label>
+                                <input type="text" class="form-control" id="InstallmentNo">
+                                <p id="InstallmentNoError" class="text-danger error-item"></p>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="EmiStartMonthString">EmI Start Month <span class="text-danger">*</span></label>
+                                <input type="text" class="form-control datetimepicker" id="EmiStartMonthString">
+                                <p id="EmiStartMonthStringError" class="text-danger error-item"></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group d-flex justify-content-between mt-4">
+                        <button type="button" class="btn btn-danger" id="cancel_button">Cancel</button>
+                        <button type="button" class="btn btn-success text-dark" id="submit_button">Create</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal" tabindex="-1" id="car_loan_installments_modal">
+    <div class="modal-dialog modal-xl">
+        <div class="modal-content">
+            <div class="modal-header">
+                @*  <h5 class="modal-title">View Installments</h5> *@
+                <a href="" id="generate_installment_pdf" target="_blank" class="btn btn-success btn-sm font-weight-bold mr-2">
+                    Generate PDF
+                </a>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div id="headerInfo">
+                
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-12">
+                        <h5 class="card-title">Car Loan Installments</h5>
+                        <div class="row">
+                            <div class="col-12">
+                                <table class="table table-hover table-bordered col-12" id="car_loan_installments_table">
+                                    <thead>
+                                        <tr>
+                                            <th>Sl.</th>
+                                            <th>Month Id</th>
+                                            <th>Principal Amount</th>
+                                            <th>Interest Amount</th>
+                                            <th>TotalPayment</th>
+                                            <th>Remaining Balance</th>
+                                            <th>Depreciation Amount</th>
+                                            <th>Status</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="footerInfo">
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary btn-sm" data-dismiss="modal">close</button>
+                @* <button type="button" class="btn btn-primary btn-sm" onclick="onEditConfirmed()">confirm</button> *@
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal" tabindex="-1" id="car_loan_depreciation_installments_modal">
+    <div class="modal-dialog  modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                @* <h5 class="modal-title">View Depreciation Installments</h5> *@
+                <a href="" id="generate_depriciate_pdf" target="_blank" class="btn btn-success btn-sm font-weight-bold mr-2">
+                    Generate PDF
+                </a>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div id="d_headerInfo">
+            </div>
+            <div class="modal-body">
+                <input type="hidden" id="LoanId" value="" />
+                <div class="row">
+                    <div class="col-12">
+                        <h5 class="card-title">Car Loan Depreciation Installments</h5>
+                        <div class="row">
+                            <div class="col-12">
+                                <table class="table table-hover table-bordered col-12" id="car_loan_depreciation_installments_table">
+                                    <thead>
+                                        <tr>
+                                            <th>Sl.</th>
+                                            <th>Month Id</th>
+                                            <th>Depreciation Amount</th>
+                                            <th>Status</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="d_footerInfo">
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary btn-sm" data-dismiss="modal">Close</button>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script type="text/javascript" src="~/js/loans/car_loan.js"></script>
+    <style>
+         #car_loan_list_table tbody tr {
+            height: 20px;
+            line-height: 20px;
+        }
+
+        #car_loan_list_table tbody td {
+            padding: .5rem;
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+        }
+        /*
+        #car_loan_list_table thead th {
+            background-color: #f8f9fa;
+            color: darkolivegreen;
+            padding: 15px 8px;
+            font-weight: bold;
+        } */
+    </style>
+}

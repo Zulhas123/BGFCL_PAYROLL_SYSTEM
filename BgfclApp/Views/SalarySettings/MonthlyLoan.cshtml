@@ -1,0 +1,73 @@
+﻿@model List<BgfclApp.ViewModels.ExcelUploadMonthlyLoanViewModel>
+@{
+    ViewData["Title"] = "Monthly Loan";
+}
+
+<div class="row">
+    <div class="col-4">
+        <div class="card">
+            <div class="card-body">
+                <form asp-controller="SalarySettings" asp-action="MonthlyLoan" method="post" enctype="multipart/form-data">
+                    <div class="form-group">
+                        <label for="postedFile">Choose File</label>
+                        <input type="file" name="postedFile" id="postedFile" />
+                        @* <p id="BankTagIdError" class="text-danger error-item"></p> *@
+                    </div>
+                    <button type="submit" class="btn btn-primary" id="submit_button">upload</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-8">
+        <div class="card">
+            <div class="card-body">
+                @if (Model.Count > 0)
+                {
+                    <div class="col-4">
+                        <div class="form-group">
+                            <label for="month">Month</label>
+                            <select class="form-control" id="months"></select>
+                        </div>
+                        <div class="form-group">
+                            <label for="year">Year</label>
+                            <select class="form-control" id="years"></select>
+                        </div>
+                        <button type="button" class="btn btn-primary mb-2" id="save_button">save</button>
+                    </div>
+                }
+                <table class="table table-hover col-12 table-bordered" id="ml_list">
+                    <thead>
+                        <tr>
+                            <th>Sl.</th>
+                            <th>Job Code</th>
+                            <th>Empoyee Name</th>
+                            <th>Amount</th>
+                            <th>Loan Type</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @if (Model.Count > 0)
+                        {
+                            foreach (var item in Model)
+                            {
+                                <tr>
+                                    <td>@item.Sl</td>
+                                    <td>@item.JobCode</td>
+                                    <td>@item.EmployeeName</td>
+                                    <td>@item.Amount</td>
+                                    <td>@item.LoanType</td>
+                                </tr>
+                            }
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script type="text/javascript" src="~/js/salarysettings/ml.js"></script>
+}

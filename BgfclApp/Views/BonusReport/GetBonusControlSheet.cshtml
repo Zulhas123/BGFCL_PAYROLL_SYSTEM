@@ -1,0 +1,125 @@
+﻿@{
+    ViewData["Title"] = "Bonus Sheet";
+}
+@section Styles {
+    <link rel="stylesheet" href="~/css/bonus/bonusSheet.css" />
+}
+
+<div class="row justify-content-center mt-4 mb-2">
+    <div class="col-md-5">
+        <form method="post" asp-action="GetBonusControlSheet" class="form-signin create-form bg-white rounded border shadow-sm p-3" style="max-height: 310px;">
+            <div class="text-center mb-2">
+                <h1 class="h4 mb-2 font-weight-bold card-header border p-2">Bonus Sheet Report</h1>
+            </div>
+            <div class="form-group d-flex">
+                <label for="month" class="col-4">Month</label>
+                <select class="form-control form-control-sm col-8" id="months" name="month"></select>
+            </div>
+            <div class="form-group d-flex">
+                <label for="year" class="col-4">Year</label>
+                <select class="form-control form-control-sm col-8" id="years" name="year"></select>
+            </div>
+            <div class="form-group d-flex">
+                <label for="BonusId" class="col-4">Bonus <span class="text-danger" title="required">*</span></label>
+                <select class="form-control" id="BonusId" name="bonusId"></select>
+                <p id="BonusIdError" class="text-danger error-item">@ViewBag.bonusError</p>
+            </div>
+            <div class="form-group d-flex">
+                <label for="EmployeeTypeId" class="col-4">Employee Type <span class="text-danger" title="required">*</span></label>
+                <select class="form-control form-control-sm col-8" id="EmployeeTypeId" name="employeeTypeId"></select>
+            </div>
+            <div class="d-flex justify-content-between align-items-center">
+                <div class="form-check">
+                    <input type="checkbox" class="form-check-input" id="isExcel" name="isExcel">
+                    <label class="form-check-label" for="isExcel">Export as Excel?</label>
+                </div>
+                <button type="submit" id="generateButton" formtarget="_blank" class="btn btn-success btn-sm">Report</button>
+            </div>
+        </form>
+    </div>
+    <div class="col-md-7">
+        <table class="table table-hover table-bordered" id="bonus_process_list_table">
+            <thead>
+                <tr>
+                    <th>Sl.</th>
+                    <th>Month</th>
+                    <th>Year</th>
+                    <th>Bonus Title</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+    </div>
+</div>
+<div class="row">
+    <div class="col-12">
+        <div class="card p-3">
+            <div class="d-flex justify-content-between align-items-center mb-2">
+                <h5 class="mb-0">Data List</h5>
+                <div class="d-flex flex-wrap align-items-center gap-2">
+                    <div class="me-2"><h6 class="p-3 mr-1">Filter By :</h6></div>
+                    <select id="employee_type_filter" class="form-control w-auto mr-1">
+                        <option value="">All Types</option>
+                        <!-- Populate dynamically -->
+                    </select>
+                    <select id="school_filter" class="form-control w-auto mr-1">
+                        <option value="">All Schools</option>
+                        <!-- Populate dynamically -->
+                    </select>
+                    <select id="role_filter" class="form-control w-auto mr-1">
+                        <option value="">All Roles</option>
+                        <!-- Populate dynamically -->
+                    </select>
+                    <select id="department_filter" class="form-control w-auto mr-1">
+                        <option value="">All Departments</option>
+                        <!-- Populate dynamically -->
+                    </select>
+                    <select id="designation_filter" class="form-control w-auto mr-1">
+                        <option value="">All Designations</option>
+                        <!-- Populate dynamically -->
+                    </select>
+                   @*  <div class="mx-2"><h6 class="mb-0">Select Rows size</h6></div> *@
+                    @* <select id="page_length_select" class="form-control w-auto">
+                        <option value="100">100 rows</option>
+                        <option value="120">120 rows</option>
+                        <option value="130">130 rows</option>
+                        <option value="150">150 rows</option>
+                        <option value="200">200 rows</option>
+                    </select> *@
+                </div>
+            </div>
+        </div>
+
+        <div class="col-12">
+            <div class="card">
+                <div class="card-body table-responsive">
+                    <table class="table table-hover table-bordered" id="process_bonus_list_table">
+                        <thead>
+                            <tr>
+                                <th>Sl.</th>
+                                <th>Code</th>
+                                <th>Employee</th>
+                                <th>Designation</th>
+                                <th>Department</th>
+                                <th>Festival</th>
+                                <th>Incentive</th>
+                                <th>Honorarium</th>
+                                <th>Scholarship</th>
+                                <th>RevStamp</th>
+                                <th>Deduction</th>
+                            </tr>
+                        </thead>
+                        <tbody></tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+@section Scripts {
+    <script type="text/javascript" src="~/js/bonus/bonusSheet.js"></script>
+   
+}

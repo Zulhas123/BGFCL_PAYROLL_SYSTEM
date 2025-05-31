@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="dsOverTime" targetNamespace="http://tempuri.org/dsOverTime.xsd" xmlns:mstns="http://tempuri.org/dsOverTime.xsd" xmlns="http://tempuri.org/dsOverTime.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="dsOverTime" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="dsOverTime" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="dsOverTime">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="dsOverTime" msprop:Generator_RowEvHandlerName="dsOverTimeRowChangeEventHandler" msprop:Generator_RowDeletedName="dsOverTimeRowDeleted" msprop:Generator_RowDeletingName="dsOverTimeRowDeleting" msprop:Generator_RowEvArgName="dsOverTimeRowChangeEvent" msprop:Generator_TablePropName="_dsOverTime" msprop:Generator_RowChangedName="dsOverTimeRowChanged" msprop:Generator_UserTableName="dsOverTime" msprop:Generator_RowChangingName="dsOverTimeRowChanging" msprop:Generator_RowClassName="dsOverTimeRow" msprop:Generator_TableClassName="dsOverTimeDataTable" msprop:Generator_TableVarName="tabledsOverTime">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="JobCode" msprop:Generator_ColumnPropNameInTable="JobCodeColumn" msprop:Generator_ColumnPropNameInRow="JobCode" msprop:Generator_UserColumnName="JobCode" msprop:Generator_ColumnVarNameInTable="columnJobCode" type="xs:string" minOccurs="0" />
+              <xs:element name="DepartmentName" msprop:Generator_ColumnPropNameInTable="DepartmentNameColumn" msprop:Generator_ColumnPropNameInRow="DepartmentName" msprop:Generator_UserColumnName="DepartmentName" msprop:Generator_ColumnVarNameInTable="columnDepartmentName" type="xs:string" minOccurs="0" />
+              <xs:element name="NumberOfEmployees" msprop:Generator_ColumnPropNameInTable="NumberOfEmployeesColumn" msprop:Generator_ColumnPropNameInRow="NumberOfEmployees" msprop:Generator_UserColumnName="NumberOfEmployees" msprop:Generator_ColumnVarNameInTable="columnNumberOfEmployees" type="xs:string" minOccurs="0" />
+              <xs:element name="CurrentMonthOtHours" msprop:Generator_ColumnPropNameInTable="CurrentMonthOtHoursColumn" msprop:Generator_ColumnPropNameInRow="CurrentMonthOtHours" msprop:Generator_UserColumnName="CurrentMonthOtHours" msprop:Generator_ColumnVarNameInTable="columnCurrentMonthOtHours" type="xs:string" minOccurs="0" />
+              <xs:element name="CurrentMonthOtAllow" msprop:Generator_ColumnPropNameInTable="CurrentMonthOtAllowColumn" msprop:Generator_ColumnPropNameInRow="CurrentMonthOtAllow" msprop:Generator_UserColumnName="CurrentMonthOtAllow" msprop:Generator_ColumnVarNameInTable="columnCurrentMonthOtAllow" type="xs:string" minOccurs="0" />
+              <xs:element name="TotalOtHoursFromJuly" msprop:Generator_ColumnPropNameInTable="TotalOtHoursFromJulyColumn" msprop:Generator_ColumnPropNameInRow="TotalOtHoursFromJuly" msprop:Generator_UserColumnName="TotalOtHoursFromJuly" msprop:Generator_ColumnVarNameInTable="columnTotalOtHoursFromJuly" type="xs:string" minOccurs="0" />
+              <xs:element name="TotalOtAllowFromJuly" msprop:Generator_ColumnPropNameInTable="TotalOtAllowFromJulyColumn" msprop:Generator_ColumnPropNameInRow="TotalOtAllowFromJuly" msprop:Generator_UserColumnName="TotalOtAllowFromJuly" msprop:Generator_ColumnVarNameInTable="columnTotalOtAllowFromJuly" type="xs:string" minOccurs="0" />
+              <xs:element name="Budget" msprop:Generator_ColumnPropNameInTable="BudgetColumn" msprop:Generator_ColumnPropNameInRow="Budget" msprop:Generator_UserColumnName="Budget" msprop:Generator_ColumnVarNameInTable="columnBudget" type="xs:string" minOccurs="0" />
+              <xs:element name="ExpLimit" msprop:Generator_ColumnPropNameInTable="ExpLimitColumn" msprop:Generator_ColumnPropNameInRow="ExpLimit" msprop:Generator_UserColumnName="ExpLimit" msprop:Generator_ColumnVarNameInTable="columnExpLimit" type="xs:string" minOccurs="0" />
+              <xs:element name="ActualLimit" msprop:Generator_ColumnPropNameInTable="ActualLimitColumn" msprop:Generator_ColumnPropNameInRow="ActualLimit" msprop:Generator_UserColumnName="ActualLimit" msprop:Generator_ColumnVarNameInTable="columnActualLimit" type="xs:string" minOccurs="0" />
+              <xs:element name="JournalNumber" msprop:Generator_ColumnPropNameInRow="JournalNumber" msprop:Generator_ColumnPropNameInTable="JournalNumberColumn" msprop:Generator_ColumnVarNameInTable="columnJournalNumber" msprop:Generator_UserColumnName="JournalNumber" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

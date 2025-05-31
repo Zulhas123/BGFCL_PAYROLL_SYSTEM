@@ -1,0 +1,121 @@
+﻿@{
+    ViewData["Title"] = "Medical Fund Report";
+}
+
+<!-- Page Header -->
+<div class="page-header">
+    <div class="row align-items-center">
+        <div class="col">
+            <h3 class="page-title">Medical Fund</h3>
+            <ul class="breadcrumb">
+                <li class="breadcrumb-item">Reports</li>
+                <li class="breadcrumb-item active">Medical Fund</li>
+            </ul>
+        </div>
+    </div>
+</div>
+<!-- /Page Header -->
+<div class="row">
+    <div class="col-4">
+        <div class="card">
+            <div class="card-body">
+                <form id="medicalFundForm" asp-action="GetMedicalFund" asp-controller="MedicalFund" target="_blank">
+                    <div class="form-group">
+                        <label for="month">Month</label>
+                        <select class="form-control" id="months" name="month"></select>
+                        <p id="MonthsError" class="text-danger error-item">@ViewBag.monthsError</p>
+                    </div>
+                    <div class="form-group">
+                        <label for="year">Year</label>
+                        <select class="form-control" id="years" name="year"></select>
+                        <p id="YearsError" class="text-danger error-item">@ViewBag.yearsError</p>
+                    </div>
+                    <div class="row">
+                        <div class="offset-7 col-3">
+                            <button type="submit" class="btn btn-primary btn-sm mb-2">Generate</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script type="text/javascript">
+        $(document).ready(function () {
+            loadInitialData();
+        });
+
+        function validateForm() {
+            let isValid = true;
+
+            if ($('#months').val() === '') {
+                $('#months').addClass('is-invalid');
+                $('#MonthsError').text('Please select a month.');
+                isValid = false;
+            } else {
+                $('#months').removeClass('is-invalid');
+                $('#MonthsError').text('');
+            }
+
+            if ($('#years').val() === '') {
+                $('#years').addClass('is-invalid');
+                $('#YearsError').text('Please select a year.');
+                isValid = false;
+            } else {
+                $('#years').removeClass('is-invalid');
+                $('#YearsError').text('');
+            }
+
+            return isValid;  // Return the validation status
+        }
+
+        function loadInitialData() {
+            $.ajax({
+                url: '/api/Others/GetMonths',
+                type: 'Get',
+                async: false,
+                dataType: 'json',
+                success: function (responseObject) {
+                    let months = responseObject.data;
+                    let currentMonth = new Date().getMonth() + 1;
+                    $('#months').empty();
+                    $.each(months, function (key, item) {
+                        if (currentMonth == parseInt(item.monthId)) {
+                            $('#months').append(`<option value=${item.monthId} selected>${item.monthName}</option>`);
+                        }
+                        else {
+                            $('#months').append(`<option value=${item.monthId}>${item.monthName}</option>`);
+                        }
+
+                    });
+                },
+                error: function (responseObject) {
+                }
+            });
+
+            $.ajax({
+                url: '/api/Others/GetYears',
+                type: 'Get',
+                async: false,
+                dataType: 'json',
+                success: function (responseObject) {
+                    let years = responseObject.data;
+                    let currentYear = new Date().getFullYear();
+                    $('#years').empty();
+                    $.each(years, function (key, item) {
+                        if (item == currentYear) {
+                            $('#years').append(`<option value=${item} selected>${item}</option>`);
+                        }
+                        else {
+                            $('#years').append(`<option value=${item}>${item}</option>`);
+                        }
+                    });
+                },
+                error: function (responseObject) {
+                }
+            });
+        }
+    </script>
+}

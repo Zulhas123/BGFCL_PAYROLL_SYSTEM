@@ -1,0 +1,158 @@
+﻿@{
+    ViewData["Title"] = "Create Amenities";
+}
+@* @section Styles {
+    <link rel="stylesheet" href="~/css/salarysettings/basicsalarysettingsofficer.css" />
+} *@
+<!-- Page Header -->
+<div class="page-header">
+    <div class="row align-items-center">
+        <div class="col">
+            <h3 class="page-title">Create Amenities</h3>
+            <ul class="breadcrumb">
+                <li class="breadcrumb-item">Amenities</li>
+                <li class="breadcrumb-item active">Create Amenities</li>
+            </ul>
+        </div>
+    </div>
+</div>
+<!-- /Page Header -->
+<div class="row">
+    <div class="col-7">
+        <div class="card">
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-6">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title">Employee Information</h5>
+                                <div class="form-row">
+                                    <div class="form-group col-6">
+                                        <input type="hidden" value="" id="row_id_hidden" />
+                                        <input type="hidden" value="create" id="operation_type" />
+                                        <label for="JobCode">Job Code</label>
+                                        <div class="job_code_flag">
+                                            <select class="form-control select" id="JobCode"></select>
+                                            <small id="JobCodeError" class="form-text text-danger"></small>
+                                        </div>
+                                        <div class="job_code_show_flag" style="display:none">
+                                            <input type="text" class="form-control" id="job_code_show" readonly>
+                                        </div>
+
+                                    </div>
+                                    <div class="form-group col-6">
+                                        <label for="empoyee_name">Employee Name</label>
+                                        <input type="text" class="form-control" id="empoyee_name" readonly>
+                                    </div>
+                                    <div class="form-group col-6">
+                                        <label for="designation">Designation</label>
+                                        <input type="text" class="form-control" id="designation" readonly>
+                                    </div>
+                                    <div class="form-group col-6">
+                                        <label for="department">Department</label>
+                                        <input type="text" class="form-control" id="department" readonly>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title">Payment Information</h5>
+                                <div class="form-row">
+                                    <div class="form-group col-6">
+                                        <label for="PayModeId">Pay Mode</label>
+                                        <select class="form-control select" id="PayModeId"></select>
+                                        <small id="PayModeIdError" class="form-text text-danger"></small>
+                                    </div>
+                                    <div class="form-group col-6">
+                                        <label for="BankId">Bank</label>
+                                        <select class="form-control select" id="BankId"></select>
+                                        <small id="BankIdError" class="form-text text-danger"></small>
+                                    </div>
+                                    <div class="form-group col-6">
+                                        <label for="BankBranchId">Branch</label>
+                                        <select class="form-control select" id="BankBranchId"></select>
+                                        <small id="BankBranchIdError" class="form-text text-danger"></small>
+                                    </div>
+                                    <div class="form-group col-6">
+                                        <label for="AccountNumber">Account Number</label>
+                                        <input type="text" class="form-control" id="AccountNumber">
+                                        <small id="AccountNumberError" class="form-text text-danger"></small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title">Amenities Information</h5>
+                                <div class="form-row">
+                                    <div class="form-group col-6">
+                                        <label for="WageGMSCB">Wages of Guard/Mali/Sweeper/Cook/Aya</label>
+                                        <input type="number" class="form-control" id="WageGMSCB">
+                                    </div>
+                                    <div class="form-group col-6">
+                                        <label for="HouseKeepUp">House Keep Up</label>
+                                        <input type="number" class="form-control" id="HouseKeepUp">
+                                    </div>
+                                    <div class="form-group col-6">
+                                        <label for="WESubsidy">Water and Electricity Subsidy and Other</label>
+                                        <input type="number" class="form-control" id="WESubsidy">
+                                    </div>
+                                    <div class="form-group col-6">
+                                        <label for="FuelSubsidy">Fuel Subsidy</label>
+                                        <input type="number" class="form-control" id="FuelSubsidy">
+                                    </div>
+                                    <div class="form-group col-6">
+                                        <label for="OtherPay">Other Pay</label>
+                                        <input type="number" class="form-control" id="OtherPay">
+                                    </div>
+                                    <div class="form-group col-6">
+                                        <label for="OtherDeduction">Other Deduction</label>
+                                        <input type="number" class="form-control" id="OtherDeduction">
+                                    </div>
+                                </div>
+                               @*  <div class="col-6">
+                                    <button type="button" class="btn btn-primary btn-sm" id="submit_button">submit</button>
+                                    <button type="button" class="btn btn-danger btn-sm cancel_button_show ml-2" id="cancel_button" style="display:none">cancel</button>
+                                </div> *@
+                                <div class="form-group d-flex justify-content-between">
+                                   
+                                    <button type="button" class="btn btn-danger btn-sm cancel_button_show ml-2" id="cancel_button" style="display:none">Cancel</button>
+                                    <button type="button" class="btn btn-success text-dark" id="submit_button">Save</button>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-5">
+        <div class="card">
+            <div class="card-body table-responsive">
+                <table class="table table-hover table-bordered col-12" id="amenities_list_table">
+                    <thead>
+                        <tr>
+                            <th>Action</th>
+                            <th>JobCode</th>
+                            <th>Name</th>
+                            <th>Designation</th>
+                            <th>Department</th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+@section Scripts {
+    <script type="text/javascript" src="~/js/amenities/create_amenities.js"></script>
+}

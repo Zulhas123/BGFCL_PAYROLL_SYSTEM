@@ -1,0 +1,99 @@
+﻿@{
+    ViewData["Title"] = "Amortization Schedule";
+}
+@* @section Styles {
+    <link rel="stylesheet" href="~/css/banks/banks.css" />
+} *@
+
+<!-- Page Header -->
+<div class="page-header">
+    <div class="row align-items-center">
+        <div class="col">
+            <h3 class="page-title">Amortization Schedule</h3>
+            <ul class="breadcrumb">
+                <li class="breadcrumb-item">Reports</li>
+                <li class="breadcrumb-item active">Amortization Schedule</li>
+            </ul>
+        </div>
+    </div>
+</div>
+<!-- /Page Header -->
+<div class="row justify-content-center mt-4 mb-2">
+    <div class="col-md-8">
+        <form method="post" asp-action="GetAmortizationSchedule" class="form-signin create-form bg-white rounded border shadow-sm p-4">
+            <div class="text-center mb-4">
+                <h1 class="h5 mb-3 font-weight-bold card-header border">Amortization Schedule</h1>
+            </div>
+            <div class="row">
+                <div class="col-md-6 border">
+                    <div class="form-group">
+                        <label class="control-label">Report Type</label>
+                        <select name="reportType" class="form-control" required="required" id="reportType">
+                            <option value="1">Principal</option>
+                            <option value="2">Interest</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label">Loan Amount</label>
+                        <input type="number" name="loanAmount" step="0.01" class="form-control" required="required" />
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label">Interest Rate (%)</label>
+                        <input type="number" name="interestRate" step="0.01" class="form-control" required="required" />
+                    </div>
+
+                </div>
+                <div class="col-md-6 border">
+                    <div class="form-group">
+                        <label class="control-label">Number of Installments</label>
+                        <input type="number" name="installmentNumber" class="form-control" required="required" />
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label">Installment No Of Interest</label>
+                        <input type="number" name="installNoOfInterest" class="form-control" required="required" />
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label">Start Date</label>
+                        <input type="date" name="startDate" class="form-control" required="required" />
+                    </div>
+                </div>
+            </div>
+            <div class="offset-10 col-3 mt-2">
+                <button type="submit" formtarget="_blank" class="btn btn-primary btn-sm mb-2">generate</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+@if (Model != null && Model.Any())
+{
+    <div class="row justify-content-center mt-4 mb-2">
+        <div class="col-md-8">
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th>No of Interest</th>
+                        <th>Month-Year</th>
+                        <th>Principal</th>
+                        <th>Installment</th>
+                        <th>Interest</th>
+                        <th>New Principal</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var entry in Model)
+                    {
+                        <tr>
+                            <td>@entry.NoOfInterest</td>
+                            <td>@entry.MonthYear</td>
+                            <td>@entry.Principal</td>
+                            <td>@entry.Installment</td>
+                            <td>@entry.Interest</td>
+                            <td>@entry.NewPrincipal</td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+}

@@ -1,0 +1,109 @@
+﻿@{
+    ViewData["Title"] = "Branches";
+}
+@section Styles {
+    <link rel="stylesheet" href="~/css/banks/account.css" />
+}
+<div class="row">
+    <div class="col-12">
+        <div class="card">
+            <div class="card-body">
+                <!-- Top right aligned controls -->
+                <div class="card border shadow-sm p-1">
+                    <div class="d-flex justify-content-between align-items-center gap-2">
+                        <h4 class="mb-0 mr-1">Bank Accounts Management</h4>
+                        <div class="d-flex">
+                            <button type="button" class="btn btn-info" id="add_button"><i class="fas fa-plus me-1"></i> Add Accounts</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- DataTable -->
+                <table class="table table-hover table-bordered" id="accounts_list_table">
+                    <thead>
+                        <tr>
+                            <th>Sl.</th>
+                            <th>Bank Name</th>
+                            <th>Branch Name</th>
+                            <th>Account Number</th>
+                            <th>Oppening Balance</th>
+                            <th>Notes</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Branch Form Modal -->
+<div class="modal fade" id="account_modal" tabindex="-1" aria-labelledby="accountModalLabel" aria-hidden="true">
+    <div class="modal-dialog" style="width: 800px;">
+        <div class="modal-content">
+            <div class="modal-header border border-info">
+                <h5 class="modal-title" id="accountModalLabel">Add Account</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form id="accountForm">
+                    <input type="hidden" value="" id="AccountId" />
+                    <input type="hidden" value="create" id="operation_type" />
+
+                    <div class="row">
+                        <div class="form-group col-md-6">
+                            <label for="BankId">Bank <span class="text-danger" title="required">*</span></label>
+                            <select class="form-control" id="BankId"></select>
+                            <p id="BankIdError" class="text-danger error-item"></p>
+                        </div>
+
+                        <div class="form-group col-md-6">
+                            <label for="BranchId">Branch Name <span class="text-danger" title="required">*</span></label>
+                            <select class="form-control" id="BranchId"></select>
+                            <p id="BranchIdError" class="text-danger error-item"></p>
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="AccountType">Account Type <span class="text-danger" title="required">*</span></label>
+                            <select class="form-control" id="AccountType">
+                                <option value="">-- Select Account Type --</option>
+                                <option value="Savings">Savings</option>
+                                <option value="Current">Current</option>
+                                <option value="Fixed Deposit">Fixed Deposit</option>
+                            </select>
+                            <p id="AccountTypeIdError" class="text-danger error-item"></p>
+                        </div>
+
+
+                        <div class="form-group col-md-6">
+                            <label for="AccountNumber">Acc. Number</label>
+                            <input type="text" class="form-control" id="AccountNumber">
+                        </div>
+
+                        <div class="form-group col-md-6">
+                            <label for="AccountName">Account Name</label>
+                            <input type="text" class="form-control" id="AccountName">
+                        </div>
+
+                        <div class="form-group col-md-6">
+                            <label for="Address">Notes</label>
+                            <textarea class="form-control" id="Notes" rows="3"></textarea>
+                        </div>
+                    </div>
+
+                    <!-- Buttons -->
+                    <div class="d-flex justify-content-between mt-3">
+                        <button type="button" class="btn btn-outline-danger px-3" id="cancel_button">Cancel</button>
+                        <button type="button" class="btn btn-success px-3 fw-bold" id="submit_button">Create</button>
+                    </div>
+                </form>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script type="text/javascript" src="~/js/banks/account.js"></script>
+}

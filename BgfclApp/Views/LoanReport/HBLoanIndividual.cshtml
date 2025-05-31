@@ -1,0 +1,161 @@
+﻿@{
+    ViewData["Title"] = "HB Loan Report";
+    var employeeType = ViewBag.employeeType as List<SelectListItem>;
+    var Codes = ViewBag.EmployeeCode as List<SelectListItem>;
+}
+
+<!-- Page Header -->
+<div class="page-header">
+    <div class="row align-items-center">
+        <div class="col">
+            <h3 class="page-title">HB Loan Report</h3>
+            <ul class="breadcrumb">
+                <li class="breadcrumb-item">Reports</li>
+                <li class="breadcrumb-item active">HB Loan </li>
+            </ul>
+        </div>
+    </div>
+</div>
+<!-- /Page Header -->
+<div class="row">
+    <div class="col-8 offset-2">
+        <div class="card border">
+            <div class="card-body">
+                <form asp-action="HBLoanIndividual" asp-controller="LoanReport">
+                    <div class="row">
+                        <div class="col-6">
+                            <div class="form-group">
+                                <label for="EmployeeTypeId">Employee Type <span class="text-danger" title="required">*</span></label>
+                                <select class="form-control" id="EmployeeTypeId" name="employeeTypeId"></select>
+                                <p id="EmployeeTypeIdError" class="text-danger error-item"></p>
+                            </div>
+                            <div class="form-group">
+                                <label for="fmonth">From Month</label>
+                                <select class="form-control" id="fmonths" name="fmonth"></select>
+                            </div>
+                            <div class="form-group">
+                                <label for="fyear">From Year</label>
+                                <select class="form-control" id="fyears" name="fyear"></select>
+                            </div>
+                            <div class="form-group">
+                                <label for="yearclosingmonth">Year Closing Month</label>
+                                <select class="form-control" id="yearclosingmonth" name="yearclosingmonth"></select>
+                            </div>
+
+                        </div>
+                        <div class="col-6">
+                            <div class="form-group">
+                                <label for="jobCode">Job Codes</label>
+                                <select class="form-control" id="jobCode" name="jobCodes">
+                                    <option value="">-- Select Employee Code --</option>
+                                    @foreach (var jobCode in ViewBag.EmployeeCode)
+                                    {
+                                        <option value="@jobCode.Value">@jobCode.Text</option>
+                                    }
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="tmonth">To Month</label>
+                                <select class="form-control" id="tmonths" name="tmonth"></select>
+                            </div>
+                            <div class="form-group">
+                                <label for="tyear">To Year</label>
+                                <select class="form-control" id="tyears" name="tyear"></select>
+                            </div>
+                            <div class="form-group">
+                                <label for="tyear">Year Closing Year</label>
+                                <select class="form-control" id="yearclosingyear" name="yearclosingyear"></select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="offset-10 col-3">
+                            <button type="submit" formtarget="_blank" class="btn btn-primary btn-sm mb-2">Generate</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script type="text/javascript">
+        $(document).ready(function () {
+            loadInitialData();
+        });
+        $(document).ready(function () {
+            $('#jobCode').select2({
+                placeholder: "Select job codes",
+                allowClear: true
+            });
+        });
+        function loadInitialData() {
+            $.ajax({
+                url: '/api/Employees/GetEmployeeTypes',
+                type: 'GET',
+                dataType: 'json',
+                success: function (responseObject) {
+                    let employeeTypes = responseObject.data;
+                    $('#EmployeeTypeId').empty();
+                    $('#EmployeeTypeId').append('<option value="0">Select One</option>');
+                    $.each(employeeTypes, function (key, item) {
+                        if (item.id != 3 && item.id != 4) {
+                            $('#EmployeeTypeId').append(`<option value=${item.id}>${item.employeeTypeName}</option>`);
+                        }
+                    });
+                },
+                error: function (responseObject) {
+                    console.error('Error loading employee types:', responseObject);
+                }
+            });
+
+
+            $.ajax({
+                url: '/api/Others/GetMonths',
+                type: 'GET',
+                async: false,
+                dataType: 'json',
+                success: function (responseObject) {
+                    let months = responseObject.data;
+                    const currentMonth = new Date().getMonth() + 1;
+                    $('#fmonths, #tmonths').empty();
+
+                    $.each(months, function (key, item) {
+                        if (item.monthId === currentMonth) {
+                            $('#fmonths, #tmonths,#yearclosingmonth').append(`<option value=${item.monthId} selected>${item.monthName}</option>`);
+                        } else {
+                            $('#fmonths, #tmonths,#yearclosingmonth').append(`<option value=${item.monthId}>${item.monthName}</option>`);
+                        }
+                    });
+                },
+                error: function (responseObject) {
+                    console.error('Error fetching months:', responseObject);
+                }
+            });
+
+            $.ajax({
+                url: '/api/Others/GetYears',
+                type: 'GET',
+                async: false,
+                dataType: 'json',
+                success: function (responseObject) {
+                    let years = responseObject.data;
+                    const currentYear = new Date().getFullYear(); // Get the current year
+                    $('#fyears, #tyears').empty();
+
+                    $.each(years, function (key, item) {
+                        if (item === currentYear) {
+                            $('#fyears, #tyears,#yearclosingyear').append(`<option value=${item} selected>${item}</option>`);
+                        } else {
+                            $('#fyears, #tyears,#yearclosingyear').append(`<option value=${item}>${item}</option>`);
+                        }
+                    });
+                },
+                error: function (responseObject) {
+                    console.error('Error fetching years:', responseObject);
+                }
+            });
+        }
+    </script>
+}

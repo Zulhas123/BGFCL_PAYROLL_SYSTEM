@@ -1,0 +1,50 @@
+﻿@{
+    ViewData["Title"] = "Loan Process";
+}
+@* @section Styles {
+    <link rel="stylesheet" href="~/css/banks/banks.css" />
+} *@
+
+<!-- Page Header -->
+<div class="page-header">
+    <div class="row align-items-center">
+        <div class="col">
+            <h3 class="page-title">Loan Process</h3>
+            <ul class="breadcrumb">
+                <li class="breadcrumb-item">Loans</li>
+                <li class="breadcrumb-item active">Loan Process</li>
+            </ul>
+        </div>
+    </div>
+</div>
+<!-- /Page Header -->
+
+<div class="row">
+    <div class="col-4">
+        <div class="card">
+            <div class="card-body">
+                <form>
+                    <div class="form-group">
+                        <label class="control-label" for="LoanId">Select Loan <span class="text-danger" title="required">*</span></label>
+                        <select class="form-control" id="LoanId"></select>
+                        <p id="LoanId" class="text-danger error-item"></p>
+                    </div>
+                    <div class="form-group">
+                        <label for="month">Month</label>
+                        <select class="form-control" id="months"></select>
+                    </div>
+                    <div class="form-group">
+                        <label for="year">Year</label>
+                        <select class="form-control" id="years"></select>
+                    </div>
+                    <button type="button" class="btn btn-primary mb-2" id="process_button">process</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+@section Scripts {
+    <script type="text/javascript" src="~/js/loans/loan_process.js"></script>
+}

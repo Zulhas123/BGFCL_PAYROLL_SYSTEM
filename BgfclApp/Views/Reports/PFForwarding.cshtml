@@ -1,0 +1,196 @@
+﻿@{
+    ViewData["Title"] = "PF Forwarding Report";
+    var Codes = ViewBag.EmployeeCode as List<SelectListItem>;
+}
+@section Styles {
+    <link rel="stylesheet" href="~/css/Reports/reports.css" />
+}
+
+
+<div class="row">
+    <div class="col-md-5 offset-md-2">
+        @if (!string.IsNullOrEmpty(ViewBag.ProcessMessage as string))
+        {
+            <div id="processAlert" class="alert alert-warning alert-dismissible fade show" role="alert">
+                @ViewBag.ProcessMessage
+                <button type="button" class="btn-close float-end" data-bs-dismiss="alert" aria-label="Close">X</button>
+            </div>
+        }
+        <div class="card border">
+            <div class="card-header bg-light">
+                <h4 class="page-title">PF Forwarding Report</h4>
+            </div>
+            <div class="card-body">
+                <form id="PfForwardinfFormId" asp-action="PFForwarding" asp-controller="Reports">
+
+                    <div class="form-group">
+                        <label for="month">Month</label>
+                        <select class="form-control" id="months" name="month"></select>
+                        <p id="MonthsError" class="text-danger error-item">@ViewBag.monthsError</p>
+                    </div>
+                    <div class="form-group">
+                        <label for="year">Year</label>
+                        <select class="form-control" id="years" name="year"></select>
+                        <p id="YearsError" class="text-danger error-item">@ViewBag.yearsError</p>
+                    </div>
+                    <div class="form-group">
+                        <label for="EmployeeTypeId">Employee Type <span class="text-danger" title="required">*</span></label>
+                        <select class="form-control" id="EmployeeTypeId" name="employeeTypeId"></select>
+                        <p id="EmployeeTypeIdError" class="text-danger error-item">@ViewBag.employeeTypeIdError</p>
+                    </div>
+                    <div class="form-group row">
+                        <label for="Accounts" class="col-4 col-form-label">Accounts <span class="text-danger" title="required">*</span></label>
+                        <div class="col-8">
+                            <select class="form-control form-control-sm" id="Accounts" name="Accounts"></select>
+                            <p id="AccountsError" class="text-danger error-item mb-0">@ViewBag.AccountsError</p>
+                        </div>
+                    </div>
+                    <div class="text-right">
+                        <button type="submit" formtarget="_blank" class="btn btn-primary btn-sm">Generate</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+@section Scripts {
+    <script type="text/javascript">
+        $(document).ready(function () {
+            loadInitialData();
+            $('#jobCode').select2({
+                placeholder: 'Select an employee code',
+                allowClear: true
+            });
+            setTimeout(function () {
+                var alertBox = document.getElementById("processAlert");
+                if (alertBox) {
+                    alertBox.classList.remove("show");
+                    alertBox.classList.add("fade");
+                    setTimeout(() => {
+                        alertBox.style.display = 'none';
+                    }, 500); // Allow Bootstrap's fade animation
+                }
+            }, 5000);
+        });
+        function getMonthId() {
+            let month = $('#months').val();
+            let year = $('#years').val();
+
+            return (parseInt(year) * 100) + parseInt(month);
+        }
+
+        function loadInitialData() {
+
+            $.ajax({
+                url: '/api/Banks/GetAccounts',
+                type: 'GET',
+                async: false,
+                dataType: 'json',
+                success: function (responseObject) {
+                    let accounts = responseObject.data;
+                    $('#Accounts').empty().append('<option value="">-- Select Account --</option>');
+                    $.each(accounts, function (key, item) {
+                        $('#Accounts').append(`<option value="${item.accountNumber}">${item.accountNumber}</option>`);
+                    });
+                },
+                error: function () {
+                    alert('Failed to load accounts.');
+                }
+            });
+            $.ajax({
+                url: '/api/Employees/GetEmployeeTypes',
+                type: 'GET',
+                async: false,
+                dataType: 'json',
+                success: function (responseObject) {
+                    let employeeTypes = responseObject.data;
+                    const $employeeType = $('#EmployeeTypeId');
+                    const $errorField = $('#EmployeeTypeIdError');
+
+                    $employeeType.empty();
+                    $employeeType.append('<option value="">Select One</option>');
+
+                    $.each(employeeTypes, function (key, item) {
+                        // Append only item with id 1 or 2
+                        if (item.id == 1 || item.id == 2) {
+                            $employeeType.append(`<option value="${item.id}">${item.employeeTypeName}</option>`);
+                        }
+                    });
+
+                    // Reset error field
+                    $errorField.text('');
+                },
+                error: function (xhr, status, error) {
+                    console.error("Error fetching employee types:", error);
+                }
+            });
+
+            $.ajax({
+                url: '/api/Others/GetMonths',
+                type: 'Get',
+                async: false,
+                dataType: 'json',
+                success: function (responseObject) {
+                    let months = responseObject.data;
+                    let currentMonth = new Date().getMonth() + 1;
+                    $('#months').empty();
+                    $.each(months, function (key, item) {
+                        if (currentMonth == parseInt(item.monthId)) {
+                            $('#months').append(`<option value=${item.monthId} selected>${item.monthName}</option>`);
+                        }
+                        else {
+                            $('#months').append(`<option value=${item.monthId}>${item.monthName}</option>`);
+                        }
+
+                    });
+                },
+                error: function (responseObject) {
+                }
+            });
+            $.ajax({
+                url: '/api/Others/GetYears',
+                type: 'Get',
+                async: false,
+                dataType: 'json',
+                success: function (responseObject) {
+                    let years = responseObject.data;
+                    let currentYear = new Date().getFullYear();
+                    $('#years').empty();
+                    $.each(years, function (key, item) {
+                        if (item == currentYear) {
+                            $('#years').append(`<option value=${item} selected>${item}</option>`);
+                        }
+                        else {
+                            $('#years').append(`<option value=${item}>${item}</option>`);
+                        }
+                    });
+                },
+                error: function (responseObject) {
+                }
+            });
+            $('#PfForwardinfFormId').on('submit', function (e) {
+                const employeeTypeValue = $('#EmployeeTypeId').val();
+                const $errorField = $('#EmployeeTypeIdError');
+
+                $errorField.text('');
+
+                if (!employeeTypeValue) {
+                    e.preventDefault();
+                    $errorField.text('Please select an employee type.');
+                }
+            });
+            $('#EmployeeTypeId').on('change', function () {
+                const employeeTypeValue = $(this).val();
+                const $errorField = $('#EmployeeTypeIdError');
+
+                if (employeeTypeValue) {
+                    $errorField.text('');
+                }
+            });
+
+        }
+    </script>
+}

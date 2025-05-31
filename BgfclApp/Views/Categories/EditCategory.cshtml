@@ -1,0 +1,33 @@
+﻿@model Entities.Category
+
+@{
+    ViewData["Title"] = "Edit Category";
+}
+
+@section Style{
+    <link rel="stylesheet" href="~/css/categories/edit_category.css" />
+}
+
+
+
+<div class="row">
+    <div class="col-12">
+        <h4 id="page_header">Edit Category</h4>
+        <div class="edit_form col-2">
+            <form asp-action="EditCategory" method="post">
+                <input type="hidden" asp-for="Id" />
+                <div class="mb-3">
+                    <label asp-for="CategoryName" class="form-label"></label>
+                    <input asp-for="CategoryName" type="text" class="form-control" placeholder="enter category name">
+                </div>
+                <div>
+                    <input type="submit" value="Save" class="btn btn-primary" />
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>

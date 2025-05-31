@@ -1,0 +1,94 @@
+﻿@model List<BgfclApp.ViewModels.ExcelUploadBasicSalaryViewModel>
+@{
+    ViewData["Title"] = "Update Basic Salary";
+}
+
+<div class="row">
+    <div class="col-4">
+        <div class="card">
+            <div class="card-body">
+                <form asp-controller="SalarySettings" asp-action="UpdateBasicSalary" method="post" enctype="multipart/form-data">
+                    <div class="form-group">
+                        <label class="control-label" for="EmployeeTypeId">Employee Type <span class="text-danger" title="required">*</span></label>
+                        <select class="form-control" id="EmployeeTypeId" name="employeeTypeId"></select>
+                        @* <p id="EmployeeTypeIdError" class="text-danger error-item"></p> *@
+                    </div>
+                    <div class="form-group">
+                        <label for="postedFile"></label>
+                        <input type="file" name="postedFile" id="postedFile" />
+                        @* <p id="BankTagIdError" class="text-danger error-item"></p> *@
+                    </div>
+                    <button type="submit" class="btn btn-primary" id="submit_button">upload</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    @if (Model.Count > 0)
+    {
+        <div class="col-8">
+            <div class="card">
+                <div class="card-body">
+                    <p>@ViewBag.BasicSalaryUpdateResult</p>
+                    <table class="table table-hover col-12 table-bordered">
+                        <thead>
+                            <tr>
+                                <th>Sl.</th>
+                                <th>Job Code</th>
+                                <th>Empoyee Name</th>
+                                <th>New Basic</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var item in Model)
+                            {
+                                <tr>
+                                    <td>@item.Sl</td>
+                                    <td>@item.JobCode</td>
+                                    <td>@item.EmployeeName</td>
+                                    <td>@item.NewBasic.ToString("N2")</td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    }
+
+</div>
+
+@section Scripts {
+    <script type="text/javascript">
+
+        $(document).ready(function () {
+
+            loadInitialData();
+
+        });
+
+
+        function loadInitialData() {
+
+            $.ajax({
+                url: '/api/Employees/GetEmployeeTypes',
+                type: 'Get',
+                async: false,
+                dataType: 'json',
+                success: function (responseObject) {
+                    employeeTypes = responseObject.data;
+                    $('#EmployeeTypeId').empty();
+                    $.each(employeeTypes, function (key, item) {
+                        if(item.id==1 || item.id==2){
+                            $('#EmployeeTypeId').append(`<option value=${item.id}>${item.employeeTypeName}</option>`);
+                        }
+                       
+                    });
+                },
+                error: function (responseObject) {
+                }
+            });
+
+        }
+
+    </script>
+}

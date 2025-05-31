@@ -1,0 +1,14 @@
+﻿.input-wrapper input,
+.input-wrapper select {
+    max-width: 80%;
+    min-height: 38px;
+}
+
+.card-body {
+    max-height: 70vh;
+    overflow-y: auto;
+}
+
+#fieldConfigForm .form-check-inline {
+    margin-right: 15px;
+}

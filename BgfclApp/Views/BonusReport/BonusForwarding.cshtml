@@ -1,0 +1,63 @@
+﻿@{
+    ViewData["Title"] = "Bonus Sheet";
+}
+@section Styles {
+    <link rel="stylesheet" href="~/css/bonus/bonusSheet.css" />
+}
+
+<div class="row justify-content-center mt-4 mb-2">
+    <div class="col-md-5">
+        <form method="post" asp-action="BonusForwarding" class="form-signin create-form bg-white rounded border shadow-sm p-3" style="max-height: 310px;">
+            <div class="text-center mb-2">
+                <h1 class="h4 mb-2 font-weight-bold card-header border p-2">Bonus Sheet Report</h1>
+            </div>
+            <div class="form-group d-flex">
+                <label for="month" class="col-4">Month</label>
+                <select class="form-control form-control-sm col-8" id="months" name="month"></select>
+            </div>
+            <div class="form-group d-flex">
+                <label for="year" class="col-4">Year</label>
+                <select class="form-control form-control-sm col-8" id="years" name="year"></select>
+            </div>
+            <div class="form-group d-flex">
+                <label for="BonusId" class="col-4">Bonus <span class="text-danger" title="required">*</span></label>
+                <select class="form-control" id="BonusId" name="bonusId"></select>
+                <p id="BonusIdError" class="text-danger error-item">@ViewBag.bonusError</p>
+            </div>
+            <div class="form-group d-flex">
+                <label for="EmployeeTypeId" class="col-4">Emp. Type <span class="text-danger" title="required">*</span></label>
+                <select class="form-control form-control-sm col-8" id="EmployeeTypeId" name="employeeTypeId"></select>
+            </div>
+            <div class="form-group row">
+                <label for="Accounts" class="col-4 col-form-label">Accounts <span class="text-danger" title="required">*</span></label>
+                <div class="col-8">
+                    <select class="form-control form-control-sm" id="Accounts" name="Accounts"></select>
+                    <p id="AccountsError" class="text-danger error-item mb-0">@ViewBag.AccountsError</p>
+                </div>
+            </div>
+            <div class="text-right">
+                <button type="submit" id="generateButton" formtarget="_blank" class="btn btn-success btn-sm">Report</button>
+            </div>
+        </form>
+    </div>
+    <div class="col-md-7">
+        <table class="table table-hover table-bordered" id="bonus_process_list_table">
+            <thead>
+                <tr>
+                    <th>Sl.</th>
+                    <th>Month</th>
+                    <th>Year</th>
+                    <th>Bonus Title</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+    </div>
+</div>
+
+@section Scripts {
+    <script type="text/javascript" src="~/js/bonus/bonusSheet.js"></script>
+
+}
+

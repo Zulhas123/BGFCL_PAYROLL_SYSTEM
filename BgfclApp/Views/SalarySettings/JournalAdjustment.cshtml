@@ -1,0 +1,56 @@
+﻿@{
+    ViewData["Title"] = "Journal Adjustment";
+}
+
+<div class="row">
+    <div class="col-md-12">
+        <div class="card">
+            <div class="card-header">
+                <h3>Journal Adjustment Officer/JS</h3>
+            </div>
+            <div class="card-body">
+                <form>
+                    <div class="row align-items-center">
+                        <div class="col-md-3">
+                            <div class="form-group">
+                                <label for="months">Month</label>
+                                <select class="form-control" id="months"></select>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="form-group">
+                                <label for="years">Year</label>
+                                <select class="form-control" id="years"></select>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="form-group">
+                                <label class="control-label" for="EmployeeTypeId">Employee Type <span class="text-danger" title="required">*</span></label>
+                                <select class="form-control" id="EmployeeTypeId" name="employeeTypeId"></select>
+                            </div>
+                        </div>
+                        <div class="col-md-1 d-flex justify-content-end">
+                            <button type="button" class="btn btn-success" id="submit_button">Show</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="row">
+    <div class="col-12">
+        <div id="spreadsheet"></div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-12 d-flex justify-content-start mt-3">
+        <button type="button" class="btn btn-info p-2" id="update_button" style="display:none;">Update</button>
+    </div>
+</div>
+
+@section Scripts {
+    <script type="text/javascript" src="~/js/salarysettings/journal_adjustment_officer.js"></script>
+}

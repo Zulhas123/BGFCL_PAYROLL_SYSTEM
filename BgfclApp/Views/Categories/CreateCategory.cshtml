@@ -1,0 +1,26 @@
+﻿@{
+    ViewData["Title"] = "Create Category";
+}
+@model Entities.Category
+
+@section Style{
+    <link rel="stylesheet" href="~/css/categories/create_category.css" />
+}
+<div class="row">
+    <div class="col-12">
+        <h4 id="page_header">Create Category</h4>
+        <div class="col-2 create_form">
+            <form asp-action="CreateCategory" method="post">
+                <div class="mb-3">
+                    <label asp-for="CategoryName" class="form-label"></label>
+                    <input asp-for="CategoryName" type="text" class="form-control" placeholder="enter category name">
+                </div>
+                <div>
+                    <input type="Submit" value="submit" class="btn btn-primary" />
+                </div>
+            </form>
+        </div>
+        <a asp-action="Index">Color List</a>
+    </div>
+</div>
+

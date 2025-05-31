@@ -1,0 +1,531 @@
+is_global = true
+build_property.TargetFramework = net7.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = BgfclApp
+build_property.RootNamespace = BgfclApp
+build_property.ProjectDir = E:\JabaIt\Payroll_System\BgfclApp\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
+build_property.RazorLangVersion = 7.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = E:\JabaIt\Payroll_System\BgfclApp
+build_property._RazorSourceGeneratorDebug = 
+
+[E:/JabaIt/Payroll_System/BgfclApp/Views/AmenitiesReport/AmenitiesPaySlip.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQW1lbml0aWVzUmVwb3J0XEFtZW5pdGllc1BheVNsaXAuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/JabaIt/Payroll_System/BgfclApp/Views/AmenitiesReport/AmenitiesYearlyPayslip.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQW1lbml0aWVzUmVwb3J0XEFtZW5pdGllc1llYXJseVBheXNsaXAuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/JabaIt/Payroll_System/BgfclApp/Views/AmenitiesReport/GetAmenitiesBankForward.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQW1lbml0aWVzUmVwb3J0XEdldEFtZW5pdGllc0JhbmtGb3J3YXJkLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/JabaIt/Payroll_System/BgfclApp/Views/AmenitiesReport/GetAmenitiesControlSheet.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQW1lbml0aWVzUmVwb3J0XEdldEFtZW5pdGllc0NvbnRyb2xTaGVldC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/JabaIt/Payroll_System/BgfclApp/Views/AmenitiesReport/GetAmenitiesJournal.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQW1lbml0aWVzUmVwb3J0XEdldEFtZW5pdGllc0pvdXJuYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/JabaIt/Payroll_System/BgfclApp/Views/AmenitiesReport/YearlyAmenitiesControlSheet.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQW1lbml0aWVzUmVwb3J0XFllYXJseUFtZW5pdGllc0NvbnRyb2xTaGVldC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/JabaIt/Payroll_System/BgfclApp/Views/Amenities/AmenitiesJournalPosting.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQW1lbml0aWVzXEFtZW5pdGllc0pvdXJuYWxQb3N0aW5nLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/JabaIt/Payroll_System/BgfclApp/Views/Amenities/CreateAmenities.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQW1lbml0aWVzXENyZWF0ZUFtZW5pdGllcy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/JabaIt/Payroll_System/BgfclApp/Views/Amenities/FinalAdjustment.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQW1lbml0aWVzXEZpbmFsQWRqdXN0bWVudC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/JabaIt/Payroll_System/BgfclApp/Views/Amenities/JournalAdjustment.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQW1lbml0aWVzXEpvdXJuYWxBZGp1c3RtZW50LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/JabaIt/Payroll_System/BgfclApp/Views/Amenities/ProcessAmenities.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQW1lbml0aWVzXFByb2Nlc3NBbWVuaXRpZXMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/JabaIt/Payroll_System/BgfclApp/Views/Banks/BankAccounts.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQmFua3NcQmFua0FjY291bnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/JabaIt/Payroll_System/BgfclApp/Views/Banks/Banks.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQmFua3NcQmFua3MuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/JabaIt/Payroll_System/BgfclApp/Views/Banks/BankTypes.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQmFua3NcQmFua1R5cGVzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/JabaIt/Payroll_System/BgfclApp/Views/Banks/Branches.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQmFua3NcQnJhbmNoZXMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/JabaIt/Payroll_System/BgfclApp/Views/Banks/Tags.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQmFua3NcVGFncy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/JabaIt/Payroll_System/BgfclApp/Views/BonusReport/BonusBankForward.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQm9udXNSZXBvcnRcQm9udXNCYW5rRm9yd2FyZC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/JabaIt/Payroll_System/BgfclApp/Views/BonusReport/BonusForwarding.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQm9udXNSZXBvcnRcQm9udXNGb3J3YXJkaW5nLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/JabaIt/Payroll_System/BgfclApp/Views/BonusReport/GetBonusControlSheet.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQm9udXNSZXBvcnRcR2V0Qm9udXNDb250cm9sU2hlZXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/JabaIt/Payroll_System/BgfclApp/Views/BonusReport/GetBonusJournal.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQm9udXNSZXBvcnRcR2V0Qm9udXNKb3VybmFsLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/JabaIt/Payroll_System/BgfclApp/Views/BonusReport/GetBonusPaySlip.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQm9udXNSZXBvcnRcR2V0Qm9udXNQYXlTbGlwLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/JabaIt/Payroll_System/BgfclApp/Views/BonusReport/GetBonusSheet.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQm9udXNSZXBvcnRcR2V0Qm9udXNTaGVldC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/JabaIt/Payroll_System/BgfclApp/Views/Bonus/CrateBonus.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQm9udXNcQ3JhdGVCb251cy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/JabaIt/Payroll_System/BgfclApp/Views/Bonus/FinalAdjustment.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQm9udXNcRmluYWxBZGp1c3RtZW50LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/JabaIt/Payroll_System/BgfclApp/Views/Bonus/JournalPosting.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQm9udXNcSm91cm5hbFBvc3RpbmcuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/JabaIt/Payroll_System/BgfclApp/Views/Bonus/ProcessBonus.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQm9udXNcUHJvY2Vzc0JvbnVzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/JabaIt/Payroll_System/BgfclApp/Views/Bonus/ProcessBonusData.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQm9udXNcUHJvY2Vzc0JvbnVzRGF0YS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/JabaIt/Payroll_System/BgfclApp/Views/Categories/CreateCategory.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2F0ZWdvcmllc1xDcmVhdGVDYXRlZ29yeS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/JabaIt/Payroll_System/BgfclApp/Views/Categories/EditCategory.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2F0ZWdvcmllc1xFZGl0Q2F0ZWdvcnkuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/JabaIt/Payroll_System/BgfclApp/Views/Categories/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2F0ZWdvcmllc1xJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/JabaIt/Payroll_System/BgfclApp/Views/Dashboard/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGFzaGJvYXJkXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/JabaIt/Payroll_System/BgfclApp/Views/Dashboard/Login.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGFzaGJvYXJkXExvZ2luLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/JabaIt/Payroll_System/BgfclApp/Views/DataImports/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGF0YUltcG9ydHNcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/JabaIt/Payroll_System/BgfclApp/Views/Departments/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGVwYXJ0bWVudHNcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/JabaIt/Payroll_System/BgfclApp/Views/Designations/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGVzaWduYXRpb25zXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/JabaIt/Payroll_System/BgfclApp/Views/Employees/DailyWorker.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wbG95ZWVzXERhaWx5V29ya2VyLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/JabaIt/Payroll_System/BgfclApp/Views/Employees/EmployeeType.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wbG95ZWVzXEVtcGxveWVlVHlwZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/JabaIt/Payroll_System/BgfclApp/Views/Employees/InactiveJuniorStaff.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wbG95ZWVzXEluYWN0aXZlSnVuaW9yU3RhZmYuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/JabaIt/Payroll_System/BgfclApp/Views/Employees/InactiveOfficer.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wbG95ZWVzXEluYWN0aXZlT2ZmaWNlci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/JabaIt/Payroll_System/BgfclApp/Views/Employees/JuniorStaff.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wbG95ZWVzXEp1bmlvclN0YWZmLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/JabaIt/Payroll_System/BgfclApp/Views/Employees/Officer.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wbG95ZWVzXE9mZmljZXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/JabaIt/Payroll_System/BgfclApp/Views/Grades/CreateBasic.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcR3JhZGVzXENyZWF0ZUJhc2ljLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/JabaIt/Payroll_System/BgfclApp/Views/Grades/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcR3JhZGVzXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/JabaIt/Payroll_System/BgfclApp/Views/LoanReport/GetComLoan.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTG9hblJlcG9ydFxHZXRDb21Mb2FuLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/JabaIt/Payroll_System/BgfclApp/Views/LoanReport/GetHBILoan.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTG9hblJlcG9ydFxHZXRIQklMb2FuLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/JabaIt/Payroll_System/BgfclApp/Views/LoanReport/GetLoanSheet.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTG9hblJlcG9ydFxHZXRMb2FuU2hlZXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/JabaIt/Payroll_System/BgfclApp/Views/LoanReport/GetMCLLoan.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTG9hblJlcG9ydFxHZXRNQ0xMb2FuLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/JabaIt/Payroll_System/BgfclApp/Views/LoanReport/HBLLoanSchedule.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTG9hblJlcG9ydFxIQkxMb2FuU2NoZWR1bGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/JabaIt/Payroll_System/BgfclApp/Views/LoanReport/HBLoanIndividual.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTG9hblJlcG9ydFxIQkxvYW5JbmRpdmlkdWFsLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/JabaIt/Payroll_System/BgfclApp/Views/Loans/CarLoan.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTG9hbnNcQ2FyTG9hbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/JabaIt/Payroll_System/BgfclApp/Views/Loans/ComLoan.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTG9hbnNcQ29tTG9hbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/JabaIt/Payroll_System/BgfclApp/Views/Loans/FlatLoan.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTG9hbnNcRmxhdExvYW4uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/JabaIt/Payroll_System/BgfclApp/Views/Loans/HbLoan.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTG9hbnNcSGJMb2FuLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/JabaIt/Payroll_System/BgfclApp/Views/Loans/LoanProcess.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTG9hbnNcTG9hblByb2Nlc3MuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/JabaIt/Payroll_System/BgfclApp/Views/Loans/MclLoan.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTG9hbnNcTWNsTG9hbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/JabaIt/Payroll_System/BgfclApp/Views/Locations/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTG9jYXRpb25zXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/JabaIt/Payroll_System/BgfclApp/Views/MedicalFund/GetMedicalFund.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWVkaWNhbEZ1bmRcR2V0TWVkaWNhbEZ1bmQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/JabaIt/Payroll_System/BgfclApp/Views/PayrollDashboard/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGF5cm9sbERhc2hib2FyZFxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/JabaIt/Payroll_System/BgfclApp/Views/PensionSheet/GetPensionSheet.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGVuc2lvblNoZWV0XEdldFBlbnNpb25TaGVldC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/JabaIt/Payroll_System/BgfclApp/Views/PFGratuity/ScheduleProvident.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUEZHcmF0dWl0eVxTY2hlZHVsZVByb3ZpZGVudC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/JabaIt/Payroll_System/BgfclApp/Views/PFSheetReport/GetPFSheet.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUEZTaGVldFJlcG9ydFxHZXRQRlNoZWV0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/JabaIt/Payroll_System/BgfclApp/Views/Religions/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVsaWdpb25zXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/JabaIt/Payroll_System/BgfclApp/Views/Reports/BankWisePaymentSummary.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVwb3J0c1xCYW5rV2lzZVBheW1lbnRTdW1tYXJ5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/JabaIt/Payroll_System/BgfclApp/Views/Reports/BankWiseSalaryBankForwarding.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVwb3J0c1xCYW5rV2lzZVNhbGFyeUJhbmtGb3J3YXJkaW5nLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/JabaIt/Payroll_System/BgfclApp/Views/Reports/EmployeeUnionORClub.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVwb3J0c1xFbXBsb3llZVVuaW9uT1JDbHViLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/JabaIt/Payroll_System/BgfclApp/Views/Reports/GenereateScheduleProvidentFound.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVwb3J0c1xHZW5lcmVhdGVTY2hlZHVsZVByb3ZpZGVudEZvdW5kLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/JabaIt/Payroll_System/BgfclApp/Views/Reports/GetAmortizationSchedule.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVwb3J0c1xHZXRBbW9ydGl6YXRpb25TY2hlZHVsZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/JabaIt/Payroll_System/BgfclApp/Views/Reports/GetComputerLoan.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVwb3J0c1xHZXRDb21wdXRlckxvYW4uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/JabaIt/Payroll_System/BgfclApp/Views/Reports/GetMotorLoan.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVwb3J0c1xHZXRNb3RvckxvYW4uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/JabaIt/Payroll_System/BgfclApp/Views/Reports/LoanSheet.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVwb3J0c1xMb2FuU2hlZXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/JabaIt/Payroll_System/BgfclApp/Views/Reports/OfficerAssoORClub.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVwb3J0c1xPZmZpY2VyQXNzb09SQ2x1Yi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/JabaIt/Payroll_System/BgfclApp/Views/Reports/OverTime.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVwb3J0c1xPdmVyVGltZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/JabaIt/Payroll_System/BgfclApp/Views/Reports/PensionSheet.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVwb3J0c1xQZW5zaW9uU2hlZXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/JabaIt/Payroll_System/BgfclApp/Views/Reports/PFDeduction.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVwb3J0c1xQRkRlZHVjdGlvbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/JabaIt/Payroll_System/BgfclApp/Views/Reports/PFForwarding.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVwb3J0c1xQRkZvcndhcmRpbmcuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/JabaIt/Payroll_System/BgfclApp/Views/Reports/PFSheet.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVwb3J0c1xQRlNoZWV0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/JabaIt/Payroll_System/BgfclApp/Views/Reports/SalaryBankForwarding.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVwb3J0c1xTYWxhcnlCYW5rRm9yd2FyZGluZy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/JabaIt/Payroll_System/BgfclApp/Views/Reports/SalaryJournal.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVwb3J0c1xTYWxhcnlKb3VybmFsLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/JabaIt/Payroll_System/BgfclApp/Views/Reports/WelfareFund.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVwb3J0c1xXZWxmYXJlRnVuZC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/JabaIt/Payroll_System/BgfclApp/Views/Reports/YearlyGPFDeduction.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVwb3J0c1xZZWFybHlHUEZEZWR1Y3Rpb24uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/JabaIt/Payroll_System/BgfclApp/Views/Reports/YearlyPensionSheet.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVwb3J0c1xZZWFybHlQZW5zaW9uU2hlZXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/JabaIt/Payroll_System/BgfclApp/Views/Reports/YearlyPFSheet.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVwb3J0c1xZZWFybHlQRlNoZWV0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/JabaIt/Payroll_System/BgfclApp/Views/Report/SalaryReport.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVwb3J0XFNhbGFyeVJlcG9ydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/JabaIt/Payroll_System/BgfclApp/Views/Roles/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUm9sZXNcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/JabaIt/Payroll_System/BgfclApp/Views/SalaryReport/GetBankWisePaymentSummary.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2FsYXJ5UmVwb3J0XEdldEJhbmtXaXNlUGF5bWVudFN1bW1hcnkuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/JabaIt/Payroll_System/BgfclApp/Views/SalaryReport/GetPFDeductionOF.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2FsYXJ5UmVwb3J0XEdldFBGRGVkdWN0aW9uT0YuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/JabaIt/Payroll_System/BgfclApp/Views/SalaryReport/GetSalaryControlSheetJRStaff.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2FsYXJ5UmVwb3J0XEdldFNhbGFyeUNvbnRyb2xTaGVldEpSU3RhZmYuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/JabaIt/Payroll_System/BgfclApp/Views/SalaryReport/GetSalaryControlSheetOfficer.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2FsYXJ5UmVwb3J0XEdldFNhbGFyeUNvbnRyb2xTaGVldE9mZmljZXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/JabaIt/Payroll_System/BgfclApp/Views/SalaryReport/GetSalaryForwarding.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2FsYXJ5UmVwb3J0XEdldFNhbGFyeUZvcndhcmRpbmcuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/JabaIt/Payroll_System/BgfclApp/Views/SalaryReport/GetSalaryJournal.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2FsYXJ5UmVwb3J0XEdldFNhbGFyeUpvdXJuYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/JabaIt/Payroll_System/BgfclApp/Views/SalaryReport/GetSalaryPaySlip.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2FsYXJ5UmVwb3J0XEdldFNhbGFyeVBheVNsaXAuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/JabaIt/Payroll_System/BgfclApp/Views/SalaryReport/GetYearlyPaySlip.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2FsYXJ5UmVwb3J0XEdldFllYXJseVBheVNsaXAuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/JabaIt/Payroll_System/BgfclApp/Views/SalaryReport/MonthlyAtteendance.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2FsYXJ5UmVwb3J0XE1vbnRobHlBdHRlZW5kYW5jZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/JabaIt/Payroll_System/BgfclApp/Views/SalaryReport/SalaryBankForward.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2FsYXJ5UmVwb3J0XFNhbGFyeUJhbmtGb3J3YXJkLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/JabaIt/Payroll_System/BgfclApp/Views/SalaryReport/SalarySetting.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2FsYXJ5UmVwb3J0XFNhbGFyeVNldHRpbmcuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/JabaIt/Payroll_System/BgfclApp/Views/SalaryReport/YearlySalaryControlSheet.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2FsYXJ5UmVwb3J0XFllYXJseVNhbGFyeUNvbnRyb2xTaGVldC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/JabaIt/Payroll_System/BgfclApp/Views/SalarySettings/AdvanceTax.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2FsYXJ5U2V0dGluZ3NcQWR2YW5jZVRheC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/JabaIt/Payroll_System/BgfclApp/Views/SalarySettings/BasicSalarySettingsDailyWorker.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2FsYXJ5U2V0dGluZ3NcQmFzaWNTYWxhcnlTZXR0aW5nc0RhaWx5V29ya2VyLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/JabaIt/Payroll_System/BgfclApp/Views/SalarySettings/BasicSalarySettingsJuniorStaff.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2FsYXJ5U2V0dGluZ3NcQmFzaWNTYWxhcnlTZXR0aW5nc0p1bmlvclN0YWZmLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/JabaIt/Payroll_System/BgfclApp/Views/SalarySettings/BasicSalarySettingsOfficer.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2FsYXJ5U2V0dGluZ3NcQmFzaWNTYWxhcnlTZXR0aW5nc09mZmljZXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/JabaIt/Payroll_System/BgfclApp/Views/SalarySettings/FinalAdjustmentJuniorStaff.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2FsYXJ5U2V0dGluZ3NcRmluYWxBZGp1c3RtZW50SnVuaW9yU3RhZmYuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/JabaIt/Payroll_System/BgfclApp/Views/SalarySettings/FinalAdjustmentOfficer.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2FsYXJ5U2V0dGluZ3NcRmluYWxBZGp1c3RtZW50T2ZmaWNlci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/JabaIt/Payroll_System/BgfclApp/Views/SalarySettings/JournalAdjustment.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2FsYXJ5U2V0dGluZ3NcSm91cm5hbEFkanVzdG1lbnQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/JabaIt/Payroll_System/BgfclApp/Views/SalarySettings/JournalPosting.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2FsYXJ5U2V0dGluZ3NcSm91cm5hbFBvc3RpbmcuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/JabaIt/Payroll_System/BgfclApp/Views/SalarySettings/MonthlyLoan.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2FsYXJ5U2V0dGluZ3NcTW9udGhseUxvYW4uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/JabaIt/Payroll_System/BgfclApp/Views/SalarySettings/MonthlySalarySettingOfficer.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2FsYXJ5U2V0dGluZ3NcTW9udGhseVNhbGFyeVNldHRpbmdPZmZpY2VyLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/JabaIt/Payroll_System/BgfclApp/Views/SalarySettings/MonthlySalarySettingStaff.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2FsYXJ5U2V0dGluZ3NcTW9udGhseVNhbGFyeVNldHRpbmdTdGFmZi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/JabaIt/Payroll_System/BgfclApp/Views/SalarySettings/SalaryPolicySettings.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2FsYXJ5U2V0dGluZ3NcU2FsYXJ5UG9saWN5U2V0dGluZ3MuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/JabaIt/Payroll_System/BgfclApp/Views/SalarySettings/SalaryProcess.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2FsYXJ5U2V0dGluZ3NcU2FsYXJ5UHJvY2Vzcy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/JabaIt/Payroll_System/BgfclApp/Views/SalarySettings/SalarySettinsConfig.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2FsYXJ5U2V0dGluZ3NcU2FsYXJ5U2V0dGluc0NvbmZpZy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/JabaIt/Payroll_System/BgfclApp/Views/SalarySettings/SMSService.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2FsYXJ5U2V0dGluZ3NcU01TU2VydmljZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/JabaIt/Payroll_System/BgfclApp/Views/SalarySettings/UpdateBasicSalary.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2FsYXJ5U2V0dGluZ3NcVXBkYXRlQmFzaWNTYWxhcnkuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/JabaIt/Payroll_System/BgfclApp/Views/SalarySettings/UpdateTax.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2FsYXJ5U2V0dGluZ3NcVXBkYXRlVGF4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/JabaIt/Payroll_System/BgfclApp/Views/Schools/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2Nob29sc1xJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/JabaIt/Payroll_System/BgfclApp/Views/Shared/_Header.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9IZWFkZXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/JabaIt/Payroll_System/BgfclApp/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/JabaIt/Payroll_System/BgfclApp/Views/Shared/_LoginLayout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9Mb2dpbkxheW91dC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/JabaIt/Payroll_System/BgfclApp/Views/Shared/_Modal.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9Nb2RhbC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/JabaIt/Payroll_System/BgfclApp/Views/Shared/_Sidebar.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9TaWRlYmFyLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/JabaIt/Payroll_System/BgfclApp/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/JabaIt/Payroll_System/BgfclApp/Views/TaxReport/GetIncomeTaxMonthly.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGF4UmVwb3J0XEdldEluY29tZVRheE1vbnRobHkuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/JabaIt/Payroll_System/BgfclApp/Views/TaxReport/GetIncomeTaxYearly.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGF4UmVwb3J0XEdldEluY29tZVRheFllYXJseS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/JabaIt/Payroll_System/BgfclApp/Views/TaxReport/GetTaxCertificate.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGF4UmVwb3J0XEdldFRheENlcnRpZmljYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/JabaIt/Payroll_System/BgfclApp/Views/Users/Attendance.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlcnNcQXR0ZW5kYW5jZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/JabaIt/Payroll_System/BgfclApp/Views/Users/DailyAttendece.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlcnNcRGFpbHlBdHRlbmRlY2UuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/JabaIt/Payroll_System/BgfclApp/Views/Users/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlcnNcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/JabaIt/Payroll_System/BgfclApp/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/JabaIt/Payroll_System/BgfclApp/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 

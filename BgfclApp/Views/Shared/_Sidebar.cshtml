@@ -1,0 +1,191 @@
+﻿<div class="sidebar" id="sidebar" style="background-color:#002040">
+    <div class="sidebar-inner slimscroll">
+        <div id="sidebar-menu" class="sidebar-menu">
+            <ul>
+                <li class="menu-title text-white">
+                    <span>Admin</span>
+                </li>
+
+                <li class="submenu">
+                    <a href="#" class="text-white "><i class="fas fa-tachometer-alt fa-sm me-1" ></i> <span> Dashboard</span> <span class="menu-arrow"></span></a>
+                    <ul style="display: none;">
+                        <li><a href="/PayrollDashboard/Index" class="text-white">Admin Dashboard</a></li>
+                    </ul>
+                </li>
+                
+                <li class="submenu">
+                    <a href="#" class="text-white"><i class="fas fa-user-tie"></i> <span> Employee</span> <span class="menu-arrow"></span></a>
+                    <ul style="display: none;">
+                        <li><a href="/Employees/Officer" class="text-white">Permanent</a></li>
+                        @* <li><a href="/Employees/InactiveOfficer" class="text-white">Inactive Officer</a></li> *@
+                        <li><a href="/Employees/JuniorStaff" class="text-white">Contract</a></li>
+                        <li><a href="/Employees/DailyWorker" class="text-white">Daily Worker</a></li>
+                        @* <li><a href="/Employees/InactiveJuniorStaff" class="text-white">Inactive Junior Staff</a></li> *@
+                    </ul>
+                </li>
+                <li class="submenu">
+                    <a href="#" class="text-white"><i class="fas fa-cog"></i> <span> Salary Settings</span> <span class="menu-arrow"></span></a>
+                    <ul style="display: none;">
+                        @* <li><a href="/SalarySettings/SalaryPolicySettings" class="text-white">Salary Policy Settings</a></li> *@
+                        @* <li><a href="/SalarySettings/SalarySettinsConfig" class="text-white"> Salary Settings Config</a></li> *@
+                        <li><a href="/SalarySettings/BasicSalarySettingsOfficer" class="text-white">Permanent</a></li>
+                        <li><a href="/SalarySettings/BasicSalarySettingsJuniorStaff" class="text-white">Contract</a></li>
+                        <li><a href="/SalarySettings/BasicSalarySettingsDailyWorker" class="text-white">Daily Worker</a></li>
+                        @* <li><a href="/SalarySettings/UpdateBasicSalary" class="text-white">Update Basic Salary</a></li> *@
+  @*                       <li><a href="/SalarySettings/UpdateTax" class="text-white">Update TAX</a></li>
+                        <li><a href="/SalarySettings/AdvanceTax" class="text-white">Advance TAX</a></li> *@
+                    </ul>
+                </li>
+                <li class="submenu">
+                   @*  <a href="#" class="text-white"><i class="la la-dashboard"></i> <span> Salary</span> <span class="menu-arrow"></span></a> *@
+                    <ul style="display: none;">
+                        @* <li><a href="/SalarySettings/MonthlySalarySettingOfficer" class="text-white">Monthly Salary Setting Officer</a></li>
+                        <li><a href="/SalarySettings/MonthlySalarySettingStaff" class="text-white">Monthly Salary Setting Junior Staff</a></li>
+                        <li><a href="/SalarySettings/MonthlyLoan" class="text-white">Monthly Loan</a></li> *@
+                      @*   <li><a href="/SalarySettings/SalaryProcess" class="text-white">Salary Process</a></li> *@
+                       @*  <li><a href="/SalarySettings/FinalAdjustmentOfficer" class="text-white">Final Adjustment Officer</a></li>
+                        <li><a href="/SalarySettings/FinalAdjustmentJuniorStaff" class="text-white">Final Adjustment Junior Staff</a></li>
+                        <li><a href="/SalarySettings/JournalPosting" class="text-white">Journal Posting</a></li>
+                        <li><a href="/SalarySettings/JournalAdjustment" class="text-white">Journal Adjustment</a></li>
+                        <li><a href="/SalarySettings/SMSService" class="text-white">SMS Service</a></li> *@
+                    </ul>
+                </li>
+                <li class="submenu">
+                    <a href="#" class="text-white"><i class="fas fa-gift"></i> <span> Bonus Settings</span> <span class="menu-arrow"></span></a>
+                    <ul style="display: none;">
+                        <li><a href="/Bonus/CrateBonus" class="text-white">Bonus</a></li>
+                    @*     <li><a href="/Bonus/ProcessBonusData" class="text-white">Bonus Setup</a></li>
+                        <li><a href="/Bonus/ProcessBonus" class="text-white">Process Bonus</a></li> *@
+                     @*    <li><a href="/Bonus/FinalAdjustment" class="text-white">Final Adjustment</a></li>
+                        <li><a href="/Bonus/JournalPosting" class="text-white">Journal Posting</a></li> *@
+                    </ul>
+                </li>
+                <li class="submenu">
+                    <a href="#" class="text-white"><i class="fas fa-cog"></i> <span>Salary & Wages  Process</span> <span class="menu-arrow"></span></a>
+                    <ul style="display: none;">
+                        <li><a href="/SalarySettings/SalaryProcess" class="text-white">Salary Process</a></li>
+                        <li><a href="/Users/DailyAttendece" class="text-white">Attendance Setup</a></li>
+                    </ul>
+                </li>
+                <li class="submenu">
+                    <a href="#" class="text-white"><i class="fas fa-cog"></i> <span>PF & Gratuity Settings </span> <span class="menu-arrow"></span></a>
+                    <ul style="display: none;">
+                        <li><a href="/PFGratuity/ScheduleProvident" class="text-white">Provident Fund</a></li>
+                    </ul>
+                </li>
+                <li class="submenu">
+                    <a href="#" class="text-white"><i class="fas fa-file-alt fa-sm"></i> <span> Reports</span> <span class="menu-arrow"></span></a>
+                    <ul style="display: none;">
+                        <li class="submenu text-white">
+                            <a href="#" class="text-white"><i class="la la-dashboard"></i> <span> Salary</span> <span class="menu-arrow"></span></a>
+                            <ul style="display: none;">
+                                <li><a href="/SalaryReport/GetSalaryControlSheetOfficer" class="text-white">Salary Sheet</a></li>
+                                <li><a href="/SalaryReport/GetSalaryForwarding" class="text-white">Salary Forwarding</a></li>
+                                <li><a href="/Reports/SalaryBankForwarding" class="text-white">Bank Sheet</a></li>
+                                <li><a href="/Reports/PFSheet" class="text-white">PF Sheet</a></li>
+                                <li><a href="/Reports/PFForwarding" class="text-white">PF Forwarding</a></li>
+                               
+                            </ul>
+                        </li>
+                        <li class="submenu">
+                            <a href="#" class="text-white"><i class="la la-dashboard"></i> <span> Bonus</span> <span class="menu-arrow"></span></a>
+                            <ul style="display: none;">
+                                @* <li><a href="/BonusReport/GetBonusControlSheet" class="text-white">Bonus  Sheet</a></li> *@
+                                <li><a href="/BonusReport/GetBonusSheet" class="text-white">Bonus  Sheet</a></li>
+                                <li><a href="/BonusReport/BonusForwarding" class="text-white">Bonus Forwarding</a></li>
+                               @*  <li><a href="/BonusReport/BonusBankForward" class="text-white">Bank Forwarding</a></li>
+                                <li><a href="/BonusReport/GetBonusPaySlip" class="text-white">Bonus PaySlip</a></li>
+                                <li><a href="/BonusReport/GetBonusJournal" class="text-white">Journal</a></li> *@
+                            </ul>
+                        </li>
+                        <li class="submenu">
+                            <a href="#" class="text-white"><i class="la la-dashboard"></i> <span> Attendance</span> <span class="menu-arrow"></span></a>
+                            <ul style="display: none;">
+                                <li><a href="/SalaryReport/MonthlyAtteendance" class="text-white">Monthly Attendance</a></li>
+                            </ul>
+                        </li>
+                        <li class="submenu">
+                            <a href="#" class="text-white"><i class="la la-dashboard"></i> <span> PF & Gratuity </span> <span class="menu-arrow"></span></a>
+                            <ul style="display: none;">
+                                <li><a href="/Reports/GenereateScheduleProvidentFound" class="text-white">Schedule Provident Fund</a></li>
+                            </ul>
+                        </li>
+                        
+                @*         <li class="submenu">
+                            <a href="#" class="text-white"><i class="la la-dashboard"></i> <span> Tax</span> <span class="menu-arrow"></span></a>
+                            <ul style="display: none;">
+                                <li><a href="/TaxReport/GetIncomeTaxMonthly" class="text-white">Monthly IncomeTax</a></li>
+                                <li><a href="/TaxReport/GetIncomeTaxYearly" class="text-white">IncomeTax Yearly</a></li>
+                                <li><a href="/TaxReport/GetTaxCertificate" class="text-white">Tax Certificate</a></li>
+                            </ul>
+                        </li> *@
+
+                        @* <li class="submenu">
+                            <a href="#" class="text-white"><i class="la la-dashboard"></i> <span> Amenities</span> <span class="menu-arrow"></span></a>
+                            <ul style="display: none;">
+                                <li><a href="/AmenitiesReport/GetAmenitiesControlSheet" class="text-white">Ameneties Control Sheet</a></li>
+                                <li><a href="/AmenitiesReport/YearlyAmenitiesControlSheet" class="text-white"> Yearly Ameneties Control Sheet</a></li>
+                                <li><a href="/AmenitiesReport/GetAmenitiesBankForward" class="text-white">Bank Forwarding</a></li>
+                                <li><a href="/AmenitiesReport/AmenitiesPaySlip" class="text-white">Amenities PaySlip</a></li>
+                                <li><a href="/AmenitiesReport/AmenitiesYearlyPayslip" class="text-white">Yearly Amenities PaySlip</a></li>
+                                <li><a href="/AmenitiesReport/GetAmenitiesJournal" class="text-white">Journal</a></li>
+                            </ul>
+                        </li>
+                        <li class="submenu">
+                            <a href="#" class="text-white"><i class="la la-dashboard"></i> <span> Loan Report</span> <span class="menu-arrow"></span></a>
+                            <ul style="display: none;">
+                                <li><a href="/Reports/GetComputerLoan" class="text-white">Computer</a></li>
+                                <li><a href="/Reports/GetMotorLoan" class="text-white">Motor Cycle</a></li>
+                                <li><a href="/LoanReport/HBLoanIndividual" class="text-white">HB Loan</a></li>
+                            </ul>
+                        </li>
+
+                        <li class="submenu">
+                            <a href="#" class="text-white"><i class="la la-dashboard"></i> <span>Year Ending Loan Report</span> <span class="menu-arrow"></span></a>
+                            <ul style="display: none;">
+                                <li><a href="/LoanReport/GetMCLLoan" class="text-white">MCL</a></li>
+                                <li><a href="/LoanReport/GetComLoan" class="text-white">COM</a></li>
+                                <li><a href="/LoanReport/GetHBILoan" class="text-white">HBI</a></li>
+                            </ul>
+                        </li> *@
+
+                       @*  <li><a href="/MedicalFund/GetMedicalFund" class="text-white">Medical Fund</a></li>
+                        <li><a href="/Reports/WelfareFund" class="text-white">Welfare Fund</a></li>
+                        <li><a href="/Reports/EmployeeUnionORClub" class="text-white">Employee UnionORClub</a></li>
+                        <li><a href="/Reports/OfficerAssoORClub" class="text-white">Officer AssociationORClub</a></li>
+                        <li><a href="/Reports/LoanSheet" class="text-white">Loan Sheet</a></li> *@
+                      
+                      @*   <li><a href="/Reports/YearlyPFSheet" class="text-white"> Yearly PF Sheet</a></li>
+                        <li><a href="/Reports/PensionSheet" class="text-white">Pension Sheet</a></li>
+                        <li><a href="/Reports/YearlyPensionSheet" class="text-white">Yearly Pension Sheet</a></li>
+                        <li><a href="/Reports/GetAmortizationSchedule" class="text-white">Amortization Schedule</a></li>
+                        <li><a href="/Reports/OverTime" class="text-white">Over Time</a></li> *@
+                        
+                        @*
+
+                        <li><a href="/PFSheetReport/GetPFSheet">PF Sheet</a></li> *@
+                    </ul>
+                <li class="submenu text-white">
+                    <a href="#" class="text-white"><i class="fas fa-cog"></i> <span> Settings</span> <span class="menu-arrow"></span></a>
+                    <ul style="display: none;">
+                        <li><a href="/Users/Index" class="text-white">Users</a></li>
+     @*                    <li><a href="/Schools/Index" class="text-white">Schools</a></li>
+                        <li><a href="/Employees/EmployeeType" class="text-white">Employee Type</a></li>
+                        <li><a href="/Religions/Index" class="text-white">Religion</a></li>
+                        <li><a href="/Roles/Index" class="text-white">Roles</a></li> *@
+                        <li><a href="/Departments/Index" class="text-white">Department</a></li>
+                        <li><a href="/Designations/Index" class="text-white">Designation</a></li>
+                       @*  <li><a href="/Banks/BankTypes" class="text-white">Bank Types</a></li> *@
+                        <li><a href="/Banks/Banks" class="text-white">Bank</a></li>
+                        <li><a href="/Banks/Branches" class="text-white">Branch</a></li>
+                        <li><a href="/Banks/BankAccounts" class="text-white">Accounts</a></li>
+                            @* <li><a href="/Locations/Index" class="text-white">Location</a></li> *@
+                        <li><a href="/Grades/Index" class="text-white">Pay Scale</a></li>
+                        <li><a href="/Grades/CreateBasic" class="text-white">Basic</a></li>   
+                       @*  <li><a href="/DataImports/Index" class="text-white">Data Import</a></li> *@
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>

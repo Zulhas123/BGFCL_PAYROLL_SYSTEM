@@ -1,0 +1,264 @@
+﻿@{
+    ViewData["Title"] = "Dashboard";
+}
+@section Styles {
+    <link rel="stylesheet" href="~/css/dashboard/index.css" />
+    <link rel="stylesheet" href="~/css/loader/loader.css" />
+    <link rel="stylesheet" href="styles.css?v=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+}
+
+<!-- Loader -->
+<div id="loginLoader" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+     background-color: rgba(255,255,255,0.6); z-index: 9999;">
+    <div class="d-flex justify-content-center align-items-center" style="height: 100%;">
+        <div class="spinner-border text-primary" role="status">
+            <span class="visually-hidden">Loading...</span>
+        </div>
+    </div>
+</div>
+
+<div class="row" id="loaderId">
+    <div class="col-md-6 col-sm-6 col-lg-6 col-xl-4">
+        <div class="card dash-widget">
+            <div class="card-body">
+                <div class="d-flex align-items-center justify-content-between">
+                    <div class="d-flex flex-column align-items-center">
+                        <span class="dash-widget-icon">
+                            <i class="fa fa-cubes fa-1x"></i>
+                        </span>
+                        <span class="font-weight-bold mt-1" style="color:gray">Salary</span>
+                    </div>
+                    <div class="dash-widget-info ml-4">
+                       @*  <h5 id="salary_process"></h5> *@
+                        <h5 id="salary_process"><span class="label">Latest month :</span><span id="latestMonthValue"></span></h5>
+                        <h5 id="salary_of"><span class="label"> Amount (OF) :</span><span id="totalAmountOF"></span></h5>
+                        <h5 id="salary_js"><span class="label"> Amount (JS) :</span><span id="totalAmountJS"></span></h5>
+
+                        @* <h5 id="salary_of"></h5>
+                        <h5 id="salary_js"></h5> *@
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="col-md-6 col-sm-6 col-lg-6 col-xl-4">
+        <div class="card dash-widget">
+            <div class="card-body">
+                <div class="d-flex align-items-center justify-content-between">
+                    <div class="d-flex flex-column align-items-center">
+                        <span class="dash-widget-icon">
+                            <i class="fa fa-cubes fa-1x"></i>
+                        </span>
+                        <span class="font-weight-bold mt-1" style="color:gray">Bonus</span>
+                    </div>
+                    <div class="dash-widget-info">
+                        <h5 id="bonus_name"><span class="label">Latest month :</span><span id="latestbonusMonth"></span></h5>
+                        <h5 id="bonus_amount"><span class="label">Bonus amount :</span><span id="totalBonus"></span></h5>
+                       @*  <h5 id="bonus_name"></h5>
+                        <h5 id="bonus_amount"></h5> *@
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6 col-sm-6 col-lg-6 col-xl-4">
+        <div class="card dash-widget">
+            <div class="card-body">
+                <div class="d-flex align-items-center justify-content-between">
+                    <div class="d-flex flex-column align-items-center">
+                        <span class="dash-widget-icon">
+                            <i class="fa fa-cubes fa-1x"></i>
+                        </span>
+                        <span class="font-weight-bold mt-1" style="color:gray">Amenities</span>
+                    </div>
+                    <div class="dash-widget-info">
+                        <h5 id="amenities_name"><span class="label">Latest month :</span><span id="latestAmeMonth"></span></h5>
+                        <h5 id="amenities_amount"><span class="label">Total amount :</span><span id="totalAme"></span></h5>
+                        @* <h5 id="amenities_name"></h5>
+                        <h5 id="amenities_amount"></h5> *@
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="row">
+    <div class="col-md-6 col-sm-6 col-lg-6 col-xl-4">
+        <div class="card dash-widget">
+            <div class="card-body">
+                <div class="d-flex align-items-center justify-content-between">
+                    <div class="d-flex flex-column align-items-center">
+                        <span class="dash-widget-icon">
+                            <i class="fa fa-cubes fa-1x"></i>
+                        </span>
+                        <span class="font-weight-bold ml-2" style="color:gray">Departments</span>
+                    </div>
+                    <div class="dash-widget-info">
+                        <h5 id="department_count"></h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-6 col-sm-6 col-lg-6 col-xl-4">
+        <div class="card dash-widget">
+            <div class="card-body">
+                <div class="d-flex align-items-center justify-content-between">
+                    <div class="d-flex flex-column align-items-center">
+                        <span class="dash-widget-icon">
+                            <i class="fa fa-cubes fa-1x"></i>
+                        </span>
+                        <span class="font-weight-bold ml-2" style="color:gray">Designations</span>
+                    </div>
+                <div class="dash-widget-info">
+                    <h5 id="designation_count"></h5>
+                </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6 col-sm-6 col-lg-6 col-xl-4">
+        <div class="card dash-widget">
+            <div class="card-body">
+                <div class="d-flex align-items-center justify-content-between">
+                    <div class="d-flex flex-column align-items-center">
+                        <span class="dash-widget-icon">
+                            <i class="fa fa-cubes fa-1x"></i>
+                        </span>
+                        <span class="font-weight-bold ml-2" style="color:gray">Bank Tags</span>
+                    </div>
+                <div class="dash-widget-info">
+                    <h5 id="bank_tag_count"></h5>
+                </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-6 col-sm-6 col-lg-6 col-xl-4">
+        <div class="card dash-widget">
+            <div class="card-body">
+                <div class="d-flex align-items-center justify-content-between">
+                    <div class="d-flex flex-column align-items-center">
+                        <span class="dash-widget-icon">
+                            <i class="fa fa-cubes fa-1x"></i>
+                        </span>
+                        <span class="font-weight-bold ml-2" style="color:gray">Banks</span>
+                    </div>
+                <div class="dash-widget-info">
+                    <h5 id="bank_count"></h5>
+                </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6 col-sm-6 col-lg-6 col-xl-4">
+        <div class="card dash-widget">
+            <div class="card-body">
+                <div class="d-flex align-items-center justify-content-between">
+                    <div class="d-flex flex-column align-items-center">
+                        <span class="dash-widget-icon">
+                            <i class="fa fa-cubes fa-1x"></i>
+                        </span>
+                        <span class="font-weight-bold ml-2" style="color:gray">Locations</span>
+                    </div>
+                <div class="dash-widget-info">
+                    <h5 id="location_count"></h5>
+                </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6 col-sm-6 col-lg-6 col-xl-4">
+        <div class="card dash-widget">
+            <div class="card-body">
+                <div class="d-flex align-items-center justify-content-between">
+                    <div class="d-flex flex-column align-items-center">
+                        <span class="dash-widget-icon">
+                            <i class="fa fa-cubes fa-1x"></i>
+                        </span>
+                        <span class="font-weight-bold ml-2" style="color:gray">Grades</span>
+                    </div>
+                <div class="dash-widget-info">
+                    <h5 id="grade_count"></h5>
+                </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+@* new *@
+<div class="row">
+    <div class="col-md-6 col-sm-6 col-lg-6 col-xl-4">
+        <div class="card dash-widget">
+            <div class="card-body">
+                <div class="d-flex align-items-center justify-content-between">
+                    <div class="d-flex flex-column align-items-center">
+                        <span class="dash-widget-icon">
+                            <i class="fa fa-cubes fa-1x"></i>
+                        </span>
+                        <span class="font-weight-bold ml-2" style="color:gray">Officer</span>
+                    </div>
+                    <div class="dash-widget-info">
+                        <h5 id="officer_count"></h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6 col-sm-6 col-lg-6 col-xl-4">
+        <div class="card dash-widget">
+            <div class="card-body">
+                <div class="d-flex align-items-center justify-content-between">
+                    <div class="d-flex flex-column align-items-center">
+                        <span class="dash-widget-icon">
+                            <i class="fa fa-cubes fa-1x"></i>
+                        </span>
+                        <span class="font-weight-bold ml-2" style="color:gray">Junior Staff</span>
+                    </div>
+                    <div class="dash-widget-info">
+                        <h5 id="staff_count"></h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6 col-sm-6 col-lg-6 col-xl-4">
+        <div class="card dash-widget">
+            <div class="card-body">
+                <div class="d-flex align-items-center justify-content-between">
+                    <div class="d-flex flex-column align-items-center">
+                        <span class="dash-widget-icon">
+                            <i class="fa fa-cubes fa-1x"></i>
+                        </span>
+                        <span class="font-weight-bold ml-2" style="color:gray">Pension OF & Staff </span>
+                    </div>
+                    <div class="dash-widget-info">
+                        <h5 id="pension_count"></h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="~/js/dashboard/index.js"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#loaderId').on('submit', function () {
+                $('#loginLoader').show();
+            });
+        });
+    </script>
+}
